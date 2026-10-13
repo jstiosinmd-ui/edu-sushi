@@ -1,0 +1,38 @@
+# SUSHI Implementation Decisions
+
+---
+
+## Laravel application and PostgreSQL
+
+The Laravel application lives in src/laravel alongside the preserved v1.3 offline release. PostgreSQL is the default development, test, and deployment database. Laravel's session authentication provides username sign-in, throttling, CSRF protection, role checks, and session revocation; the small two-role application uses dedicated controllers instead of a separate authentication package.
+
+## Fixed achievement thresholds
+
+The owner's revised requirement replaces the original six thresholds. Tiers now advance every 200 distinct question IDs, including completed MCQs or rated flashcards. Repeats across modes count once. Retiring questions and importing new questions do not reduce earned completion. Names extend through twelve named tiers and then numbered Omakase Master tiers without an upper limit.
+
+## Fresh Catch retry pool
+
+Fresh Catch selects exactly ten distinct stems from never-completed MCQs and latest incorrect MCQ results. A correct graded MCQ excludes the duplicate-stem group; a later incorrect result puts it back. An unchecked answer selection alone does not remove a question. Confidence ratings belong to Memory Maki and do not alter MCQ accuracy or the Fresh Catch pool.
+
+## Flashcard decks repeat within a session
+
+The owner's latest requirement supersedes the initial day-based flashcard proposal. A learner filters subjects/topics/difficulty, previews an inclusive one-based range, selects individual questions, and saves a versioned deck. Each question is answered before feedback is revealed, then rated 1 to 5. A deck persists across sessions and devices.
+
+Draw weights are unrated 6, rating 1: 6, rating 2: 4, rating 3: 3, rating 4: 2, and rating 5: 1. Sampling is weighted with replacement, so low-rated questions return more frequently and a question can repeat immediately. These are transparent application rules, not Brainscape's proprietary algorithm. There are no date-based due times. Counts are specific to the current deck and show unrated plus each of the five familiarity ratings.
+
+## Frozen scoring evidence
+
+Attempt items, exam items, and flashcard deck items preserve the question version actually presented. Catalog edits do not silently change past scores or existing decks. The original 33 CSV fields remain in the bank and question-version provenance.
+
+New catalog IDs append after existing positions, keeping earlier ranges stable. Re-running the bootstrap seeder adds missing original IDs and preserves administrator edits to existing questions.
+
+## Legacy progress
+
+Offline backups provide latest answers and counts without a complete historical timeline. Imports preserve known completion and bookmarks, do not overwrite existing server results, and keep unknown historical first-attempt data out of that metric even after later practice.
+
+## PDF rendering
+
+Dompdf renders escaped Blade templates using local assets and embedded DejaVu fonts. All three files are queued and saved in private storage. Only the exam owner or an administrator can download them. Administrator assignments do not grant access to the creator's answer-key PDF. Classroom feedback release is enforced separately in attempt responses.
+
+Jon Bryan S. Tiosin, MD
+(c) jstiosin 2026

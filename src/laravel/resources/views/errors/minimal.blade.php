@@ -1,0 +1,4 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>@yield('title') | SUSHI</title><style>
+body{margin:0;background:#fff8f3;color:#452735;font:16px/1.6 system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column}main{max-width:560px;margin:auto;padding:36px 24px}img{width:100px}h1{font:36px Georgia,serif;color:#9d3656}a{display:inline-block;color:#6f233f;padding:12px 0}footer{border-top:1px solid #ead7da;padding:24px;text-align:center;font-size:12px}
+</style></head><body><main><img src="/art/20261013_EDU_SushiBrandLogo_v1.0.png" alt="SUSHI"><p>SUSHI · @yield('code')</p><h1>@yield('message')</h1><p>Return to the counter to continue. If the problem persists, contact your administrator.</p><a href="/">Back to SUSHI</a></main><footer>Jon Bryan S. Tiosin, MD<br>(c) jstiosin 2026</footer></body></html>

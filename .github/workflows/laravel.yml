@@ -1,0 +1,48 @@
+name: Laravel PostgreSQL checks
+on:
+  push:
+    paths: ['src/laravel/**', '.github/workflows/laravel.yml']
+  pull_request:
+    paths: ['src/laravel/**', '.github/workflows/laravel.yml']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/laravel
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: sushi
+          POSTGRES_PASSWORD: sushi-ci
+          POSTGRES_DB: sushi_test
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U sushi -d sushi_test"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      DB_CONNECTION: pgsql
+      DB_HOST: 127.0.0.1
+      DB_PORT: 5432
+      DB_DATABASE: sushi_test
+      DB_USERNAME: sushi
+      DB_PASSWORD: sushi-ci
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: pdo_pgsql, mbstring, intl, gd, zip
+          coverage: none
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: src/laravel/package-lock.json
+      - run: composer install --prefer-dist --no-interaction
+      - run: cp .env.example .env && php artisan key:generate
+      - run: npm ci && npm run build
+      - run: php artisan test

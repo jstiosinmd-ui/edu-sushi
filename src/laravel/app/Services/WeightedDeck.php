@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Services;
+
+class WeightedDeck
+{
+    // Relative draw weights, not waiting periods. A rating-1 card has six times
+    // the probability of a rating-5 card, all else equal. Unrated cards get 6.
+    public const WEIGHTS = [0 => 6, 1 => 6, 2 => 4, 3 => 3, 4 => 2, 5 => 1];
+
+    public function choose(array $items, ?int $ticket = null): string
+    {
+        $total = array_sum(array_map(fn ($q) => self::WEIGHTS[$q['confidence'] ?? 0], $items));
+        if (! $total) {
+            throw new \InvalidArgumentException('A deck must contain questions.');
+        }
+        $ticket ??= random_int(1, $total);
+        if ($ticket < 1 || $ticket > $total) {
+            throw new \InvalidArgumentException('Invalid draw ticket.');
+        }
+        foreach ($items as $q) {
+            $ticket -= self::WEIGHTS[$q['confidence'] ?? 0];
+            if ($ticket <= 0) {
+                return $q['question_id'];
+            }
+        }
+        throw new \LogicException('Deck draw failed.');
+    }
+}

@@ -1,0 +1,63 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: sushi
+      POSTGRES_USER: sushi
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in .env}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sushi -d sushi"]
+      interval: 5s
+      timeout: 5s
+      retries: 15
+    restart: unless-stopped
+  web:
+    build: .
+    image: edu-sushi:2.0
+    env_file: .env
+    environment: &app-environment
+      APP_ENV: production
+      APP_DEBUG: "false"
+      DB_CONNECTION: pgsql
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: sushi
+      DB_USERNAME: sushi
+      QUEUE_CONNECTION: database
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8080:80"
+    volumes:
+      - app_storage:/var/www/html/storage
+    restart: unless-stopped
+  worker:
+    image: edu-sushi:2.0
+    env_file: .env
+    environment: *app-environment
+    profiles: ["workers"]
+    command: php artisan queue:work --sleep=2 --tries=2 --timeout=300
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - app_storage:/var/www/html/storage
+    restart: unless-stopped
+  scheduler:
+    image: edu-sushi:2.0
+    env_file: .env
+    environment: *app-environment
+    profiles: ["workers"]
+    command: php artisan schedule:work
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - app_storage:/var/www/html/storage
+    restart: unless-stopped
+volumes:
+  postgres_data:
+  app_storage:
