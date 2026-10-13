@@ -1,0 +1,64 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const fs=require('node:fs'),path=require('node:path'),{pathToFileURL}=require('node:url');
+const ROOT=path.resolve(__dirname,'..'),OUT=path.join(ROOT,'.tmp','browser-qa');fs.mkdirSync(OUT,{recursive:true});
+const checks=[];function check(ok,name){checks.push({ok,name});if(!ok)throw Error(name);}
+const html=path.join(ROOT,'20261013_EDU_SushiClerksExamStudio_v1.3.html');
+(async()=>{
+ const browser=await chromium.launch({headless:true,executablePath:process.env.BROWSER_PATH,downloadsPath:path.join(OUT,'downloads')});
+ try{
+  const ctx=await browser.newContext({viewport:{width:1440,height:1000},acceptDownloads:true,reducedMotion:'reduce'});await ctx.setOffline(true);
+  const page=await ctx.newPage(),errors=[],requests=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(/^https?:/.test(r.url()))requests.push(r.url());});
+  await page.goto(pathToFileURL(html).href);await page.waitForFunction(()=>SushiStudio.ready);
+  check(await page.title()==='SUSHI Clerks Comprehensive Exam Reviewer','exact platform title');
+  check(await page.locator('#heroBanner').evaluate(e=>e.complete&&e.naturalWidth>0),'banner loaded offline');
+  check(await page.locator('#headerLogo').evaluate(e=>e.complete&&e.naturalWidth>0),'logo loaded offline');
+  check((await page.locator('footer').innerText()).includes('(c) jstiosin 2026')&&(await page.locator('footer').innerText()).includes('Jon Bryan S. Tiosin, MD'),'full footer credit');
+  check(await page.locator('.subject-card').count()===4,'four subject cards');
+  check(await page.evaluate(()=>SushiStudio.bank.items.length)===1047,'all items embedded');
+  check(!/\bdraft\b/i.test(await page.locator('body').innerText()),'no Draft label on landing');
+  for(const width of [320,360,390,430,768,1024,1440]){await page.setViewportSize({width,height:900});for(const name of ['home','practice','library','maker','about']){await page.evaluate(v=>SushiStudio.go(v),name);check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${name} fits ${width}px`);check(!/\bdraft\b/i.test(await page.locator('body').innerText()),`${name} is released at ${width}px`);}}
+  await page.setViewportSize({width:1440,height:1000});await page.evaluate(()=>SushiStudio.go('home'));await page.screenshot({path:path.join(ROOT,'20261013_EDU_SushiLandingDesktop_v1.3.png'),fullPage:true});
+  await page.setViewportSize({width:390,height:844});check(await page.locator('nav').evaluate(e=>Math.abs(e.getBoundingClientRect().bottom-innerHeight)<2),'mobile navigation stays at viewport bottom');await page.screenshot({path:path.join(ROOT,'20261013_EDU_SushiLandingMobile_v1.3.png'),fullPage:true});
+  await page.evaluate(()=>SushiStudio.go('practice'));await page.locator('#studyCount').fill('3');await page.locator('#startStudy').click();
+  check(await page.locator('#sessionArea').isVisible(),'practice starts');const first=await page.evaluate(()=>SushiStudio.session.ids[0]);let q=await page.evaluate(()=>SushiStudio.bank.items.find(q=>q.id===SushiStudio.session.ids[0]));
+  await page.locator(`input[name=answer][value=${q.key}]`).check();await page.locator('#checkAnswer').click();
+  check((await page.locator('#questionFeedback').innerText()).includes('Correct. Nicely done.'),'tutor marks correct answer');check((await page.locator('#questionFeedback').innerText()).includes(q.rationale),'exact rationale preserved');
+  await page.locator('#bookmarkQuestion').click();check(await page.locator('#bookmarkQuestion').getAttribute('aria-pressed')==='true','bookmark saves');
+  await page.reload();await page.waitForFunction(()=>SushiStudio.ready);await page.evaluate(()=>SushiStudio.go('practice'));
+  check(await page.evaluate(id=>SushiStudio.session.ids[0]===id&&SushiStudio.session.checked[id],first),'session and checked answer survive reload');
+  check(await page.locator('#bookmarkQuestion').getAttribute('aria-pressed')==='true','bookmark survives reload');
+  await page.locator('#nextQuestion').click();q=await page.evaluate(()=>SushiStudio.bank.items.find(q=>q.id===SushiStudio.session.ids[1]));const wrong='ABCD'.split('').find(a=>a!==q.key);await page.locator(`input[name=answer][value=${wrong}]`).check();await page.locator('#checkAnswer').click();
+  check((await page.locator('#questionFeedback').innerText()).includes('Review this one.'),'tutor marks wrong answer');
+  await page.locator('#finishStudy').click();check((await page.locator('#confirmText').innerText()).includes('1 question is unanswered'),'finish discloses unanswered items');await page.locator('#confirmYes').click();
+  check((await page.locator('#sessionResults').innerText()).includes('1 / 3'),'score includes unanswered');
+  await page.screenshot({path:path.join(OUT,'practice-mobile.png'),fullPage:true});
+  await page.locator('#studyPool').selectOption('missed');check((await page.locator('#studyAvailable').innerText()).startsWith('1 '),'missed-only pool');
+  await page.locator('#studyPool').selectOption('bookmarks');check((await page.locator('#studyAvailable').innerText()).startsWith('1 '),'bookmarked pool');
+  await page.locator('#studyCount').fill('5');await page.locator('#startStudy').click();check((await page.locator('#studyStatus').innerText()).includes('Only 1'),'insufficient pool gives precise error');
+  await page.locator('#studyPool').selectOption('all');await page.locator('#studyMode').selectOption('exam');await page.locator('#studyCount').fill('2');await page.locator('#startStudy').click();q=await page.evaluate(()=>SushiStudio.bank.items.find(q=>q.id===SushiStudio.session.ids[0]));await page.locator(`input[name=answer][value=${q.key}]`).check();
+  check(await page.locator('#questionFeedback').isHidden(),'exam mode hides feedback');check(await page.locator('#checkAnswer').isHidden(),'exam mode has no check-answer action');
+  await page.evaluate(()=>SushiStudio.session.deadline=Date.now()-1000);await page.waitForFunction(()=>SushiStudio.session.finished);
+  check((await page.locator('#sessionResults').innerText()).includes('1 / 2'),'time expiry finishes and scores');
+  await page.evaluate(()=>SushiStudio.go('library'));await page.locator('#librarySearch').fill(first);check(await page.locator('.library-item').count()===1,'library ID search');await page.locator('.library-item>summary').click();check(await page.locator('.library-item').getAttribute('open')!==null,'library open');
+  check(await page.locator('.library-item .feedback').isVisible(),'library explanations available');check(!/\bdraft\b/i.test(await page.locator('body').innerText()),'library explanation not labeled Draft');
+  await page.evaluate(()=>SushiStudio.go('about'));let event=page.waitForEvent('download');await page.locator('#exportProgress').click();const backup=await event,backupPath=path.join(OUT,'backup.json');await backup.saveAs(backupPath);const saved=JSON.parse(fs.readFileSync(backupPath));check(Object.keys(saved.answers).length>=2,'backup contains progress');
+  await page.locator('#resetProgress').click();await page.locator('#confirmYes').click();check(await page.evaluate(()=>Object.keys(SushiStudio.progress.answers).length)===0,'confirmed reset clears progress');
+  await page.locator('#importProgress').setInputFiles(backupPath);await page.locator('#confirmYes').click();check(await page.evaluate(()=>Object.keys(SushiStudio.progress.answers).length)===Object.keys(saved.answers).length,'backup restores progress');
+  await page.locator('#importProgress').setInputFiles({name:'bad.json',mimeType:'application/json',buffer:Buffer.from('{"version":1}')});check((await page.locator('#progressStatus').innerText()).includes('does not match'),'invalid backup rejected');
+  await page.evaluate(()=>SushiStudio.go('maker'));await page.locator('#examCount').fill('2');await page.locator('#generateExam').click();check((await page.locator('#examStatus').innerText()).includes('at least 4'),'balanced draw requires each selected subject');
+  await page.locator('#examDifficulty').selectOption('Difficult');await page.locator('#examCount').fill('80');await page.locator('#generateExam').click();check((await page.locator('#examStatus').innerText()).includes('Only 27'),'scarce difficult pool is reported');
+  await page.locator('#examDifficulty').selectOption('All');await page.locator('#examCount').fill('20');await page.locator('#examMinutes').fill('30');await page.locator('#generateExam').click();
+  let exam=await page.evaluate(()=>SushiStudio.exam);check(exam.questions.length===20,'exact exam count');check(exam.settings.subjects.every(s=>exam.questions.filter(q=>q.subject===s).length===5),'exam balances four subjects');
+  const code=exam.code;await page.locator('#generateExam').click();check(await page.evaluate(()=>SushiStudio.exam.code)===code,'UI seed reproduction');
+  await page.locator('#previewNext').click();check((await page.locator('#examPreview').innerText()).includes('6.'),'preview pagination');
+  await page.locator('#downloadPaper').click();await page.waitForFunction(()=>!SushiStudio.pdfBusy,null,{timeout:120000});check(await page.locator('#paperLink').isVisible(),'paper save link appears');
+  event=page.waitForEvent('download');await page.locator('#paperLink').click();let download=await event;await download.saveAs(path.join(ROOT,'.tmp','pdf-smoke','20261013_EDU_SushiSampleExam_v1.3.pdf'));check(!await download.failure(),'paper downloads offline');
+  await page.locator('#downloadKey').click();await page.waitForFunction(()=>!SushiStudio.pdfBusy,null,{timeout:120000});check(await page.locator('#keyLink').isVisible(),'key save link appears');
+  event=page.waitForEvent('download');await page.locator('#keyLink').click();download=await event;await download.saveAs(path.join(ROOT,'.tmp','pdf-smoke','20261013_EDU_SushiSampleAnswerKey_v1.3.pdf'));check(!await download.failure(),'answer key downloads offline');
+  fs.writeFileSync(path.join(OUT,'sample-record.json'),JSON.stringify(await page.evaluate(()=>SushiStudio.exam),null,2));
+  await page.screenshot({path:path.join(OUT,'maker-mobile.png'),fullPage:true});await page.setViewportSize({width:1440,height:1000});await page.screenshot({path:path.join(OUT,'maker-desktop.png'),fullPage:true});
+  await page.locator('#examCount').fill('21');check(await page.locator('#examReady').isHidden(),'changed settings clear prior PDF links');check(await page.evaluate(()=>SushiStudio.exam===null),'changed settings invalidate draw');
+  check(errors.length===0,'no browser runtime errors');check(requests.length===0,'no network dependencies');
+  fs.writeFileSync(path.join(OUT,'results.json'),JSON.stringify({checks,errors,requests},null,2));console.log(JSON.stringify({checks:checks.length,passed:checks.filter(c=>c.ok).length}));
+ }catch(error){fs.writeFileSync(path.join(OUT,'results.json'),JSON.stringify({checks,error:error.message},null,2));throw error;}finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

@@ -1,0 +1,12 @@
+# Local build output and dependencies
+.tmp/
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Distribution archives and personal exports
+*.zip
+SUSHI_Progress_*.json
+SUSHI_*_Record.json

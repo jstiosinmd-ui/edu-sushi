@@ -1,0 +1,30 @@
+{
+  "tool": "Built-in image_gen",
+  "reference": "assets/20261013_EDU_SushiBrandLogo_v1.0.png",
+  "characters": [
+    {
+      "key": "maki",
+      "name": "Maki Mentor",
+      "prompt": "Use case: illustration-story. Asset type: individual web app mascot for SUSHI Clerks Comprehensive Exam Reviewer. Reference image is style and palette reference only, do not reproduce wordmark. Primary request: A single cheerful maki sushi roll character with dark raspberry nori sides, cream rice and coral salmon center, tiny pink glasses, sitting with an open rose-colored study book. A friendly study buddy. Match the supplied SUSHI mascot's rounded kawaii proportions, thick smooth dark raspberry outlines, warm blush cheeks, bright smile and clean soft-shaded sticker illustration. Warm palette #9D3656, #6F233F, #E99092, #FCE5E6, #FFF8F3, small #DCE8CD accents. Single character centered, entire body visible, square composition, generous transparent margin, crisp edges. Genuine transparent background, no glow or background shadow, no words, letters, numerals, logos, watermarks, extra characters or scenery. Designed to read at small mobile card sizes.",
+      "file": "20261013_EDU_SushiCharacterMaki_v1.1.png"
+    },
+    {
+      "key": "temaki",
+      "name": "Fresh Catch",
+      "prompt": "Use case: illustration-story. Asset type: individual web app mascot for SUSHI Clerks Comprehensive Exam Reviewer. Reference image is style and palette reference only, do not reproduce wordmark. Primary request: A single cheerful temaki hand-roll sushi character, a cone of dark raspberry nori filled with cream rice, salmon pink fish and small sage green leaves, holding a little coral study card with a simple star icon. A curious explorer pose, one tiny arm waving. Match the supplied SUSHI mascot's rounded kawaii proportions, thick smooth dark raspberry outlines, warm blush cheeks, bright smile and clean soft-shaded sticker illustration. Warm palette #9D3656, #6F233F, #E99092, #FCE5E6, #FFF8F3, small #DCE8CD accents. Single character centered, entire body visible, square composition, generous transparent margin, crisp edges. Genuine transparent background, no glow or background shadow, no words, letters, numerals, logos, watermarks, extra characters or scenery. Designed to read at small mobile card sizes.",
+      "file": "20261013_EDU_SushiCharacterTemaki_v1.1.png"
+    },
+    {
+      "key": "wasabi",
+      "name": "Wasabi Rush",
+      "prompt": "Use case: illustration-story. Asset type: individual web app mascot for SUSHI Clerks Comprehensive Exam Reviewer. Reference image is style and palette reference only, do not reproduce wordmark. Primary request: A single energetic nigiri sushi character with cream rice and salmon coral topping, wearing a small sage-green sports headband, holding a round pink stopwatch, in a playful running pose. A determined but friendly study buddy. Match the supplied SUSHI mascot's rounded kawaii proportions, thick smooth dark raspberry outlines, warm blush cheeks, bright smile and clean soft-shaded sticker illustration. Warm palette #9D3656, #6F233F, #E99092, #FCE5E6, #FFF8F3, small #DCE8CD accents. Single character centered, entire body visible, square composition, generous transparent margin, crisp edges. Genuine transparent background, no glow or background shadow, no words, letters, numerals, logos, watermarks, extra characters or scenery. Designed to read at small mobile card sizes.",
+      "file": "20261013_EDU_SushiCharacterWasabi_v1.1.png"
+    },
+    {
+      "key": "chef",
+      "name": "Omakase Chef",
+      "prompt": "Use case: illustration-story. Asset type: individual web app mascot for SUSHI Clerks Comprehensive Exam Reviewer. Reference image is style and palette reference only, do not reproduce wordmark. Primary request: A single cheerful nigiri sushi character with cream rice and salmon pink topping wearing a fluffy cream chef hat and a raspberry bow tie, holding a small gold-and-rose star trophy with one hand and a clipboard with check marks with the other. A celebratory sushi study host. Match the supplied SUSHI mascot's rounded kawaii proportions, thick smooth dark raspberry outlines, warm blush cheeks, bright smile and clean soft-shaded sticker illustration. Warm palette #9D3656, #6F233F, #E99092, #FCE5E6, #FFF8F3, small #DCE8CD accents. Single character centered, entire body visible, square composition, generous transparent margin, crisp edges. Genuine transparent background, no glow or background shadow, no words, letters, numerals, logos, watermarks, extra characters or scenery. Designed to read at small mobile card sizes.",
+      "file": "20261013_EDU_SushiCharacterChef_v1.1.png"
+    }
+  ]
+}

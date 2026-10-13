@@ -1,0 +1,3 @@
+# Preserve released file bytes so the recorded SHA-256 hashes remain valid.
+* -text
+*.png binary

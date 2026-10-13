@@ -1,0 +1,67 @@
+{
+  "built": "2026-10-13T11:13:13.895076+00:00",
+  "source_files": [
+    {
+      "file": "20261013_EDU_InternalMedicineQuestionBank_v1.0.csv",
+      "sha256": "05fa29a6e603748e9cd5d5a89f40780ab58d936f33a5d76bd7be8140d148726d",
+      "rows": 303
+    },
+    {
+      "file": "20261013_EDU_OBGYNQuestionBank_v1.0.csv",
+      "sha256": "029604c7c9356b6e318a4e9b47994bef61208f6d9ff99392b863ef07898cbb9b",
+      "rows": 194
+    },
+    {
+      "file": "20261013_EDU_PediatricsQuestionBank_v1.0.csv",
+      "sha256": "4eddc61f2193b9be96f155927f78e2d050c4c81f0ee2f8db6552e38f1b6c1d3d",
+      "rows": 239
+    },
+    {
+      "file": "20261013_EDU_SurgeryQuestionBank_v1.0.csv",
+      "sha256": "3b0181ac7768d1347bea938d56ccb02aba5682994b12c8e8a6d82f024d6e5614",
+      "rows": 311
+    }
+  ],
+  "bank_hash": "3cae311b133fe775562ce8d377a7fb41ee8faa3f65d64000ddfa966f4d48585d",
+  "rows": 1047,
+  "subjects": {
+    "Internal Medicine": 303,
+    "OB-GYN": 194,
+    "Pediatrics": 239,
+    "Surgery": 311
+  },
+  "topics": 67,
+  "difficulty": {
+    "Average": 489,
+    "Difficult": 27,
+    "Easy": 531
+  },
+  "review_status": {
+    "Released": 1047
+  },
+  "duplicate_stem_groups": [
+    [
+      "SUR-Q0270",
+      "SUR-Q0295"
+    ]
+  ],
+  "content_changes": "Question content unchanged. All 33 CSV columns retained; display status Released per owner instruction.",
+  "software_scope": "Presentation, study workflows, and exam assembly. No new clinical source review.",
+  "html_sha256": "43d6b052bd3abeaee48a49fc40eac19612789e42e21ce5f37749111a7ca1892d",
+  "library_source": "08 Pediatrics Sample Exams\\99 Codex Outputs\\20261006_PED_PGHDLSNelsonsTools\\.tmp\\pgh-pedia-nelsons-qbank\\exam-maker.html",
+  "build_files": {
+    "app.js": "496b6249374ce15312073c679ef75c8a3f85f2e97777e8010429421d289896b0",
+    "build.py": "0ace6a3d4e4292bc39dbbe399b59cd572129e22ba2ea3061cc2ec42de74407e8",
+    "engine.js": "7fb0f1e012e3c73c63e70a92fec76ed1587180912a326605abdfc8486c6451e9",
+    "inspect_pdfs.py": "5594fc385063f89cf3bfb28fa6dae23419dba8325ac129a54d2db209f14521cc",
+    "package_release.py": "e24041b53710d354ffc7a123347fb22f8a8f14aed99edbbbe1836038e89f3c6d",
+    "pdf.js": "c4e43b7a918fd70906d766eeddb11c78142d6eb9e0a3a2ef60776eb03fb0a640",
+    "style.css": "8898728d9ca3c90ac4867f97fabe0a9d4fa9c1bb8d8bd7167378fb8e287bfc9e",
+    "template.html": "8f5b65a59e9e3e185248679b6ef6be45f783ad8622a70f821fb057167bf5a88e",
+    "test_browser.cjs": "05befebf4965491780e3b62b07159a03b43c98f1c84d491fc7077533a0dd8c47",
+    "test_engine.cjs": "f5b05d60fba5f5b13042e1468ab24aacf0b34cd561c3cfdfc74c072a9b21995d",
+    "test_fresh.cjs": "be6b36e446c45d411761eca303460522cdf96d97be018fd78066413e9e7b711d",
+    "test_touch.cjs": "5d4c1a252d34a38eaf84938183973fe340a6d91b6aa6fea2e42c6bd6a0da9d21",
+    "verify_subject_screens.cjs": "811616da3f6c0cdee2bb2e0ad2fc342ecce61fb29c8884493a223e7b79ce12b0"
+  }
+}

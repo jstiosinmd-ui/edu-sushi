@@ -1,0 +1,28 @@
+{
+  "name": "SUSHI Clerks Comprehensive Exam Reviewer",
+  "credit": "(c) jstiosin 2026",
+  "author": "Jon Bryan S. Tiosin, MD",
+  "method": "Built-in image_gen tool",
+  "palette": {
+    "raspberry": "#9D3656",
+    "coral": "#E99092",
+    "blush": "#FCE5E6",
+    "cream": "#FFF8F3",
+    "sage": "#DCE8CD",
+    "ink": "#452735"
+  },
+  "assets": [
+    {
+      "file": "assets/20261013_EDU_SushiBrandLogo_v1.0.png",
+      "sha256": "b25fe0ebbede6d53d2d3aabe6af26c9b1ea80f7ed513a138638fc70efb71afec",
+      "prompt": "Use case: logo-brand. Asset type: original logo for SUSHI Clerks Comprehensive Exam Reviewer, a playful medical undergraduate exam study app. Create one polished, compact, memorable kawaii-inspired sushi mascot brand logo with the word SUSHI in expressive rounded chunky custom lettering. A smiling salmon nigiri sushi character wearing a tiny rose-pink stethoscope, simple friendly face, a tiny dark burgundy seaweed accent, no red cross emblem. Warm coral salmon #ED8F93, deep raspberry #9D3656, pale pink #FFE4E6, cream rice #FFF8EF, tiny soft sage accent. Clean flat vector-like shapes, subtle hand-drawn character, crisp silhouette suitable for a mobile header, deliberately limited details. Logo icon above or beside the exact text 'SUSHI' only, high-quality professional brand mark, tightly composed but with safe padding, transparent background. No additional words, no mockup, no gradients, no photographic elements, no watermark.",
+      "reference": null
+    },
+    {
+      "file": "assets/20261013_EDU_SushiBrandBanner_v1.0.png",
+      "sha256": "a2e57434ac2a3732341c23e6d35c349be0e6a9aea6f372ae7a7d16df6745dce8",
+      "prompt": "Use case: ads-marketing. Create a wide 3:1 brand banner for a playful medical undergraduate study app, matching the supplied SUSHI mascot logo. Preserve the recognizable smiling salmon nigiri mascot with burgundy outline, cream rice, coral-pink salmon, and rose stethoscope. New composition on a fully opaque warm ivory-pink #FFF5F1 background with sparse tiny rose stars and soft sage doodle accents. Flat clean illustrated stationery aesthetic, no glow, no dark backdrop. Right third: mascot next to a small neat stack of books and an exam clipboard, oversized friendly shapes; no word SUSHI on the mascot itself. Left two thirds: elegant playful rounded typography with exact text 'SUSHI' large in deep raspberry, underneath 'Clerks Comprehensive' and then 'Exam Reviewer' in smaller very legible deep raspberry type. Exact text only: 'SUSHI Clerks Comprehensive Exam Reviewer'. Comfortable generous empty margins, everything safely within canvas. Fun, warm, polished and useful for adult medical students. No institutional symbols, no red-cross mark, no watermark, no tiny unreadable detail, no glossy 3D effects.",
+      "reference": "SUSHI logo"
+    }
+  ]
+}

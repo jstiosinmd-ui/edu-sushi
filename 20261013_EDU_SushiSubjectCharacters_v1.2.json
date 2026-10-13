@@ -1,0 +1,34 @@
+{
+  "tool": "Built-in image_gen",
+  "reference": "assets/20261013_EDU_SushiCharacterMaki_v1.1.png",
+  "characters": [
+    {
+      "key": "subjectIM",
+      "file": "20261013_EDU_SushiSubjectIM_v1.2.png",
+      "subject": "Internal Medicine",
+      "name": "Miso Medic",
+      "prompt": "Use case: illustration-story. Asset type: subject mascot for the SUSHI Clerks Comprehensive Exam Reviewer web app. Input image is a STYLE reference only, not an edit target: match the existing SUSHI crew. Primary request: Miso Medic, the Internal Medicine sushi character: a rounded salmon maki roll with cream rice and deep raspberry nori, wearing a small open cream-white doctor coat and a rose stethoscope around its neck. Tiny round rose glasses. Hold a coral clipboard with a large simple heart icon and a small heartbeat line. Calm, thoughtful, friendly expression. Clearly a sushi roll physician, not a human. Illustration style: rounded kawaii sticker character with thick smooth dark-raspberry outlines, tidy shapes, warm blush cheeks, cream highlights and light soft shading. Palette: raspberry #9D3656, deep #6F233F, coral #E99092, blush #FCE5E6, cream #FFF8F3, small sage #DCE8CD accents; pale egg gold only when needed. One centered full-body character composition, entire props visible, square canvas, at least 10 percent transparent padding on every side, crisp silhouette legible at thumbnail size. Genuine transparent background. No glow, no background, no ground shadow, no scenery, no lettering, no numerals, no watermark."
+    },
+    {
+      "key": "subjectPedia",
+      "file": "20261013_EDU_SushiSubjectPediatrics_v1.2.png",
+      "subject": "Pediatrics",
+      "name": "Pip the Pedia Roll",
+      "prompt": "Use case: illustration-story. Asset type: subject mascot for the SUSHI Clerks Comprehensive Exam Reviewer web app. Input image is a STYLE reference only, not an edit target: match the existing SUSHI crew. Primary request: Pip the Pedia Roll, the Pediatrics sushi character: a cheerful tamago nigiri with a pale golden egg topping, creamy rice body and dark raspberry nori belt, wearing a tiny cream-white doctor coat and rose stethoscope. Hug a small warm-pink teddy bear in one arm and hold a little star-shaped blush balloon on a short string with the other. Warm gentle playful expression and blush cheeks. Clearly sushi, not a human. Child-friendly pediatric clinician theme. Illustration style: rounded kawaii sticker character with thick smooth dark-raspberry outlines, tidy shapes, warm blush cheeks, cream highlights and light soft shading. Palette: raspberry #9D3656, deep #6F233F, coral #E99092, blush #FCE5E6, cream #FFF8F3, small sage #DCE8CD accents; pale egg gold only when needed. One centered full-body character composition, entire props visible, square canvas, at least 10 percent transparent padding on every side, crisp silhouette legible at thumbnail size. Genuine transparent background. No glow, no background, no ground shadow, no scenery, no lettering, no numerals, no watermark."
+    },
+    {
+      "key": "subjectSurgery",
+      "file": "20261013_EDU_SushiSubjectSurgery_v1.2.png",
+      "subject": "Surgery",
+      "name": "Suture Salmon",
+      "prompt": "Use case: illustration-story. Asset type: subject mascot for the SUSHI Clerks Comprehensive Exam Reviewer web app. Input image is a STYLE reference only, not an edit target: match the existing SUSHI crew. Primary request: Suture Salmon, the Surgery sushi character: a salmon nigiri with a coral salmon topping and cream rice body, wearing a sage-green surgical cap, pale sage scrub gown, rose surgical face mask, and tiny cream gloves. Friendly smiling eyes. Hold one small simplified closed needle holder with a loose looping rose thread and a rounded training pad in the other hand. Clean surgical-training theme, no patient, no anatomy, no blood, no incision, no needles pointing at viewer. Clearly sushi, not a human. Illustration style: rounded kawaii sticker character with thick smooth dark-raspberry outlines, tidy shapes, warm blush cheeks, cream highlights and light soft shading. Palette: raspberry #9D3656, deep #6F233F, coral #E99092, blush #FCE5E6, cream #FFF8F3, small sage #DCE8CD accents; pale egg gold only when needed. One centered full-body character composition, entire props visible, square canvas, at least 10 percent transparent padding on every side, crisp silhouette legible at thumbnail size. Genuine transparent background. No glow, no background, no ground shadow, no scenery, no lettering, no numerals, no watermark."
+    },
+    {
+      "key": "subjectOB",
+      "file": "20261013_EDU_SushiSubjectOBGYN_v1.2.png",
+      "subject": "OB-GYN",
+      "name": "Nori Nurture",
+      "prompt": "Use case: illustration-story. Asset type: subject mascot for the SUSHI Clerks Comprehensive Exam Reviewer web app. Input image is a STYLE reference only, not an edit target: match the existing SUSHI crew. Primary request: Nori Nurture, the Obstetrics and Gynecology sushi character: a rounded temaki cone with deep raspberry nori, cream rice and salmon-pink topping, wearing a short cream-white doctor coat with a small rose heart badge. Gently cradle a very small smiling rice-grain baby bundled snugly in a blush-pink swaddle. Rose stethoscope around the adult character. Tender cheerful expression. Single adult sushi character and tiny swaddled rice baby prop, no other figures. Clearly sushi, not a human; no human anatomy. Illustration style: rounded kawaii sticker character with thick smooth dark-raspberry outlines, tidy shapes, warm blush cheeks, cream highlights and light soft shading. Palette: raspberry #9D3656, deep #6F233F, coral #E99092, blush #FCE5E6, cream #FFF8F3, small sage #DCE8CD accents; pale egg gold only when needed. One centered full-body character composition, entire props visible, square canvas, at least 10 percent transparent padding on every side, crisp silhouette legible at thumbnail size. Genuine transparent background. No glow, no background, no ground shadow, no scenery, no lettering, no numerals, no watermark."
+    }
+  ]
+}
