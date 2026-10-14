@@ -4,11 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Assignment;
 use App\Models\Attempt;
+use App\Models\FlashcardDeck;
 use App\Models\Progress;
 use App\Models\Question;
+use App\Models\User;
 use App\Services\Achievements;
 use App\Services\Analytics;
 use App\Services\Catalog;
+use App\Services\CatchReminders;
+use App\Services\Habits;
+use App\Services\Leaderboard;
 use App\Services\Study;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -31,13 +36,25 @@ class StudyController extends Controller
 
     public function home(Request $r, Analytics $analytics)
     {
+        $u = $r->user();
+        $habits = app(Habits::class)->for($u);
+        $attempt = Attempt::where('user_id', $u->id)->where('mode', 'fresh')->where('status', 'active')->latest('id')->first();
+        $latest = FlashcardDeck::where('user_id', $u->id)->with('items')->latest('updated_at')->first();
+        $available = app(CatchReminders::class)->available($u);
+        $daily = [...$habits, 'attempt' => $attempt?->id, 'answered' => $attempt?->items()->whereNotNull('answer')->count() ?? 0,
+            'subjects' => $u->fresh_subjects ?: Catalog::SUBJECTS, 'available' => $available, 'push_enabled' => $u->reminder_enabled,
+            'remind' => $available && app(CatchReminders::class)->incomplete($u)];
+        $deck = $latest ? ['id' => $latest->id, 'title' => $latest->title, 'total' => $latest->items->count(), 'confident' => $latest->items->where('confidence', 5)->count(),
+            'low' => $latest->items->whereIn('confidence', [1, 2])->count(), 'unrated' => $latest->items->whereNull('confidence')->count()] : null;
+
         return Inertia::render('Home', ['catalog' => self::catalog(), 'stats' => $analytics->for($r->user()->id),
+            'daily' => $daily, 'deck' => $deck, 'leaders' => app(Leaderboard::class)->for($u),
             'assignments' => Assignment::where('user_id', $r->user()->id)->with('exam:id,title,code')->latest()->get()]);
     }
 
-    public function practice()
+    public function practice(Request $r)
     {
-        return Inertia::render('Practice', ['catalog' => self::catalog()]);
+        return Inertia::render('Practice', ['catalog' => self::catalog(), 'freshSubjects' => $r->user()->fresh_subjects ?: Catalog::SUBJECTS]);
     }
 
     public function start(Request $r, Study $study)
@@ -72,7 +89,7 @@ class StudyController extends Controller
         $d = $r->validate(['item_id' => 'required|integer', 'answer' => 'required|in:A,B,C,D', 'revision' => 'required|integer|min:0', 'check' => 'boolean']);
         $a = $study->answer($attempt, $d['item_id'], $d);
 
-        return response()->json(['attempt' => $study->present($a), 'achievement' => Achievements::for($r->user()->id)]);
+        return response()->json(['attempt' => $study->present($a), 'achievement' => Achievements::for($r->user()->id), 'community' => CommunityController::summary($r->user())]);
     }
 
     public function finish(Request $r, Attempt $attempt, Study $study)
@@ -89,6 +106,7 @@ class StudyController extends Controller
         $this->own($r, $attempt);
         $study->expire($attempt);
         DB::transaction(function () use ($attempt, $r) {
+            User::whereKey($attempt->user_id)->lockForUpdate()->firstOrFail();
             $a = Attempt::lockForUpdate()->findOrFail($attempt->id);
             if ($a->status !== 'active') {
                 return;
@@ -96,6 +114,9 @@ class StudyController extends Controller
             $delta = $a->heartbeat_at ? (int) $a->heartbeat_at->diffInSeconds(now()) : 0;
             $seconds = $a->active_seconds + (($delta >= 5 && $delta <= 45 && $r->boolean('active')) ? $delta : 0);
             $a->update(['heartbeat_at' => now(), 'active_seconds' => $seconds]);
+            if ($r->boolean('active')) {
+                $r->user()->update(['last_active_at' => now()]);
+            }
         });
 
         return response()->json(['status' => 'ok']);

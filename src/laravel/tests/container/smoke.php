@@ -10,6 +10,7 @@ use App\Services\Catalog;
 use App\Services\Study;
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Storage;
 
 function check(bool $condition, string $message): void
@@ -28,6 +29,8 @@ try {
     check(config('database.connections.pgsql.database') === 'sushi_container_smoke', 'Use the isolated container smoke database.');
     check(Question::count() === 1047 && User::count() === 4, 'Bootstrap data mismatch.');
     check(User::where('must_change_password', true)->count() === 4, 'Bootstrap credentials changed.');
+    check((gd_info()['JPEG Support'] ?? false) && (gd_info()['WebP Support'] ?? false), 'Profile photos require JPEG and WebP support.');
+    check(Schema::hasTable('daily_catches'), 'Community migrations were not applied.');
 
     if (($argv[1] ?? '') === 'create') {
         $user = User::where('username', 'jstiosin')->firstOrFail();

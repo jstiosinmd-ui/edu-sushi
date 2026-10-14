@@ -8,6 +8,8 @@ use App\Models\Question;
 use App\Models\User;
 use App\Services\Analytics;
 use App\Services\Catalog;
+use App\Services\Habits;
+use App\Services\Passport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
@@ -28,6 +30,15 @@ class AdminController extends Controller
 
         return Inertia::render('Admin', ['users' => $users->map(fn ($u) => $u->only('id', 'username', 'role', 'disabled', 'cohort', 'last_active_at')),
             'student' => $student, 'stats' => $student ? $analytics->for($student, $r->only('subject', 'topic', 'difficulty', 'mode', 'from', 'to')) : null,
+            'engagement' => $student ? [
+                'habits' => app(Habits::class)->for(User::findOrFail($student)),
+                'badges' => count(array_filter(app(Passport::class)->for(User::findOrFail($student)), fn ($b) => $b['earned_at'])),
+                'last_seven_days' => DB::table('daily_catches')->where('user_id', $student)->where('completed_at', '>=', now()->subDays(7))->count(),
+                'reminders_sent' => DB::table('catch_reminders')->where('user_id', $student)->whereNotNull('sent_at')->count(),
+                'reminders_clicked' => DB::table('catch_reminders')->where('user_id', $student)->whereNotNull('clicked_at')->count(),
+                'confidence' => DB::table('flashcards')->where('user_id', $student)->selectRaw('confidence, count(*) as total')->groupBy('confidence')->get(),
+                'activity' => DB::table('study_events')->where('user_id', $student)->selectRaw('mode, count(*) as answers, count(distinct question_hash) as questions')->groupBy('mode')->get(),
+            ] : null,
             'catalog' => StudyController::catalog(), 'filters' => $r->only('subject', 'topic', 'difficulty', 'mode', 'from', 'to'),
             'audits' => DB::table('audit_logs')->latest()->limit(30)->get(), 'assignments' => Assignment::with('exam:id,title', 'user:id,username')->latest()->limit(100)->get()]);
     }

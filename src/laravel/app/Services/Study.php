@@ -62,6 +62,11 @@ class Study
             } else {
                 $mode = $settings['mode'];
                 if ($mode === 'fresh') {
+                    $active = Attempt::where('user_id', $user->id)->where('mode', 'fresh')->where('status', 'active')->latest('id')->first();
+                    if ($active) {
+                        return $active;
+                    }
+                    $user->update(['fresh_subjects' => $settings['subjects']]);
                     $settings['count'] = 10;
                     $settings['balance'] = false;
                     $settings['topics'] = [];
@@ -88,6 +93,7 @@ class Study
         $correct = $item->answer !== null && $item->answer === $item->snapshot['key'];
         $item->update(['correct' => $correct, 'graded_at' => now()]);
         if ($item->answer !== null) {
+            app(Learning::class)->answer($attempt->user_id, 'attempt:'.$item->id, $item->snapshot, $attempt->mode, $correct);
             $p = Progress::firstOrCreate(['user_id' => $attempt->user_id, 'question_id' => $item->question_id]);
             $p->update(['selected_at' => $p->selected_at ?? now(), 'completed_at' => now(), 'latest_answer' => $item->answer, 'latest_correct' => $correct, 'legacy' => false]);
         }
@@ -96,14 +102,19 @@ class Study
     public function finish(Attempt $attempt, string $status = 'finished'): Attempt
     {
         return DB::transaction(function () use ($attempt, $status) {
+            User::whereKey($attempt->user_id)->lockForUpdate()->firstOrFail();
             $a = Attempt::lockForUpdate()->findOrFail($attempt->id);
             if ($a->status !== 'active') {
                 return $a;
+            }
+            if ($a->mode === 'fresh' && $a->items()->whereNull('answer')->exists()) {
+                throw ValidationException::withMessages(['answers' => 'Answer all 10 questions to finish your Fresh Catch.']);
             }
             foreach ($a->items as $item) {
                 $this->grade($a, $item);
             }
             $a->update(['status' => $status, 'finished_at' => now(), 'score' => $a->items()->where('correct', true)->count(), 'revision' => $a->revision + 1]);
+            app(Learning::class)->completed($a);
 
             return $a->refresh();
         }, 3);
@@ -124,6 +135,7 @@ class Study
         $attempt = $this->expire($attempt);
 
         return DB::transaction(function () use ($attempt, $itemId, $data) {
+            User::whereKey($attempt->user_id)->lockForUpdate()->firstOrFail();
             $a = Attempt::lockForUpdate()->findOrFail($attempt->id);
             abort_if($a->status !== 'active' || ($a->deadline && now()->gte($a->deadline)), 409, 'This attempt has ended. Reload to view results.');
             $item = $a->items()->findOrFail($itemId);
@@ -145,6 +157,9 @@ class Study
             }
             if (! empty($data['check'])) {
                 $this->grade($a, $item);
+                if ($a->mode === 'tutor') {
+                    app(Learning::class)->view($a->user_id, $item->snapshot, 'tutor');
+                }
             }
             $a->update(['revision' => $a->revision + 1]);
             User::whereKey($a->user_id)->update(['last_active_at' => now()]);

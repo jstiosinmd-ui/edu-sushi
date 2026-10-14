@@ -1,0 +1,10 @@
+<script setup>
+import {ref,computed} from 'vue';import {Head,Link} from '@inertiajs/vue3';import Avatar from '../Components/Avatar.vue';
+const props=defineProps({badges:Array,closet:Array});const group=ref('All'),state=ref('All');
+const groups=computed(()=>['All',...new Set(props.badges.map(b=>b.group))]);
+const filtered=computed(()=>props.badges.filter(b=>(group.value==='All'||b.group===group.value)&&(state.value==='All'||(state.value==='Earned'?b.earned_at:!b.earned_at))));
+</script>
+<template><Head title="Sushi Passport"/><div class="page-title"><div><p class="eyebrow">Collect your study story</p><h1>Sushi Passport</h1><p>{{badges.filter(b=>b.earned_at).length}} / {{badges.length}} achievements earned. Every achievement includes a permanent Passport stamp.</p></div><Link class="button" href="/profile">Character Closet</Link></div>
+<div class="filterbar"><label>Study tool or subject<select v-model="group"><option v-for="g in groups" :key="g">{{g}}</option></select></label><label>Achievement status<select v-model="state"><option>All</option><option>Earned</option><option>Locked</option></select></label></div>
+<div class="badge-grid"><article v-for="b in filtered" :key="b.id" class="badge-card" :class="{earned:b.earned_at}"><span class="badge-stamp" aria-hidden="true">{{b.earned_at?'✿':'◇'}}</span><p class="eyebrow">{{b.group}}</p><h2>{{b.name}}</h2><p>{{b.requirement}}</p><p v-if="b.earned_at" class="badge-earned">Earned {{new Date(b.earned_at.replace(' ','T')+'Z').toLocaleDateString('en-PH')}}</p><template v-else><div class="meter"><i :style="{width:Math.min(100,b.progress/b.target*100)+'%'}"></i></div><p>{{b.progress}} / {{b.target}}</p></template><p v-if="b.available!==undefined&&b.available<b.target&&!b.earned_at" class="muted">{{b.available}} active questions available. This milestone continues as the bank grows.</p><div v-for="r in b.rewards" :key="r.name" class="reward-preview"><Avatar :avatar="r" size="small"/><small>{{b.earned_at?'Unlocked':'Unlocks'}} {{r.name}}</small></div></article></div><p v-if="!filtered.length">No achievements match these filters yet.</p></template>
+

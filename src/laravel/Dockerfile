@@ -6,7 +6,8 @@ COPY resources ./resources
 COPY vite.config.js ./
 RUN npm run build
 FROM php:8.4-apache
-RUN apt-get update && apt-get install -y --no-install-recommends libpq-dev libzip-dev libpng-dev libonig-dev libicu-dev libcurl4-openssl-dev unzip supervisor \
+RUN apt-get update && apt-get install -y --no-install-recommends libpq-dev libzip-dev libpng-dev libjpeg62-turbo-dev libwebp-dev libonig-dev libicu-dev libcurl4-openssl-dev unzip supervisor \
+    && docker-php-ext-configure gd --with-jpeg --with-webp \
     && docker-php-ext-install pdo_pgsql mbstring intl zip gd opcache curl pcntl \
     && a2enmod rewrite headers \
     && rm -rf /var/lib/apt/lists/*

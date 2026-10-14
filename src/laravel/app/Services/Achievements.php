@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Flashcard;
 use App\Models\Progress;
+use App\Models\Question;
 
 class Achievements
 {
@@ -23,6 +24,8 @@ class Achievements
         $ids = Progress::where('user_id', $userId)->whereNotNull('completed_at')->pluck('question_id');
         $ids = $ids->merge(Flashcard::where('user_id', $userId)->whereNotNull('confidence')->pluck('question_id'));
 
-        return self::at($ids->unique()->count());
+        $hashes = Question::whereIn('id', $ids->unique())->pluck('stem_hash', 'id');
+
+        return self::at($ids->unique()->map(fn ($id) => $hashes[$id] ?? $id)->unique()->count());
     }
 }

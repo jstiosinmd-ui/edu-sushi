@@ -1,0 +1,15 @@
+{
+  "method": "built-in image_gen",
+  "date": "2026-10-14",
+  "assets": [
+    {
+      "path": "public/art/rice-rookie.png",
+      "prompt": "Create a single isolated kawaii Rice Rookie sushi mascot avatar for SUSHI Clerks Exam Studio. Rounded cream white onigiri rice body, burgundy nori belt, tiny warm pink cheeks, cheerful face, small salmon-pink learner backpack, a single rice-grain tuft. Original friendly medical student mascot without instruments. Match the reference illustration's polished soft cartoon rendering, burgundy outlines, warm pink salmon and cream palette, gently shaded shapes. Centered full body, uncluttered silhouette legible as a tiny circular profile photo, 15% transparent margin. No text, letters, badge, frame, background, scenery, or watermark. The attached image is style reference only, do not copy its glasses or book."
+    },
+    {
+      "path": "public/art/nori-librarian.png",
+      "prompt": "Create a single isolated kawaii Nori Librarian sushi mascot avatar for SUSHI Clerks Exam Studio. A small friendly upright seaweed-wrapped tamago sushi character, warm cream rice face and golden egg top, burgundy nori sides, warm pink blush, subtle sage-green round spectacles, carrying two closed salmon-pink reference books with a small ribbon bookmark and a magnifying glass. Match reference's polished soft cartoon rendering, burgundy outlines, warm pink salmon cream palette, gentle shading. Centered full body, uncluttered recognizable silhouette readable as tiny circular profile photo, generous transparent margin. No text, letters, frame, background, scenery or watermark. Reference image is style reference only; make this new distinct character, not the same salmon roll."
+    }
+  ],
+  "variants": "Existing character art is presented with CSS Sakura, Golden Omakase, and Wasabi frames; original bitmaps remain unchanged."
+}

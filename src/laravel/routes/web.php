@@ -2,10 +2,14 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\ExamController;
 use App\Http\Controllers\FlashcardController;
 use App\Http\Controllers\ImportController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReminderController;
 use App\Http\Controllers\StudyController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -18,6 +22,23 @@ Route::middleware(['auth', 'active'])->group(function () {
     Route::get('/password', fn () => Inertia::render('Password'));
     Route::post('/password', [AuthController::class, 'password']);
     Route::get('/', [StudyController::class, 'home'])->name('dashboard');
+    Route::get('/profile', [ProfileController::class, 'index']);
+    Route::post('/profile', [ProfileController::class, 'update']);
+    Route::get('/profiles/{user}/photo', [ProfileController::class, 'photo']);
+    Route::get('/profiles/{user}', [CommunityController::class, 'profile']);
+    Route::get('/passport', [CommunityController::class, 'passport']);
+    Route::get('/leaderboard', [CommunityController::class, 'leaderboard']);
+    Route::get('/fresh-catch', [ReminderController::class, 'fresh']);
+    Route::post('/reminders/settings', [ReminderController::class, 'settings']);
+    Route::post('/reminders/subscribe', [ReminderController::class, 'subscribe'])->middleware('throttle:10,1');
+    Route::post('/reminders/unsubscribe', [ReminderController::class, 'unsubscribe']);
+    Route::post('/reminders/dismiss', [ReminderController::class, 'dismiss']);
+    Route::post('/study/active', function (Request $r) {
+        $r->user()->update(['last_active_at' => now()]);
+
+        return response()->json(['saved' => true]);
+    })->middleware('throttle:6,1');
+    Route::post('/questions/{question}/view', [CommunityController::class, 'view'])->middleware('throttle:120,1');
     Route::get('/practice', [StudyController::class, 'practice']);
     Route::post('/attempts', [StudyController::class, 'start'])->middleware('throttle:30,1');
     Route::get('/attempts/{attempt}', [StudyController::class, 'show']);
@@ -34,6 +55,7 @@ Route::middleware(['auth', 'active'])->group(function () {
     Route::get('/flashcards/decks/{deck}', [FlashcardController::class, 'show']);
     Route::post('/flashcards/decks/{deck}/answer', [FlashcardController::class, 'answer']);
     Route::post('/flashcards/decks/{deck}/rate', [FlashcardController::class, 'rate']);
+    Route::post('/flashcards/decks/{deck}/session', [FlashcardController::class, 'session']);
     Route::get('/exams', [ExamController::class, 'index']);
     Route::post('/exams', [ExamController::class, 'store']);
     Route::post('/exams/{exam}/export', [ExamController::class, 'export'])->middleware('throttle:10,1');

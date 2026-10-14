@@ -16,6 +16,7 @@ class User extends Authenticatable
 
     protected function casts(): array
     {
-        return ['password' => 'hashed', 'disabled' => 'boolean', 'must_change_password' => 'boolean', 'last_active_at' => 'datetime'];
+        return ['password' => 'hashed', 'disabled' => 'boolean', 'must_change_password' => 'boolean', 'last_active_at' => 'datetime',
+            'pinned_badges' => 'array', 'fresh_subjects' => 'array', 'reminder_enabled' => 'boolean', 'reminder_snoozed_until' => 'datetime', 'timezone_changed_at' => 'datetime'];
     }
 }

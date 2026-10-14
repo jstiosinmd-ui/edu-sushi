@@ -26,7 +26,11 @@ class AuthController extends Controller
         $r->session()->regenerate();
         $r->session()->put('auth_version', $r->user()->auth_version);
 
-        return redirect($r->user()->must_change_password ? '/password' : ($r->user()->role === 'admin' ? '/admin' : '/'));
+        if ($r->user()->must_change_password) {
+            return redirect('/password');
+        }
+
+        return redirect()->intended($r->user()->role === 'admin' ? '/admin' : '/');
     }
 
     public function password(Request $r)

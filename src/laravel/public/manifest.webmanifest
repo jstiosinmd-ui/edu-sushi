@@ -1,0 +1,18 @@
+{
+  "id": "/sushi",
+  "name": "SUSHI Clerks Comprehensive Exam Reviewer",
+  "short_name": "SUSHI",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fff8f3",
+  "theme_color": "#9d3656",
+  "icons": [
+    {
+      "src": "/art/rice-rookie.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

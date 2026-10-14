@@ -31,7 +31,7 @@ php artisan queue:work --tries=2 --timeout=300
 php artisan schedule:work
 ~~~
 
-The worker creates PDF downloads. The scheduler finalizes expired timed attempts even when a learner has closed the page.
+The worker creates PDF downloads and sends opted-in daily push reminders. The scheduler finalizes expired timed attempts and checks for incomplete daily catches every minute.
 
 ## Initial accounts
 
@@ -53,7 +53,15 @@ The initial password is password for all four accounts. Each must choose a new p
 - Bento Builder saves exam versions and generates exam, answer-sheet, and answer-key PDFs.
 - Roll Call provides the searchable library, sources, explanations, and bookmarks.
 
-The sticky achievement bar advances every 200 distinct completed question IDs. MCQ completions and rated flashcards share this count without duplicating it. Accuracy remains separate from familiarity. New question imports extend the possible journey without reducing anyone's rank.
+The sticky achievement bar advances every 200 distinct completed questions, grouping duplicate stems. MCQ completions and rated flashcards share this count. Accuracy remains separate from familiarity. New question imports extend the possible journey without reducing anyone's rank.
+
+## Community and daily study
+
+Fresh Catch and Memory Maki lead the home screen. Finishing all ten Fresh Catch questions earns a daily stamp, with a streak calendar and Wasabi Saves. Memory Maki offers an optional session ending once at least 80% of the selected deck is rated 5. Ratings and the deck remain saved after finishing.
+
+The Sushi Passport contains 45 permanent achievements. Profiles support cropped photos, three pinned badges, and 32 character/frame choices, including achievement unlocks. Signed-in learners share weekly, all-time coverage, and streak leaderboards. The administrator sees completion, engagement, familiarity, and reminder totals.
+
+See [community rules and release setup](docs/COMMUNITY.md) for thresholds, scoring, reminders, and the deployment hold.
 
 ## Head Chef workspace
 

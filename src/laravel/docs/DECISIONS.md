@@ -8,7 +8,7 @@ The Laravel application lives in src/laravel alongside the preserved v1.3 offlin
 
 ## Fixed achievement thresholds
 
-The owner's revised requirement replaces the original six thresholds. Tiers now advance every 200 distinct question IDs, including completed MCQs or rated flashcards. Repeats across modes count once. Retiring questions and importing new questions do not reduce earned completion. Names extend through twelve named tiers and then numbered Omakase Master tiers without an upper limit.
+The owner's revised requirement replaces the original six thresholds. Tiers advance every 200 distinct completed questions, including completed MCQs or rated flashcards. Duplicate stems and repeats across modes count once. Retiring questions and importing new questions do not reduce earned completion. Names extend through twelve named tiers and then numbered Omakase Master tiers without an upper limit.
 
 ## Fresh Catch retry pool
 
@@ -29,6 +29,10 @@ New catalog IDs append after existing positions, keeping earlier ranges stable. 
 ## Legacy progress
 
 Offline backups provide latest answers and counts without a complete historical timeline. Imports preserve known completion and bookmarks, do not overwrite existing server results, and keep unknown historical first-attempt data out of that metric even after later practice.
+
+## Community release, October 14, 2026
+
+The approved community upgrade adds 45 persistent achievement stamps, portrait rewards, daily catch streaks, scheduled opt-in web push, and learner leaderboards. Current self-rated familiarity is separate from correctness and earns no leaderboard points. Assigned exams do not contribute shared points or subject achievements, preserving their feedback policy. Recorded history is reconciled idempotently; historical feedback views and bookmarked-at-answer status are not invented. See [Community rules](COMMUNITY.md) for the full operational specification. This release remains local until the owner authorizes pushing and Railway deployment.
 
 ## PDF rendering
 

@@ -23,8 +23,8 @@ fs.mkdirSync(out,{recursive:true});
  }
  try{
    await page.goto(url+'/login');await snap('login-desktop');await snap('login-mobile',390);await page.setViewportSize({width:1440,height:1000});
-   await login('powquanico');await expect(page.getByRole('heading',{name:'Your next study round.'})).toBeVisible();await snap('counter-desktop');
-   await page.getByRole('link',{name:'Practice',exact:true}).click();await page.getByLabel('Study mode').selectOption('tutor');await page.getByLabel('Questions',{exact:true}).fill('3');await page.getByRole('button',{name:'Start round',exact:true}).click();await page.waitForURL(/\/attempts\/\d+$/);
+   await login('powquanico');await expect(page.getByRole('heading',{name:'Fresh Catch 10',exact:true})).toBeVisible();await snap('counter-desktop');
+   await page.getByRole('link',{name:'More practice',exact:true}).click();await page.getByLabel('Study mode').selectOption('tutor');await page.getByLabel('Questions',{exact:true}).fill('3');await page.getByRole('button',{name:'Start round',exact:true}).click();await page.waitForURL(/\/attempts\/\d+$/);
    await page.locator('.options button').first().click();await expect(page.getByRole('button',{name:'Check answer',exact:true})).toBeEnabled();await page.getByRole('button',{name:'Check answer',exact:true}).click();await expect(page.locator('.feedback')).toBeVisible();await expect(page.locator('.rank small')).toContainText(/\d+ completed/);
    await snap('practice-mobile',390);await page.reload();await expect(page.locator('.feedback')).toBeVisible();checks.push('answer persisted after reload');
    await page.locator('summary').filter({hasText:'Finish this round'}).click();await page.getByRole('button',{name:'Submit round'}).click();await expect(page.getByRole('heading',{name:'Round complete'})).toBeVisible();
@@ -36,7 +36,7 @@ fs.mkdirSync(out,{recursive:true});
    await page.setViewportSize({width:1440,height:1000});await snap('memory-maki-desktop');
    await page.getByRole('link',{name:'My Progress',exact:true}).click();await expect(page.getByRole('heading',{name:'My Progress',exact:true})).toBeVisible();await snap('progress-mobile',390);
    const denied=await context.request.get(url+'/admin');expect(denied.status()).toBe(403);checks.push('student denied admin access');
-   await page.getByRole('button',{name:'Sign out',exact:true}).click();await login('jstiosin');await expect(page.getByRole('heading',{name:'Head Chef',exact:true})).toBeVisible();await snap('admin-desktop');await snap('admin-mobile',390);
+   await page.setViewportSize({width:1440,height:1000});await page.getByRole('button',{name:'Sign out',exact:true}).click();await login('jstiosin');await expect(page.getByRole('heading',{name:'Head Chef',exact:true})).toBeVisible();await snap('admin-desktop');await snap('admin-mobile',390);
    await page.getByRole('link',{name:'Manage questions and imports'}).click();await expect(page.getByRole('heading',{name:'Question kitchen'})).toBeVisible();checks.push('admin question catalog');
    await page.getByRole('link',{name:'Bento Builder',exact:true}).click();const examTitle='SUSHI QA '+Date.now();await page.getByLabel('Exam title',{exact:true}).fill(examTitle);await page.getByLabel('Questions',{exact:true}).fill('12');await page.getByRole('button',{name:'Save exam',exact:true}).click();await expect(page.getByRole('heading',{name:examTitle,exact:true})).toBeVisible();
    const newestExam=page.locator('article.panel').filter({has:page.getByRole('heading',{name:examTitle,exact:true})});

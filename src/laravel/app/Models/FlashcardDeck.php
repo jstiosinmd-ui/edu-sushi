@@ -10,7 +10,7 @@ class FlashcardDeck extends Model
 
     protected function casts(): array
     {
-        return ['settings' => 'array'];
+        return ['settings' => 'array', 'session_finished_at' => 'datetime', 'goal_prompt_dismissed' => 'boolean'];
     }
 
     public function items()
