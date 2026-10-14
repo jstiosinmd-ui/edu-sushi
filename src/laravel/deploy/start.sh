@@ -17,6 +17,11 @@ mkdir -p storage/app/private storage/framework/cache/data storage/framework/sess
 chown -R www-data:www-data storage bootstrap/cache
 sed -i "s/^Listen [0-9][0-9]*/Listen $PORT/" /etc/apache2/ports.conf
 sed -i "s/<VirtualHost \*:[0-9][0-9]*>/<VirtualHost *:$PORT>/" /etc/apache2/sites-available/000-default.conf
+# mod_php requires exactly one MPM. Normalize this at runtime because some
+# container hosts restore the base image's event/worker module links.
+a2dismod -f mpm_event mpm_worker >/dev/null
+a2enmod mpm_prefork >/dev/null
+apache2ctl -t
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache

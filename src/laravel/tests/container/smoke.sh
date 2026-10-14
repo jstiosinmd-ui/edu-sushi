@@ -46,6 +46,13 @@ PY
 check_http
 docker exec sushi-smoke-app supervisorctl -c /etc/supervisor/conf.d/sushi.conf status
 docker exec --user www-data sushi-smoke-app php tests/container/smoke.php create
+# Reproduce the extra MPM links seen on the production container host.
+docker exec sushi-smoke-app ln -sf /etc/apache2/mods-available/mpm_event.load /etc/apache2/mods-enabled/mpm_event.load
+docker exec sushi-smoke-app ln -sf /etc/apache2/mods-available/mpm_worker.load /etc/apache2/mods-enabled/mpm_worker.load
+if docker exec sushi-smoke-app apache2ctl -t; then
+  echo 'Expected Apache to reject the conflicting MPM fixture' >&2
+  exit 1
+fi
 docker restart sushi-smoke-app
 check_http
 docker exec --user www-data sushi-smoke-app php tests/container/smoke.php verify
