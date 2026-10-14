@@ -42,11 +42,13 @@ The compose database is private to the container network. Persistent volumes ret
 
 ## Railway
 
+The production service address is [SUSHI Clerks Comprehensive Exam Reviewer](https://sushi-production-83a2.up.railway.app). The Railway project is `edu-sushi`, environment `production`, with `sushi` and `Postgres` services in Singapore. Both storage volumes currently use 500 MB trial allocations. Trial resources are time and credit limited; review the workspace usage before the trial expires.
+
 The configuration in .railway/railway.ts defines the GitHub source, a PostgreSQL service, and one application replica with a persistent storage volume. Railway detects the Dockerfile in the service root, src/laravel. This uses Railway's current Infrastructure as Code workflow; the older railway.json format is deprecated. See the [Railway configuration reference](https://docs.railway.com/infrastructure-as-code/reference).
 
 1. Authenticate with the Railway CLI and link a new edu-sushi project in the intended account.
 2. Create the sushi service. Generate a unique APP_KEY and save it through Railway Variables. Set APP_URL to the generated HTTPS domain. These two values are preserved by the configuration and must exist before applying it. Keep the key private and stable across deployments.
-3. Run railway config plan from src/laravel. Review the services, volume, region, and variables before railway config apply. The configuration requests a 1 GB application volume in Singapore and one application replica; confirm that the hosting plan supports those resources.
+3. Run railway config plan from src/laravel. Review the services, volume, region, and variables before railway config apply. The configuration requests a 500 MB application volume in Singapore and one application replica, within the current trial volume limit. Increase storage deliberately when usage requires it and the hosting plan supports it.
 4. Confirm the GitHub source uses main and root directory src/laravel. The pre-deploy command runs migrations and idempotent seeding. Do not override the Docker start command. Confirm PostgreSQL provisioning and its private DB_URL reference before deploying.
 5. Generate a public Railway domain for sushi and verify APP_URL uses that exact HTTPS URL. The entrypoint binds Apache to Railway's PORT and starts all three processes. The /login readiness check exercises the database-backed session and frontend assets.
 6. Verify the deployment logs, login page, worker, scheduler, and private PDF downloads. Configure database and storage backups in the hosting account. Never run tests/container/smoke.php against the production database; it is restricted to its isolated test database.

@@ -2,7 +2,7 @@ import { defineRailway, github, postgres, preserve, project, service, volume } f
 
 export default defineRailway(() => {
   const db = postgres('Postgres', { region: 'asia-southeast1-eqsg3a' });
-  const storage = volume('sushi-storage', { region: 'asia-southeast1-eqsg3a', sizeMB: 1024 });
+  const storage = volume('sushi-storage', { region: 'asia-southeast1-eqsg3a', sizeMB: 500 });
   const web = service('sushi', {
     source: github('jstiosinmd-ui/edu-sushi', { branch: 'main', rootDirectory: 'src/laravel' }),
     replicas: { 'asia-southeast1-eqsg3a': 1 },
