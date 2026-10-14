@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use App\Http\Controllers\CommunityController;
 use App\Services\Achievements;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Inertia\Middleware;
 
 class HandleInertiaRequests extends Middleware
@@ -16,6 +17,7 @@ class HandleInertiaRequests extends Middleware
         return [...parent::share($request), 'user' => $request->user()?->only('id', 'username', 'role', 'must_change_password'),
             'achievement' => fn () => $request->user() ? Achievements::for($request->user()->id) : null,
             'community' => fn () => $request->user() ? CommunityController::summary($request->user()) : null,
+            'unreadUpdates' => fn () => $request->user() ? DB::table('learning_notices')->where('user_id', $request->user()->id)->whereNull('read_at')->count() : 0,
             'flash' => fn () => $request->session()->get('message')];
     }
 }

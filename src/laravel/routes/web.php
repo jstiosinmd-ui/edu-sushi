@@ -2,14 +2,18 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CohortController;
 use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\ExamController;
 use App\Http\Controllers\ExamDraftController;
 use App\Http\Controllers\FlashcardController;
 use App\Http\Controllers\ImportController;
+use App\Http\Controllers\NotebookController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\QuestionFeedbackController;
 use App\Http\Controllers\ReminderController;
 use App\Http\Controllers\StudyController;
+use App\Http\Controllers\StudyGuideController;
 use App\Http\Controllers\WorkbenchController;
 use App\Models\Question;
 use Illuminate\Http\Request;
@@ -25,6 +29,8 @@ Route::middleware(['auth', 'active'])->group(function () {
     Route::get('/password', fn () => Inertia::render('Password'));
     Route::post('/password', [AuthController::class, 'password']);
     Route::get('/', [StudyController::class, 'home'])->name('dashboard');
+    Route::post('/today-bento/preview', [StudyGuideController::class, 'preview']);
+    Route::post('/today-bento/start', [StudyGuideController::class, 'start'])->middleware('throttle:30,1');
     Route::get('/profile', [ProfileController::class, 'index']);
     Route::post('/profile', [ProfileController::class, 'update']);
     Route::get('/settings', [ProfileController::class, 'settings']);
@@ -60,8 +66,15 @@ Route::middleware(['auth', 'active'])->group(function () {
     Route::get('/library', [StudyController::class, 'library']);
     Route::post('/bookmarks/{question}', [StudyController::class, 'bookmark']);
     Route::get('/progress', [StudyController::class, 'progress']);
+    Route::get('/progress/notebook', [NotebookController::class, 'index']);
+    Route::get('/questions/{question}/note', [NotebookController::class, 'show']);
+    Route::post('/questions/{question}/note', [NotebookController::class, 'save']);
+    Route::post('/questions/{question}/report', [QuestionFeedbackController::class, 'report'])->middleware('throttle:10,1');
+    Route::get('/updates', [QuestionFeedbackController::class, 'updates']);
+    Route::post('/updates/{notice}/read', [QuestionFeedbackController::class, 'read']);
     Route::get('/flashcards', [FlashcardController::class, 'index']);
     Route::post('/flashcards/preview', [FlashcardController::class, 'preview']);
+    Route::post('/flashcards/quick', [FlashcardController::class, 'quick'])->middleware('throttle:30,1');
     Route::post('/flashcards/decks', [FlashcardController::class, 'create']);
     Route::get('/flashcards/decks/{deck}', [FlashcardController::class, 'show']);
     Route::post('/flashcards/decks/{deck}/answer', [FlashcardController::class, 'answer']);
@@ -75,6 +88,10 @@ Route::middleware(['auth', 'active'])->group(function () {
     Route::post('/import', [ImportController::class, 'store'])->middleware('throttle:10,1');
     Route::prefix('admin')->middleware('admin')->group(function () {
         Route::get('/', [AdminController::class, 'index']);
+        Route::get('/reports', [QuestionFeedbackController::class, 'index']);
+        Route::get('/overview', [CohortController::class, 'index']);
+        Route::post('/learners/{user}/practice', [CohortController::class, 'assign'])->middleware('throttle:20,1');
+        Route::patch('/reports/{report}', [QuestionFeedbackController::class, 'resolve']);
         Route::post('/users', [AdminController::class, 'createUser']);
         Route::patch('/users/{user}', [AdminController::class, 'updateUser']);
         Route::get('/questions', [AdminController::class, 'questions']);

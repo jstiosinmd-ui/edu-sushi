@@ -58,6 +58,7 @@ class Catalog
             foreach ($bank['items'] as $i => $content) {
                 $content['status'] = 'Released';
                 $q = $existing->get($content['id']) ?? new Question(['id' => $content['id']]);
+                $previousVersion = $q->current_version_id;
                 $hash = hash('sha256', json_encode($content, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
                 if ($q->exists && $q->currentVersion?->content_hash === $hash) {
                     $result['unchanged']++;
@@ -68,6 +69,9 @@ class Catalog
                 $q->fill(['subject' => $content['subject'], 'topic' => $content['topic'], 'difficulty' => $content['tier'], 'stem_hash' => self::stemHash($content['stem']), 'position' => $q->exists ? $q->position : ++$position])->save();
                 $v = QuestionVersion::create(['question_id' => $q->id, 'version' => (QuestionVersion::where('question_id', $q->id)->max('version') ?? 0) + 1, 'content' => $content, 'content_hash' => $hash, 'created_by' => $actor]);
                 $q->update(['current_version_id' => $v->id]);
+                if ($previousVersion) {
+                    app(QuestionNotices::class)->correction($q->fresh());
+                }
             }
 
             return $result;

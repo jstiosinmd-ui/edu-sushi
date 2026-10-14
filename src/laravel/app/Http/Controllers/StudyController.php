@@ -15,6 +15,8 @@ use App\Services\CatchReminders;
 use App\Services\Habits;
 use App\Services\Leaderboard;
 use App\Services\Study;
+use App\Services\StudyGuide;
+use App\Services\SubjectMap;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
@@ -48,6 +50,7 @@ class StudyController extends Controller
             'low' => $latest->items->whereIn('confidence', [1, 2])->count(), 'unrated' => $latest->items->whereNull('confidence')->count()] : null;
 
         return Inertia::render('Home', ['catalog' => self::catalog(), 'stats' => $analytics->for($r->user()->id),
+            'today' => app(StudyGuide::class)->plan($u, $u->fresh_subjects ?: Catalog::SUBJECTS, 15),
             'daily' => $daily, 'deck' => $deck, 'leaders' => app(Leaderboard::class)->for($u),
             'assignments' => Assignment::where('user_id', $r->user()->id)->with('exam:id,title,code')->latest()->get()]);
     }
@@ -86,7 +89,7 @@ class StudyController extends Controller
     public function answer(Request $r, Attempt $attempt, Study $study)
     {
         $this->own($r, $attempt);
-        $d = $r->validate(['item_id' => 'required|integer', 'answer' => 'required|in:A,B,C,D', 'revision' => 'required|integer|min:0', 'check' => 'boolean']);
+        $d = $r->validate(['item_id' => 'required|integer', 'answer' => 'required|in:A,B,C,D', 'revision' => 'required|integer|min:0', 'check' => 'boolean', 'request_token' => 'nullable|uuid']);
         $a = $study->answer($attempt, $d['item_id'], $d);
 
         return response()->json(['attempt' => $study->present($a), 'achievement' => Achievements::for($r->user()->id), 'community' => CommunityController::summary($r->user())]);
@@ -157,6 +160,7 @@ class StudyController extends Controller
     {
         $filters = $r->validate(['period' => 'nullable|in:all,1,7,30,custom', 'subject' => 'nullable|string|max:100', 'topic' => 'nullable|string|max:255', 'difficulty' => 'nullable|in:Easy,Average,Difficult', 'mode' => 'nullable|in:tutor,exam,fresh,assigned', 'from' => 'nullable|date_format:Y-m-d', 'to' => 'nullable|date_format:Y-m-d|after_or_equal:from']);
 
-        return Inertia::render('Progress', ['stats' => $analytics->for($r->user()->id, $filters), 'filters' => $filters, 'catalog' => self::catalog()]);
+        return Inertia::render('Progress', ['stats' => $analytics->for($r->user()->id, $filters), 'filters' => $filters, 'catalog' => self::catalog(),
+            'subjectMap' => app(SubjectMap::class)->for($r->user()->id)]);
     }
 }

@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Services\Achievements;
 use App\Services\Catalog;
 use App\Services\Learning;
+use App\Services\StudyGuide;
 use App\Services\WeightedDeck;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -85,8 +86,16 @@ class FlashcardController extends Controller
             $counts[$i->confidence ?? 0]++;
         }
         $item = $items->firstWhere('question_id', $deck->active_question_id);
+        $reviews = DB::table('flashcard_reviews')->whereIn('flashcard_deck_item_id', $items->pluck('id'))->orderBy('id')->get();
+        $latest = $reviews->keyBy('question_id')->whereNotNull('correct');
+        $calibration = ['correct_confident' => 0, 'correct_unsure' => 0, 'incorrect_unsure' => 0, 'incorrect_confident' => 0];
+        foreach ($latest as $review) {
+            $calibration[($review->correct ? 'correct' : 'incorrect').($review->confidence >= 4 ? '_confident' : '_unsure')]++;
+        }
+        $session = $reviews->slice($deck->session_start_reviews)->whereNotNull('correct');
 
         return ['id' => $deck->id, 'title' => $deck->title, 'total' => $items->count(), 'reviews' => $deck->reviews, 'counts' => $counts,
+            'calibration' => $calibration, 'accuracy' => ['correct' => $session->where('correct', true)->count(), 'total' => $session->count()],
             'session_number' => $deck->session_number, 'session_reviews' => $deck->reviews - $deck->session_start_reviews,
             'finished' => (bool) $deck->session_finished_at, 'goal_target' => (int) ceil($items->count() * .8),
             'goal_prompt' => ! $deck->session_finished_at && ! $deck->goal_prompt_dismissed && $items->count() > 0 && $counts[5] >= ceil($items->count() * .8),
@@ -98,7 +107,7 @@ class FlashcardController extends Controller
         return DB::transaction(function () use ($deck) {
             $deck = FlashcardDeck::lockForUpdate()->findOrFail($deck->id);
             if (! $deck->active_question_id && ! $deck->session_finished_at) {
-                $id = app(WeightedDeck::class)->choose($deck->items()->get(['question_id', 'confidence'])->toArray());
+                $id = app(WeightedDeck::class)->choose($deck->items()->get(['question_id', 'confidence'])->toArray(), recent: $deck->recent_question_ids ?? []);
                 $deck->items()->where('question_id', $id)->update(['answer' => null, 'correct' => null, 'review_token' => (string) Str::uuid()]);
                 $deck->update(['active_question_id' => $id]);
             }
@@ -126,6 +135,7 @@ class FlashcardController extends Controller
             abort_unless($deck->active_question_id === $d['question_id'], 409, 'This deck moved to another card. Reload to continue.');
             $item = $deck->items()->where('question_id', $d['question_id'])->firstOrFail();
             abort_unless($item->review_token === $d['token'], 409, 'This is an older presentation of this card. Reload the deck.');
+            abort_if($item->answer !== null && $item->answer !== $d['answer'], 409, 'An answer is already saved for this card. Reload to see it.');
             if ($item->answer === null) {
                 $item->update(['answer' => $d['answer'], 'correct' => $d['answer'] === $item->snapshot['key']]);
                 app(Learning::class)->answer($deck->user_id, 'memory:'.$item->review_token, $item->snapshot, 'memory', $item->correct);
@@ -156,7 +166,8 @@ class FlashcardController extends Controller
             $item->update(['confidence' => $d['confidence'], 'reviews' => $item->reviews + 1]);
             $global = Flashcard::firstOrCreate(['user_id' => $r->user()->id, 'question_id' => $item->question_id]);
             $global->update(['confidence' => $d['confidence'], 'reviews' => $global->reviews + 1]);
-            $deck->update(['active_question_id' => null, 'reviews' => $deck->reviews + 1]);
+            $deck->update(['active_question_id' => null, 'reviews' => $deck->reviews + 1,
+                'recent_question_ids' => array_slice([...($deck->recent_question_ids ?? []), $item->question_id], -3)]);
             $r->user()->update(['last_active_at' => now()]);
 
             return $deck;
@@ -186,5 +197,34 @@ class FlashcardController extends Controller
         }, 3);
 
         return response()->json(['deck' => $this->present($this->draw($deck)), 'community' => CommunityController::summary($r->user())]);
+    }
+
+    public function quick(Request $r)
+    {
+        $d = $r->validate(['pool' => 'required|in:missed,low,bookmarks', 'subjects' => 'required|array|min:1|max:'.count(Catalog::SUBJECTS),
+            'subjects.*' => 'required|distinct|in:'.implode(',', Catalog::SUBJECTS)]);
+        $latest = app(StudyGuide::class)->events($r->user()->id)->keyBy('question_hash');
+        $ratings = DB::table('flashcards')->where('user_id', $r->user()->id)->pluck('confidence', 'question_id');
+        $saved = DB::table('progress')->where('user_id', $r->user()->id)->where('bookmarked', true)->pluck('question_id')->all();
+        $items = collect(app(Catalog::class)->items())->whereIn('subject', $d['subjects'])->unique(fn ($q) => Catalog::stemHash($q['stem']))
+            ->filter(fn ($q) => match ($d['pool']) {
+                'missed' => ($event = $latest->get(Catalog::stemHash($q['stem']))) && ! $event->correct,
+                'low' => isset($ratings[$q['id']]) && $ratings[$q['id']] <= 2,
+                'bookmarks' => in_array($q['id'], $saved, true),
+            })->shuffle()->take(20)->values();
+        if ($items->isEmpty()) {
+            throw ValidationException::withMessages(['pool' => 'No matching cards yet. Try another preset or select more subjects.']);
+        }
+        $deck = DB::transaction(function () use ($r, $d, $items) {
+            $title = ['missed' => 'Second Serving', 'low' => 'A Little More Practice', 'bookmarks' => 'Saved Favorites'][$d['pool']];
+            $deck = FlashcardDeck::create(['user_id' => $r->user()->id, 'title' => $title.' · '.$items->count().' cards', 'settings' => $d]);
+            foreach ($items as $q) {
+                $deck->items()->create(['question_id' => $q['id'], 'snapshot' => $q]);
+            }
+
+            return $deck;
+        });
+
+        return redirect('/flashcards/decks/'.$deck->id);
     }
 }

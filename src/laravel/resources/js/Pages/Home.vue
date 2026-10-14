@@ -3,7 +3,8 @@ import {Head,Link,router,usePage} from '@inertiajs/vue3';
 import {art,modes,date} from '../art';
 import Avatar from '../Components/Avatar.vue';
 import WeekStamps from '../Components/WeekStamps.vue';
-defineProps({catalog:Object,stats:Object,assignments:Array,daily:Object,deck:Object,leaders:Object});
+import TodayBento from '../Components/TodayBento.vue';
+defineProps({catalog:Object,stats:Object,assignments:Array,daily:Object,deck:Object,leaders:Object,today:Object});
 const page=usePage();
 const menu=[['Maki Mentor','Check answers and read feedback.','maki','/practice?mode=tutor'],['Wasabi Rush','Practice under a timer.','wasabi','/practice?mode=exam'],['Bento Builder','Create exam papers and keys.','chef','/exams'],['Roll Call','Find explanations and bookmarks.','nori','/library']];
 </script>
@@ -13,6 +14,7 @@ const menu=[['Maki Mentor','Check answers and read feedback.','maki','/practice?
 <section class="daily-card memory-card"><img :src="art.memo" alt="Memo Maki" class="daily-character"><p class="eyebrow">Keep it rolling</p><h2>Memory Maki</h2><template v-if="deck"><p>{{deck.title}}</p><strong class="coverage-number">{{deck.confident}} / {{deck.total}} confident</strong><div class="meter"><i :style="{width:deck.total?deck.confident/deck.total*100+'%':'0%'}"></i></div><p>{{deck.low}} questions rated 1–2 · {{deck.unrated}} unrated</p><Link :href="'/flashcards/decks/'+deck.id" class="button primary">Resume deck</Link> <Link href="/flashcards">Choose a deck</Link></template><template v-else><p>Choose your questions, answer, then rate how well you know them. The less familiar cards appear more often.</p><Link href="/flashcards" class="button primary">Build your first deck</Link></template><p class="muted">An optional stopping point appears at 80% rated 5.</p></section>
 </div>
 <WeekStamps :habits="page.props.community.habits"/>
+<TodayBento :subjects="catalog.subjects" :initial="today"/>
 <section v-if="page.props.community.recent_badges.length" class="notice" aria-live="polite"><strong>New in your Passport</strong><p>{{page.props.community.recent_badges.map(b=>b.name).join(' · ')}}</p><Link href="/profile">Explore your unlocked portraits →</Link></section>
 <section v-if="assignments.length" class="panel"><h2>Your assigned bentos</h2><div v-for="a in assignments" :key="a.id" class="row"><div><strong>{{a.exam.title}}</strong><p>{{date(a.opens_at)}} to {{date(a.closes_at)}} · {{a.minutes}} minutes</p></div><button @click="router.post('/assignments/'+a.id+'/start')">Start exam</button></div></section>
 <section class="panel"><div class="row"><div><p class="eyebrow">This week at the counter</p><h2>Sushi Counter Leaderboard</h2></div><Link class="button" href="/leaderboard">View everyone</Link></div><p v-if="!leaders.rows.length">The first study round starts the story.</p><div v-for="r in leaders.rows.slice(0,3)" :key="r.profile.id" class="leader-row"><strong>#{{r.rank}}</strong><Avatar :avatar="r.profile.avatar" size="small"/><Link :href="'/profiles/'+r.profile.id">{{r.profile.display_name}}</Link><strong>{{r.points}} points</strong></div><p v-if="leaders.my_rank">Your rank this week: #{{leaders.my_rank}}</p></section>

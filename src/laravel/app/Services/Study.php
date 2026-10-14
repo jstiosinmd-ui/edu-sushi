@@ -142,6 +142,15 @@ class Study
         return DB::transaction(function () use ($attempt, $itemId, $data) {
             User::whereKey($attempt->user_id)->lockForUpdate()->firstOrFail();
             $a = Attempt::lockForUpdate()->findOrFail($attempt->id);
+            $fingerprint = hash('sha256', json_encode([$a->id, $itemId, $data['answer'], (bool) ($data['check'] ?? false), (int) $data['revision']]));
+            if (! empty($data['request_token'])) {
+                $receipt = DB::table('study_answer_receipts')->where('user_id', $a->user_id)->where('request_token', $data['request_token'])->first();
+                if ($receipt) {
+                    abort_unless(hash_equals($receipt->fingerprint, $fingerprint), 409, 'This save token belongs to another answer. Reload before continuing.');
+
+                    return $a;
+                }
+            }
             abort_if($a->status !== 'active' || ($a->deadline && now()->gte($a->deadline)), 409, 'This attempt has ended. Reload to view results.');
             $item = $a->items()->findOrFail($itemId);
             if ($item->graded_at && $item->answer === $data['answer']) {
@@ -167,6 +176,9 @@ class Study
                 }
             }
             $a->update(['revision' => $a->revision + 1]);
+            if (! empty($data['request_token'])) {
+                DB::table('study_answer_receipts')->insert(['user_id' => $a->user_id, 'request_token' => $data['request_token'], 'fingerprint' => $fingerprint, 'created_at' => now()]);
+            }
             User::whereKey($a->user_id)->update(['last_active_at' => now()]);
 
             return $a->refresh();

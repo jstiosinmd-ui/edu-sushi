@@ -73,6 +73,8 @@ See [community rules and release setup](docs/COMMUNITY.md) for thresholds, scori
 
 ## Head Chef workspace
 
+The [learning upgrade guide](docs/LEARNING_GUIDE.md) describes Today's Bento, the ten-subject progress map, Second Serving private notes, question reports and Study Updates, cohort analytics, focused practice assignments, and mobile answer recovery. These features are implemented locally; pushing and Railway deployment remain subject to the owner's go signal.
+
 The administrator can manage learners, review per-student analytics, export filtered response summaries, version or retire questions, preview and publish question-bank JSON, build exam assignments, set opening/closing times and attempt limits, and control explanation release. Audit entries record management actions without passwords.
 
 Question imports use the shape of database/data/bank.json. CSV imports should first be converted to that shape while preserving the source fields. No external clinical AI service is called by this application.
