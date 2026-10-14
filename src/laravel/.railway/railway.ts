@@ -8,7 +8,7 @@ export default defineRailway(() => {
     replicas: { 'asia-southeast1-eqsg3a': 1 },
     healthcheck: '/login',
     healthcheckTimeout: 180,
-    preDeploy: 'php artisan migrate --force && php artisan db:seed --force',
+    preDeploy: 'sh deploy/release.sh',
     volumeMounts: { '/var/www/html/storage': storage },
     env: {
       APP_NAME: 'SUSHI',

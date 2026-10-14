@@ -23,8 +23,7 @@ app_args=(--network sushi-smoke --env APP_KEY
   -e LOG_CHANNEL=stderr -e LOG_LEVEL=warning -e PORT=8080
   -v sushi-smoke-storage:/var/www/html/storage)
 
-docker run --rm "${app_args[@]}" edu-sushi:ci php artisan migrate --force
-docker run --rm "${app_args[@]}" edu-sushi:ci php artisan db:seed --force
+docker run --rm "${app_args[@]}" edu-sushi:ci sh deploy/release.sh
 docker run -d --name sushi-smoke-app -p 127.0.0.1:18080:8080 "${app_args[@]}" edu-sushi:ci
 trap 'docker logs sushi-smoke-app' ERR
 
