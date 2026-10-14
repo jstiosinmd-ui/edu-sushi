@@ -54,6 +54,23 @@ class Draw
         if ($count > count($eligible)) {
             throw ValidationException::withMessages(['count' => 'Only '.count($eligible).' distinct questions match. Broaden your filters or reduce the count. Fresh Catch requires exactly 10.']);
         }
+        if (! empty($s['allocation'])) {
+            $allocation = $s['allocation'];
+            if (array_diff(array_keys($allocation), $s['subjects']) || array_sum($allocation) !== $count) {
+                throw ValidationException::withMessages(['allocation' => 'Subject counts must add up to the total and use selected subjects.']);
+            }
+            $chosen = [];
+            foreach ($s['subjects'] as $subject) {
+                $n = (int) ($allocation[$subject] ?? 0);
+                $bucket = array_values(array_filter($eligible, fn ($q) => $q['subject'] === $subject));
+                if ($n > count($bucket)) {
+                    throw ValidationException::withMessages(['allocation' => 'Only '.count($bucket).' questions match in '.$subject.'.']);
+                }
+                $chosen = array_merge($chosen, array_slice($bucket, 0, $n));
+            }
+
+            return $this->shuffle($chosen, $rng);
+        }
         if (empty($s['balance'])) {
             return array_slice($eligible, 0, $count);
         }

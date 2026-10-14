@@ -25,13 +25,13 @@ class StudyController extends Controller
     {
         return $r->validate(['mode' => 'required|in:tutor,exam,fresh', 'count' => 'required|integer|min:1|max:10000',
             'seed' => 'required|integer|min:0|max:4294967295', 'subjects' => 'required|array|min:1|max:4',
-            'subjects.*' => 'required|distinct|in:'.implode(',', Catalog::SUBJECTS), 'topics' => 'array|max:500', 'topics.*' => 'string|max:600|distinct',
-            'difficulty' => 'required|in:All,Easy,Average,Difficult', 'balance' => 'boolean', 'pool' => 'in:all,new,missed,bookmarks', 'minutes' => 'required|integer|min:1|max:360']);
+            'subjects.*' => 'required|distinct|in:'.implode(',', Catalog::SUBJECTS), 'topics' => 'required_if:topic_scope,custom|array|max:500', 'topics.*' => 'string|max:600|distinct',
+            'difficulty' => 'required|in:All,Easy,Average,Difficult', 'balance' => 'boolean', 'allocation' => 'array|max:4', 'allocation.*' => 'integer|min:0|max:10000', 'topic_scope' => 'in:all,custom', 'pool' => 'in:all,new,missed,bookmarks', 'minutes' => 'required|integer|min:1|max:360']);
     }
 
     public static function catalog(): array
     {
-        return ['subjects' => Catalog::SUBJECTS, 'topics' => Question::where('active', true)->select('subject', 'topic')->distinct()->orderBy('subject')->orderBy('topic')->get(), 'total' => Question::where('active', true)->count()];
+        return ['subjects' => Catalog::SUBJECTS, 'topics' => Question::where('active', true)->select('subject', 'topic')->selectRaw('COUNT(*) as count')->groupBy('subject', 'topic')->orderBy('subject')->orderBy('topic')->get(), 'total' => Question::where('active', true)->count()];
     }
 
     public function home(Request $r, Analytics $analytics)
@@ -141,19 +141,21 @@ class StudyController extends Controller
             $ids = $q->get()->filter(fn ($q) => str_contains(mb_strtolower($q->id.' '.$q->topic.' '.$q->currentVersion->content['stem']), $term))->pluck('id');
             $q->whereIn('id', $ids);
         }
-        if ($r->boolean('bookmarks')) {
-            $q->whereIn('id', Progress::where('user_id', $r->user()->id)->where('bookmarked', true)->pluck('question_id'));
+        $r->validate(['view' => 'nullable|in:all,new,missed,bookmarks', 'subject' => 'nullable|in:'.implode(',', Catalog::SUBJECTS), 'search' => 'nullable|string|max:200']);
+        $view = $r->input('view', $r->boolean('bookmarks') ? 'bookmarks' : 'all');
+        if ($view !== 'all') {
+            $q->whereIn('id', array_column(app(Study::class)->eligible($r->user()->id, ['mode' => 'tutor', 'pool' => $view]), 'id'));
         }
         $page = $q->orderBy('position')->paginate(12)->withQueryString();
         $page->through(fn ($q) => Catalog::publicQuestion([...$q->currentVersion->content, 'version' => $q->currentVersion->version], true));
 
-        return Inertia::render('Library', ['questions' => $page, 'catalog' => self::catalog(), 'filters' => $r->only('subject', 'search', 'bookmarks'),
+        return Inertia::render('Library', ['questions' => $page, 'catalog' => self::catalog(), 'filters' => $r->only('subject', 'search', 'bookmarks', 'view'),
             'bookmarks' => Progress::where('user_id', $r->user()->id)->where('bookmarked', true)->pluck('question_id')]);
     }
 
     public function progress(Request $r, Analytics $analytics)
     {
-        $filters = $r->validate(['subject' => 'nullable|string|max:100', 'topic' => 'nullable|string|max:255', 'difficulty' => 'nullable|in:Easy,Average,Difficult', 'mode' => 'nullable|in:tutor,exam,fresh,assigned', 'from' => 'nullable|date_format:Y-m-d', 'to' => 'nullable|date_format:Y-m-d|after_or_equal:from']);
+        $filters = $r->validate(['period' => 'nullable|in:all,1,7,30,custom', 'subject' => 'nullable|string|max:100', 'topic' => 'nullable|string|max:255', 'difficulty' => 'nullable|in:Easy,Average,Difficult', 'mode' => 'nullable|in:tutor,exam,fresh,assigned', 'from' => 'nullable|date_format:Y-m-d', 'to' => 'nullable|date_format:Y-m-d|after_or_equal:from']);
 
         return Inertia::render('Progress', ['stats' => $analytics->for($r->user()->id, $filters), 'filters' => $filters, 'catalog' => self::catalog()]);
     }

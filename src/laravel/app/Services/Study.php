@@ -18,6 +18,9 @@ class Study
     public function eligible(int $userId, array $settings): array
     {
         $items = $this->catalog->items();
+        if (! empty($settings['selected_ids'])) {
+            return app(Selection::class)->exact($settings['selected_ids']);
+        }
         $progress = Progress::where('user_id', $userId)->get()->keyBy('question_id');
         if (($settings['mode'] ?? '') === 'fresh') {
             // The latest graded result across a duplicate-stem group determines retry eligibility.
@@ -32,11 +35,13 @@ class Study
             return array_values(array_filter($items, fn ($q) => ! ($results[Catalog::stemHash($q['stem'])]['correct'] ?? false)));
         }
 
-        return array_values(array_filter($items, function ($q) use ($progress, $settings) {
+        $seen = DB::table('study_events')->where('user_id', $userId)->pluck('question_hash')->all();
+
+        return array_values(array_filter($items, function ($q) use ($progress, $settings, $seen) {
             $p = $progress[$q['id']] ?? null;
 
             return match ($settings['pool'] ?? 'all') {
-                'new' => ! $p?->completed_at, 'missed' => $p?->completed_at && ! $p->latest_correct,
+                'new' => ! $p?->completed_at && ! in_array(Catalog::stemHash($q['stem']), $seen, true), 'missed' => $p?->completed_at && ! $p->latest_correct,
                 'bookmarks' => (bool) $p?->bookmarked, default => true
             };
         }));

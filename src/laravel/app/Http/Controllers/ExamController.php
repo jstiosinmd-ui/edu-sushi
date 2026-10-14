@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Services\Catalog;
 use App\Services\Draw;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Inertia\Inertia;
@@ -25,7 +26,7 @@ class ExamController extends Controller
         $exams->through(fn ($exam) => ['id' => $exam->id, 'title' => $exam->title, 'code' => $exam->code, 'settings' => $exam->settings, 'items_count' => count($exam->items), 'exports' => $exam->exports]);
 
         return Inertia::render('Exams', ['catalog' => StudyController::catalog(), 'exams' => $exams,
-            'students' => $r->user()->role === 'admin' ? User::where('role', 'student')->where('disabled', false)->get(['id', 'username']) : []]);
+            'presets' => DB::table('study_presets')->where('user_id', $r->user()->id)->get()->map(fn ($p) => ['id' => $p->id, 'name' => $p->name, 'settings' => json_decode($p->settings, true)]), 'students' => $r->user()->role === 'admin' ? User::where('role', 'student')->where('disabled', false)->get(['id', 'username']) : []]);
     }
 
     public function store(Request $r, Catalog $catalog, Draw $draw)
@@ -50,7 +51,7 @@ class ExamController extends Controller
         $export = PdfExport::create(['exam_id' => $exam->id, 'user_id' => $r->user()->id, 'explanations' => $r->boolean('explanations')]);
         BuildExamPdfs::dispatch($export->id);
 
-        return back()->with('message', 'PDFs queued. Refresh the export status shortly.');
+        return back()->with('message', 'PDFs queued. The download links will appear automatically.');
     }
 
     public function download(Request $r, PdfExport $export, string $kind)

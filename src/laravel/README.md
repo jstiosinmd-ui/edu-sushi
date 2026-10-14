@@ -59,7 +59,7 @@ The sticky achievement bar advances every 200 distinct completed questions, grou
 
 Fresh Catch and Memory Maki lead the home screen. Finishing all ten Fresh Catch questions earns a daily stamp, with a streak calendar and Wasabi Saves. Memory Maki offers an optional session ending once at least 80% of the selected deck is rated 5. Ratings and the deck remain saved after finishing.
 
-The Sushi Passport contains 45 permanent achievements. Profiles support cropped photos, three pinned badges, and 32 character/frame choices, including achievement unlocks. Signed-in learners share weekly, all-time coverage, and streak leaderboards. The administrator sees completion, engagement, familiarity, and reminder totals.
+The Sushi Passport contains 45 permanent achievements. Profiles use characters only: Rice Rookie plus 45 distinct achievement unlocks, three pinned badges, and Bronze, Silver, Gold, or Sakura rank frames. Signed-in learners share weekly, all-time coverage, and streak leaderboards. The administrator sees completion, engagement, familiarity, and reminder totals.
 
 See [community rules and release setup](docs/COMMUNITY.md) for thresholds, scoring, reminders, and the deployment hold.
 

@@ -187,7 +187,7 @@ class Passport
         return array_values(array_map(function ($b) use ($values, $earned, $closet) {
             $b['progress'] = min($b['target'], $values[$b['id']]);
             $b['earned_at'] = $earned[$b['id']] ?? null;
-            $b['rewards'] = array_values(array_map(fn ($a) => ['name' => $a['name'], 'image' => $a['image'], 'frame' => $a['frame']], array_filter($closet, fn ($a) => $a['badge'] === $b['id'])));
+            $b['rewards'] = array_values(array_map(fn ($a) => $a, array_filter($closet, fn ($a) => $a['badge'] === $b['id'])));
             if (in_array($b['group'], Catalog::SUBJECTS, true)) {
                 $b['available'] = Question::where('subject', $b['group'])->where('active', true)->distinct()->count('stem_hash');
             }

@@ -8,15 +8,13 @@ use App\Models\Question;
 
 class Achievements
 {
-    public const NAMES = ['Rice Rookie', 'Maki Explorer', 'Nigiri Navigator', 'Temaki Trailblazer', 'Wasabi Warrior', 'Omakase Legend', 'Sakura Sensei', 'Sashimi Scholar', 'Bento Virtuoso', 'Nori Grandmaster', 'Sushi Shogun', 'Golden Chopsticks'];
-
     public static function at(int $count): array
     {
         $level = intdiv($count, 200);
-        $name = fn ($n) => self::NAMES[$n] ?? ('Omakase Master '.($n - count(self::NAMES) + 1));
+        $name = fn ($n) => ['Bronze', 'Silver', 'Gold'][$n] ?? ('Sakura '.($n - 2));
 
-        return ['count' => $count, 'level' => $level, 'name' => $name($level), 'next' => $name($level + 1), 'threshold' => ($level + 1) * 200, 'remaining' => 200 - ($count % 200), 'percent' => ($count % 200) / 2,
-            'tiers' => array_map(fn ($n) => ['name' => $name($n), 'at' => $n * 200], range(0, max(12, $level + 2)))];
+        return ['count' => $count, 'level' => $level, 'frame' => ['bronze', 'silver', 'gold'][$level] ?? 'sakura', 'name' => $name($level), 'next' => $name($level + 1), 'threshold' => ($level + 1) * 200, 'remaining' => 200 - ($count % 200), 'percent' => ($count % 200) / 2,
+            'tiers' => array_map(fn ($n) => ['name' => $name($n), 'at' => $n * 200, 'frame' => ['bronze', 'silver', 'gold'][$n] ?? 'sakura'], range(0, max(12, $level + 2)))];
     }
 
     public static function for(int $userId): array

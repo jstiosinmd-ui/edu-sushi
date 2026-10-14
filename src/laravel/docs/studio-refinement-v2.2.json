@@ -1,0 +1,95 @@
+{
+  "version": "2.2",
+  "date": "2026-10-14",
+  "status": "Local review build",
+  "deployment": "GitHub push and Railway deployment are held until the user gives a go signal.",
+  "passes": [
+    {
+      "pass": 1,
+      "name": "Achievement characters and rank frames",
+      "changes": [
+        "45 unique achievement characters plus Rice Rookie starter, with 35 newly generated illustrations.",
+        "Characters are the only profile-picture choices; locked rewards are enforced on the server.",
+        "Bronze at 0, Silver at 200, Gold at 400, Sakura at 600; Sakura stage increases every 200 thereafter.",
+        "Existing earned badges and question history remain intact. Historical uploaded images remain private and are no longer served.",
+        "46 optimized transparent WebP portraits total 696,908 bytes; source PNG illustrations retained."
+      ]
+    },
+    {
+      "pass": 2,
+      "name": "Navigation and collection",
+      "changes": [
+        "Compact sticky desktop header with rank, streak, earned count, and account menu.",
+        "Fresh Catch and Memory Maki remain directly available; secondary tools are grouped.",
+        "Avatar dropdown links to profile, character closet, settings, and password change.",
+        "Journey uses a single styled scroll area, responsive achievement cards, character art, and equip actions."
+      ]
+    },
+    {
+      "pass": 3,
+      "name": "Study setup and progress",
+      "changes": [
+        "Shared coverage, settings, and review steps for Maki Mentor, Wasabi Rush, and Bento Builder.",
+        "Subject cards and searchable grouped topic buttons replace the topic checkbox wall.",
+        "Server-checked availability, request limits, topic scope, difficulty, and user-specific pools.",
+        "My Progress exposes subject and time period first; advanced filters are collapsible with removable chips.",
+        "Lifetime measures and filtered accuracy are labeled separately."
+      ]
+    },
+    {
+      "pass": 4,
+      "name": "Roll Call and Bento Builder",
+      "changes": [
+        "Roll Call supports All, Unseen, Missed, and Saved views, explicit answer reveal, and a per-user tab-local question tray.",
+        "The tray creates an exact-question Maki Mentor round or Memory Maki deck.",
+        "Bento supports balanced or custom subject counts, private saved recipes, and previews with same-subject replacement.",
+        "Saved exams preserve server-owned frozen questions and keys; duplication creates a separate review preview.",
+        "PDF export status refreshes automatically and exposes distinct paper, answer-sheet, and answer-key links."
+      ]
+    }
+  ],
+  "verification": {
+    "phpunit": {
+      "tests": 48,
+      "assertions": 1544,
+      "result": "passed",
+      "database": "sushi_test",
+      "engine": "PostgreSQL",
+      "php": "8.5.10"
+    },
+    "vite": {
+      "result": "passed",
+      "modules": 793
+    },
+    "pint": {
+      "result": "passed after formatting"
+    },
+    "source_checks": [
+      "git diff --check passed",
+      "node --check tests/browser/smoke.cjs passed"
+    ],
+    "browser_smoke_script": "Updated and syntax-checked; not executed in this pass. Interactive verification used the Codex browser tooling.",
+    "interactive_checks": [
+      "Desktop layout at 1440x900; account dropdown and Escape dismissal.",
+      "Journey crew with characters, locks, equip controls, and a single mobile scroll region.",
+      "Maki Mentor topic search and required-selection validation; selected ten Internal Medicine Neurology questions.",
+      "Bento preview with eight questions and two per subject, same-subject replacement, save, and automatic availability of all three PDF links.",
+      "Roll Call selected two exact questions and created the matching two-card Memory Maki deck.",
+      "My Progress Pediatrics and seven-day filters; primary and advanced controls.",
+      "Mobile layouts at 390px and 320px with no horizontal overflow on tested screens; step changes return focus to the new heading."
+    ],
+    "preview_database": "sushi_community_preview",
+    "preview_url": "http://127.0.0.1:8139/",
+    "question_bank": "All 1,047 source items preserved; draw selection deduplicates to 1,046 stems.",
+    "limitations": [
+      "Railway and container verification were not performed during this local review pass.",
+      "The two new migrations must run with the next authorized deployment.",
+      "The all-character HTML gallery is self-contained; it was source-checked, not rendered in the browser tool because that tool blocks file URLs."
+    ]
+  },
+  "migrations": [
+    "2026_10_14_180000_character_profiles.php",
+    "2026_10_14_190000_study_workbench.php"
+  ],
+  "credits": "Jon Bryan S. Tiosin, MD · (c) jstiosin 2026"
+}

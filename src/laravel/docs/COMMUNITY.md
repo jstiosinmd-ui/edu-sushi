@@ -10,9 +10,9 @@ Fresh Catch 10 and Memory Maki occupy the first two cards on the Counter. Other 
 
 Memory Maki has six distinct colors for unrated and ratings 1 through 5, with numbers and text so meaning does not depend on color. The stopping threshold is ceil(0.8 × the saved deck size). Reaching that number currently rated 5 opens a choice to finish or keep rolling. Keeping rolling dismisses the prompt for that session, including refresh. Finishing saves the deck, presents a summary, and allows resuming later. Resuming begins a new session; ratings remain. Familiarity is self-reported, independent of answer accuracy.
 
-Profiles support a display name, short bio, a JPEG/PNG/WebP upload up to 4 MB, a movable square crop, and up to three earned badges. Photos are re-encoded to 512-pixel JPEG in private storage and served only to authenticated users. SVG is rejected. Removing a photo detaches it from the profile. Old uploaded files remain private.
+Profiles support a display name, short bio, an earned sushi character, and up to three earned badges. Uploading, cropping, and serving personal photos have been removed. Existing photo profiles return to Rice Rookie; private historical files are retained.
 
-The Character Closet has 32 choices: 11 base characters, Sakura and Golden Omakase frames for the 10 achievement characters, and Rice Rookie's Wasabi frame. Rice Rookie is the starter. Locked choices cannot be selected through the UI or a forged request. Rice Rookie and Nori Librarian have new generated artwork; existing mode and subject characters retain their illustrations.
+The Character Closet has 46 choices: Rice Rookie plus one distinct character for each of 45 achievements. Frames follow overall unique completion: Bronze 0-199, Silver 200-399, Gold 400-599, Sakura 1 at 600, and another Sakura level every 200 items. All 35 new characters have generated originals and small transparent WebP delivery assets. Locked choices are silhouettes and cannot be equipped through forged requests.
 
 ## Daily catches and streaks
 
@@ -77,7 +77,7 @@ After deployment approval:
 2. Push the reviewed source and run the existing Railway release process. `deploy/release.sh` applies migrations, seeds idempotently, and reconciles recorded community history.
 3. Generate a VAPID key pair with the installed Minishlink library. Store the public/private keys in `SUSHI_VAPID_PUBLIC_KEY` and `SUSHI_VAPID_PRIVATE_KEY` through Railway Variables. Set `SUSHI_VAPID_SUBJECT` to the production HTTPS origin or an owner-provided contact. Never commit keys.
 4. Keep the supervised queue worker and minute scheduler running. The container now builds GD with JPEG and WebP support for profile uploads.
-5. Verify HTTPS login, photos after restart, an opted-in real-device push, completion cancellation, session resume, and PDF downloads.
+5. Verify HTTPS login, character avatars after restart, an opted-in real-device push, completion cancellation, session resume, and PDF downloads.
 
 Local verification uses isolated `sushi_test` and `sushi_community_preview` databases. The guarded preview fixture is `tests/browser/prepare-community.php`. It creates sample history solely for UI review and refuses another database.
 

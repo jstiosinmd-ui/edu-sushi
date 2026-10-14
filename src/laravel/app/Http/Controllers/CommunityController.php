@@ -21,7 +21,7 @@ class CommunityController extends Controller
         $badges = app(Passport::class)->for($u);
 
         return ['profile' => Closet::profile($u), 'habits' => app(Habits::class)->for($u), 'badge_count' => count(array_filter($badges, fn ($b) => $b['earned_at'])),
-            'badge_total' => count($badges), 'recent_badges' => array_slice(array_values(array_filter($badges, fn ($b) => $b['earned_at'] && strtotime($b['earned_at']) >= now()->subMinutes(2)->timestamp)), 0, 3)];
+            'badges' => $badges, 'badge_total' => count($badges), 'recent_badges' => array_slice(array_values(array_filter($badges, fn ($b) => $b['earned_at'] && strtotime($b['earned_at']) >= now()->subMinutes(2)->timestamp)), 0, 3)];
     }
 
     public function passport(Request $r)

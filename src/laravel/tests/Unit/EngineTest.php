@@ -11,10 +11,10 @@ class EngineTest extends TestCase
 {
     public function test_fixed_two_hundred_question_tiers_extend_indefinitely(): void
     {
-        $this->assertSame('Rice Rookie', Achievements::at(199)['name']);
-        $this->assertSame('Maki Explorer', Achievements::at(200)['name']);
+        $this->assertSame('Bronze', Achievements::at(199)['name']);
+        $this->assertSame('Silver', Achievements::at(200)['name']);
         $this->assertSame(400, Achievements::at(200)['threshold']);
-        $this->assertSame('Omakase Master 1', Achievements::at(2400)['name']);
+        $this->assertSame('Sakura 10', Achievements::at(2400)['name']);
         $this->assertSame(50200, Achievements::at(50000)['threshold']);
     }
 

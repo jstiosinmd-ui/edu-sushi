@@ -1,0 +1,370 @@
+[
+    {
+        "id": "rice",
+        "name": "Rice Rookie",
+        "badge": null,
+        "image": "/art/portraits/rice-v2.2.webp",
+        "reused": true,
+        "source_image": "/art/rice-rookie.png"
+    },
+    {
+        "id": "catch",
+        "name": "Captain Catch",
+        "badge": "fresh_first",
+        "image": "/art/portraits/catch-v2.2.webp",
+        "reused": true,
+        "source_image": "/art/20261013_EDU_SushiCharacterTemaki_v1.1.png"
+    },
+    {
+        "id": "mentor",
+        "name": "Maki Mentor",
+        "badge": "tutor_100",
+        "image": "/art/portraits/mentor-v2.2.webp",
+        "reused": true,
+        "source_image": "/art/20261013_EDU_SushiCharacterMaki_v1.1.png"
+    },
+    {
+        "id": "wasabi",
+        "name": "Wasabi Warrior",
+        "badge": "rush_cool",
+        "image": "/art/portraits/wasabi-v2.2.webp",
+        "reused": true,
+        "source_image": "/art/20261013_EDU_SushiCharacterWasabi_v1.1.png"
+    },
+    {
+        "id": "memory",
+        "name": "Memory Maki",
+        "badge": "memory_ready",
+        "image": "/art/portraits/memory-v2.2.webp",
+        "reused": true,
+        "source_image": "/art/20261013_EDU_SushiMemoMaki_v2.0.png"
+    },
+    {
+        "id": "bento",
+        "name": "Bento Chef",
+        "badge": "bento_chef",
+        "image": "/art/portraits/bento-v2.2.webp",
+        "reused": true,
+        "source_image": "/art/20261013_EDU_SushiCharacterChef_v1.1.png"
+    },
+    {
+        "id": "nori",
+        "name": "Nori Librarian",
+        "badge": "library_notes",
+        "image": "/art/portraits/nori-v2.2.webp",
+        "reused": true,
+        "source_image": "/art/nori-librarian.png"
+    },
+    {
+        "id": "im",
+        "name": "Miso Medic",
+        "badge": "subject_im_50",
+        "image": "/art/portraits/im-v2.2.webp",
+        "reused": true,
+        "source_image": "/art/20261013_EDU_SushiSubjectIM_v1.2.png"
+    },
+    {
+        "id": "pedia",
+        "name": "Pip the Pedia Roll",
+        "badge": "subject_pedia_50",
+        "image": "/art/portraits/pedia-v2.2.webp",
+        "reused": true,
+        "source_image": "/art/20261013_EDU_SushiSubjectPediatrics_v1.2.png"
+    },
+    {
+        "id": "surgery",
+        "name": "Suture Salmon",
+        "badge": "subject_surgery_50",
+        "image": "/art/portraits/surgery-v2.2.webp",
+        "reused": true,
+        "source_image": "/art/20261013_EDU_SushiSubjectSurgery_v1.2.png"
+    },
+    {
+        "id": "ob",
+        "name": "Nori Nurture",
+        "badge": "subject_ob_50",
+        "image": "/art/portraits/ob-v2.2.webp",
+        "reused": true,
+        "source_image": "/art/20261013_EDU_SushiSubjectOBGYN_v1.2.png"
+    },
+    {
+        "id": "toro",
+        "name": "Toro Titan",
+        "badge": "fresh_perfect",
+        "image": "/art/portraits/toro-v2.2.webp",
+        "description": "fatty tuna nigiri holding a tiny shining perfect-score star",
+        "source_image": "/art/achievements/toro-v2.2.png"
+    },
+    {
+        "id": "ebi",
+        "name": "Ebi Encore",
+        "badge": "fresh_second",
+        "image": "/art/portraits/ebi-v2.2.webp",
+        "description": "shrimp nigiri sailor with a life ring and coral bow",
+        "source_image": "/art/achievements/ebi-v2.2.png"
+    },
+    {
+        "id": "rainbow",
+        "name": "Rainbow Reel",
+        "badge": "fresh_week",
+        "image": "/art/portraits/rainbow-v2.2.webp",
+        "description": "rainbow sushi roll fisher with a tiny fishing rod",
+        "source_image": "/art/achievements/rainbow-v2.2.png"
+    },
+    {
+        "id": "unagi",
+        "name": "Unagi Admiral",
+        "badge": "fresh_50",
+        "image": "/art/portraits/unagi-v2.2.webp",
+        "description": "grilled eel nigiri captain with a burgundy captain hat",
+        "source_image": "/art/achievements/unagi-v2.2.png"
+    },
+    {
+        "id": "kappa",
+        "name": "Kappa Coach",
+        "badge": "tutor_first",
+        "image": "/art/portraits/kappa-v2.2.webp",
+        "description": "cucumber maki coach with round glasses and an open book",
+        "source_image": "/art/achievements/kappa-v2.2.png"
+    },
+    {
+        "id": "inari",
+        "name": "Inari Encore",
+        "badge": "tutor_comeback",
+        "image": "/art/portraits/inari-v2.2.webp",
+        "description": "golden tofu inari pocket chef holding a small patched heart",
+        "source_image": "/art/achievements/inari-v2.2.png"
+    },
+    {
+        "id": "futomaki",
+        "name": "Professor Futomaki",
+        "badge": "tutor_four",
+        "image": "/art/portraits/futomaki-v2.2.webp",
+        "description": "large colorful futomaki professor with four little learning cards",
+        "source_image": "/art/achievements/futomaki-v2.2.png"
+    },
+    {
+        "id": "spicy",
+        "name": "Spicy Tuna Sprinter",
+        "badge": "rush_first",
+        "image": "/art/portraits/spicy-v2.2.webp",
+        "description": "spicy tuna maki runner wearing a headband and sneakers",
+        "source_image": "/art/achievements/spicy-v2.2.png"
+    },
+    {
+        "id": "dragon",
+        "name": "Dragon Dash",
+        "badge": "rush_triple",
+        "image": "/art/portraits/dragon-v2.2.webp",
+        "description": "avocado dragon roll with tiny dragon horns and racing goggles",
+        "source_image": "/art/achievements/dragon-v2.2.png"
+    },
+    {
+        "id": "oshi",
+        "name": "Oshi Commander",
+        "badge": "rush_four",
+        "image": "/art/portraits/oshi-v2.2.webp",
+        "description": "rectangular pressed sushi captain holding a little stopwatch",
+        "source_image": "/art/achievements/oshi-v2.2.png"
+    },
+    {
+        "id": "hoso",
+        "name": "Hoso Helper",
+        "badge": "memory_first",
+        "image": "/art/portraits/hoso-v2.2.webp",
+        "description": "slender cucumber hosomaki assistant with a small reminder ribbon",
+        "source_image": "/art/achievements/hoso-v2.2.png"
+    },
+    {
+        "id": "gunkan",
+        "name": "Golden Gunkan",
+        "badge": "memory_golden",
+        "image": "/art/portraits/gunkan-v2.2.webp",
+        "description": "seaweed gunkan boat with golden sea urchin topping holding a star wand",
+        "source_image": "/art/achievements/gunkan-v2.2.png"
+    },
+    {
+        "id": "ikura",
+        "name": "Ikura Rescuer",
+        "badge": "memory_rescue",
+        "image": "/art/portraits/ikura-v2.2.webp",
+        "description": "salmon roe gunkan hero with a pink rescue cape",
+        "source_image": "/art/achievements/ikura-v2.2.png"
+    },
+    {
+        "id": "recall",
+        "name": "Rainbow Recall",
+        "badge": "memory_four",
+        "image": "/art/portraits/recall-v2.2.webp",
+        "description": "rainbow uramaki scholar holding four pastel memory tiles",
+        "source_image": "/art/achievements/recall-v2.2.png"
+    },
+    {
+        "id": "lunch",
+        "name": "Bento Buddy",
+        "badge": "bento_first",
+        "image": "/art/portraits/lunch-v2.2.webp",
+        "description": "cute tamago nigiri carrying a tiny closed lunchbox",
+        "source_image": "/art/achievements/lunch-v2.2.png"
+    },
+    {
+        "id": "chirashi",
+        "name": "Chirashi Chef",
+        "badge": "bento_four",
+        "image": "/art/portraits/chirashi-v2.2.webp",
+        "description": "tiny chirashi sushi rice bowl character with colorful fish toppings and chef hat",
+        "source_image": "/art/achievements/chirashi-v2.2.png"
+    },
+    {
+        "id": "butler",
+        "name": "Nigiri Butler",
+        "badge": "bento_serve",
+        "image": "/art/portraits/butler-v2.2.webp",
+        "description": "white fish nigiri butler presenting a tiny serving tray",
+        "source_image": "/art/achievements/butler-v2.2.png"
+    },
+    {
+        "id": "battera",
+        "name": "Battera Planner",
+        "badge": "bento_prep",
+        "image": "/art/portraits/battera-v2.2.webp",
+        "description": "rectangular mackerel pressed sushi wearing an apron and holding a checklist clipboard",
+        "source_image": "/art/achievements/battera-v2.2.png"
+    },
+    {
+        "id": "temari",
+        "name": "Temari Scout",
+        "badge": "library_sampler",
+        "image": "/art/portraits/temari-v2.2.webp",
+        "description": "round temari sushi explorer with a tiny map and magnifying glass",
+        "source_image": "/art/achievements/temari-v2.2.png"
+    },
+    {
+        "id": "shiso",
+        "name": "Shiso Sherlock",
+        "badge": "library_comeback",
+        "image": "/art/portraits/shiso-v2.2.webp",
+        "description": "shiso leaf wrapped maki detective with a deerstalker hat and magnifying glass",
+        "source_image": "/art/achievements/shiso-v2.2.png"
+    },
+    {
+        "id": "tekka",
+        "name": "Tekka Archivist",
+        "badge": "library_100",
+        "image": "/art/portraits/tekka-v2.2.webp",
+        "description": "tuna tekka maki librarian carrying stacked miniature books",
+        "source_image": "/art/achievements/tekka-v2.2.png"
+    },
+    {
+        "id": "trio",
+        "name": "Trio Temari",
+        "badge": "streak_3",
+        "image": "/art/portraits/trio-v2.2.webp",
+        "description": "three little temari sushi friends balanced in one compact triangular group",
+        "source_image": "/art/achievements/trio-v2.2.png"
+    },
+    {
+        "id": "conductor",
+        "name": "Conductor Kappa",
+        "badge": "streak_7",
+        "image": "/art/portraits/conductor-v2.2.webp",
+        "description": "cucumber maki train conductor wearing a conductor cap with a small ticket",
+        "source_image": "/art/achievements/conductor-v2.2.png"
+    },
+    {
+        "id": "guardian",
+        "name": "Gunkan Guardian",
+        "badge": "streak_14",
+        "image": "/art/portraits/guardian-v2.2.webp",
+        "description": "seaweed gunkan guardian with a pink shield and tiny sash",
+        "source_image": "/art/achievements/guardian-v2.2.png"
+    },
+    {
+        "id": "omakase",
+        "name": "Omakase Sovereign",
+        "badge": "streak_30",
+        "image": "/art/portraits/omakase-v2.2.webp",
+        "description": "luxurious salmon nigiri with a small golden crown and pink royal cape",
+        "source_image": "/art/achievements/omakase-v2.2.png"
+    },
+    {
+        "id": "champion",
+        "name": "Chirashi Champion",
+        "badge": "days_100",
+        "image": "/art/portraits/champion-v2.2.webp",
+        "description": "chirashi rice bowl champion holding a tiny golden trophy",
+        "source_image": "/art/achievements/champion-v2.2.png"
+    },
+    {
+        "id": "ume",
+        "name": "Ume Homecoming",
+        "badge": "comeback",
+        "image": "/art/portraits/ume-v2.2.webp",
+        "description": "pickled plum maki traveler returning with a cozy scarf and small suitcase",
+        "source_image": "/art/achievements/ume-v2.2.png"
+    },
+    {
+        "id": "aburi",
+        "name": "Dr. Aburi",
+        "badge": "subject_im_100",
+        "image": "/art/portraits/aburi-v2.2.webp",
+        "description": "seared salmon nigiri physician wearing a white coat and a burgundy stethoscope",
+        "source_image": "/art/achievements/aburi-v2.2.png"
+    },
+    {
+        "id": "saba",
+        "name": "Professor Saba",
+        "badge": "subject_im_200",
+        "image": "/art/portraits/saba-v2.2.webp",
+        "description": "mackerel nigiri senior physician with round glasses and a little heart diagram",
+        "source_image": "/art/achievements/saba-v2.2.png"
+    },
+    {
+        "id": "tamago",
+        "name": "Tamago Tots",
+        "badge": "subject_pedia_100",
+        "image": "/art/portraits/tamago-v2.2.webp",
+        "description": "egg tamago nigiri pediatrician with a tiny plush teddy bear and white coat",
+        "source_image": "/art/achievements/tamago-v2.2.png"
+    },
+    {
+        "id": "temaki",
+        "name": "Temaki Tendercare",
+        "badge": "subject_pedia_200",
+        "image": "/art/portraits/temaki-v2.2.webp",
+        "description": "salmon hand roll pediatrician with a pastel toy and a stethoscope",
+        "source_image": "/art/achievements/temaki-v2.2.png"
+    },
+    {
+        "id": "scalpel",
+        "name": "Scallop Scrub",
+        "badge": "subject_surgery_100",
+        "image": "/art/portraits/scalpel-v2.2.webp",
+        "description": "scallop nigiri surgeon in pink scrub cap holding a closed suture kit",
+        "source_image": "/art/achievements/scalpel-v2.2.png"
+    },
+    {
+        "id": "surgeon",
+        "name": "Ebi Precision",
+        "badge": "subject_surgery_200",
+        "image": "/art/portraits/surgeon-v2.2.webp",
+        "description": "shrimp tempura uramaki surgeon with glasses and pink scrub cap, holding a neat suture loop",
+        "source_image": "/art/achievements/surgeon-v2.2.png"
+    },
+    {
+        "id": "sakura",
+        "name": "Sakura Midwife",
+        "badge": "subject_ob_100",
+        "image": "/art/portraits/sakura-v2.2.webp",
+        "description": "pink sakura denbu sushi roll obstetrician cradling a tiny swaddled rice baby",
+        "source_image": "/art/achievements/sakura-v2.2.png"
+    },
+    {
+        "id": "pearl",
+        "name": "Pearl Nurture",
+        "badge": "subject_ob_200",
+        "image": "/art/portraits/pearl-v2.2.webp",
+        "description": "pearl white fish temari obstetrician with a flower pin and a tiny swaddled rice baby",
+        "source_image": "/art/achievements/pearl-v2.2.png"
+    }
+]

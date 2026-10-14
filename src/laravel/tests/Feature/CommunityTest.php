@@ -19,7 +19,6 @@ use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Queue;
-use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
 class CommunityTest extends TestCase
@@ -176,25 +175,15 @@ class CommunityTest extends TestCase
         $this->get('/profiles/'.$u->id)->assertOk();
     }
 
-    public function test_photo_is_normalized_and_requires_authentication(): void
+    public function test_profiles_only_allow_characters_and_never_serve_old_photos(): void
     {
         $u = $this->learner();
-        Storage::fake('local');
-        $this->post('/profile', ['display_name' => 'Photo Chef', 'avatar' => 'photo', 'pins' => [], 'photo' => UploadedFile::fake()->image('portrait.png', 900, 650)])->assertRedirect();
-        $u->refresh();
-        $bytes = Storage::disk('local')->get($u->photo_path);
-        $size = getimagesizefromstring($bytes);
-        $this->assertSame(512, $size[0]);
-        $this->assertSame(512, $size[1]);
-        $this->assertSame('image/jpeg', $size['mime']);
-        $this->get('/profiles/'.$u->id.'/photo')->assertOk()->assertHeader('Content-Type', 'image/jpeg');
-        $this->postJson('/profile', ['display_name' => 'Photo Chef', 'avatar' => 'rice', 'pins' => [], 'photo' => UploadedFile::fake()->createWithContent('evil.svg', '<svg onload="alert(1)"/>')])->assertUnprocessable();
-        $this->post('/profile', ['display_name' => 'Photo Chef', 'avatar' => 'photo', 'pins' => [], 'remove_photo' => true])->assertRedirect();
-        $this->assertNull($u->fresh()->photo_path);
+        $this->postJson('/profile', ['display_name' => 'Chef', 'avatar' => 'photo', 'pins' => []])->assertUnprocessable();
+        $this->postJson('/profile', ['display_name' => 'Chef', 'avatar' => 'rice', 'pins' => [], 'photo' => UploadedFile::fake()->image('portrait.png')])->assertUnprocessable();
+        $u->update(['avatar' => 'photo', 'photo_path' => 'profiles/private-history.jpg']);
+        $this->assertSame('rice', $this->props('/profile')['profile']['avatar']['id']);
         $this->get('/profiles/'.$u->id.'/photo')->assertNotFound();
-        $this->post('/logout');
-        $this->get('/leaderboard')->assertRedirect('/login');
-        $this->get('/profiles/'.$u->id)->assertRedirect('/login');
+        $this->assertSame('profiles/private-history.jpg', $u->fresh()->photo_path);
     }
 
     public function test_library_view_and_bookmark_achievements_require_recorded_actions(): void
@@ -291,7 +280,7 @@ class CommunityTest extends TestCase
         $deck->items()->update(['confidence' => 1]);
         $badges = $this->props('/passport')['badges'];
         $this->assertNotNull(collect($badges)->firstWhere('id', 'memory_golden')['earned_at']);
-        $this->post('/profile', ['display_name' => 'Memo', 'avatar' => 'memory-gold', 'pins' => ['memory_golden']])->assertRedirect();
+        $this->post('/profile', ['display_name' => 'Memo', 'avatar' => 'gunkan', 'pins' => ['memory_golden']])->assertRedirect();
     }
 
     public function test_tutor_timed_and_builder_awards_require_their_specific_work(): void
