@@ -300,7 +300,7 @@ class CommunityTest extends TestCase
             $exam->exports()->create(['user_id' => $u->id, 'status' => 'ready', 'explanations' => true]);
         }
         $badges = collect($this->props('/passport')['badges']);
-        $this->assertCount(51, $badges);
+        $this->assertCount(53, $badges);
         foreach (['tutor_first', 'rush_first', 'rush_cool', 'rush_four', 'bento_first', 'bento_four', 'bento_serve', 'bento_chef'] as $id) {
             $this->assertNotNull($badges->firstWhere('id', $id)['earned_at'], $id);
         }

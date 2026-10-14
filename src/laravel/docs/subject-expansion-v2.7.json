@@ -1,0 +1,61 @@
+{
+  "version": "2.7",
+  "date": "2026-10-14",
+  "subjects": {
+    "Physiology": 165,
+    "Microbiology-Parasitology": 126
+  },
+  "added_questions": 291,
+  "expected_total_questions": 2463,
+  "expected_distinct_stems": 2462,
+  "expected_achievements": 53,
+  "expected_characters": 54,
+  "character_generation": "Built-in image_gen; original transparent PNGs retained, 320px transparent WebP delivery assets",
+  "characters": [
+    {
+      "subject": "Physiology",
+      "id": "physiology",
+      "name": "Unagi Pulse",
+      "badge": "subject_physiology_50",
+      "requirement": "Correctly answer 50 distinct Physiology questions in self-study",
+      "prompt": "Create one brand-new transparent PNG character asset for the SUSHI Clerks Comprehensive Exam Reviewer, named Unagi Pulse (do not render any text). A friendly chibi unagi nigiri sushi physiologist: glossy caramel-brown grilled eel cap with delicate cream sauce stripes resting on a rounded cream rice face, large sparkling burgundy eyes, rosy pink cheeks, tiny happy mouth, little arms and feet. Wearing an ivory lab coat with dusty-rose trim and burgundy buttons. Hold a small pink heart-shaped teaching model with a simple pulse line on one side and a coral breath-flow pin on the coat. Warm pink, cream, salmon, caramel and burgundy palette. Cute polished hand-painted kawaii sticker illustration with bold burgundy outlines, soft detailed shading, similar to a premium collectible sushi mascot. Full-body single centered figure taking up 85 percent of a square canvas with generous safe margins around all props, readable at 64px avatar size. True transparent background, no surrounding scene, no circle or frame, no lettering, no watermark. Distinct eel sushi silhouette; no human anatomy detail, no additional characters."
+    },
+    {
+      "subject": "Microbiology-Parasitology",
+      "id": "microbiology",
+      "name": "Shimeji Scout",
+      "badge": "subject_microbiology_50",
+      "requirement": "Correctly answer 50 distinct Microbiology-Parasitology questions in self-study",
+      "prompt": "Create one brand-new transparent PNG character asset for the SUSHI Clerks Comprehensive Exam Reviewer, named Shimeji Scout (do not render any text). A friendly chibi mushroom-topped gunkan sushi microbiology and parasitology scientist: three rounded caramel and pale-cream shimeji mushroom caps above a soft cream rice face wrapped in dark burgundy nori, large sparkling burgundy eyes, rosy pink cheeks, tiny happy mouth, little arms and feet. Wearing an ivory lab coat with warm blush-pink trim, round rose safety glasses perched above the eyes. Hold a translucent pink petri dish with three simple mint and lilac microbe dots and one harmless wavy worm doodle; hold a small burgundy magnifying glass in the other hand. Warm pink, cream, caramel, burgundy with restrained sage accents. Cute polished hand-painted kawaii sticker illustration with bold burgundy outlines and soft detailed shading, matching a premium collectible sushi mascot family. Full-body single centered figure taking up 85 percent of a square canvas with generous safe margins, readable at 64px avatar size. True transparent background, no scene, no circle or frame, no lettering, no watermark, no extra characters."
+    }
+  ],
+  "scope": "Import supplied CSV contents without editing stems, options, answers, explanations, citations, or source metadata. Application status Released per standing user instruction. This integration does not constitute a new clinical review.",
+  "deployment": "Local only; no GitHub push or Railway deployment",
+  "sources": [
+    {
+      "file": "20261014_EDU_PhysiologyQuestionBank_v1.0.csv",
+      "sha256": "e31376c14b5bdd2282fd5a9429c1526fff3ce738ed8e555d099bb2324dbce263",
+      "rows": 165
+    },
+    {
+      "file": "20261014_EDU_MicrobiologyParasitologyQuestionBank_v1.0.csv",
+      "sha256": "817f0d371c5bee3968bebcc0ebe06bd9419775d0de18c9c9e5dce2296c05e8a7",
+      "rows": 126
+    }
+  ],
+  "verification": {
+    "csv_bundle_database_parity": true,
+    "preserved_existing_questions": 2172,
+    "preserved_learner_state": true,
+    "idempotent_seed_runs": 2,
+    "original_duplicate_pair": [
+      "SUR-Q0270",
+      "SUR-Q0295"
+    ],
+    "regression": "Full suite ran 65 tests. 64 passed; one existing blueprint fixture still requested 20 questions while allocating 2 across all 12 subjects. Corrected fixture to 24. All 9 StudioTest tests then passed with 217 assertions.",
+    "build": "Passed",
+    "pint": "Passed",
+    "mobile": "390 x 844, document width 375, both new portraits loaded",
+    "browser_console_errors": 0
+  }
+}

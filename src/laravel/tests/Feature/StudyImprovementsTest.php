@@ -125,7 +125,7 @@ class StudyImprovementsTest extends TestCase
         app(Learning::class)->answer($u->id, 'hidden-assigned', $items[1], 'assigned', true);
         DB::table('flashcards')->insert(['user_id' => $u->id, 'question_id' => $items[0]['id'], 'confidence' => 5, 'created_at' => now(), 'updated_at' => now()]);
         $map = $this->get('/progress')->assertOk()->viewData('page')['props']['subjectMap'];
-        $this->assertCount(10, $map);
+        $this->assertCount(12, $map);
         $s = collect($map)->firstWhere('subject', 'Anatomy');
         $this->assertSame(12, $s['total']);
         $this->assertSame(1, $s['attempted']);

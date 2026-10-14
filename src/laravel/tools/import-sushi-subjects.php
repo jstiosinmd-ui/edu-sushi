@@ -1,6 +1,6 @@
 <?php
 
-// Usage: php tools/import-sushi-subjects.php <read-only CSV folder> [next|basic]
+// Usage: php tools/import-sushi-subjects.php <read-only CSV folder> [next|basic|final]
 use App\Services\Catalog;
 use Illuminate\Contracts\Console\Kernel;
 
@@ -8,24 +8,39 @@ require __DIR__.'/../vendor/autoload.php';
 $app = require __DIR__.'/../bootstrap/app.php';
 $app->make(Kernel::class)->bootstrap();
 
-$directory = $argv[1] ?? throw new InvalidArgumentException('Supply the v1.1 CSV folder.');
+$directory = $argv[1] ?? throw new InvalidArgumentException('Supply the CSV folder.');
 $bundle = $argv[2] ?? 'next';
-if (! in_array($bundle, ['next', 'basic'], true)) {
-    throw new InvalidArgumentException('Choose next or basic.');
+if (! in_array($bundle, ['next', 'basic', 'final'], true)) {
+    throw new InvalidArgumentException('Choose next, basic, or final.');
 }
-$output = $bundle === 'basic' ? 'basic-sciences-20261014-v1.0.json' : 'subjects-20261014-v1.1.json';
-$files = $bundle === 'basic' ? [
-    '20261014_EDU_PathologyQuestionBank_v1.0.csv' => ['Pathology', 194],
-    '20261014_EDU_PharmacologyQuestionBank_v1.0.csv' => ['Pharmacology', 166],
-    '20261014_EDU_BiochemistryQuestionBank_v1.0.csv' => ['Biochemistry', 157],
-] : [
-    '20261014_EDU_PreventiveMedicineQuestionBank_v1.1.csv' => ['Preventive Medicine', 247],
-    '20261014_EDU_AnatomyQuestionBank_v1.1.csv' => ['Anatomy', 189],
-    '20261014_EDU_LegalMedicineEthicsQuestionBank_v1.1.csv' => ['Legal Medicine-Ethics', 172],
-];
+$output = match ($bundle) {
+    'final' => 'physiology-microbiology-20261014-v1.0.json',
+    'basic' => 'basic-sciences-20261014-v1.0.json',
+    default => 'subjects-20261014-v1.1.json',
+};
+$files = match ($bundle) {
+    'final' => [
+        '20261014_EDU_PhysiologyQuestionBank_v1.0.csv' => ['Physiology', 165],
+        '20261014_EDU_MicrobiologyParasitologyQuestionBank_v1.0.csv' => ['Microbiology-Parasitology', 126],
+    ],
+    'basic' => [
+        '20261014_EDU_PathologyQuestionBank_v1.0.csv' => ['Pathology', 194],
+        '20261014_EDU_PharmacologyQuestionBank_v1.0.csv' => ['Pharmacology', 166],
+        '20261014_EDU_BiochemistryQuestionBank_v1.0.csv' => ['Biochemistry', 157],
+    ],
+    default => [
+        '20261014_EDU_PreventiveMedicineQuestionBank_v1.1.csv' => ['Preventive Medicine', 247],
+        '20261014_EDU_AnatomyQuestionBank_v1.1.csv' => ['Anatomy', 189],
+        '20261014_EDU_LegalMedicineEthicsQuestionBank_v1.1.csv' => ['Legal Medicine-Ethics', 172],
+    ],
+};
 $base = json_decode(file_get_contents(database_path('data/bank.json')), true, 512, JSON_THROW_ON_ERROR);
-if ($bundle === 'basic') {
+if (in_array($bundle, ['basic', 'final'], true)) {
     $prior = json_decode(file_get_contents(database_path('data/subjects-20261014-v1.1.json')), true, 512, JSON_THROW_ON_ERROR);
+    $base['items'] = [...$base['items'], ...$prior['items']];
+}
+if ($bundle === 'final') {
+    $prior = json_decode(file_get_contents(database_path('data/basic-sciences-20261014-v1.0.json')), true, 512, JSON_THROW_ON_ERROR);
     $base['items'] = [...$base['items'], ...$prior['items']];
 }
 $expectedHeaders = array_keys($base['items'][0]['raw']);

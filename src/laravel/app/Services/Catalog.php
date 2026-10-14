@@ -14,7 +14,7 @@ class Catalog
 
     public const CORE_SUBJECTS = ['Internal Medicine', 'OB-GYN', 'Pediatrics', 'Surgery'];
 
-    public const SUBJECTS = [...self::CORE_SUBJECTS, 'Preventive Medicine', 'Anatomy', 'Legal Medicine-Ethics', 'Pathology', 'Pharmacology', 'Biochemistry'];
+    public const SUBJECTS = [...self::CORE_SUBJECTS, 'Preventive Medicine', 'Anatomy', 'Legal Medicine-Ethics', 'Pathology', 'Pharmacology', 'Biochemistry', 'Physiology', 'Microbiology-Parasitology'];
 
     public static function stemHash(string $stem): string
     {

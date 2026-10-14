@@ -17,6 +17,8 @@ export const crew = {
  'Pathology':{name:'Ikura Insight',image:'/art/subjects/pathology-v2.5.webp'},
  'Pharmacology':{name:'Ebi Remedy',image:'/art/subjects/pharmacology-v2.5.webp'},
  'Biochemistry':{name:'Temaki Spark',image:'/art/subjects/biochemistry-v2.5.webp'},
+ 'Physiology':{name:'Unagi Pulse',image:'/art/subjects/physiology-v2.7.webp'},
+ 'Microbiology-Parasitology':{name:'Shimeji Scout',image:'/art/subjects/microbiology-v2.7.webp'},
 };
 export const modes={fresh:'Fresh Catch 10',tutor:'Maki Mentor',exam:'Wasabi Rush',assigned:'Assigned exam'};
 export const date = value => value ? new Intl.DateTimeFormat('en-PH',{dateStyle:'medium',timeStyle:'short',timeZone:'Asia/Manila'}).format(new Date(value)) : 'None yet';

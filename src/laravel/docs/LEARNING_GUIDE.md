@@ -11,7 +11,7 @@ The approved improvements were implemented in order: 1, 2, 3, 4, 5, 6, and 8. Ex
 | Today's Bento | Counter | Choose 5, 15, or 30 minutes and subjects; see why questions were selected; start an untimed practice round or resume a matching unfinished deck. |
 | Accuracy and familiarity | Memory Maki deck | Separate latest-answer correctness from familiarity ratings, show session accuracy, and insert up to three intervening cards before a repeat. The 80% rated-5 stopping prompt remains optional. |
 | Second Serving | My Progress | Review missed questions, add private mistake reasons and notes, and create tutor rounds or Memory Maki decks from selected questions. |
-| Subject map | My Progress | Ten character cards show coverage, first-attempt accuracy with denominators, familiarity, weak topics, and the next available subject achievement. |
+| Subject map | My Progress | Twelve character cards show coverage, first-attempt accuracy with denominators, familiarity, weak topics, and the next available subject achievement. |
 | Chef's Review | Beside explanations and Head Chef | Learners report unclear wording, disputed answers, references, or typos. Administrators review the reported version and record a response. Study Updates contains replies and correction notices. |
 | Cohort overview | Head Chef | Filter active learners by cohort, inspect subject results, assign focused practice, and inspect version-specific answer-choice counts. |
 | Mobile study | Study pages | Quick deck presets, touch-sized controls, keyboard shortcuts, reduced motion, and recoverable unsent selections. |

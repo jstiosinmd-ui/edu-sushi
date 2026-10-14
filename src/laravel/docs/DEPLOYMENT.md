@@ -65,7 +65,7 @@ Keep a single replica while exports use a local volume. Multiple application rep
 - Check scheduler execution with php artisan schedule:list and run sushi:expire.
 - Check php artisan queue:failed and storage/logs/laravel.log. Logs can contain request context; restrict access and retention.
 
-The seeded bank contains 2,172 questions across ten subjects, loaded from bank.json, subjects-20261014-v1.1.json, and basic-sciences-20261014-v1.0.json. The original 1,047-question bundle and legacy import hash 3cae311b133fe775562ce8d377a7fb41ee8faa3f65d64000ddfa966f4d48585d are unchanged. The two additions retain CSV source SHA-256 values. Re-running the seeder only adds missing IDs.
+The seeded bank contains 2,463 questions across twelve subjects, loaded from bank.json, subjects-20261014-v1.1.json, basic-sciences-20261014-v1.0.json, and physiology-microbiology-20261014-v1.0.json. The original 1,047-question bundle and legacy import hash 3cae311b133fe775562ce8d377a7fb41ee8faa3f65d64000ddfa966f4d48585d are unchanged. The three additions retain CSV source SHA-256 values. Re-running the seeder only adds missing IDs.
 
 ## Backups and restore
 

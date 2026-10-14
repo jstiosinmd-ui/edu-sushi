@@ -62,7 +62,7 @@ class SushiTest extends TestCase
 
     public function test_seed_content_and_accounts_are_repeatable(): void
     {
-        $this->assertSame(2172, Question::count());
+        $this->assertSame(2463, Question::count());
         $this->assertSame(4, User::count());
         $u = User::where('username', 'jstiosin')->first();
         $this->assertSame('admin', $u->role);
@@ -71,7 +71,7 @@ class SushiTest extends TestCase
         $hash = $u->password;
         $this->seed();
         $this->assertSame($hash, $u->fresh()->password);
-        $this->assertSame(2172, DB::table('question_versions')->count());
+        $this->assertSame(2463, DB::table('question_versions')->count());
         $bank = json_decode(file_get_contents(database_path('data/bank.json')), true);
         foreach ($bank['items'] as $q) {
             $this->assertSame($q, Question::find($q['id'])->currentVersion->content);
@@ -82,11 +82,11 @@ class SushiTest extends TestCase
     {
         $page = $this->get('/login')->assertOk()->viewData('page');
         $this->assertSame('Login', $page['component']);
-        $this->assertSame(2172, $page['props']['questionCount']);
+        $this->assertSame(2463, $page['props']['questionCount']);
         $this->assertArrayNotHasKey('items', $page['props']);
         $this->assertArrayNotHasKey('questions', $page['props']);
         Question::firstOrFail()->update(['active' => false]);
-        $this->assertSame(2171, $this->get('/login')->assertOk()->viewData('page')['props']['questionCount']);
+        $this->assertSame(2462, $this->get('/login')->assertOk()->viewData('page')['props']['questionCount']);
     }
 
     public function test_all_requested_accounts_can_login_and_must_change_password(): void
@@ -112,14 +112,14 @@ class SushiTest extends TestCase
         $bytes = json_encode(['items' => [$new]]);
         $file = fn () => UploadedFile::fake()->createWithContent('bank.json', $bytes);
         $this->postJson('/admin/import', ['bank' => $file()])->assertOk()->assertJsonPath('preview.items', 1);
-        $this->assertSame(2172, Question::count());
+        $this->assertSame(2463, Question::count());
         $this->postJson('/admin/import', ['bank' => $file(), 'publish' => true, 'preview_hash' => 'wrong'])->assertUnprocessable();
         $this->postJson('/admin/import', ['bank' => $file(), 'publish' => true, 'preview_hash' => hash('sha256', $bytes)])->assertOk();
-        $this->assertSame(2173, Question::findOrFail('IM-QA-NEW')->position);
+        $this->assertSame(2464, Question::findOrFail('IM-QA-NEW')->position);
         $this->seed();
         $this->assertSame($edited['stem'], $q->fresh()->currentVersion->content['stem']);
         $this->assertSame(2, $q->fresh()->currentVersion->version);
-        $this->assertSame(2173, Question::count());
+        $this->assertSame(2464, Question::count());
         $bad = UploadedFile::fake()->createWithContent('invalid.json', json_encode(['items' => ['invalid']]));
         $this->postJson('/admin/import', ['bank' => $bad])->assertUnprocessable();
     }
@@ -220,9 +220,9 @@ class SushiTest extends TestCase
         Question::where('position', '<=', 9)->update(['active' => true]);
         $this->post('/attempts', $this->settings(['mode' => 'fresh']))->assertSessionHasErrors('count');
         Question::query()->update(['active' => true]);
-        $a = $this->attempt(['count' => 2171]);
+        $a = $this->attempt(['count' => 2462]);
         $hashes = $a->items->map(fn ($i) => Catalog::stemHash($i->snapshot['stem']));
-        $this->assertSame(2171, $hashes->unique()->count());
+        $this->assertSame(2462, $hashes->unique()->count());
     }
 
     public function test_timer_is_server_authoritative_and_submission_is_idempotent(): void

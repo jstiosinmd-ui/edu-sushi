@@ -414,5 +414,21 @@
         "image": "/art/subjects/biochemistry-v2.5.webp",
         "reused": false,
         "source_image": "/art/subjects/biochemistry-v2.5.png"
+    },
+    {
+        "id": "physiology",
+        "name": "Unagi Pulse",
+        "badge": "subject_physiology_50",
+        "image": "/art/subjects/physiology-v2.7.webp",
+        "description": "grilled eel nigiri physiologist carrying a pink pulse heart",
+        "source_image": "/art/subjects/physiology-v2.7.png"
+    },
+    {
+        "id": "microbiology",
+        "name": "Shimeji Scout",
+        "badge": "subject_microbiology_50",
+        "image": "/art/subjects/microbiology-v2.7.webp",
+        "description": "mushroom gunkan microbiologist with a petri dish and magnifying glass",
+        "source_image": "/art/subjects/microbiology-v2.7.png"
     }
 ]

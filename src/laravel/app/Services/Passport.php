@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 class Passport
 {
-    private const NEW_SUBJECTS = ['preventive' => 'Preventive Medicine', 'anatomy' => 'Anatomy', 'legal' => 'Legal Medicine-Ethics', 'pathology' => 'Pathology', 'pharmacology' => 'Pharmacology', 'biochemistry' => 'Biochemistry'];
+    private const NEW_SUBJECTS = ['preventive' => 'Preventive Medicine', 'anatomy' => 'Anatomy', 'legal' => 'Legal Medicine-Ethics', 'pathology' => 'Pathology', 'pharmacology' => 'Pharmacology', 'biochemistry' => 'Biochemistry', 'physiology' => 'Physiology', 'microbiology' => 'Microbiology-Parasitology'];
 
     public static function definitions(): array
     {

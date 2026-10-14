@@ -42,8 +42,8 @@ class StudioTest extends TestCase
     {
         $u = $this->user();
         $closet = Closet::all($u);
-        $this->assertCount(52, $closet);
-        $this->assertCount(52, array_unique(array_column($closet, 'image')));
+        $this->assertCount(54, $closet);
+        $this->assertCount(54, array_unique(array_column($closet, 'image')));
         $rewards = array_values(array_filter(array_column($closet, 'badge')));
         $this->assertEqualsCanonicalizing(array_keys(Passport::definitions()), $rewards);
         foreach ($closet as $a) {
@@ -110,14 +110,14 @@ class StudioTest extends TestCase
     {
         $this->user();
         $allocation = array_fill_keys(Catalog::SUBJECTS, 2);
-        $draft = $this->postJson('/exams/preview', $this->settings(['allocation' => $allocation]))->assertOk()->json();
+        $draft = $this->postJson('/exams/preview', $this->settings(['count' => 24, 'allocation' => $allocation]))->assertOk()->json();
         $this->assertEqualsCanonicalizing($allocation, collect($draft['items'])->countBy('subject')->all());
         $this->assertSame(0, $draft['revision']);
         $old = $draft['items'][0];
         $replacement = $this->postJson('/exam-drafts/'.$draft['id'].'/replace', ['position' => 0, 'revision' => 0])->assertOk()->json();
         $this->assertSame($old['subject'], $replacement['items'][0]['subject']);
         $this->assertNotSame($old['id'], $replacement['items'][0]['id']);
-        $this->assertCount(20, array_unique(array_column($replacement['items'], 'id')));
+        $this->assertCount(24, array_unique(array_column($replacement['items'], 'id')));
         $this->postJson('/exam-drafts/'.$draft['id'].'/replace', ['position' => 0, 'revision' => 0])->assertConflict();
         $this->postJson('/exams/preview', $this->settings(['allocation' => ['Internal Medicine' => 19]]))->assertUnprocessable();
         $this->postJson('/exams/preview', $this->settings(['allocation' => ['Bogus' => 20]]))->assertUnprocessable();
