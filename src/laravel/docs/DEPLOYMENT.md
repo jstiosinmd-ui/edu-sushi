@@ -28,17 +28,30 @@ Make storage and bootstrap/cache writable by the PHP service account. Keep stora
 
 ## Container option
 
-A Dockerfile and compose.yaml are included. Docker was unavailable on the build host; the application was tested directly against PostgreSQL, and the container configuration requires a smoke test on the target host.
+A Dockerfile and compose.yaml are included. The application container runs Apache, the queue worker, and the scheduler under Supervisor. The worker and web server share the same private PDF storage. The GitHub Actions container job checks PostgreSQL seeding, forwarded HTTPS, scheduled expiry, queued PDF generation, and file persistence after a restart.
 
 1. Copy .env.example to .env and set a nonempty DB_PASSWORD.
 2. Build with docker compose build.
 3. Generate an application key with docker compose run --rm --no-deps web php artisan key:generate --show and put that value in .env as APP_KEY.
-4. Run docker compose up -d db web.
-5. Run docker compose exec web php artisan migrate --force and docker compose exec web php artisan db:seed --force.
-6. Run docker compose up -d worker scheduler.
-7. Place an HTTPS reverse proxy in front of the localhost-bound port 8080. Set the real APP_URL and secure-cookie setting in .env, then recreate the application services.
+4. Run docker compose up -d db.
+5. Run docker compose run --rm web php artisan migrate --force and docker compose run --rm web php artisan db:seed --force.
+6. Run docker compose up -d web. The queue worker and scheduler start automatically.
+7. Place an HTTPS reverse proxy in front of the localhost-bound port 8080. Set the real APP_URL, SESSION_SECURE_COOKIE=true, and TRUSTED_PROXIES=* in .env, then recreate web. Only trust all forwarded headers when requests must pass through that proxy.
 
 The compose database is private to the container network. Persistent volumes retain PostgreSQL data and private exports.
+
+## Railway
+
+The configuration in .railway/railway.ts defines the GitHub source, a PostgreSQL service, and one application replica with a persistent storage volume. Railway detects the Dockerfile in the service root, src/laravel. This uses Railway's current Infrastructure as Code workflow; the older railway.json format is deprecated. See the [Railway configuration reference](https://docs.railway.com/infrastructure-as-code/reference).
+
+1. Authenticate with the Railway CLI and link a new edu-sushi project in the intended account.
+2. Create the sushi service. Generate a unique APP_KEY and save it through Railway Variables. Set APP_URL to the generated HTTPS domain. These two values are preserved by the configuration and must exist before applying it. Keep the key private and stable across deployments.
+3. Run railway config plan from src/laravel. Review the services, volume, region, and variables before railway config apply. The configuration requests a 1 GB application volume in Singapore and one application replica; confirm that the hosting plan supports those resources.
+4. Confirm the GitHub source uses main and root directory src/laravel. The pre-deploy command runs migrations and idempotent seeding. Do not override the Docker start command. Confirm PostgreSQL provisioning and its private DB_URL reference before deploying.
+5. Generate a public Railway domain for sushi and verify APP_URL uses that exact HTTPS URL. The entrypoint binds Apache to Railway's PORT and starts all three processes. The /login readiness check exercises the database-backed session and frontend assets.
+6. Verify the deployment logs, login page, worker, scheduler, and private PDF downloads. Configure database and storage backups in the hosting account. Never run tests/container/smoke.php against the production database; it is restricted to its isolated test database.
+
+Keep a single replica while exports use a local volume. Multiple application replicas require shared object storage and a separate worker topology. Persistent storage is mounted at /var/www/html/storage; Laravel keeps exports outside the public web root.
 
 ## Release checks
 

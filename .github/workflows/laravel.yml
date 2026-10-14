@@ -46,3 +46,15 @@ jobs:
       - run: cp .env.example .env && php artisan key:generate
       - run: npm ci && npm run build
       - run: php artisan test
+  container:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: src/laravel
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the production image
+        run: docker build -t edu-sushi:ci .
+      - name: Check HTTPS proxy, workers, PostgreSQL, PDFs, and restart persistence
+        run: bash tests/container/smoke.sh

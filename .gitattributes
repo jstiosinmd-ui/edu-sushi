@@ -1,3 +1,5 @@
 # Preserve released file bytes so the recorded SHA-256 hashes remain valid.
 * -text
 *.png binary
+src/laravel/deploy/*.sh text eol=lf
+src/laravel/tests/container/*.sh text eol=lf

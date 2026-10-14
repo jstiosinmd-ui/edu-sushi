@@ -17,7 +17,7 @@ services:
     build: .
     image: edu-sushi:2.0
     env_file: .env
-    environment: &app-environment
+    environment:
       APP_ENV: production
       APP_DEBUG: "false"
       DB_CONNECTION: pgsql
@@ -31,30 +31,6 @@ services:
         condition: service_healthy
     ports:
       - "127.0.0.1:8080:80"
-    volumes:
-      - app_storage:/var/www/html/storage
-    restart: unless-stopped
-  worker:
-    image: edu-sushi:2.0
-    env_file: .env
-    environment: *app-environment
-    profiles: ["workers"]
-    command: php artisan queue:work --sleep=2 --tries=2 --timeout=300
-    depends_on:
-      db:
-        condition: service_healthy
-    volumes:
-      - app_storage:/var/www/html/storage
-    restart: unless-stopped
-  scheduler:
-    image: edu-sushi:2.0
-    env_file: .env
-    environment: *app-environment
-    profiles: ["workers"]
-    command: php artisan schedule:work
-    depends_on:
-      db:
-        condition: service_healthy
     volumes:
       - app_storage:/var/www/html/storage
     restart: unless-stopped
