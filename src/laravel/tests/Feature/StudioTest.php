@@ -42,8 +42,8 @@ class StudioTest extends TestCase
     {
         $u = $this->user();
         $closet = Closet::all($u);
-        $this->assertCount(46, $closet);
-        $this->assertCount(46, array_unique(array_column($closet, 'image')));
+        $this->assertCount(52, $closet);
+        $this->assertCount(52, array_unique(array_column($closet, 'image')));
         $rewards = array_values(array_filter(array_column($closet, 'badge')));
         $this->assertEqualsCanonicalizing(array_keys(Passport::definitions()), $rewards);
         foreach ($closet as $a) {
@@ -109,7 +109,7 @@ class StudioTest extends TestCase
     public function test_blueprint_enforces_counts_and_replacement_keeps_subject(): void
     {
         $this->user();
-        $allocation = array_combine(Catalog::SUBJECTS, [2, 4, 6, 8]);
+        $allocation = array_fill_keys(Catalog::SUBJECTS, 2);
         $draft = $this->postJson('/exams/preview', $this->settings(['allocation' => $allocation]))->assertOk()->json();
         $this->assertEqualsCanonicalizing($allocation, collect($draft['items'])->countBy('subject')->all());
         $this->assertSame(0, $draft['revision']);

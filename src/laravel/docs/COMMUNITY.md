@@ -12,7 +12,7 @@ Memory Maki has six distinct colors for unrated and ratings 1 through 5, with nu
 
 Profiles support a display name, short bio, an earned sushi character, and up to three earned badges. Uploading, cropping, and serving personal photos have been removed. Existing photo profiles return to Rice Rookie; private historical files are retained.
 
-The Character Closet has 46 choices: Rice Rookie plus one distinct character for each of 45 achievements. Portrait frames unlock through unique completion: Bronze at zero, Silver at 200, Gold at 400, and Sakura flowers at 600. Learners choose any earned frame independently of their sushi tier name. The frame persists when they change characters or advance a tier. All 35 new characters have generated originals and small transparent WebP delivery assets. Locked characters are silhouettes, and locked characters or frames cannot be equipped through forged requests.
+The Character Closet has 52 choices: Rice Rookie plus one distinct character for each of 51 achievements. Portrait frames unlock through unique completion: Bronze at zero, Silver at 200, Gold at 400, and Sakura flowers at 600. Learners choose any earned frame independently of their sushi tier name. The frame persists when they change characters or advance a tier. The generated character originals and small transparent WebP delivery assets are retained. Locked characters are silhouettes, and locked characters or frames cannot be equipped through forged requests.
 
 ## Daily catches and streaks
 
@@ -38,8 +38,9 @@ The authoritative catalog is `App\Services\Passport::definitions()`: 45 badges w
 | Roll Call | Nori Notes; Crew Sampler; Bookmark Comeback; Reference Regular |
 | Daily habits | Three-Day Tray; Sushi Train; Fortnight Feast; Thirty-Day Omakase; Counter Regular; Welcome Back Roll |
 | Each of IM, Pediatrics, Surgery, OB-GYN | Meet the Chef at 50 distinct correct questions; Sakura Specialist at 100; Golden Specialist at 200 |
+| Each of Preventive Medicine, Anatomy, Legal Medicine-Ethics, Pathology, Pharmacology, Biochemistry | Meet the Chef at 50 distinct correct questions, unlocking that subject character |
 
-Memory Maki's 80% and 100% achievement badges require a deck of at least 20 cards; its stopping prompt works for any deck size. Timed achievements require at least 20 fully answered questions. Full-Service Rush requires ten per subject. Meal Prepper requires five exported exams with different question sets, so changing titles or exporting the same set repeatedly does not qualify.
+Memory Maki's 80% and 100% achievement badges require a deck of at least 20 cards; its stopping prompt works for any deck size. Timed achievements require at least 20 fully answered questions. Full-Service Rush requires ten per original core subject: Internal Medicine, OB-GYN, Pediatrics, and Surgery. All existing four-subject awards retain that core scope. Meal Prepper requires five exported exams with different question sets, so changing titles or exporting the same set repeatedly does not qualify.
 
 Actual tutor feedback opens and library explanation opens are recorded; simply listing questions does not award review credit. Subject achievements use graded correctness across self-study modes, excluding assigned exams. Confidence alone earns no subject correctness.
 

@@ -366,5 +366,53 @@
         "image": "/art/portraits/pearl-v2.2.webp",
         "description": "pearl white fish temari obstetrician with a flower pin and a tiny swaddled rice baby",
         "source_image": "/art/achievements/pearl-v2.2.png"
+    },
+    {
+        "id": "preventive",
+        "name": "Kappa Care",
+        "badge": "subject_preventive_50",
+        "image": "/art/subjects/preventive-v2.5.webp",
+        "reused": false,
+        "source_image": "/art/subjects/preventive-v2.5.png"
+    },
+    {
+        "id": "anatomy",
+        "name": "Tama Atlas",
+        "badge": "subject_anatomy_50",
+        "image": "/art/subjects/anatomy-v2.5.webp",
+        "reused": false,
+        "source_image": "/art/subjects/anatomy-v2.5.png"
+    },
+    {
+        "id": "legal",
+        "name": "Inari Integrity",
+        "badge": "subject_legal_50",
+        "image": "/art/subjects/legal-v2.5.webp",
+        "reused": false,
+        "source_image": "/art/subjects/legal-v2.5.png"
+    },
+    {
+        "id": "pathology",
+        "name": "Ikura Insight",
+        "badge": "subject_pathology_50",
+        "image": "/art/subjects/pathology-v2.5.webp",
+        "reused": false,
+        "source_image": "/art/subjects/pathology-v2.5.png"
+    },
+    {
+        "id": "pharmacology",
+        "name": "Ebi Remedy",
+        "badge": "subject_pharmacology_50",
+        "image": "/art/subjects/pharmacology-v2.5.webp",
+        "reused": false,
+        "source_image": "/art/subjects/pharmacology-v2.5.png"
+    },
+    {
+        "id": "biochemistry",
+        "name": "Temaki Spark",
+        "badge": "subject_biochemistry_50",
+        "image": "/art/subjects/biochemistry-v2.5.webp",
+        "reused": false,
+        "source_image": "/art/subjects/biochemistry-v2.5.png"
     }
 ]

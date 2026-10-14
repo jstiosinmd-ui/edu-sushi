@@ -26,13 +26,13 @@ function submit(){
                         <p class="eyebrow">A little practice. A stronger you.</p>
                         <h1>Good things come<br>one roll at a time.</h1>
                         <p>Meet your study crew, find your next challenge, and watch your progress grow with every round.</p>
-                        <div class="crew" aria-label="Your four study subjects">
+                        <div class="crew" aria-label="Your study subjects">
                             <div v-for="(c,s) in crew" :key="s">
                                 <img :src="c.image" :alt="c.name" width="68" height="68">
                                 <strong>{{s==='Internal Medicine'?'Medicine':s}}</strong>
                             </div>
                         </div>
-                        <p class="bank-summary"><span aria-hidden="true">●</span> {{questionCount.toLocaleString()}} questions · Four subjects · Your own pace</p>
+                        <p class="bank-summary"><span aria-hidden="true">●</span> {{questionCount.toLocaleString()}} questions · {{Object.keys(crew).length}} subjects · Your own pace</p>
                     </div>
                 </div>
             </section>

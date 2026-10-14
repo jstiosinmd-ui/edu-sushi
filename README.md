@@ -2,7 +2,7 @@
 
 ---
 
-SUSHI v2.0 is a Laravel and Vue study studio backed by PostgreSQL. It includes 1,047 released questions, student accounts, persistent learner analytics, an administrator workspace, and downloadable exam PDFs.
+SUSHI v2.5 is a Laravel and Vue study studio backed by PostgreSQL. It includes 2,172 released questions across ten subjects, student accounts, persistent learner analytics, an administrator workspace, and downloadable exam PDFs.
 
 **Start with the [Laravel application guide](src/laravel/README.md) and [deployment guide](src/laravel/docs/DEPLOYMENT.md).** The web server must serve `src/laravel/public`. GitHub Pages cannot run this backend.
 

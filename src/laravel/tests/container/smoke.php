@@ -27,7 +27,7 @@ try {
 
     // This fixture must never create study records in a real learner database.
     check(config('database.connections.pgsql.database') === 'sushi_container_smoke', 'Use the isolated container smoke database.');
-    check(Question::count() === 1047 && User::count() === 4, 'Bootstrap data mismatch.');
+    check(Question::count() === 2172 && User::count() === 4, 'Bootstrap data mismatch.');
     check(User::where('must_change_password', true)->count() === 4, 'Bootstrap credentials changed.');
     check((gd_info()['JPEG Support'] ?? false) && (gd_info()['WebP Support'] ?? false), 'Profile photos require JPEG and WebP support.');
     check(Schema::hasTable('daily_catches'), 'Community migrations were not applied.');

@@ -11,6 +11,12 @@ export const crew = {
  'Pediatrics':{name:'Pip the Pedia Roll',image:'/art/20261013_EDU_SushiSubjectPediatrics_v1.2.png'},
  'Surgery':{name:'Suture Salmon',image:'/art/20261013_EDU_SushiSubjectSurgery_v1.2.png'},
  'OB-GYN':{name:'Nori Nurture',image:'/art/20261013_EDU_SushiSubjectOBGYN_v1.2.png'},
+ 'Preventive Medicine':{name:'Kappa Care',image:'/art/subjects/preventive-v2.5.webp'},
+ 'Anatomy':{name:'Tama Atlas',image:'/art/subjects/anatomy-v2.5.webp'},
+ 'Legal Medicine-Ethics':{name:'Inari Integrity',image:'/art/subjects/legal-v2.5.webp'},
+ 'Pathology':{name:'Ikura Insight',image:'/art/subjects/pathology-v2.5.webp'},
+ 'Pharmacology':{name:'Ebi Remedy',image:'/art/subjects/pharmacology-v2.5.webp'},
+ 'Biochemistry':{name:'Temaki Spark',image:'/art/subjects/biochemistry-v2.5.webp'},
 };
 export const modes={fresh:'Fresh Catch 10',tutor:'Maki Mentor',exam:'Wasabi Rush',assigned:'Assigned exam'};
 export const date = value => value ? new Intl.DateTimeFormat('en-PH',{dateStyle:'medium',timeStyle:'short',timeZone:'Asia/Manila'}).format(new Date(value)) : 'None yet';

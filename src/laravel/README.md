@@ -44,6 +44,14 @@ The worker creates PDF downloads and sends opted-in daily push reminders. The sc
 
 The initial password is password for all four accounts. Each must choose a new password on first login. Passwords are hashed; seeding again never resets an existing account or password. No public registration or email addresses are required. The admin can add students, reset passwords, group learners by cohort, or disable access.
 
+## Question bank and subject crew
+
+The released bank contains 2,172 questions across ten subjects. The six additions are Preventive Medicine (247), Anatomy (189), Legal Medicine-Ethics (172), Pathology (194), Pharmacology (166), and Biochemistry (157). All source fields are retained in two additional JSON bundles under database/data. The original bank and its legacy progress-import hash remain unchanged.
+
+Each new subject has a character available throughout study screens and as an achievement avatar: Kappa Care, Tama Atlas, Inari Integrity, Ikura Insight, Ebi Remedy, and Temaki Spark. Correctly answering 50 distinct questions in that subject unlocks its portrait. Original four-subject achievements retain their Internal Medicine, OB-GYN, Pediatrics, and Surgery requirements.
+
+Run php artisan db:seed to append missing bundled questions. Existing questions, administrator edits, accounts, progress, and saved exam snapshots are preserved. See docs/subject-expansion-v2.5.json for source conversion, character prompts, and validation details.
+
 ## Study modes
 
 - Fresh Catch 10 draws unanswered or latest-incorrect MCQs. A correct answer removes that item group until a later incorrect MCQ result.
@@ -59,7 +67,7 @@ The sticky achievement bar advances every 200 distinct completed questions, grou
 
 Fresh Catch and Memory Maki lead the home screen. Finishing all ten Fresh Catch questions earns a daily stamp, with a streak calendar and Wasabi Saves. Memory Maki offers an optional session ending once at least 80% of the selected deck is rated 5. Ratings and the deck remain saved after finishing.
 
-The Sushi Passport contains 45 permanent achievements. Profiles use characters only: Rice Rookie plus 45 distinct achievement unlocks and three pinned badges. Bronze, Silver, Gold, and Sakura are portrait frames, separate from tier names. Learners choose any earned frame in My Profile; it stays selected as they progress or change characters. Signed-in learners share weekly, all-time coverage, and streak leaderboards. The administrator sees completion, engagement, familiarity, and reminder totals.
+The Sushi Passport contains 51 permanent achievements. Profiles use characters only: Rice Rookie plus 51 distinct achievement unlocks and three pinned badges. Bronze, Silver, Gold, and Sakura are portrait frames, separate from tier names. Learners choose any earned frame in My Profile; it stays selected as they progress or change characters. Signed-in learners share weekly, all-time coverage, and streak leaderboards. The administrator sees completion, engagement, familiarity, and reminder totals.
 
 See [community rules and release setup](docs/COMMUNITY.md) for thresholds, scoring, reminders, and the deployment hold.
 

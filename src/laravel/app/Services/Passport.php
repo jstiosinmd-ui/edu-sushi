@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\DB;
 
 class Passport
 {
+    private const NEW_SUBJECTS = ['preventive' => 'Preventive Medicine', 'anatomy' => 'Anatomy', 'legal' => 'Legal Medicine-Ethics', 'pathology' => 'Pathology', 'pharmacology' => 'Pharmacology', 'biochemistry' => 'Biochemistry'];
+
     public static function definitions(): array
     {
         $rows = [
@@ -22,23 +24,23 @@ class Passport
             ['tutor_first', 'Maki Mentor', 'First Roll', 'Complete a tutor session with at least 10 answered questions.', 1],
             ['tutor_100', 'Maki Mentor', 'Mentor’s Apprentice', 'Answer and open tutor feedback for 100 distinct questions.', 100],
             ['tutor_comeback', 'Maki Mentor', 'Comeback Chef', 'Correct 25 distinct previously missed questions in tutor mode.', 25],
-            ['tutor_four', 'Maki Mentor', 'Mentor’s Table', 'Answer and review 25 distinct questions in each subject.', 100],
+            ['tutor_four', 'Maki Mentor', 'Mentor’s Table', 'Answer and review 25 distinct questions in each core subject: Internal Medicine, OB-GYN, Pediatrics, and Surgery.', 100],
             ['rush_first', 'Wasabi Rush', 'First Heat', 'Answer every question in a timed exam of at least 20 questions.', 1],
             ['rush_cool', 'Wasabi Rush', 'Cool Under Wasabi', 'Score at least 80% on a fully answered timed exam of at least 20 questions.', 1],
             ['rush_triple', 'Wasabi Rush', 'Triple Heat', 'Earn three qualifying 80% results covering at least 40 distinct questions overall.', 3],
-            ['rush_four', 'Wasabi Rush', 'Full-Service Rush', 'Complete a timed exam with at least 10 answered questions per subject.', 1],
+            ['rush_four', 'Wasabi Rush', 'Full-Service Rush', 'Complete a timed exam with at least 10 answered questions per core subject: Internal Medicine, OB-GYN, Pediatrics, and Surgery.', 1],
             ['memory_first', 'Memory Maki', 'First Wrap', 'Answer and rate 20 distinct cards.', 20],
             ['memory_ready', 'Memory Maki', 'Ready to Roll', 'Have at least 80% rated 5 in a deck of at least 20 cards.', 80],
             ['memory_golden', 'Memory Maki', 'Golden Maki', 'Have all cards rated 5 in a deck of at least 20 cards.', 100],
             ['memory_rescue', 'Memory Maki', 'Sticky Rice Rescue', 'Move 20 distinct questions from a recorded rating of 1 or 2 to 5.', 20],
-            ['memory_four', 'Memory Maki', 'Four-Flavor Memory', 'Have 25 questions currently rated 5 in each subject.', 100],
+            ['memory_four', 'Memory Maki', 'Four-Flavor Memory', 'Have 25 questions currently rated 5 in each core subject: Internal Medicine, OB-GYN, Pediatrics, and Surgery.', 100],
             ['bento_first', 'Bento Builder', 'Lunchbox Launch', 'Save an exam with at least 20 questions.', 1],
-            ['bento_four', 'Bento Builder', 'Four-Flavor Bento', 'Save an exam with at least 10 questions per subject.', 1],
+            ['bento_four', 'Bento Builder', 'Four-Flavor Bento', 'Save an exam with at least 10 questions per core subject: Internal Medicine, OB-GYN, Pediatrics, and Surgery.', 1],
             ['bento_serve', 'Bento Builder', 'Ready to Serve', 'Generate a paper, answer sheet, and key with explanations for one saved exam.', 1],
-            ['bento_chef', 'Bento Builder', 'Bento Chef', 'Save and export an exam with at least 10 questions per subject.', 1],
+            ['bento_chef', 'Bento Builder', 'Bento Chef', 'Save and export an exam with at least 10 questions per core subject: Internal Medicine, OB-GYN, Pediatrics, and Surgery.', 1],
             ['bento_prep', 'Bento Builder', 'Meal Prepper', 'Save and export five exams with different question sets.', 5],
             ['library_notes', 'Roll Call', 'Nori Notes', 'Bookmark 10 distinct questions.', 10],
-            ['library_sampler', 'Roll Call', 'Crew Sampler', 'Open five distinct explanations from each subject.', 20],
+            ['library_sampler', 'Roll Call', 'Crew Sampler', 'Open five distinct explanations from each core subject: Internal Medicine, OB-GYN, Pediatrics, and Surgery.', 20],
             ['library_comeback', 'Roll Call', 'Bookmark Comeback', 'Correctly answer 10 distinct questions while bookmarked.', 10],
             ['library_100', 'Roll Call', 'Reference Regular', 'Open explanations for 100 distinct library questions.', 100],
             ['streak_3', 'Daily habits', 'Three-Day Tray', 'Complete three study days in a continuous catch streak.', 3],
@@ -52,6 +54,10 @@ class Passport
             foreach ([50 => 'Meet the Chef', 100 => 'Sakura Specialist', 200 => 'Golden Specialist'] as $n => $name) {
                 $rows[] = ['subject_'.$id.'_'.$n, $subject, $name, 'Correctly answer '.$n.' distinct '.$subject.' questions.', $n];
             }
+        }
+
+        foreach (self::NEW_SUBJECTS as $id => $subject) {
+            $rows[] = ['subject_'.$id.'_50', $subject, 'Meet the Chef', 'Correctly answer 50 distinct '.$subject.' questions.', 50];
         }
 
         return collect($rows)->mapWithKeys(fn ($r) => [$r[0] => ['id' => $r[0], 'group' => $r[1], 'name' => $r[2], 'requirement' => $r[3], 'target' => $r[4]]])->all();
@@ -176,6 +182,9 @@ class Passport
                 $values['subject_'.$id.'_'.$target] = $n;
             }
         }
+        foreach (self::NEW_SUBJECTS as $id => $subject) {
+            $values['subject_'.$id.'_50'] = $events->where('subject', $subject)->where('correct', true)->unique('question_hash')->count();
+        }
         foreach (self::definitions() as $id => $badge) {
             if ($values[$id] >= $badge['target']) {
                 DB::table('earned_badges')->insertOrIgnore(['user_id' => $u->id, 'badge' => $id, 'earned_at' => now()]);
@@ -198,6 +207,6 @@ class Passport
 
     private function subjectProgress($items, int $each): int
     {
-        return array_sum(array_map(fn ($s) => min($each, $items->where('subject', $s)->count()), Catalog::SUBJECTS));
+        return array_sum(array_map(fn ($s) => min($each, $items->where('subject', $s)->count()), Catalog::CORE_SUBJECTS));
     }
 }

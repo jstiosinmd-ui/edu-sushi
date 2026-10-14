@@ -25,7 +25,7 @@ class FlashcardController extends Controller
 
     private function filters(Request $r): array
     {
-        $d = $r->validate(['subjects' => 'required|array|min:1|max:4', 'subjects.*' => 'distinct|in:'.implode(',', Catalog::SUBJECTS),
+        $d = $r->validate(['subjects' => 'required|array|min:1|max:'.count(Catalog::SUBJECTS), 'subjects.*' => 'distinct|in:'.implode(',', Catalog::SUBJECTS),
             'topic_scope' => 'in:all,custom', 'topics' => 'required_if:topic_scope,custom|array', 'topics.*' => 'string|max:600', 'difficulty' => 'required|in:All,Easy,Average,Difficult',
             'range_start' => 'required|integer|min:1', 'range_end' => 'required|integer|gte:range_start']);
         if ($d['range_end'] - $d['range_start'] >= 500) {

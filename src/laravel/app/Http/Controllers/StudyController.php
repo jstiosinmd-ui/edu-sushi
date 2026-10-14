@@ -24,9 +24,9 @@ class StudyController extends Controller
     public static function settings(Request $r): array
     {
         return $r->validate(['mode' => 'required|in:tutor,exam,fresh', 'count' => 'required|integer|min:1|max:10000',
-            'seed' => 'required|integer|min:0|max:4294967295', 'subjects' => 'required|array|min:1|max:4',
+            'seed' => 'required|integer|min:0|max:4294967295', 'subjects' => 'required|array|min:1|max:'.count(Catalog::SUBJECTS),
             'subjects.*' => 'required|distinct|in:'.implode(',', Catalog::SUBJECTS), 'topics' => 'required_if:topic_scope,custom|array|max:500', 'topics.*' => 'string|max:600|distinct',
-            'difficulty' => 'required|in:All,Easy,Average,Difficult', 'balance' => 'boolean', 'allocation' => 'array|max:4', 'allocation.*' => 'integer|min:0|max:10000', 'topic_scope' => 'in:all,custom', 'pool' => 'in:all,new,missed,bookmarks', 'minutes' => 'required|integer|min:1|max:360']);
+            'difficulty' => 'required|in:All,Easy,Average,Difficult', 'balance' => 'boolean', 'allocation' => 'array|max:'.count(Catalog::SUBJECTS), 'allocation.*' => 'integer|min:0|max:10000', 'topic_scope' => 'in:all,custom', 'pool' => 'in:all,new,missed,bookmarks', 'minutes' => 'required|integer|min:1|max:360']);
     }
 
     public static function catalog(): array

@@ -8,7 +8,7 @@
 .login .caption .eyebrow{font-size:10px;letter-spacing:.14em;margin:0 0 12px}
 .login .caption h1{font-size:clamp(30px,2.7vw,39px);line-height:1.12;margin:0 0 16px}
 .login .caption>p:not(.eyebrow){font-size:14px;line-height:1.7;max-width:470px}
-.login .crew{margin-top:24px;gap:18px}
+.login .crew{margin-top:20px;gap:14px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
 .login .crew img{width:68px;height:68px;background:#fffdfb;border:1px solid #ead7da}
 .login .crew strong{font-size:11px;line-height:1.4}
 .login .caption .bank-summary{font-size:11px;margin:24px 0 0}

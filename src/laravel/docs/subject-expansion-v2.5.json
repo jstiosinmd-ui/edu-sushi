@@ -1,0 +1,112 @@
+{
+  "title": "SUSHI ten-subject expansion",
+  "date": "2026-10-14",
+  "version": "2.5",
+  "total_questions": 2172,
+  "new_questions": 1125,
+  "unique_stems": 2171,
+  "source_bundles": [
+    "subjects-20261014-v1.1.json",
+    "basic-sciences-20261014-v1.0.json"
+  ],
+  "release_policy": "Release new imported items in the app as requested. Preserve all original CSV fields and source review notes in raw metadata. This change integrates supplied content and does not claim a new clinical source review.",
+  "preservation": [
+    "Original bank.json and legacy import hash unchanged.",
+    "Existing question IDs, positions, versions, edits, accounts, learner history and saved exam snapshots preserved.",
+    "Original four-subject achievements retain their core subject scope.",
+    "No schema migration needed. Seed appends missing items only."
+  ],
+  "features": [
+    "All ten subjects in Fresh Catch, Maki Mentor, Wasabi Rush, Memory Maki, Roll Call, Bento Builder and analytics.",
+    "Six new subject portraits and six Meet the Chef achievements.",
+    "51 achievements and 52 character avatar choices including the starter.",
+    "Each new subject avatar unlocks at 50 distinct correct practice answers; assigned exam answers are excluded as with existing subject rewards.",
+    "Portrait frame selection remains independent of character and tier.",
+    "Login displays ten subject characters; achievement totals are derived dynamically."
+  ],
+  "image_generation": {
+    "tool": "Built-in image_gen.imagegen",
+    "transparent": true,
+    "delivery": "320x320 WebP; original PNG retained",
+    "characters": [
+      {
+        "id": "preventive",
+        "subject": "Preventive Medicine",
+        "name": "Kappa Care",
+        "questions": 247,
+        "prompt": "Use case: illustration-story. Asset type: a single transparent square mascot for SUSHI medical exam study app. Match the existing SUSHI subject mascot visible in conversation: adorable plump sushi food creature, ivory rice face, huge friendly glossy burgundy eyes, rosy cheeks, thick rounded burgundy outlines, warm pink and salmon palette, polished soft vector-like shading. Full body centered, small arms and feet, all props fully in frame, generous transparent margin, readable at 64px. Actual alpha transparency. One character only. No words, lettering, watermark, frame, background, or extra characters. Create 'Kappa Care', the Preventive Medicine mascot: a cheerful cucumber maki roll with green cucumber slices visible on its head and burgundy nori sides, wearing a mint community health vest. Holding a rounded mint shield with a small pink heart emblem and a tiny leafy sprout. Embodies prevention and community care, with a welcoming open pose. Distinct cucumber-green accents.",
+        "png": "public/art/subjects/preventive-v2.5.png",
+        "webp": "public/art/subjects/preventive-v2.5.webp",
+        "badge": "subject_preventive_50"
+      },
+      {
+        "id": "anatomy",
+        "subject": "Anatomy",
+        "name": "Tama Atlas",
+        "questions": 189,
+        "prompt": "Use case: illustration-story. Asset type: a single transparent square mascot for SUSHI medical exam study app. Match the existing SUSHI subject mascot visible in conversation: adorable plump sushi food creature, ivory rice face, huge friendly glossy burgundy eyes, rosy cheeks, thick rounded burgundy outlines, warm pink and salmon palette, polished soft vector-like shading. Full body centered, small arms and feet, all props fully in frame, generous transparent margin, readable at 64px. Actual alpha transparency. One character only. No words, lettering, watermark, frame, background, or extra characters. Create 'Tama Atlas', the Anatomy mascot: a golden tamago nigiri egg pillow atop a rice body with a nori belt, tiny round pink spectacles, light ivory lab coat; holding a small friendly ivory model skeleton torso with ribs and pelvis, and a closed coral anatomy atlas with a simple bone emblem. Keep anatomy symbolic and cute, no gore or exposed flesh. Distinct golden tamago silhouette.",
+        "png": "public/art/subjects/anatomy-v2.5.png",
+        "webp": "public/art/subjects/anatomy-v2.5.webp",
+        "badge": "subject_anatomy_50"
+      },
+      {
+        "id": "legal",
+        "subject": "Legal Medicine-Ethics",
+        "name": "Inari Integrity",
+        "questions": 172,
+        "prompt": "Use case: illustration-story. Asset type: a single transparent square mascot for SUSHI medical exam study app. Match the existing SUSHI subject mascot visible in conversation: adorable plump sushi food creature, ivory rice face, huge friendly glossy burgundy eyes, rosy cheeks, thick rounded burgundy outlines, warm pink and salmon palette, polished soft vector-like shading. Full body centered, small arms and feet, all props fully in frame, generous transparent margin, readable at 64px. Actual alpha transparency. One character only. No words, lettering, watermark, frame, background, or extra characters. Create 'Inari Integrity', the Legal Medicine-Ethics mascot: a golden-brown inari tofu sushi pouch with ivory rice visible at the top and a sweet rice face, tiny burgundy bow tie and ivory coat. Holding small balanced gold scales of justice in one hand and a closed warm pink book with a simple heart emblem in the other. Friendly thoughtful scholar, no judge wig or gavel. Distinct folded tofu-pouch silhouette.",
+        "png": "public/art/subjects/legal-v2.5.png",
+        "webp": "public/art/subjects/legal-v2.5.webp",
+        "badge": "subject_legal_50"
+      },
+      {
+        "id": "pathology",
+        "subject": "Pathology",
+        "name": "Ikura Insight",
+        "questions": 194,
+        "prompt": "Use case: illustration-story. Asset type: one transparent square subject mascot for the SUSHI medical study app. Match the existing sushi mascots shown: adorable plump food creature, ivory rice face, large friendly glossy burgundy eyes, rosy cheeks, thick rounded burgundy outlines, polished warm pink and salmon palette with soft shading. Centered full body, small arms and feet, all props fully in frame, generous margin, readable at 64px. Actual alpha transparency, no backdrop. One character only, no words, letters, watermark, or frame. Create 'Ikura Insight', the Pathology mascot: round gunkan sushi cup with burgundy nori wrapping and glistening coral salmon-roe pearls on its head, rice face and ivory lab coat. One hand holds a simple pink tissue slide, other hand rests on a tiny rose-colored microscope. Gentle curious expression and a tiny burgundy bow. No gore, organs, or disease imagery.",
+        "png": "public/art/subjects/pathology-v2.5.png",
+        "webp": "public/art/subjects/pathology-v2.5.webp",
+        "badge": "subject_pathology_50"
+      },
+      {
+        "id": "pharmacology",
+        "subject": "Pharmacology",
+        "name": "Ebi Remedy",
+        "questions": 166,
+        "prompt": "Use case: illustration-story. Asset type: one transparent square subject mascot for the SUSHI medical study app. Match the existing sushi mascots shown: adorable plump food creature, ivory rice face, large friendly glossy burgundy eyes, rosy cheeks, thick rounded burgundy outlines, polished warm pink and salmon palette with soft shading. Centered full body, small arms and feet, all props fully in frame, generous margin, readable at 64px. Actual alpha transparency, no backdrop. One character only, no words, letters, watermark, or frame. Create 'Ebi Remedy', the Pharmacology mascot: a shrimp nigiri rice creature wearing a curved coral shrimp cap with tail at the back, ivory pharmacist coat and tiny mint bow tie. Holding a small pink-and-ivory capsule in one hand and a squat coral mortar with mint pestle in the other. Friendly confident smile, shrimp segments clearly visible, no syringes, no writing.",
+        "png": "public/art/subjects/pharmacology-v2.5.png",
+        "webp": "public/art/subjects/pharmacology-v2.5.webp",
+        "badge": "subject_pharmacology_50"
+      },
+      {
+        "id": "biochemistry",
+        "subject": "Biochemistry",
+        "name": "Temaki Spark",
+        "questions": 157,
+        "prompt": "Use case: illustration-story. Asset type: one transparent square subject mascot for the SUSHI medical study app. Match the existing sushi mascots shown: adorable plump food creature, ivory rice face, large friendly glossy burgundy eyes, rosy cheeks, thick rounded burgundy outlines, polished warm pink and salmon palette with soft shading. Centered full body, small arms and feet, all props fully in frame, generous margin, readable at 64px. Actual alpha transparency, no backdrop. One character only, no words, letters, watermark, or frame. Create 'Temaki Spark', the Biochemistry mascot: a cute cone-shaped burgundy nori temaki hand roll, ivory rice face peeking above the cone, salmon and avocado filling at top, with round rosy safety goggles and a little ivory lab vest. Holding a small round-bottom flask with pink liquid in one hand and a simple connected mint-and-coral ball molecular model in the other. Warm curious smile, no bubbles obscuring face, no writing.",
+        "png": "public/art/subjects/biochemistry-v2.5.png",
+        "webp": "public/art/subjects/biochemistry-v2.5.webp",
+        "badge": "subject_biochemistry_50"
+      }
+    ]
+  },
+  "verification": {
+    "csv_parity": {
+      "rows": 1125,
+      "fields_per_row": 33,
+      "source_sha256_checks": 6,
+      "passed": true
+    },
+    "preview_seed": {
+      "original_questions_preserved": 1047,
+      "new_questions": 1125,
+      "idempotent": true,
+      "learner_records_unchanged": true
+    },
+    "frontend_build": "Passed, 794 modules",
+    "automated_tests": "Passed: 57 tests, 12,178 assertions; final complete PostgreSQL suite",
+    "browser": "Ten-subject desktop login accessibility state verified before session interruption; final screenshot and mobile review blocked by browser URL security policy on reconnect."
+  },
+  "deployment": "Local only. GitHub push and Railway deployment remain on hold."
+}
