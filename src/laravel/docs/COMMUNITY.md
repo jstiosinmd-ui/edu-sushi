@@ -12,7 +12,7 @@ Memory Maki has six distinct colors for unrated and ratings 1 through 5, with nu
 
 Profiles support a display name, short bio, an earned sushi character, and up to three earned badges. Uploading, cropping, and serving personal photos have been removed. Existing photo profiles return to Rice Rookie; private historical files are retained.
 
-The Character Closet has 46 choices: Rice Rookie plus one distinct character for each of 45 achievements. Frames follow overall unique completion: Bronze 0-199, Silver 200-399, Gold 400-599, Sakura 1 at 600, and another Sakura level every 200 items. All 35 new characters have generated originals and small transparent WebP delivery assets. Locked choices are silhouettes and cannot be equipped through forged requests.
+The Character Closet has 46 choices: Rice Rookie plus one distinct character for each of 45 achievements. Portrait frames unlock through unique completion: Bronze at zero, Silver at 200, Gold at 400, and Sakura flowers at 600. Learners choose any earned frame independently of their sushi tier name. The frame persists when they change characters or advance a tier. All 35 new characters have generated originals and small transparent WebP delivery assets. Locked characters are silhouettes, and locked characters or frames cannot be equipped through forged requests.
 
 ## Daily catches and streaks
 
@@ -44,6 +44,8 @@ Memory Maki's 80% and 100% achievement badges require a deck of at least 20 card
 Actual tutor feedback opens and library explanation opens are recorded; simply listing questions does not award review credit. Subject achievements use graded correctness across self-study modes, excluding assigned exams. Confidence alone earns no subject correctness.
 
 Every 200 distinct completed questions still advances the global tier. Repeated stems and study modes count once. Growing the bank extends the journey without a percentage denominator changing the tier. Subject achievements show available question counts when the active bank cannot yet reach a threshold.
+
+The 26 named tiers run from Rice Rookie at zero to Omakase Master at 5,000. The original first twelve names remain intact; numbered Omakase Master tiers continue beyond 5,000. The full ladder is shown in Your sushi journey. Bronze, Silver, Gold, and Sakura label portrait frames only.
 
 ## Shared leaderboard
 

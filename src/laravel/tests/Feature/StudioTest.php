@@ -59,6 +59,40 @@ class StudioTest extends TestCase
         }
     }
 
+    public function test_portrait_frames_are_earned_selectable_and_independent_of_tier_and_character(): void
+    {
+        $u = $this->user();
+        $data = ['display_name' => 'Chef Q', 'avatar' => 'rice', 'pins' => []];
+        foreach (['silver', 'gold', 'sakura', 'unrecognized'] as $frame) {
+            $this->postJson('/profile', [...$data, 'avatar_frame' => $frame])->assertUnprocessable();
+        }
+        $this->assertNull($u->fresh()->avatar_frame);
+        $questions = Question::all()->unique('stem_hash')->take(600)->values();
+        $complete = fn ($items) => Progress::insert($items->map(fn ($q) => ['user_id' => $u->id, 'question_id' => $q->id, 'completed_at' => now(), 'created_at' => now(), 'updated_at' => now()])->all());
+        $complete($questions->take(200));
+        $this->assertSame('Maki Explorer', Achievements::for($u->id)['name']);
+        $this->assertSame('silver', Closet::profile($u->fresh())['avatar']['frame']);
+        $this->postJson('/profile', [...$data, 'avatar_frame' => 'gold'])->assertUnprocessable();
+        $this->post('/profile', [...$data, 'avatar_frame' => 'silver'])->assertRedirect()->assertSessionHasNoErrors();
+        $this->post('/profile', [...$data, 'avatar_frame' => 'bronze'])->assertRedirect()->assertSessionHasNoErrors();
+        $complete($questions->slice(200));
+        $this->assertSame('Temaki Trailblazer', Achievements::for($u->id)['name']);
+        $this->assertSame('bronze', Closet::profile($u->fresh())['avatar']['frame']);
+        foreach (['sakura', 'silver', 'gold', 'bronze'] as $frame) {
+            $this->post('/profile', [...$data, 'avatar_frame' => $frame])->assertRedirect()->assertSessionHasNoErrors();
+            $this->assertSame($frame, Closet::profile($u->fresh())['avatar']['frame']);
+        }
+        DB::table('earned_badges')->insert(['user_id' => $u->id, 'badge' => 'fresh_perfect', 'earned_at' => now()]);
+        $this->post('/profile/equip', ['avatar' => 'toro'])->assertRedirect()->assertSessionHasNoErrors();
+        $this->assertSame('bronze', Closet::profile($u->fresh())['avatar']['frame']);
+        $this->assertSame('toro', Closet::profile($u->fresh())['avatar']['id']);
+        $this->assertSame('Temaki Trailblazer', $this->get('/')->assertOk()->viewData('page')['props']['achievement']['name']);
+        $public = $this->get('/profiles/'.$u->id)->assertOk()->viewData('page')['props'];
+        $this->assertSame('Temaki Trailblazer', $public['tier']['name']);
+        $this->assertSame('bronze', $public['profile']['avatar']['frame']);
+        $this->assertNull(User::where('username', 'hannahquintero')->firstOrFail()->avatar_frame);
+    }
+
     public function test_counts_match_unique_pool_and_reject_invalid_custom_scope(): void
     {
         $this->user();

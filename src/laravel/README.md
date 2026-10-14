@@ -53,13 +53,13 @@ The initial password is password for all four accounts. Each must choose a new p
 - Bento Builder saves exam versions and generates exam, answer-sheet, and answer-key PDFs.
 - Roll Call provides the searchable library, sources, explanations, and bookmarks.
 
-The sticky achievement bar advances every 200 distinct completed questions, grouping duplicate stems. MCQ completions and rated flashcards share this count. Accuracy remains separate from familiarity. New question imports extend the possible journey without reducing anyone's rank.
+The sticky achievement bar advances every 200 distinct completed questions, grouping duplicate stems. There are 26 unique sushi tier names from Rice Rookie at zero to Omakase Master at 5,000, with numbered Master tiers afterward. MCQ completions and rated flashcards share this count. Accuracy remains separate from familiarity. New question imports extend the possible journey without reducing anyone's rank.
 
 ## Community and daily study
 
 Fresh Catch and Memory Maki lead the home screen. Finishing all ten Fresh Catch questions earns a daily stamp, with a streak calendar and Wasabi Saves. Memory Maki offers an optional session ending once at least 80% of the selected deck is rated 5. Ratings and the deck remain saved after finishing.
 
-The Sushi Passport contains 45 permanent achievements. Profiles use characters only: Rice Rookie plus 45 distinct achievement unlocks, three pinned badges, and Bronze, Silver, Gold, or Sakura rank frames. Signed-in learners share weekly, all-time coverage, and streak leaderboards. The administrator sees completion, engagement, familiarity, and reminder totals.
+The Sushi Passport contains 45 permanent achievements. Profiles use characters only: Rice Rookie plus 45 distinct achievement unlocks and three pinned badges. Bronze, Silver, Gold, and Sakura are portrait frames, separate from tier names. Learners choose any earned frame in My Profile; it stays selected as they progress or change characters. Signed-in learners share weekly, all-time coverage, and streak leaderboards. The administrator sees completion, engagement, familiarity, and reminder totals.
 
 See [community rules and release setup](docs/COMMUNITY.md) for thresholds, scoring, reminders, and the deployment hold.
 

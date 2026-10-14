@@ -11,11 +11,33 @@ class EngineTest extends TestCase
 {
     public function test_fixed_two_hundred_question_tiers_extend_indefinitely(): void
     {
-        $this->assertSame('Bronze', Achievements::at(199)['name']);
-        $this->assertSame('Silver', Achievements::at(200)['name']);
+        $this->assertSame('Rice Rookie', Achievements::at(199)['name']);
+        $this->assertSame('Maki Explorer', Achievements::at(200)['name']);
         $this->assertSame(400, Achievements::at(200)['threshold']);
-        $this->assertSame('Sakura 10', Achievements::at(2400)['name']);
+        $this->assertSame('Tamago Tactician', Achievements::at(2400)['name']);
+        $this->assertSame('Omakase Master', Achievements::at(5000)['name']);
+        $this->assertSame('Omakase Master 2', Achievements::at(5200)['name']);
         $this->assertSame(50200, Achievements::at(50000)['threshold']);
+    }
+
+    public function test_named_tiers_cover_every_boundary_through_five_thousand(): void
+    {
+        $tiers = Achievements::at(0)['tiers'];
+        $this->assertCount(26, $tiers);
+        $this->assertCount(26, array_unique(array_column($tiers, 'name')));
+        foreach ($tiers as $level => $tier) {
+            $at = $level * 200;
+            $this->assertSame($at, $tier['at']);
+            $this->assertSame($tier['name'], Achievements::at($at)['name']);
+            $this->assertSame($tier['name'], Achievements::at($at + 199)['name']);
+            $this->assertSame(200, Achievements::at($at)['remaining']);
+            $this->assertSame(1, Achievements::at($at + 199)['remaining']);
+            $this->assertSame(0, Achievements::at($at)['percent']);
+            $this->assertArrayNotHasKey('frame', $tier);
+        }
+        foreach ([0 => 1, 199 => 1, 200 => 2, 399 => 2, 400 => 3, 599 => 3, 600 => 4, 5000 => 4] as $count => $earned) {
+            $this->assertCount($earned, array_filter(Achievements::frames($count), fn ($f) => $f['unlocked']));
+        }
     }
 
     public function test_weighted_deck_draws_low_confidence_six_times_as_often(): void

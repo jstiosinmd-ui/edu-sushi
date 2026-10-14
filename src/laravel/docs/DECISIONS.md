@@ -8,7 +8,9 @@ The Laravel application lives in src/laravel alongside the preserved v1.3 offlin
 
 ## Fixed achievement thresholds
 
-The owner's revised requirement replaces the original six thresholds. Tiers advance every 200 distinct completed questions, including completed MCQs or rated flashcards. Duplicate stems and repeats across modes count once. Retiring questions and importing new questions do not reduce earned completion. Names extend through twelve named tiers and then numbered Omakase Master tiers without an upper limit.
+The owner's revised requirement replaces the original six thresholds. Tiers advance every 200 distinct completed questions, including completed MCQs or rated flashcards. Duplicate stems and repeats across modes count once. Retiring questions and importing new questions do not reduce earned completion. The original first twelve names are preserved, with 26 unique names from Rice Rookie at zero through Omakase Master at 5,000 questions. Numbered Omakase Master tiers continue every 200 beyond 5,000.
+
+Portrait frames are separate from tier names. Bronze is available initially, Silver at 200 completed questions, Gold at 400, and Sakura flowers at 600. Learners can choose any earned frame, and their saved choice persists across later tiers and character changes. A null preference keeps the previous highest-earned appearance until the learner chooses. This supersedes the v2.2 interpretation that used frame colors as tier names.
 
 ## Fresh Catch retry pool
 

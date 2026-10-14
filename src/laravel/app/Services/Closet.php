@@ -11,8 +11,10 @@ class Closet
     {
         $earned = DB::table('earned_badges')->where('user_id', $user->id)->pluck('badge')->all();
         $rank = Achievements::for($user->id);
+        $frames = array_column(array_filter($rank['frames'], fn ($f) => $f['unlocked']), 'id');
+        $frame = in_array($user->avatar_frame, $frames, true) ? $user->avatar_frame : $rank['frame'];
 
-        return array_map(fn ($a) => [...$a, 'frame' => $rank['frame'],
+        return array_map(fn ($a) => [...$a, 'frame' => $frame,
             'unlocked' => ! $a['badge'] || in_array($a['badge'], $earned, true)],
             json_decode(file_get_contents(resource_path('characters.json')), true));
     }

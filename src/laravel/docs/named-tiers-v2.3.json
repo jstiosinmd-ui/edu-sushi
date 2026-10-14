@@ -1,0 +1,149 @@
+{
+  "version": "2.3",
+  "date": "2026-10-14",
+  "change": "Restore sushi tier names and separate selectable portrait frames",
+  "tiers": [
+    {
+      "questions": 0,
+      "name": "Rice Rookie"
+    },
+    {
+      "questions": 200,
+      "name": "Maki Explorer"
+    },
+    {
+      "questions": 400,
+      "name": "Nigiri Navigator"
+    },
+    {
+      "questions": 600,
+      "name": "Temaki Trailblazer"
+    },
+    {
+      "questions": 800,
+      "name": "Wasabi Warrior"
+    },
+    {
+      "questions": 1000,
+      "name": "Omakase Legend"
+    },
+    {
+      "questions": 1200,
+      "name": "Sakura Sensei"
+    },
+    {
+      "questions": 1400,
+      "name": "Sashimi Scholar"
+    },
+    {
+      "questions": 1600,
+      "name": "Bento Virtuoso"
+    },
+    {
+      "questions": 1800,
+      "name": "Nori Grandmaster"
+    },
+    {
+      "questions": 2000,
+      "name": "Sushi Shogun"
+    },
+    {
+      "questions": 2200,
+      "name": "Golden Chopsticks"
+    },
+    {
+      "questions": 2400,
+      "name": "Tamago Tactician"
+    },
+    {
+      "questions": 2600,
+      "name": "Ebi Envoy"
+    },
+    {
+      "questions": 2800,
+      "name": "Inari Illusionist"
+    },
+    {
+      "questions": 3000,
+      "name": "Kappa Captain"
+    },
+    {
+      "questions": 3200,
+      "name": "Unagi Sage"
+    },
+    {
+      "questions": 3400,
+      "name": "Ikura Illuminator"
+    },
+    {
+      "questions": 3600,
+      "name": "Gunkan Guardian"
+    },
+    {
+      "questions": 3800,
+      "name": "Chirashi Champion"
+    },
+    {
+      "questions": 4000,
+      "name": "Dragon Roll Regent"
+    },
+    {
+      "questions": 4200,
+      "name": "Toro Trailmaster"
+    },
+    {
+      "questions": 4400,
+      "name": "Temari Treasurekeeper"
+    },
+    {
+      "questions": 4600,
+      "name": "Rainbow Roll Royalty"
+    },
+    {
+      "questions": 4800,
+      "name": "Sushi Starlight"
+    },
+    {
+      "questions": 5000,
+      "name": "Omakase Master"
+    }
+  ],
+  "beyond_5000": "Omakase Master 2 at 5200, then another numbered Master level every 200 questions",
+  "frames": [
+    {
+      "name": "Bronze",
+      "questions": 0
+    },
+    {
+      "name": "Silver",
+      "questions": 200
+    },
+    {
+      "name": "Gold",
+      "questions": 400
+    },
+    {
+      "name": "Sakura",
+      "questions": 600
+    }
+  ],
+  "frame_selection": "Any earned frame; saved choice persists across tier and character changes",
+  "migration": "2026_10_14_200000_selectable_portrait_frames.php",
+  "tests": {
+    "engine": "PostgreSQL",
+    "assertions": 1774,
+    "passed": 50,
+    "database": "sushi_test"
+  },
+  "build": "Vite passed, 793 modules",
+  "checks": [
+    "Pint passed",
+    "git diff --check passed",
+    "Desktop frame chooser, locked options, and profile save verified",
+    "26 tier names confirmed in Journey; 320-pixel layout and final 5000 milestone inspected"
+  ],
+  "preview": "http://127.0.0.1:8139/",
+  "preview_database": "sushi_community_preview",
+  "deployment": "Local only; GitHub and Railway remain on hold",
+  "credits": "Jon Bryan S. Tiosin, MD; (c) jstiosin 2026"
+}
