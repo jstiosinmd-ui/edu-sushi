@@ -81,6 +81,5 @@ After deployment approval:
 
 Local verification uses isolated `sushi_test` and `sushi_community_preview` databases. The guarded preview fixture is `tests/browser/prepare-community.php`. It creates sample history solely for UI review and refuses another database.
 
-Jon Bryan S. Tiosin, MD  
+Jon Bryan S. Tiosin, MD
 (c) jstiosin 2026
-

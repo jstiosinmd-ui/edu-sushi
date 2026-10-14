@@ -33,4 +33,3 @@ function save(){form.post('/profile',{forceFormData:true,preserveScroll:true,onS
 <Errors :errors="form.errors"/><button class="primary spaced" :disabled="form.processing">Save profile</button> <Link href="/passport">View Sushi Passport</Link></form>
 <p><Link href="/password">Change password</Link> · <button class="plain" @click="router.post('/logout')">Sign out</button></p><ReminderSettings :preferences="preferences" :push-key="pushKey"/>
 </template>
-

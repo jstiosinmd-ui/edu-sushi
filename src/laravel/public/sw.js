@@ -13,4 +13,3 @@ self.addEventListener('notificationclick',event=>{
  }));
 });
 // Never cache authenticated pages, answers, profiles, or API responses.
-
