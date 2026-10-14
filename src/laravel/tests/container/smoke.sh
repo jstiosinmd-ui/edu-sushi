@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -Eeuo pipefail
 cd "$(dirname "$0")/../.."
 
 docker network create sushi-smoke
 docker volume create sushi-smoke-storage
 docker run -d --name sushi-smoke-db --network sushi-smoke \
   -e POSTGRES_USER=sushi -e POSTGRES_PASSWORD=sushi-ci \
-  -e POSTGRES_DB=sushi_container_smoke postgres:17
+  -e POSTGRES_DB=sushi_container_smoke postgres:18
 for i in {1..30}; do
   if docker exec sushi-smoke-db pg_isready -U sushi -d sushi_container_smoke; then break; fi
   sleep 2
