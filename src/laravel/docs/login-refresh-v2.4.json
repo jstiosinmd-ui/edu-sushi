@@ -1,0 +1,50 @@
+{
+  "version": "2.4",
+  "date": "2026-10-14",
+  "changes": [
+    "Omakase Legend is the 5000-question tier, replacing Omakase Master.",
+    "Mochi Maestro fills the earlier Omakase Legend slot at 1000, retaining 26 unique named tiers.",
+    "Numbered Omakase Legend tiers continue every 200 questions beyond 5000.",
+    "Login follows the supplied two-column reference, with a compact single-column phone layout.",
+    "The original banner lettering and illustration have a transparent background, allowing the warm page gradient to show through.",
+    "Login shows the active bank question count and retains the working Laravel username/password flow and footer credits."
+  ],
+  "banner": {
+    "method": "Built-in image_gen background extraction, followed by a retained PHP delivery-asset conversion.",
+    "prompt": "Use case: background-extraction. Edit target: the supplied existing SUSHI banner. Remove ONLY the pale cream/pink rectangular background and its paper texture, making all negative space genuinely transparent, including the open spaces between letters and decorative motifs. Preserve the existing wide 3:1 composition, ALL exact lettering ('SUSHI', 'Clerks Comprehensive', 'Exam Reviewer', and the book/clipboard labels), raspberry and salmon colors, illustration, smiling sushi student, books, clipboard, green decorative shapes, and pink sparkles. Preserve the opaque off-white rice, book pages, and clipboard paper inside the illustration; those are subject details, not background. Crisp clean antialiased edges, no white matte, no replacement background, no new objects, no new text, no crop. This will sit on a warm ivory to blush web-page gradient (#fffaf6 to #fce5e6); maintain the reference's soft warm palette and avoid a colored rectangular edge. Output the isolated complete existing banner on transparent background.",
+    "source": "public/art/20261013_EDU_SushiBrandBanner_v1.0.png",
+    "generated_png": "public/art/20261014_EDU_SushiLoginBanner_v2.4.png",
+    "delivery_webp": "public/art/20261014_EDU_SushiLoginBanner_v2.4.webp",
+    "delivery_dimensions": [
+      1440,
+      480
+    ],
+    "delivery_bytes": 136918,
+    "builder": "tools/build-login-banner.php"
+  },
+  "verification": {
+    "targeted_tests": {
+      "passed": 7,
+      "assertions": 264,
+      "command": "php artisan test --filter='EngineTest|login'",
+      "database": "sushi_test",
+      "engine": "PostgreSQL"
+    },
+    "build": {
+      "result": "passed",
+      "modules": 794
+    },
+    "browser": [
+      "1280x888 desktop reference layout with no overflow",
+      "320x780 phone layout with no horizontal overflow",
+      "Password show/hide behavior",
+      "Invalid credentials display error feedback",
+      "Valid credentials reach the Counter",
+      "Transparent banner blend and empty-field placeholders visually inspected"
+    ],
+    "preview_database": "sushi_community_preview"
+  },
+  "preview": "http://127.0.0.1:8139/login",
+  "deployment": "Local only. GitHub and Railway remain on hold.",
+  "credits": "Jon Bryan S. Tiosin, MD; (c) jstiosin 2026"
+}

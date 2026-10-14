@@ -10,12 +10,12 @@ class Achievements
 {
     public const NAMES = [
         'Rice Rookie', 'Maki Explorer', 'Nigiri Navigator', 'Temaki Trailblazer',
-        'Wasabi Warrior', 'Omakase Legend', 'Sakura Sensei', 'Sashimi Scholar',
+        'Wasabi Warrior', 'Mochi Maestro', 'Sakura Sensei', 'Sashimi Scholar',
         'Bento Virtuoso', 'Nori Grandmaster', 'Sushi Shogun', 'Golden Chopsticks',
         'Tamago Tactician', 'Ebi Envoy', 'Inari Illusionist', 'Kappa Captain',
         'Unagi Sage', 'Ikura Illuminator', 'Gunkan Guardian', 'Chirashi Champion',
         'Dragon Roll Regent', 'Toro Trailmaster', 'Temari Treasurekeeper',
-        'Rainbow Roll Royalty', 'Sushi Starlight', 'Omakase Master',
+        'Rainbow Roll Royalty', 'Sushi Starlight', 'Omakase Legend',
     ];
 
     public static function frames(int $count): array
@@ -27,7 +27,7 @@ class Achievements
     public static function at(int $count): array
     {
         $level = intdiv($count, 200);
-        $name = fn ($n) => self::NAMES[$n] ?? ('Omakase Master '.($n - count(self::NAMES) + 2));
+        $name = fn ($n) => self::NAMES[$n] ?? ('Omakase Legend '.($n - count(self::NAMES) + 2));
 
         return ['count' => $count, 'level' => $level, 'frame' => ['bronze', 'silver', 'gold'][$level] ?? 'sakura', 'frames' => self::frames($count), 'name' => $name($level), 'next' => $name($level + 1), 'threshold' => ($level + 1) * 200, 'remaining' => 200 - ($count % 200), 'percent' => ($count % 200) / 2,
             'tiers' => array_map(fn ($n) => ['name' => $name($n), 'at' => $n * 200], range(0, max(count(self::NAMES) - 1, $level + 1)))];

@@ -1,6 +1,7 @@
 export const art = {
  nori:'/art/nori-librarian.png',rice:'/art/rice-rookie.png',
  logo:'/art/20261013_EDU_SushiBrandLogo_v1.0.png',banner:'/art/20261013_EDU_SushiBrandBanner_v1.0.png',
+ loginBanner:'/art/20261014_EDU_SushiLoginBanner_v2.4.webp',
  maki:'/art/20261013_EDU_SushiCharacterMaki_v1.1.png',temaki:'/art/20261013_EDU_SushiCharacterTemaki_v1.1.png',
  wasabi:'/art/20261013_EDU_SushiCharacterWasabi_v1.1.png',chef:'/art/20261013_EDU_SushiCharacterChef_v1.1.png',
  memo:'/art/20261013_EDU_SushiMemoMaki_v2.0.png',

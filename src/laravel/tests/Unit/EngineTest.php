@@ -15,8 +15,9 @@ class EngineTest extends TestCase
         $this->assertSame('Maki Explorer', Achievements::at(200)['name']);
         $this->assertSame(400, Achievements::at(200)['threshold']);
         $this->assertSame('Tamago Tactician', Achievements::at(2400)['name']);
-        $this->assertSame('Omakase Master', Achievements::at(5000)['name']);
-        $this->assertSame('Omakase Master 2', Achievements::at(5200)['name']);
+        $this->assertSame('Mochi Maestro', Achievements::at(1000)['name']);
+        $this->assertSame('Omakase Legend', Achievements::at(5000)['name']);
+        $this->assertSame('Omakase Legend 2', Achievements::at(5200)['name']);
         $this->assertSame(50200, Achievements::at(50000)['threshold']);
     }
 

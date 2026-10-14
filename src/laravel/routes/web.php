@@ -11,12 +11,13 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReminderController;
 use App\Http\Controllers\StudyController;
 use App\Http\Controllers\WorkbenchController;
+use App\Models\Question;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::middleware('guest')->group(function () {
-    Route::get('/login', fn () => Inertia::render('Login'))->name('login');
+    Route::get('/login', fn () => Inertia::render('Login', ['questionCount' => Question::where('active', true)->count()]))->name('login');
     Route::post('/login', [AuthController::class, 'login']);
 });
 Route::middleware(['auth', 'active'])->group(function () {

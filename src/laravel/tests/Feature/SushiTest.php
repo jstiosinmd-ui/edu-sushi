@@ -78,6 +78,17 @@ class SushiTest extends TestCase
         }
     }
 
+    public function test_guest_login_shows_active_bank_count_without_question_content(): void
+    {
+        $page = $this->get('/login')->assertOk()->viewData('page');
+        $this->assertSame('Login', $page['component']);
+        $this->assertSame(1047, $page['props']['questionCount']);
+        $this->assertArrayNotHasKey('items', $page['props']);
+        $this->assertArrayNotHasKey('questions', $page['props']);
+        Question::firstOrFail()->update(['active' => false]);
+        $this->assertSame(1046, $this->get('/login')->assertOk()->viewData('page')['props']['questionCount']);
+    }
+
     public function test_all_requested_accounts_can_login_and_must_change_password(): void
     {
         foreach (['powquanico', 'hannahquintero', 'rachirpunla', 'jstiosin'] as $name) {

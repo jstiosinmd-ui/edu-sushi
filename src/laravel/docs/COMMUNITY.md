@@ -45,7 +45,7 @@ Actual tutor feedback opens and library explanation opens are recorded; simply l
 
 Every 200 distinct completed questions still advances the global tier. Repeated stems and study modes count once. Growing the bank extends the journey without a percentage denominator changing the tier. Subject achievements show available question counts when the active bank cannot yet reach a threshold.
 
-The 26 named tiers run from Rice Rookie at zero to Omakase Master at 5,000. The original first twelve names remain intact; numbered Omakase Master tiers continue beyond 5,000. The full ladder is shown in Your sushi journey. Bronze, Silver, Gold, and Sakura label portrait frames only.
+The 26 named tiers run from Rice Rookie at zero to Omakase Legend at 5,000. Mochi Maestro replaces the earlier Legend slot at 1,000; numbered Omakase Legend tiers continue beyond 5,000. The full ladder is shown in Your sushi journey. Bronze, Silver, Gold, and Sakura label portrait frames only.
 
 ## Shared leaderboard
 

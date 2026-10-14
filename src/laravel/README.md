@@ -53,7 +53,7 @@ The initial password is password for all four accounts. Each must choose a new p
 - Bento Builder saves exam versions and generates exam, answer-sheet, and answer-key PDFs.
 - Roll Call provides the searchable library, sources, explanations, and bookmarks.
 
-The sticky achievement bar advances every 200 distinct completed questions, grouping duplicate stems. There are 26 unique sushi tier names from Rice Rookie at zero to Omakase Master at 5,000, with numbered Master tiers afterward. MCQ completions and rated flashcards share this count. Accuracy remains separate from familiarity. New question imports extend the possible journey without reducing anyone's rank.
+The sticky achievement bar advances every 200 distinct completed questions, grouping duplicate stems. There are 26 unique sushi tier names from Rice Rookie at zero to Omakase Legend at 5,000, with numbered Legend tiers afterward. MCQ completions and rated flashcards share this count. Accuracy remains separate from familiarity. New question imports extend the possible journey without reducing anyone's rank.
 
 ## Community and daily study
 
