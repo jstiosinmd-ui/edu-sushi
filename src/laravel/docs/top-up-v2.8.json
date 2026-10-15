@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-16",
+  "counts": {
+    "Internal Medicine": 500,
+    "Pediatrics": 500,
+    "Surgery": 500,
+    "OB-GYN": 500,
+    "Preventive Medicine": 500,
+    "Anatomy": 500,
+    "Legal Medicine-Ethics": 500,
+    "Pathology": 500,
+    "Pharmacology": 500,
+    "Biochemistry": 500,
+    "Physiology": 500,
+    "Microbiology-Parasitology": 500
+  },
+  "newCounts": {
+    "Internal Medicine": 197,
+    "Pediatrics": 261,
+    "Surgery": 189,
+    "OB-GYN": 306,
+    "Preventive Medicine": 253,
+    "Anatomy": 311,
+    "Legal Medicine-Ethics": 328,
+    "Pathology": 306,
+    "Pharmacology": 334,
+    "Biochemistry": 343,
+    "Physiology": 335,
+    "Microbiology-Parasitology": 374
+  },
+  "sources": [
+    {
+      "file": "20261015_EDU_InternalMedicineQuestionBank_v2.0.csv",
+      "sha256": "49a5149bd304871185cab9b6d647e907856f8134ffefbc2ea9083d5033d9cca1",
+      "rows": 500,
+      "added": 197
+    },
+    {
+      "file": "20261015_EDU_PediatricsQuestionBank_v2.0.csv",
+      "sha256": "d0cbe0f18bfd4067e4192ecef10af9aa10c569bb70022f1a64fabe3adeed08b7",
+      "rows": 500,
+      "added": 261
+    },
+    {
+      "file": "20261015_EDU_SurgeryQuestionBank_v2.0.csv",
+      "sha256": "e8205a959993f8ebfa59a6d7795b28f8f0c3fdffc777bcd15f8ea578228dbd56",
+      "rows": 500,
+      "added": 189
+    },
+    {
+      "file": "20261015_EDU_OBGYNQuestionBank_v2.0.csv",
+      "sha256": "8d208c598a1df7e3040ade93a4d7f352bb579636896a73b719b8438ebe81e878",
+      "rows": 500,
+      "added": 306
+    },
+    {
+      "file": "20261015_EDU_PreventiveMedicineQuestionBank_v2.0.csv",
+      "sha256": "0f9fa4afa50d0a14e6fec657bf975e7e759f72a011989f7e912d2275ad69d377",
+      "rows": 500,
+      "added": 253
+    },
+    {
+      "file": "20261015_EDU_AnatomyQuestionBank_v2.0.csv",
+      "sha256": "8a9ffd4ec47d1fc982b99c82cb50f8bc12af1fbce04a738288efbeaeae1341fb",
+      "rows": 500,
+      "added": 311
+    },
+    {
+      "file": "20261016_EDU_LegalMedicineEthicsQuestionBank_v2.1.csv",
+      "sha256": "2dc18bc4de46441cbb01e6a34c5f71767547bd757a675c5774d55eb70df13073",
+      "rows": 500,
+      "added": 328
+    },
+    {
+      "file": "20261015_EDU_PathologyQuestionBank_v2.0.csv",
+      "sha256": "6bf7c1a32a6ef8a1253bc6e9a45d37b00b34a76e4e04f2a72cc6f0c2fe8327e7",
+      "rows": 500,
+      "added": 306
+    },
+    {
+      "file": "20261016_EDU_PharmacologyQuestionBank_v2.1.csv",
+      "sha256": "af9c8caf9891b8c69739913cf8f1a6ce36f27940f3f640fe5221a666fa4f0f53",
+      "rows": 500,
+      "added": 334
+    },
+    {
+      "file": "20261016_EDU_BiochemistryQuestionBank_v2.1.csv",
+      "sha256": "19245782d8848b06f9267bfc4fa7820485c5f2a669396c89c1b6f0e481c40214",
+      "rows": 500,
+      "added": 343
+    },
+    {
+      "file": "20261016_EDU_PhysiologyQuestionBank_v2.1.csv",
+      "sha256": "75b532bcffd4033f99d6c838fed2a502c53acd9ad391069d4282ea641b3f0535",
+      "rows": 500,
+      "added": 335
+    },
+    {
+      "file": "20261016_EDU_MicrobiologyParasitologyQuestionBank_v2.1.csv",
+      "sha256": "199565bc08020d2dfa271dedc1500cf5065e1de5635d40ea66c93dd02250d507",
+      "rows": 500,
+      "added": 374
+    }
+  ],
+  "sourceReviewStatuses": {
+    "Draft": 6000
+  },
+  "duplicateStems": [
+    [
+      "SUR-Q0270",
+      "SUR-Q0295"
+    ],
+    [
+      "PHA-Q0380",
+      "BCH-Q0223"
+    ],
+    [
+      "PHY-Q0416",
+      "MPA-Q0043"
+    ]
+  ],
+  "hash": "7bbcd1fb91715f1b762bbd78cf80f6286403c22b77a918eee4d82c77799e1e11",
+  "title": "SUSHI PLE top-up and learner management",
+  "total_questions": 6000,
+  "added_questions": 3537,
+  "distinct_stems": 5997,
+  "publication_status": "Active",
+  "source_files_modified": false,
+  "local_only": false,
+  "railway_deployment": "Owner approved deployment on 2026-10-16; completion recorded separately after live verification.",
+  "new_learner": {
+    "username": "jstiosin-student",
+    "role": "student",
+    "must_change_password": true
+  },
+  "activation": "One-time release activation preserves historical versions and later administrator retirements.",
+  "validation": {
+    "result": "Passed",
+    "regression_tests_verified": 69,
+    "full_run": {
+      "tests": 69,
+      "passed": 68,
+      "failures": 1,
+      "assertions": 18570,
+      "report": ".tmp/topup-regression.xml"
+    },
+    "focused_rerun": {
+      "tests": 1,
+      "passed": 1,
+      "assertions": 13,
+      "report": ".tmp/topup-leaderboard.xml",
+      "reason": "Updated existing leaderboard fixture from three learners to four after adding the requested learner."
+    },
+    "frontend_build": "Passed: 808 modules",
+    "php_style": "Pint passed",
+    "git_diff_check": "Passed",
+    "source_parity": "All 6,000 rows match source fields; all 12 CSV hashes unchanged.",
+    "local_data": "Both sushi and sushi_community_preview have 6,000 active question records and five users. Existing learner history, accounts, and earlier question versions preserved.",
+    "browser": "Head Chef learner list and Add learner form verified on desktop and 390px mobile viewport; no horizontal overflow or browser console errors."
+  }
+}

@@ -45,11 +45,15 @@ class AdminController extends Controller
 
     public function createUser(Request $r)
     {
-        $d = $r->validate(['username' => 'required|regex:/^[a-z0-9_]{3,40}$/|unique:users', 'password' => 'required|string|min:8|max:100', 'cohort' => 'nullable|string|max:100']);
+        if (is_string($r->input('username'))) {
+            $r->merge(['username' => mb_strtolower(trim($r->input('username')))]);
+        }
+        $d = $r->validate(['username' => 'required|string|regex:/^[a-z0-9_-]{3,40}$/|unique:users', 'password' => 'required|string|min:8|max:100', 'cohort' => 'nullable|string|max:100'],
+            ['username.regex' => 'Use 3–40 lowercase letters, numbers, hyphens, or underscores.']);
         $u = User::create([...$d, 'name' => $d['username'], 'role' => 'student', 'must_change_password' => true]);
         self::audit($r, 'user.created', (string) $u->id);
 
-        return back()->with('message', 'Student account created.');
+        return back()->with('message', 'Learner '.$u->username.' added. They will choose a new password at first sign-in.');
     }
 
     public function updateUser(Request $r, User $user)

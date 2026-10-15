@@ -22,7 +22,7 @@ php artisan db:seed --force
 php artisan optimize
 ~~~
 
-Run seeding on the first deployment to create the requested accounts and released bank. Later runs are idempotent and preserve passwords. The four bootstrap passwords require a change on initial login.
+Run seeding on the first deployment to create the requested accounts and released bank. Later runs are idempotent and preserve passwords. The five bootstrap accounts require a password change on initial login.
 
 Make storage and bootstrap/cache writable by the PHP service account. Keep storage/app/private outside the public web root. Provision at least 512 MB PHP memory for larger PDF exports. Run a supervised worker with php artisan queue:work --tries=2 --timeout=300 and either schedule:work or a cron entry invoking schedule:run every minute. Keep DB_QUEUE_RETRY_AFTER=360 greater than the worker timeout so a running export is not picked up by a second worker. Restart queue workers after deploying code.
 
@@ -65,7 +65,9 @@ Keep a single replica while exports use a local volume. Multiple application rep
 - Check scheduler execution with php artisan schedule:list and run sushi:expire.
 - Check php artisan queue:failed and storage/logs/laravel.log. Logs can contain request context; restrict access and retention.
 
-The seeded bank contains 2,463 questions across twelve subjects, loaded from bank.json, subjects-20261014-v1.1.json, basic-sciences-20261014-v1.0.json, and physiology-microbiology-20261014-v1.0.json. The original 1,047-question bundle and legacy import hash 3cae311b133fe775562ce8d377a7fb41ee8faa3f65d64000ddfa966f4d48585d are unchanged. The three additions retain CSV source SHA-256 values. Re-running the seeder only adds missing IDs.
+The seeded bank contains 6,000 questions across twelve subjects, with 500 per subject. The new ple-top-up-20261016-v2.8.json bundle appends 3,537 missing IDs to the four earlier bundles. The original 1,047-question bundle and legacy import hash 3cae311b133fe775562ce8d377a7fb41ee8faa3f65d64000ddfa966f4d48585d are unchanged. All additions retain CSV source SHA-256 values.
+
+The October 16 release adds jstiosin-student with the initial password password and a required first-login password change. Existing passwords are preserved. Its first seed records ple-top-up-20261016 in bank_releases, activates all existing questions, and creates new versions for publication metadata changes while retaining historical versions and administrator content edits. This activation runs once; later administrator retirements survive reseeding. No answer-correction notices are sent for activation alone. The owner approved production deployment on October 16, 2026.
 
 ## Backups and restore
 

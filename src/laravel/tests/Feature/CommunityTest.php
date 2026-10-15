@@ -121,7 +121,7 @@ class CommunityTest extends TestCase
         $mine = collect($board['rows'])->firstWhere('is_you', true);
         $this->assertSame(1, $mine['points']);
         $this->assertSame(1, $mine['coverage']);
-        $this->assertCount(3, $board['rows']);
+        $this->assertCount(4, $board['rows']);
         $this->assertArrayNotHasKey('username', $mine['profile']);
         $this->assertArrayNotHasKey('email', $mine['profile']);
         $this->travelTo(Carbon::parse('2026-10-19 00:00:01', 'Asia/Manila'));

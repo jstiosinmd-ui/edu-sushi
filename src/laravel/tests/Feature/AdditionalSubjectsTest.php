@@ -50,8 +50,8 @@ class AdditionalSubjectsTest extends TestCase
         $final = json_decode(file_get_contents(database_path('data/physiology-microbiology-20261014-v1.0.json')), true);
         $this->assertCount(291, $final['items']);
         $this->assertSame(['Physiology' => 165, 'Microbiology-Parasitology' => 126], $final['counts']);
-        $this->assertSame(2463, Question::count());
-        $this->assertSame(2462, Question::distinct()->count('stem_hash'));
+        $this->assertSame(6000, Question::count());
+        $this->assertSame(5997, Question::distinct()->count('stem_hash'));
         foreach ([...$bank['items'], ...$basic['items'], ...$final['items']] as $q) {
             $raw = $q['raw'];
             $this->assertSame($raw['Question ID'], $q['id']);
@@ -62,7 +62,7 @@ class AdditionalSubjectsTest extends TestCase
             $this->assertSame(array_map(fn ($x) => $raw['Option '.$x], ['A', 'B', 'C', 'D']), $q['options']);
             $this->assertSame(array_map(fn ($x) => $raw['Explanation '.$x], ['A', 'B', 'C', 'D']), $q['expl']);
             $this->assertSame('Released', $q['status']);
-            $this->assertSame($q, Question::findOrFail($q['id'])->currentVersion->content);
+            $this->assertSame(Catalog::activeContent($q), Question::findOrFail($q['id'])->currentVersion->content);
         }
     }
 
@@ -77,7 +77,7 @@ class AdditionalSubjectsTest extends TestCase
         }
         $coverage = collect(app(Analytics::class)->for($u->id)['coverage']);
         $this->assertCount(12, $coverage);
-        $this->assertSame(2463, $coverage->sum('total'));
+        $this->assertSame(6000, $coverage->sum('total'));
         $allocation = array_fill_keys(Catalog::SUBJECTS, 2);
         $draft = $this->postJson('/exams/preview', $this->settings(['title' => 'Twelve subject bento', 'count' => 24, 'balance' => true, 'allocation' => $allocation]))->assertOk()->json();
         $this->assertEqualsCanonicalizing($allocation, collect($draft['items'])->countBy('subject')->all());
@@ -109,7 +109,7 @@ class AdditionalSubjectsTest extends TestCase
     {
         $this->learner();
         $filters = ['subjects' => Catalog::SUBJECTS, 'topics' => [], 'difficulty' => 'All', 'range_start' => 1, 'range_end' => 1];
-        $this->postJson('/flashcards/preview', $filters)->assertOk()->assertJsonPath('total', 2463);
+        $this->postJson('/flashcards/preview', $filters)->assertOk()->assertJsonPath('total', 6000);
         foreach (self::SUBJECTS as $subject) {
             $s = [...$filters, 'subjects' => [$subject]];
             $p = $this->postJson('/flashcards/preview', $s)->assertOk()->json();
@@ -165,7 +165,7 @@ class AdditionalSubjectsTest extends TestCase
         app(Catalog::class)->import(['items' => [[...$original, 'stem' => $original['stem'].' Updated by admin.']]]);
         $this->seed();
         $this->seed();
-        $this->assertSame(2463, Question::count());
+        $this->assertSame(6000, Question::count());
         $this->assertSame(2, $q->fresh()->currentVersion->version);
         $this->assertSame($original['stem'].' Updated by admin.', $q->fresh()->currentVersion->content['stem']);
         $this->assertSame($original['stem'], $a->items()->first()->snapshot['stem']);

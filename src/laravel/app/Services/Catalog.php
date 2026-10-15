@@ -47,16 +47,25 @@ class Catalog
         return $bank;
     }
 
-    public function import(array $bank, ?int $actor = null): array
+    public static function activeContent(array $content): array
+    {
+        $content['source_review_status'] ??= $content['raw']['Review Status'] ?? null;
+        $content['status'] = 'Active';
+        $content['raw']['Review Status'] = 'Active';
+
+        return $content;
+    }
+
+    public function import(array $bank, ?int $actor = null, bool $notifyCorrections = true): array
     {
         $this->validate($bank);
 
-        return DB::transaction(function () use ($bank, $actor) {
+        return DB::transaction(function () use ($bank, $actor, $notifyCorrections) {
             $result = ['created' => 0, 'updated' => 0, 'unchanged' => 0];
             $existing = Question::with('currentVersion')->get()->keyBy('id');
             $position = (int) Question::max('position');
             foreach ($bank['items'] as $i => $content) {
-                $content['status'] = 'Released';
+                $content = self::activeContent($content);
                 $q = $existing->get($content['id']) ?? new Question(['id' => $content['id']]);
                 $previousVersion = $q->current_version_id;
                 $hash = hash('sha256', json_encode($content, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
@@ -69,7 +78,7 @@ class Catalog
                 $q->fill(['subject' => $content['subject'], 'topic' => $content['topic'], 'difficulty' => $content['tier'], 'stem_hash' => self::stemHash($content['stem']), 'position' => $q->exists ? $q->position : ++$position])->save();
                 $v = QuestionVersion::create(['question_id' => $q->id, 'version' => (QuestionVersion::where('question_id', $q->id)->max('version') ?? 0) + 1, 'content' => $content, 'content_hash' => $hash, 'created_by' => $actor]);
                 $q->update(['current_version_id' => $v->id]);
-                if ($previousVersion) {
+                if ($previousVersion && $notifyCorrections) {
                     app(QuestionNotices::class)->correction($q->fresh());
                 }
             }

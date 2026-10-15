@@ -41,16 +41,17 @@ The worker creates PDF downloads and sends opted-in daily push reminders. The sc
 | hannahquintero | Student |
 | rachirpunla | Student |
 | jstiosin | Administrator |
+| jstiosin-student | Student |
 
-The initial password is password for all four accounts. Each must choose a new password on first login. Passwords are hashed; seeding again never resets an existing account or password. No public registration or email addresses are required. The admin can add students, reset passwords, group learners by cohort, or disable access.
+The initial password is password for all five accounts. Each must choose a new password on first login. Passwords are hashed; seeding again never resets an existing account or password. No public registration or email addresses are required. Head Chef's Add learner button creates student accounts with lowercase letters, numbers, hyphens, or underscores in their usernames. The admin can reset passwords, group learners by cohort, or disable access.
 
 ## Question bank and subject crew
 
-The released bank contains 2,463 questions across twelve subjects. The eight additions are Preventive Medicine (247), Anatomy (189), Legal Medicine-Ethics (172), Pathology (194), Pharmacology (166), Biochemistry (157), Physiology (165), and Microbiology-Parasitology (126). All source fields are retained in three additional JSON bundles under database/data. The original bank and its legacy progress-import hash remain unchanged.
+The active bank contains 6,000 question records across twelve subjects, with 500 in each subject. The October 16 top-up adds 3,537 questions to the existing 2,463. It contains three repeated stem pairs, so draws group 5,997 distinct stems. Source CSV files remain unchanged. Application content uses Active status and retains the original review label in source_review_status. The original bank and its legacy progress-import hash remain unchanged.
 
 Each new subject has a character available throughout study screens and as an achievement avatar: Kappa Care, Tama Atlas, Inari Integrity, Ikura Insight, Ebi Remedy, Temaki Spark, Unagi Pulse, and Shimeji Scout. Correctly answering 50 distinct questions in that subject unlocks its portrait. Original four-subject achievements retain their Internal Medicine, OB-GYN, Pediatrics, and Surgery requirements.
 
-Run php artisan db:seed to append missing bundled questions. Existing questions, administrator edits, accounts, progress, and saved exam snapshots are preserved. See docs/subject-expansion-v2.7.json and docs/subject-expansion-v2.5.json for source conversion, character prompts, and validation details.
+Run php artisan migrate, then php artisan db:seed to append missing bundled questions. The top-up's first seed activates every current question and versions any publication metadata changes. The bank_releases record makes this a one-time action; later administrator retirements stay inactive on reseeding. Existing question edits, accounts, progress, and saved exam snapshots are preserved. Publication changes do not send answer-correction notices. See docs/top-up-v2.8.json for source counts and hashes.
 
 ## Study modes
 
