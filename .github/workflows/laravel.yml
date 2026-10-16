@@ -49,6 +49,7 @@ jobs:
         run: php deploy/check-release.php
       - run: cp .env.example .env && php artisan key:generate
       - run: npm ci && npm run build
+      - run: node --test tests/frontend/*.test.mjs
       - run: php artisan test
   container:
     runs-on: ubuntu-latest

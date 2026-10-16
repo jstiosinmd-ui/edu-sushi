@@ -25,7 +25,8 @@ class CatchReminders
     {
         $day = now($u->timezone)->toDateString();
 
-        return ! $u->disabled && ! DB::table('daily_catches')->where('user_id', $u->id)->where('day', $day)->exists()
+        return ! $u->disabled && ! $u->invitation_pending && ! $u->archived_at
+            && ! DB::table('daily_catches')->where('user_id', $u->id)->where('day', $day)->exists()
             && $u->reminder_dismissed_date !== $day
             && (! $u->reminder_snoozed_until || $u->reminder_snoozed_until->lte(now()));
     }
@@ -36,9 +37,11 @@ class CatchReminders
             return 0;
         }
         $count = 0;
-        foreach (User::where('role', 'student')->where('disabled', false)->where('reminder_enabled', true)->get() as $u) {
+        foreach (User::whereIn('role', ['student', 'admin'])->where('disabled', false)->where('invitation_pending', false)
+            ->whereNull('archived_at')->where('reminder_enabled', true)->get() as $u) {
             $local = now($u->timezone);
-            if ($local->format('H:i') < $u->reminder_time && ! $u->reminder_snoozed_until) {
+            $snoozeToday = $u->reminder_snoozed_until && $u->reminder_snoozed_until->copy()->timezone($u->timezone)->toDateString() === $local->toDateString();
+            if ($local->format('H:i') < $u->reminder_time && ! $snoozeToday) {
                 continue;
             }
             if (! $this->incomplete($u) || ! $this->available($u)) {

@@ -1,0 +1,75 @@
+[
+  {
+    "id": "sushi-2.10",
+    "version": "2.10",
+    "name": "Welcome Roll",
+    "released_on": "2026-10-16",
+    "tour_name": "Sushi Bar Hop",
+    "summary": "Your seat at the Counter, a guided look around the kitchen, and more ways to make each study session count.",
+    "features": [
+      {
+        "title": "Your seat is at the Counter",
+        "text": "Everyone starts at the Counter after signing in, including Head Chef. Your daily catch and Memory Maki deck are ready there.",
+        "url": "/",
+        "category": "improved"
+      },
+      {
+        "title": "Take the Sushi Bar Hop",
+        "text": "Follow an illustrated tour with real app screenshots, clear steps, and links to every study tool. Tap a screenshot for a closer look.",
+        "url": "/tour",
+        "category": "added"
+      },
+      {
+        "title": "Your Fresh Catch, your mix",
+        "text": "Choose how many of your daily ten are unseen or previously missed, and spread them across your subjects.",
+        "url": "/practice?mode=fresh",
+        "category": "improved"
+      },
+      {
+        "title": "One last tasting",
+        "text": "Reach 80% rated 5 in Memory Maki to unlock a short recall check with answers at the finish.",
+        "url": "/flashcards",
+        "category": "added"
+      },
+      {
+        "title": "Every Memory Maki answer counts",
+        "text": "Answering a new card advances your completion tier immediately. Memory Maki also earns weekly study points under the same repeat-counting rules as other modes.",
+        "url": "/progress",
+        "category": "improved"
+      },
+      {
+        "title": "Build a precise bento",
+        "text": "Set topic and difficulty quotas, review the actual questions, and load class recipes shared by Head Chef.",
+        "url": "/exams",
+        "category": "improved"
+      },
+      {
+        "title": "Meet the next sushi crew",
+        "text": "Five new named tiers and unlockable portraits continue your journey from 5,200 to 6,000 completed questions.",
+        "url": "/profile#closet",
+        "category": "added"
+      },
+      {
+        "title": "A clearer Chef’s Review",
+        "text": "Track matching stems, missing references, and version-specific answer checks.",
+        "url": "/admin/quality",
+        "audience": "admin",
+        "category": "improved"
+      },
+      {
+        "title": "Welcome a whole cohort",
+        "text": "Preview a CSV roster and create individual invitation links for new learners.",
+        "url": "/admin/onboarding",
+        "audience": "admin",
+        "category": "added"
+      },
+      {
+        "title": "Head Chef can join the round",
+        "text": "Your administrator account can study and earn a place on the leaderboard.",
+        "url": "/leaderboard",
+        "audience": "admin",
+        "category": "improved"
+      }
+    ]
+  }
+]

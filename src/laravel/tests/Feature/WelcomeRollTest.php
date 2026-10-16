@@ -79,9 +79,26 @@ class WelcomeRollTest extends TestCase
             $this->assertSame('Sushi Bar Hop', $page['props']['tour']['title']);
             $this->assertCount($stops, $page['props']['tour']['stops']);
             $this->assertSame($role === 'admin', in_array('Head Chef', array_column($page['props']['tour']['stops'], 'name')));
-            $adminNotes = array_filter($page['props']['featureUpdate']['features'], fn ($note) => ($note['audience'] ?? 'all') === 'admin');
+            $allNotes = array_merge($page['props']['featureUpdate']['features'], ...array_column($page['props']['featureUpdate']['history'], 'features'));
+            $adminNotes = array_filter($allNotes, fn ($note) => ($note['audience'] ?? 'all') === 'admin');
             $this->assertSame($role === 'admin', count($adminNotes) > 0);
-            $this->assertSame('Welcome Roll', $page['props']['release']['name']);
+            $this->assertSame(FeatureUpdates::release()['name'], $page['props']['release']['name']);
         }
+    }
+
+    public function test_changelog_retains_history_without_reusing_its_acknowledgment(): void
+    {
+        $user = $this->account();
+        DB::table('feature_update_reads')->insert(['user_id' => $user->id, 'release' => 'sushi-2.10', 'read_at' => now()]);
+        $notes = FeatureUpdates::for($user);
+        $this->assertTrue($notes['unread']);
+        $this->assertSame('sushi-2.10', $notes['history'][0]['id']);
+        $this->assertSame('Welcome Roll', $notes['history'][0]['name']);
+        $this->assertNotEmpty($notes['history'][0]['features']);
+        $this->actingAs($user)->withSession(['auth_version' => $user->auth_version]);
+        $this->postJson('/feature-updates/read', ['release' => FeatureUpdates::id()])->assertOk();
+        $seen = FeatureUpdates::for($user);
+        $this->assertFalse($seen['unread']);
+        $this->assertSame($notes['history'], $seen['history']);
     }
 }

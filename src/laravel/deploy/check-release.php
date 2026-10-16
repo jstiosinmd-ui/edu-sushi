@@ -19,8 +19,8 @@ function sushiReleaseErrors(array $current, ?array $previous = null, bool $appli
         $errors[] = 'Each release needs visible feature notes.';
     } else {
         foreach ($current['features'] as $feature) {
-            if (! is_array($feature) || empty($feature['title']) || empty($feature['text']) || ! preg_match('~^/(?!/)~', $feature['url'] ?? '') || ! in_array($feature['audience'] ?? 'all', ['all', 'admin'], true)) {
-                $errors[] = 'Feature notes need a title, explanation, app link, and valid audience.';
+            if (! is_array($feature) || empty($feature['title']) || empty($feature['text']) || (isset($feature['url']) && ! preg_match('~^/(?!/)~', $feature['url'])) || ! in_array($feature['audience'] ?? 'all', ['all', 'admin'], true) || ! in_array($feature['category'] ?? 'added', ['added', 'improved', 'fixed'], true)) {
+                $errors[] = 'Feature notes need a title, explanation, valid category and audience, and local app links when provided.';
             }
         }
         if (! array_filter($current['features'], fn ($f) => is_array($f) && ($f['audience'] ?? 'all') === 'all')) {

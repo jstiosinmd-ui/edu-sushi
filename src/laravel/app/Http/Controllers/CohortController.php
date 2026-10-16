@@ -24,14 +24,14 @@ class CohortController extends Controller
         $page = max(1, $r->integer('page', 1));
 
         return Inertia::render('Cohort', ['overview' => $insights->overview($users), 'filters' => $d,
-            'cohorts' => User::where('role', 'student')->whereNotNull('cohort')->where('cohort', '!=', '')->distinct()->orderBy('cohort')->pluck('cohort'),
+            'cohorts' => $insights->learners()->pluck('cohort')->filter()->unique()->sort()->values(),
             'subjects' => Catalog::SUBJECTS, 'items' => new LengthAwarePaginator($items->slice(($page - 1) * 20, 20)->values(), $items->count(), 20, $page,
                 ['path' => '/admin/overview', 'query' => $r->query()])]);
     }
 
     public function assign(Request $r, User $user)
     {
-        abort_unless($user->role === 'student' && ! $user->disabled, 422, 'Choose an active student.');
+        abort_unless($user->role === 'student' && ! $user->disabled && ! $user->invitation_pending && ! $user->archived_at, 422, 'Choose an active student.');
         $d = $r->validate(['subject' => 'required|in:'.implode(',', Catalog::SUBJECTS), 'topic' => 'nullable|string|max:255',
             'count' => 'required|integer|between:1,50', 'minutes' => 'required|integer|between:5,180', 'days' => 'required|integer|between:1,30']);
         $items = collect(app(Catalog::class)->items())->where('subject', $d['subject'])

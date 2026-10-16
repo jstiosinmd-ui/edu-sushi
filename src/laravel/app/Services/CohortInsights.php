@@ -10,7 +10,7 @@ class CohortInsights
 {
     public function learners(?string $cohort = null): Collection
     {
-        $q = User::where('role', 'student')->where('disabled', false);
+        $q = User::where('role', 'student')->where('disabled', false)->where('invitation_pending', false)->whereNull('archived_at');
         if ($cohort === '__unassigned__') {
             $q->where(fn ($q) => $q->whereNull('cohort')->orWhere('cohort', ''));
         } elseif ($cohort !== null && $cohort !== '') {

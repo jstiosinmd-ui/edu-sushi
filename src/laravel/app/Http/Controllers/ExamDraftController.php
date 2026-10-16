@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Exam;
 use App\Models\ExamDraft;
+use App\Services\Blueprint;
 use App\Services\Catalog;
 use App\Services\Draw;
 use App\Services\Selection;
@@ -48,12 +49,33 @@ class ExamDraftController extends Controller
             $old = $items[$d['position']];
             $hashes = array_map(fn ($q) => Catalog::stemHash($q['stem']), $items);
             $choices = array_values(array_filter($selection->pool($r->user(), $draft->settings), fn ($q) => $q['subject'] === $old['subject']
-                && (empty($draft->settings['blueprint']) || ($q['topic'] === $old['topic'] && $q['tier'] === $old['tier']))
                 && ! in_array(Catalog::stemHash($q['stem']), $hashes, true)));
-            if (! $choices) {
-                throw ValidationException::withMessages(['replacement' => 'No unused questions remain in this subject with these filters.']);
+            $replacement = null;
+            $cells = [];
+            foreach (collect($choices)->shuffle() as $q) {
+                if (! empty($draft->settings['blueprint'])) {
+                    $cell = json_encode([$q['subject'], $q['topic'], $q['tier']]);
+                    if (! array_key_exists($cell, $cells)) {
+                        try {
+                            // Re-match the entire set so overlapping broad and narrow rows
+                            // may exchange slots while every saved quota remains satisfied.
+                            app(Blueprint::class)->select(array_replace($items, [$d['position'] => $q]), $draft->settings['blueprint'], count($items));
+                            $cells[$cell] = true;
+                        } catch (ValidationException) {
+                            $cells[$cell] = false;
+                        }
+                    }
+                    if (! $cells[$cell]) {
+                        continue;
+                    }
+                }
+                $replacement = $q;
+                break;
             }
-            $items[$d['position']] = $choices[random_int(0, count($choices) - 1)];
+            if (! $replacement) {
+                throw ValidationException::withMessages(['replacement' => 'No unused questions satisfy this recipe’s quotas and filters.']);
+            }
+            $items[$d['position']] = $replacement;
             $draft->update(['items' => $items, 'revision' => $draft->revision + 1]);
 
             return response()->json($this->present($draft));

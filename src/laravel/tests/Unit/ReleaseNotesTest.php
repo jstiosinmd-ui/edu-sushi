@@ -60,4 +60,19 @@ class ReleaseNotesTest extends TestCase
         }
         $this->assertSame(count($hashes), count(array_unique($hashes)));
     }
+
+    public function test_changelog_has_valid_categories_and_unique_older_releases(): void
+    {
+        $current = $this->release();
+        $history = json_decode(file_get_contents(__DIR__.'/../../resources/release-history.json'), true, 512, JSON_THROW_ON_ERROR);
+        $ids = [];
+        foreach ($history as $entry) {
+            $this->assertTrue(version_compare($entry['version'], $current['version'], '<'));
+            $this->assertSame([], sushiReleaseErrors($entry));
+            $ids[] = $entry['id'];
+        }
+        $this->assertCount(count($ids), array_unique($ids));
+        $current['features'][0]['category'] = 'unknown';
+        $this->assertNotEmpty(sushiReleaseErrors($current));
+    }
 }

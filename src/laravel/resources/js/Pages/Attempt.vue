@@ -1,10 +1,11 @@
 <script setup>
-import {ref,computed,onMounted,onUnmounted} from 'vue';
+import {ref,computed,watch,onMounted,onUnmounted} from 'vue';
 import {Head,Link,router,usePage} from '@inertiajs/vue3';import axios from 'axios';import {crew,modes} from '../art';import Feedback from '../Components/Feedback.vue';
 import SaveNotice from '../Components/SaveNotice.vue';import {useStudyDelivery} from '../useStudyDelivery';import {answerKey} from '../studyDelivery';
-const props=defineProps({attempt:Object,bookmarks:Array});const page=usePage(),data=ref(props.attempt),index=ref(0),clock=ref(Date.now()),offset=new Date(props.attempt.server_now).getTime()-Date.now();
+const props=defineProps({attempt:Object,bookmarks:Array});const page=usePage(),data=ref(props.attempt),index=ref(0),clock=ref(Date.now()),offset=ref(new Date(props.attempt.server_now).getTime()-Date.now());
+watch(()=>props.attempt,attempt=>{const item=data.value.items[index.value]?.item_id;data.value=attempt;const at=attempt.items.findIndex(i=>i.item_id===item);index.value=at>=0?at:0;clock.value=Date.now();offset.value=new Date(attempt.server_now).getTime()-clock.value});
 const q=computed(()=>data.value.items[index.value]),ended=computed(()=>data.value.status!=='active');
-const remaining=computed(()=>data.value.deadline?Math.max(0,Math.ceil((new Date(data.value.deadline).getTime()-clock.value-offset)/1000)):null);
+const remaining=computed(()=>data.value.deadline?Math.max(0,Math.ceil((new Date(data.value.deadline).getTime()-clock.value-offset.value)/1000)):null);
 const timer=computed(()=>remaining.value===null?'Untimed':Math.floor(remaining.value/60)+':'+String(remaining.value%60).padStart(2,'0'));
 function accept(r){data.value=r.data.attempt;page.props.achievement=r.data.achievement;page.props.community=r.data.community;const at=data.value.items.findIndex(i=>i.item_id===pending.value?.payload.item_id);if(at>=0)index.value=at}
 const {pending,busy,error,status,send,retry,discard}=useStudyDelivery('sushi:pending:'+page.props.user.id+':attempt:'+data.value.id,'/attempts/'+data.value.id,accept);

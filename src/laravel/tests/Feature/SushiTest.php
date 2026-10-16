@@ -312,7 +312,7 @@ class SushiTest extends TestCase
         $this->postJson('/flashcards/decks/'.$deck->id.'/answer', ['question_id' => $q['id'], 'answer' => $correct, 'token' => $q['token']])->assertConflict();
         $this->assertSame(1, DB::table('flashcard_reviews')->count());
         $this->assertSame(1, Achievements::for($u->id)['count']);
-        $this->assertSame(0, app(Analytics::class)->for($u->id)['graded_total']);
+        $this->assertSame(1, app(Analytics::class)->for($u->id)['graded_total']);
         $this->learner('hannahquintero');
         $this->get('/flashcards/decks/'.$deck->id)->assertForbidden();
     }

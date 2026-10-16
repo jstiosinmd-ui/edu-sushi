@@ -3,6 +3,7 @@ import {ref,computed,watch,nextTick,onMounted,onUnmounted} from 'vue';import {He
 import Feedback from '../Components/Feedback.vue';import {art,crew,message} from '../art';
 import RecallBalance from '../Components/RecallBalance.vue';import SaveNotice from '../Components/SaveNotice.vue';import {useStudyDelivery} from '../useStudyDelivery';import {answerKey} from '../studyDelivery';
 const props=defineProps({deck:Object}),page=usePage(),data=ref(props.deck),sessionBusy=ref(false),sessionError=ref(''),saved=ref(''),goalDialog=ref(null);
+watch(()=>props.deck,deck=>{data.value=deck;sessionError.value='';saved.value=''});
 const q=computed(()=>data.value.question),labels=['Unfamiliar','Unsure','Somewhat familiar','Mostly confident','Confident'];
 async function goal(){await nextTick();if(data.value.goal_prompt&&!data.value.finished&&!goalDialog.value?.open)goalDialog.value?.showModal();else if(!data.value.goal_prompt)goalDialog.value?.close()}
 watch(()=>data.value.goal_prompt,goal);onMounted(goal);

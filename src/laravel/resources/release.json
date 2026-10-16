@@ -1,63 +1,52 @@
 {
-  "id": "sushi-2.10",
-  "version": "2.10",
-  "name": "Welcome Roll",
+  "id": "sushi-2.11",
+  "version": "2.11",
+  "name": "Counter Notes",
   "released_on": "2026-10-16",
   "tour_name": "Sushi Bar Hop",
-  "summary": "Your seat at the Counter, a guided look around the kitchen, and more ways to make each study session count.",
+  "summary": "A dated changelog, complete Memory Maki progress, and fixes for study recovery, Bento recipes, and reminders.",
   "features": [
     {
-      "title": "Your seat is at the Counter",
-      "text": "Everyone starts at the Counter after signing in, including Head Chef. Your daily catch and Memory Maki deck are ready there.",
-      "url": "/"
+      "category": "added",
+      "title": "Release history",
+      "text": "Read previous release notes without leaving the update window."
     },
     {
-      "title": "Take the Sushi Bar Hop",
-      "text": "Follow an illustrated tour with real app screenshots, clear steps, and links to every study tool. Tap a screenshot for a closer look.",
-      "url": "/tour"
+      "category": "improved",
+      "title": "What's New",
+      "text": "Updates now use concise entries grouped under Added, Improved, and Fixed. Each release shows its version and date."
     },
     {
-      "title": "Your Fresh Catch, your mix",
-      "text": "Choose how many of your daily ten are unseen or previously missed, and spread them across your subjects.",
-      "url": "/practice?mode=fresh"
+      "category": "fixed",
+      "title": "Resume from the latest saved answer",
+      "text": "Reloading after a save conflict now refreshes the question, timer, and session status in practice rounds and Memory Maki."
     },
     {
-      "title": "One last tasting",
-      "text": "Reach 80% rated 5 in Memory Maki to unlock a short recall check with answers at the finish.",
-      "url": "/flashcards"
+      "category": "fixed",
+      "title": "Memory Maki progress",
+      "text": "Submitted answers now appear in coverage, accuracy, and Missed questions, including past answers. Filter My Progress by Memory Maki to see them."
     },
     {
-      "title": "Every Memory Maki answer counts",
-      "text": "Answering a new card advances your completion tier immediately. Memory Maki also earns weekly study points under the same repeat-counting rules as other modes.",
-      "url": "/progress"
+      "category": "fixed",
+      "title": "Bento question swaps",
+      "text": "Replacing a question respects your full recipe, including Any topic and All difficulties, while keeping the other questions in place."
     },
     {
-      "title": "Build a precise bento",
-      "text": "Set topic and difficulty quotas, review the actual questions, and load class recipes shared by Head Chef.",
-      "url": "/exams"
+      "category": "fixed",
+      "title": "Fresh Catch reminder timing",
+      "text": "An old snooze no longer sends the next day\u2019s reminder before your chosen time."
     },
     {
-      "title": "Meet the next sushi crew",
-      "text": "Five new named tiers and unlockable portraits continue your journey from 5,200 to 6,000 completed questions.",
-      "url": "/profile#closet"
+      "category": "fixed",
+      "audience": "admin",
+      "title": "Head Chef reminders",
+      "text": "Administrators can receive Fresh Catch reminders when enabled, just like learners."
     },
     {
-      "title": "A clearer Chef’s Review",
-      "text": "Track matching stems, missing references, and version-specific answer checks.",
-      "url": "/admin/quality",
-      "audience": "admin"
-    },
-    {
-      "title": "Welcome a whole cohort",
-      "text": "Preview a CSV roster and create individual invitation links for new learners.",
-      "url": "/admin/onboarding",
-      "audience": "admin"
-    },
-    {
-      "title": "Head Chef can join the round",
-      "text": "Your administrator account can study and earn a place on the leaderboard.",
-      "url": "/leaderboard",
-      "audience": "admin"
+      "category": "fixed",
+      "audience": "admin",
+      "title": "Cohort activity alerts",
+      "text": "Pending invitations, archived accounts, and disabled learners are excluded from cohort activity alerts and focused practice assignments."
     }
   ]
 }

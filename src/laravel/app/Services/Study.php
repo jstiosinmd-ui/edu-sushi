@@ -20,10 +20,12 @@ class Study
         if (! empty($settings['selected_ids'])) {
             return app(Selection::class)->exact($settings['selected_ids']);
         }
-        $progress = Progress::where('user_id', $userId)->get()->keyBy('question_id');
         if (($settings['mode'] ?? '') === 'fresh') {
             return app(FreshCatch::class)->eligible($userId);
         }
+        $progress = in_array($settings['pool'] ?? 'all', ['new', 'missed'], true)
+            ? app(StudyHistory::class)->progress($userId)
+            : Progress::where('user_id', $userId)->get()->keyBy('question_id');
 
         $seen = DB::table('study_events')->where('user_id', $userId)->pluck('question_hash')->all();
 
