@@ -45,7 +45,7 @@ class TopUpTest extends TestCase
 
     public function test_activation_preserves_versions_history_edits_and_later_retirements(): void
     {
-        $user = User::where('username', 'jstiosin-student')->firstOrFail();
+        $user = User::where('username', 'powquanico')->firstOrFail();
         $user->update(['password' => 'existing-changed-password']);
         $passwordHash = $user->password;
         $question = Question::firstOrFail();
@@ -80,7 +80,7 @@ class TopUpTest extends TestCase
         $this->assertFalse($question->fresh()->active);
         $this->assertSame($current->id, $question->fresh()->current_version_id);
         $this->assertSame(6000, Question::count());
-        $this->assertSame(1, User::where('username', 'jstiosin-student')->count());
+        $this->assertSame(1, User::where('username', 'powquanico')->count());
     }
 
     public function test_head_chef_can_add_hyphenated_learner_without_granting_admin_access(): void
@@ -97,18 +97,18 @@ class TopUpTest extends TestCase
         $this->post('/admin/users', ['username' => 'NEW-LEARNER', 'password' => 'password'])->assertSessionHasErrors('username');
         $this->post('/admin/users', ['username' => 'bad name', 'password' => 'password'])->assertSessionHasErrors('username');
         $this->post('/admin/users', ['username' => 'valid-name', 'password' => 'short'])->assertSessionHasErrors('password');
-        $this->assertSame(6, User::count());
+        $this->assertSame(5, User::count());
     }
 
     public function test_new_learner_cannot_create_accounts_and_can_login_with_initial_password(): void
     {
         $this->post('/admin/users', ['username' => 'guest-added', 'password' => 'password'])->assertRedirect('/login');
-        $this->post('/login', ['username' => 'jstiosin-student', 'password' => 'password'])->assertRedirect('/password');
-        $this->assertAuthenticatedAs(User::where('username', 'jstiosin-student')->firstOrFail());
+        $this->post('/login', ['username' => 'powquanico', 'password' => 'password'])->assertRedirect('/password');
+        $this->assertAuthenticatedAs(User::where('username', 'powquanico')->firstOrFail());
         $this->post('/logout');
-        $this->signIn('jstiosin-student');
+        $this->signIn('powquanico');
         $this->get('/admin')->assertForbidden();
         $this->post('/admin/users', ['username' => 'student-added', 'password' => 'password'])->assertForbidden();
-        $this->assertSame(5, User::count());
+        $this->assertSame(4, User::count());
     }
 }

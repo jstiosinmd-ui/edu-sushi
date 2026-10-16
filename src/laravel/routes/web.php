@@ -2,25 +2,35 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BackupController;
 use App\Http\Controllers\CohortController;
 use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\ExamController;
 use App\Http\Controllers\ExamDraftController;
 use App\Http\Controllers\FlashcardController;
 use App\Http\Controllers\ImportController;
+use App\Http\Controllers\InvitationController;
+use App\Http\Controllers\MemoryExitController;
 use App\Http\Controllers\NotebookController;
+use App\Http\Controllers\OnboardingController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuestionFeedbackController;
+use App\Http\Controllers\QuestionQualityController;
 use App\Http\Controllers\ReminderController;
 use App\Http\Controllers\StudyController;
 use App\Http\Controllers\StudyGuideController;
 use App\Http\Controllers\WorkbenchController;
 use App\Models\Question;
+use App\Services\FeatureUpdates;
+use App\Services\TourGuide;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::middleware('guest')->group(function () {
+    Route::get('/join/{token}', [InvitationController::class, 'show'])->middleware('throttle:30,1');
+    Route::post('/join/{token}', [InvitationController::class, 'accept'])->middleware('throttle:10,1');
     Route::get('/login', fn () => Inertia::render('Login', ['questionCount' => Question::where('active', true)->count()]))->name('login');
     Route::post('/login', [AuthController::class, 'login']);
 });
@@ -29,6 +39,7 @@ Route::middleware(['auth', 'active'])->group(function () {
     Route::get('/password', fn () => Inertia::render('Password'));
     Route::post('/password', [AuthController::class, 'password']);
     Route::get('/', [StudyController::class, 'home'])->name('dashboard');
+    Route::get('/tour', fn (Request $r) => Inertia::render('Tour', ['tour' => TourGuide::for($r->user())]));
     Route::post('/today-bento/preview', [StudyGuideController::class, 'preview']);
     Route::post('/today-bento/start', [StudyGuideController::class, 'start'])->middleware('throttle:30,1');
     Route::get('/profile', [ProfileController::class, 'index']);
@@ -57,6 +68,13 @@ Route::middleware(['auth', 'active'])->group(function () {
     Route::post('/exams/{exam}/duplicate', [ExamDraftController::class, 'duplicate']);
     Route::post('/exams/presets', [ExamDraftController::class, 'preset']);
     Route::get('/practice', [StudyController::class, 'practice']);
+    Route::post('/fresh-catch/preview', [StudyController::class, 'freshPreview'])->middleware('throttle:60,1');
+    Route::post('/feature-updates/read', function (Request $r) {
+        $d = $r->validate(['release' => 'required|in:'.FeatureUpdates::id()]);
+        DB::table('feature_update_reads')->insertOrIgnore(['user_id' => $r->user()->id, 'release' => $d['release'], 'read_at' => now()]);
+
+        return response()->json(['saved' => true]);
+    });
     Route::post('/attempts', [StudyController::class, 'start'])->middleware('throttle:30,1');
     Route::get('/attempts/{attempt}', [StudyController::class, 'show']);
     Route::post('/attempts/{attempt}/answer', [StudyController::class, 'answer']);
@@ -80,6 +98,9 @@ Route::middleware(['auth', 'active'])->group(function () {
     Route::post('/flashcards/decks/{deck}/answer', [FlashcardController::class, 'answer']);
     Route::post('/flashcards/decks/{deck}/rate', [FlashcardController::class, 'rate']);
     Route::post('/flashcards/decks/{deck}/session', [FlashcardController::class, 'session']);
+    Route::post('/flashcards/decks/{deck}/exit-check', [MemoryExitController::class, 'start']);
+    Route::get('/memory-checks/{quiz}', [MemoryExitController::class, 'show']);
+    Route::post('/memory-checks/{quiz}', [MemoryExitController::class, 'submit']);
     Route::get('/exams', [ExamController::class, 'index']);
     Route::post('/exams', [ExamController::class, 'store']);
     Route::post('/exams/{exam}/export', [ExamController::class, 'export'])->middleware('throttle:10,1');
@@ -88,7 +109,15 @@ Route::middleware(['auth', 'active'])->group(function () {
     Route::post('/import', [ImportController::class, 'store'])->middleware('throttle:10,1');
     Route::prefix('admin')->middleware('admin')->group(function () {
         Route::get('/', [AdminController::class, 'index']);
+        Route::get('/backups', [BackupController::class, 'index']);
         Route::get('/reports', [QuestionFeedbackController::class, 'index']);
+        Route::get('/quality', [QuestionQualityController::class, 'index']);
+        Route::get('/onboarding', [OnboardingController::class, 'index']);
+        Route::post('/onboarding/preview', [OnboardingController::class, 'preview'])->middleware('throttle:10,1');
+        Route::post('/onboarding/{batch}', [OnboardingController::class, 'create'])->whereUuid('batch')->middleware('throttle:10,1');
+        Route::post('/onboarding/invitations/{invitation}/reissue', [OnboardingController::class, 'reissue'])->middleware('throttle:20,1');
+        Route::post('/onboarding/invitations/{invitation}/revoke', [OnboardingController::class, 'revoke']);
+        Route::post('/quality/{question}', [QuestionQualityController::class, 'review']);
         Route::get('/overview', [CohortController::class, 'index']);
         Route::post('/learners/{user}/practice', [CohortController::class, 'assign'])->middleware('throttle:20,1');
         Route::patch('/reports/{report}', [QuestionFeedbackController::class, 'resolve']);

@@ -47,7 +47,9 @@ class ExamDraftController extends Controller
             abort_unless(isset($items[$d['position']]), 422);
             $old = $items[$d['position']];
             $hashes = array_map(fn ($q) => Catalog::stemHash($q['stem']), $items);
-            $choices = array_values(array_filter($selection->pool($r->user(), $draft->settings), fn ($q) => $q['subject'] === $old['subject'] && ! in_array(Catalog::stemHash($q['stem']), $hashes, true)));
+            $choices = array_values(array_filter($selection->pool($r->user(), $draft->settings), fn ($q) => $q['subject'] === $old['subject']
+                && (empty($draft->settings['blueprint']) || ($q['topic'] === $old['topic'] && $q['tier'] === $old['tier']))
+                && ! in_array(Catalog::stemHash($q['stem']), $hashes, true)));
             if (! $choices) {
                 throw ValidationException::withMessages(['replacement' => 'No unused questions remain in this subject with these filters.']);
             }
@@ -86,9 +88,12 @@ class ExamDraftController extends Controller
     public function preset(Request $r)
     {
         $s = StudyController::settings($r);
-        $r->validate(['name' => 'required|string|max:80']);
-        DB::table('study_presets')->updateOrInsert(['user_id' => $r->user()->id, 'name' => trim($r->input('name'))], ['settings' => json_encode($s), 'created_at' => now(), 'updated_at' => now()]);
+        $d = $r->validate(['name' => 'required|string|max:80', 'shared' => 'boolean', 'cohort' => 'nullable|string|max:80']);
+        abort_if(($d['shared'] ?? false) && $r->user()->role !== 'admin', 403);
+        app(Draw::class)->select(app(Selection::class)->pool($r->user(), $s), $s);
+        DB::table('study_presets')->updateOrInsert(['user_id' => $r->user()->id, 'name' => trim($d['name'])], ['settings' => json_encode($s),
+            'shared' => $d['shared'] ?? false, 'cohort' => ! empty($d['shared']) ? (trim($d['cohort'] ?? '') ?: null) : null, 'created_at' => now(), 'updated_at' => now()]);
 
-        return back()->with('message','Bento preset saved.');
+        return back()->with('message', 'Bento preset saved.');
     }
 }

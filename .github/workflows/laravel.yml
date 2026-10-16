@@ -32,6 +32,8 @@ jobs:
       DB_PASSWORD: sushi-ci
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: shivammathur/setup-php@v2
         with:
           php-version: '8.4'
@@ -43,6 +45,8 @@ jobs:
           cache: npm
           cache-dependency-path: src/laravel/package-lock.json
       - run: composer install --prefer-dist --no-interaction
+      - name: Require a named release and fresh update popup notes
+        run: php deploy/check-release.php
       - run: cp .env.example .env && php artisan key:generate
       - run: npm ci && npm run build
       - run: php artisan test

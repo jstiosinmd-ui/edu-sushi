@@ -1,0 +1,5 @@
+<script setup>
+import {Head,Link,useForm} from '@inertiajs/vue3';import Footer from '../Components/Footer.vue';import Errors from '../Components/Errors.vue';import {art} from '../art';
+const props=defineProps({username:String,token:String}),form=useForm({password:'',password_confirmation:''});
+</script>
+<template><Head title="Your SUSHI invitation"/><main class="narrow"><img class="portrait" :src="art.logo" alt="SUSHI"><h1>Your seat is ready.</h1><p>Welcome, <strong>{{username}}</strong>. Set your password to activate your learner account.</p><Errors :errors="form.errors"/><form @submit.prevent="form.post('/join/'+token,{onFinish:()=>form.reset()})"><label>Choose a password<input v-model="form.password" type="password" autocomplete="new-password" required minlength="8" maxlength="100"></label><label>Confirm password<input v-model="form.password_confirmation" type="password" autocomplete="new-password" required minlength="8" maxlength="100"></label><button class="primary" :disabled="form.processing">Activate my account</button></form><Link href="/login">Back to sign in</Link></main><Footer/></template>

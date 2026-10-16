@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Flashcard;
 use App\Models\FlashcardDeck;
+use App\Models\MemoryExitQuiz;
 use App\Models\User;
 use App\Services\Achievements;
 use App\Services\Catalog;
@@ -98,6 +99,7 @@ class FlashcardController extends Controller
             'calibration' => $calibration, 'accuracy' => ['correct' => $session->where('correct', true)->count(), 'total' => $session->count()],
             'session_number' => $deck->session_number, 'session_reviews' => $deck->reviews - $deck->session_start_reviews,
             'finished' => (bool) $deck->session_finished_at, 'goal_target' => (int) ceil($items->count() * .8),
+            'exit_quiz' => MemoryExitQuiz::where('flashcard_deck_id', $deck->id)->where('session_number', $deck->session_number)->first(['id', 'finished_at']),
             'goal_prompt' => ! $deck->session_finished_at && ! $deck->goal_prompt_dismissed && $items->count() > 0 && $counts[5] >= ceil($items->count() * .8),
             'question' => $item && ! $deck->session_finished_at ? [...Catalog::publicQuestion($item->snapshot, $item->answer !== null), 'answer' => $item->answer, 'correct' => $item->answer !== null ? $item->correct : null, 'token' => $item->review_token] : null];
     }
@@ -142,7 +144,7 @@ class FlashcardController extends Controller
             }
             User::whereKey($deck->user_id)->update(['last_active_at' => now()]);
 
-            return response()->json(['deck' => $this->present($deck)]);
+            return response()->json(['deck' => $this->present($deck), 'achievement' => Achievements::for($deck->user_id), 'community' => CommunityController::summary(User::findOrFail($deck->user_id))]);
         });
     }
 

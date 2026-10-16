@@ -10,7 +10,7 @@ createInertiaApp({
     resolve: async name => {
         const pages = import.meta.glob('./Pages/*.vue');
         const page = await pages['./Pages/' + name + '.vue']();
-        if (!['Login','Password'].includes(name)) page.default.layout = Shell;
+        if (!['Login','Password','Invitation'].includes(name)) page.default.layout = Shell;
         return page;
     },
     setup({ el, App, props, plugin }) { createApp({ render: () => h(App, props) }).use(plugin).mount(el); },

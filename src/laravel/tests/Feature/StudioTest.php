@@ -42,8 +42,8 @@ class StudioTest extends TestCase
     {
         $u = $this->user();
         $closet = Closet::all($u);
-        $this->assertCount(54, $closet);
-        $this->assertCount(54, array_unique(array_column($closet, 'image')));
+        $this->assertCount(59, $closet);
+        $this->assertCount(59, array_unique(array_column($closet, 'image')));
         $rewards = array_values(array_filter(array_column($closet, 'badge')));
         $this->assertEqualsCanonicalizing(array_keys(Passport::definitions()), $rewards);
         foreach ($closet as $a) {

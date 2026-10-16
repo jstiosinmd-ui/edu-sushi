@@ -15,7 +15,7 @@ class Closet
         $frame = in_array($user->avatar_frame, $frames, true) ? $user->avatar_frame : $rank['frame'];
 
         return array_map(fn ($a) => [...$a, 'frame' => $frame,
-            'unlocked' => ! $a['badge'] || in_array($a['badge'], $earned, true)],
+            'unlocked' => isset($a['threshold']) ? $rank['count'] >= $a['threshold'] : (! $a['badge'] || in_array($a['badge'], $earned, true))],
             json_decode(file_get_contents(resource_path('characters.json')), true));
     }
 

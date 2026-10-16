@@ -12,6 +12,7 @@ use App\Services\Achievements;
 use App\Services\Analytics;
 use App\Services\Catalog;
 use App\Services\CatchReminders;
+use App\Services\FreshCatch;
 use App\Services\Habits;
 use App\Services\Leaderboard;
 use App\Services\Study;
@@ -28,7 +29,10 @@ class StudyController extends Controller
         return $r->validate(['mode' => 'required|in:tutor,exam,fresh', 'count' => 'required|integer|min:1|max:10000',
             'seed' => 'required|integer|min:0|max:4294967295', 'subjects' => 'required|array|min:1|max:'.count(Catalog::SUBJECTS),
             'subjects.*' => 'required|distinct|in:'.implode(',', Catalog::SUBJECTS), 'topics' => 'required_if:topic_scope,custom|array|max:500', 'topics.*' => 'string|max:600|distinct',
-            'difficulty' => 'required|in:All,Easy,Average,Difficult', 'balance' => 'boolean', 'allocation' => 'array|max:'.count(Catalog::SUBJECTS), 'allocation.*' => 'integer|min:0|max:10000', 'topic_scope' => 'in:all,custom', 'pool' => 'in:all,new,missed,bookmarks', 'minutes' => 'required|integer|min:1|max:360']);
+            'difficulty' => 'required|in:All,Easy,Average,Difficult', 'balance' => 'boolean', 'allocation' => 'array|max:'.count(Catalog::SUBJECTS), 'allocation.*' => 'integer|min:0|max:10000', 'topic_scope' => 'in:all,custom', 'pool' => 'in:all,new,missed,bookmarks', 'minutes' => 'required|integer|min:1|max:360',
+            'blueprint' => 'array|max:120', 'blueprint.*' => 'array:subject,topic,difficulty,count', 'blueprint.*.subject' => 'required|in:'.implode(',', Catalog::SUBJECTS),
+            'blueprint.*.topic' => 'nullable|string|max:255', 'blueprint.*.difficulty' => 'required|in:All,Easy,Average,Difficult', 'blueprint.*.count' => 'required|integer|min:1|max:10000',
+            'fresh_unseen' => 'integer|min:0|max:10', 'fresh_balance' => 'boolean']);
     }
 
     public static function catalog(): array
@@ -57,7 +61,18 @@ class StudyController extends Controller
 
     public function practice(Request $r)
     {
-        return Inertia::render('Practice', ['catalog' => self::catalog(), 'freshSubjects' => $r->user()->fresh_subjects ?: Catalog::SUBJECTS]);
+        return Inertia::render('Practice', ['catalog' => self::catalog(), 'freshSubjects' => $r->user()->fresh_subjects ?: Catalog::SUBJECTS,
+            'activeCatch' => Attempt::where('user_id', $r->user()->id)->where('mode', 'fresh')->where('status', 'active')->latest('id')->value('id'),
+            'freshPreferences' => ['fresh_unseen' => $r->user()->fresh_unseen, 'fresh_balance' => $r->user()->fresh_balance]]);
+    }
+
+    public function freshPreview(Request $r, FreshCatch $fresh)
+    {
+        $s = self::settings($r);
+        $items = $fresh->select($r->user()->id, $s);
+
+        return response()->json(['unseen' => collect($items)->where('fresh_kind', 'unseen')->count(),
+            'missed' => collect($items)->where('fresh_kind', 'missed')->count(), 'coverage' => collect($items)->countBy('subject')]);
     }
 
     public function start(Request $r, Study $study)

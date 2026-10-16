@@ -4,12 +4,28 @@ use App\Models\Attempt;
 use App\Models\FlashcardDeckItem;
 use App\Models\User;
 use App\Services\CatchReminders;
+use App\Services\DatabaseBackups;
 use App\Services\Learning;
 use App\Services\Passport;
 use App\Services\Study;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schedule;
+
+Artisan::command('sushi:backup {--rehearse}', function (DatabaseBackups $backups) {
+    $result = $backups->create();
+    $this->info(json_encode($result, JSON_PRETTY_PRINT));
+    if ($this->option('rehearse')) {
+        $this->info(json_encode($backups->rehearse($result['id']), JSON_PRETTY_PRINT));
+    }
+});
+Artisan::command('sushi:restore-rehearsal {backup}', function (DatabaseBackups $backups) {
+    $this->info(json_encode($backups->rehearse($this->argument('backup')), JSON_PRETTY_PRINT));
+});
+Schedule::command('sushi:backup')->dailyAt(config('backups.time'))->timezone('Asia/Manila')->withoutOverlapping(60)
+    ->when(fn () => config('backups.enabled') && (! config('backups.weekly_rehearsal') || now('Asia/Manila')->dayOfWeek !== 0));
+Schedule::command('sushi:backup --rehearse')->weeklyOn(0, config('backups.time'))->timezone('Asia/Manila')->withoutOverlapping(60)
+    ->when(fn () => config('backups.enabled') && config('backups.weekly_rehearsal'));
 
 Artisan::command('sushi:expire', function (Study $study) {
     Attempt::where('status', 'active')->whereNotNull('deadline')->where('deadline', '<=', now())->chunkById(100, function ($rows) use ($study) {

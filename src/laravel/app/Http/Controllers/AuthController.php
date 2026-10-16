@@ -18,7 +18,7 @@ class AuthController extends Controller
         if (RateLimiter::tooManyAttempts($key, 5)) {
             throw ValidationException::withMessages(['username' => 'Too many attempts. Try again in '.RateLimiter::availableIn($key).' seconds.']);
         }
-        if (! Auth::attempt(['username' => $username, 'password' => $data['password'], 'disabled' => false])) {
+        if (! Auth::attempt(['username' => $username, 'password' => $data['password'], 'disabled' => false, 'invitation_pending' => false])) {
             RateLimiter::hit($key, 60);
             throw ValidationException::withMessages(['username' => 'The username or password is incorrect.']);
         }
@@ -30,7 +30,9 @@ class AuthController extends Controller
             return redirect('/password');
         }
 
-        return redirect()->intended($r->user()->role === 'admin' ? '/admin' : '/');
+        $r->session()->forget('url.intended');
+
+        return redirect('/');
     }
 
     public function password(Request $r)
@@ -42,7 +44,9 @@ class AuthController extends Controller
         $r->session()->regenerate();
         $r->session()->put('auth_version', $u->auth_version);
 
-        return redirect($u->role === 'admin' ? '/admin' : '/')->with('message', 'Your password has been updated.');
+        $r->session()->forget('url.intended');
+
+        return redirect('/')->with('message', 'Your password has been updated.');
     }
 
     public function logout(Request $r)

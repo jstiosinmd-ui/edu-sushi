@@ -38,7 +38,7 @@ class CommunityController extends Controller
 
     public function profile(User $user)
     {
-        abort_if($user->disabled, 404);
+        abort_if($user->disabled || $user->invitation_pending || $user->archived_at, 404);
         $earned = DB::table('earned_badges')->where('user_id', $user->id)->pluck('earned_at', 'badge');
 
         return Inertia::render('PublicProfile', ['profile' => Closet::profile($user), 'badges' => array_values(array_filter(array_map(fn ($b) => [...$b, 'earned_at' => $earned[$b['id']] ?? null], Passport::definitions()), fn ($b) => $b['earned_at'])),

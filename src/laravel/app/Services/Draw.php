@@ -41,6 +41,9 @@ class Draw
         $pool = array_values(array_filter($items, fn ($q) => in_array($q['subject'], $s['subjects'], true)
             && (empty($s['topics']) || in_array($q['subject']."\x1f".$q['topic'], $s['topics'], true))
             && (($s['difficulty'] ?? 'All') === 'All' || $q['tier'] === $s['difficulty'])));
+        if (! empty($s['blueprint'])) {
+            return $this->shuffle(app(Blueprint::class)->select($this->shuffle($pool, $rng), $s['blueprint'], (int) $s['count']), $rng);
+        }
         $seen = [];
         $eligible = [];
         foreach ($this->shuffle($pool, $rng) as $q) {

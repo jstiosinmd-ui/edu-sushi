@@ -17,15 +17,15 @@ class EngineTest extends TestCase
         $this->assertSame('Tamago Tactician', Achievements::at(2400)['name']);
         $this->assertSame('Mochi Maestro', Achievements::at(1000)['name']);
         $this->assertSame('Omakase Legend', Achievements::at(5000)['name']);
-        $this->assertSame('Omakase Legend 2', Achievements::at(5200)['name']);
+        $this->assertSame('Yuzu Moonkeeper', Achievements::at(5200)['name']);
         $this->assertSame(50200, Achievements::at(50000)['threshold']);
     }
 
-    public function test_named_tiers_cover_every_boundary_through_five_thousand(): void
+    public function test_named_tiers_cover_every_boundary_through_six_thousand(): void
     {
         $tiers = Achievements::at(0)['tiers'];
-        $this->assertCount(26, $tiers);
-        $this->assertCount(26, array_unique(array_column($tiers, 'name')));
+        $this->assertCount(31, $tiers);
+        $this->assertCount(31, array_unique(array_column($tiers, 'name')));
         foreach ($tiers as $level => $tier) {
             $at = $level * 200;
             $this->assertSame($at, $tier['at']);

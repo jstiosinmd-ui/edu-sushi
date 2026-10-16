@@ -106,7 +106,7 @@ class CommunityTest extends TestCase
         $this->assertSame(1, app(Habits::class)->for($u)['comeback']);
     }
 
-    public function test_leaderboard_deduplicates_modes_resets_week_and_excludes_admin(): void
+    public function test_leaderboard_deduplicates_modes_resets_week_and_includes_participating_admin(): void
     {
         $u = $this->learner();
         $this->travelTo(Carbon::parse('2026-10-14 10:00:00', 'Asia/Manila'));

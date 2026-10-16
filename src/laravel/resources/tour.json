@@ -1,0 +1,178 @@
+{
+  "version": "2.10",
+  "stops": [
+    {
+      "id": "counter",
+      "name": "The Counter",
+      "art": "logo",
+      "url": "/",
+      "intro": "Your daily starting point after sign-in.",
+      "steps": [
+        "Start Fresh Catch for ten new or previously missed questions.",
+        "Return to your Memory Maki deck, or choose a short Today’s Bento.",
+        "Use the sticky bar to check your tier, streak, and achievement collection."
+      ],
+      "screens": [
+        {
+          "src": "/guide-screens/v2.10/counter.jpg",
+          "alt": "Fresh Catch and Memory Maki are the two main cards on your Counter.",
+          "caption": "Fresh Catch and Memory Maki are the two main cards on your Counter."
+        }
+      ]
+    },
+    {
+      "id": "fresh",
+      "name": "Fresh Catch",
+      "art": "temaki",
+      "url": "/practice?mode=fresh",
+      "intro": "Choose the subjects and mix for your daily ten.",
+      "steps": [
+        "Select the subjects you want to practice.",
+        "Move the unseen-versus-missed slider. The preview shows the actual mix available.",
+        "Answer all ten to earn a catch stamp. Wrong answers remain eligible for future catches."
+      ],
+      "screens": [
+        {
+          "src": "/guide-screens/v2.10/fresh.jpg",
+          "alt": "The mix preview adapts when your unseen or missed question pool is short.",
+          "caption": "The mix preview adapts when your unseen or missed question pool is short."
+        }
+      ]
+    },
+    {
+      "id": "memory",
+      "name": "Memory Maki",
+      "art": "memo",
+      "url": "/flashcards",
+      "intro": "Answer, learn from the feedback, then rate your familiarity.",
+      "steps": [
+        "Build a deck from selected subjects, topics, and a question range.",
+        "Answer the question to reveal its explanation immediately.",
+        "Rate familiarity from 1 to 5. Lower ratings return more often during the session.",
+        "Track the colored rating bar. At 80% rated 5, you can finish, keep rolling, or take a recall check."
+      ],
+      "screens": [
+        {
+          "src": "/guide-screens/v2.10/memory.jpg",
+          "alt": "The colored bar shows how many questions are unrated or rated 1 through 5.",
+          "caption": "The colored bar shows how many questions are unrated or rated 1 through 5."
+        },
+        {
+          "src": "/guide-screens/v2.10/memory-ratings.jpg",
+          "alt": "After reading the feedback, choose how well you know the question.",
+          "caption": "After reading the feedback, choose how well you know the question."
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "name": "Mentor and Rush",
+      "art": "wasabi",
+      "url": "/practice?mode=tutor",
+      "intro": "Choose immediate teaching or a timed challenge.",
+      "steps": [
+        "Maki Mentor checks each answer and provides feedback during the round.",
+        "Wasabi Rush uses a timer and reveals feedback after submission.",
+        "Both use the same three-step setup: coverage, round settings, and review."
+      ],
+      "screens": [
+        {
+          "src": "/guide-screens/v2.10/mentor.jpg",
+          "alt": "Maki Mentor uses a guided setup with a live count of matching questions.",
+          "caption": "Maki Mentor uses a guided setup with a live count of matching questions."
+        },
+        {
+          "src": "/guide-screens/v2.10/rush.jpg",
+          "alt": "Wasabi Rush adds a time limit before you start the challenge.",
+          "caption": "Wasabi Rush adds a time limit before you start the challenge."
+        }
+      ]
+    },
+    {
+      "id": "library",
+      "name": "Roll Call",
+      "art": "nori",
+      "url": "/library",
+      "intro": "Browse the bank and choose exactly what to study.",
+      "steps": [
+        "Search by text or question ID and narrow the subject.",
+        "Switch among all, unseen, missed, and saved questions.",
+        "Add questions to the study tray, then start a practice round or Memory Maki deck.",
+        "Use private notes for your reasoning or report a question for Head Chef to review."
+      ],
+      "screens": [
+        {
+          "src": "/guide-screens/v2.10/library.jpg",
+          "alt": "Roll Call combines search, saved questions, and a study tray.",
+          "caption": "Roll Call combines search, saved questions, and a study tray."
+        }
+      ]
+    },
+    {
+      "id": "builder",
+      "name": "Bento Builder",
+      "art": "chef",
+      "url": "/exams",
+      "intro": "Create a reviewed exam and downloadable PDF set.",
+      "steps": [
+        "Choose coverage or load a saved class recipe.",
+        "Allocate questions evenly, by subject count, or by topic and difficulty quotas.",
+        "Preview the actual questions and replace any item before saving.",
+        "Save the bento, then prepare the exam paper, answer sheet, and answer key PDFs."
+      ],
+      "screens": [
+        {
+          "src": "/guide-screens/v2.10/builder.jpg",
+          "alt": "Quota rows let you set an exact count for each subject, topic, and difficulty.",
+          "caption": "Quota rows let you set an exact count for each subject, topic, and difficulty."
+        }
+      ]
+    },
+    {
+      "id": "progress",
+      "name": "Progress and crew",
+      "art": "maki",
+      "url": "/progress",
+      "intro": "See your learning patterns and collect your sushi crew.",
+      "steps": [
+        "My Progress shows coverage and accuracy, with subject and time filters.",
+        "Memory Maki answers contribute to unique completion as soon as you answer.",
+        "Your Passport lists achievement requirements. Earn characters and equip them in your profile.",
+        "Every 200 unique completed questions earns a tier; the leaderboard counts weekly practice under its repeat rules."
+      ],
+      "screens": [
+        {
+          "src": "/guide-screens/v2.10/progress.jpg",
+          "alt": "Your progress view keeps subject coverage and accuracy visible.",
+          "caption": "Your progress view keeps subject coverage and accuracy visible."
+        },
+        {
+          "src": "/guide-screens/v2.10/passport.jpg",
+          "alt": "Achievement cards show their character, requirement, and earned status.",
+          "caption": "Achievement cards show their character, requirement, and earned status."
+        }
+      ]
+    },
+    {
+      "id": "chef",
+      "name": "Head Chef",
+      "art": "chef",
+      "url": "/admin",
+      "audience": "admin",
+      "intro": "Manage learners, class practice, and the question bank.",
+      "steps": [
+        "Open Head Chef from your account menu whenever you need the administrator tools.",
+        "Add learners individually or preview a CSV roster to create invitation links.",
+        "Use the quality queue to review questions and preserve corrections as new versions.",
+        "Share class recipes, assign saved exams, and inspect cohort progress or backup status."
+      ],
+      "screens": [
+        {
+          "src": "/guide-screens/v2.10/chef.jpg",
+          "alt": "Head Chef tools are grouped above the learner list. This screenshot uses demo accounts.",
+          "caption": "Head Chef tools are grouped above the learner list. This screenshot uses demo accounts."
+        }
+      ]
+    }
+  ]
+}

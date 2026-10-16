@@ -63,7 +63,7 @@ class SushiTest extends TestCase
     public function test_seed_content_and_accounts_are_repeatable(): void
     {
         $this->assertSame(6000, Question::count());
-        $this->assertSame(5, User::count());
+        $this->assertSame(4, User::count());
         $u = User::where('username', 'jstiosin')->first();
         $this->assertSame('admin', $u->role);
         $this->assertTrue(Hash::check('password', $u->password));
@@ -91,7 +91,7 @@ class SushiTest extends TestCase
 
     public function test_all_requested_accounts_can_login_and_must_change_password(): void
     {
-        foreach (['powquanico', 'hannahquintero', 'rachirpunla', 'jstiosin', 'jstiosin-student'] as $name) {
+        foreach (['powquanico', 'hannahquintero', 'rachirpunla', 'jstiosin'] as $name) {
             $this->post('/login', ['username' => $name, 'password' => 'password'])->assertRedirect('/password');
             $this->assertAuthenticatedAs(User::where('username', $name)->first());
             $this->get('/')->assertRedirect('/password');

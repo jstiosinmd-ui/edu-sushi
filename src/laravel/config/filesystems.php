@@ -29,6 +29,7 @@ return [
     */
 
     'disks' => [
+        'backups' => ['driver' => 'local', 'root' => env('SUSHI_BACKUP_PATH', storage_path('app/backups')), 'visibility' => 'private', 'serve' => false, 'throw' => true],
 
         'local' => [
             'driver' => 'local',

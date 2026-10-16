@@ -12,6 +12,13 @@ for i in {1..30}; do
   sleep 2
 done
 
+docker run -d --name sushi-smoke-restore --network sushi-smoke \
+  -e POSTGRES_USER=sushi -e POSTGRES_PASSWORD=sushi-ci -e POSTGRES_DB=postgres postgres:18
+for i in {1..30}; do
+  if docker exec sushi-smoke-restore pg_isready -U sushi -d postgres; then break; fi
+  sleep 2
+done
+
 export APP_KEY="base64:$(openssl rand -base64 32)"
 app_args=(--network sushi-smoke --env APP_KEY
   -e APP_NAME=SUSHI -e APP_ENV=production -e APP_DEBUG=false
@@ -20,6 +27,8 @@ app_args=(--network sushi-smoke --env APP_KEY
   -e DB_CONNECTION=pgsql -e DB_HOST=sushi-smoke-db -e DB_PORT=5432
   -e DB_DATABASE=sushi_container_smoke -e DB_USERNAME=sushi -e DB_PASSWORD=sushi-ci
   -e QUEUE_CONNECTION=database -e DB_QUEUE_RETRY_AFTER=360 -e CACHE_STORE=database
+  -e SUSHI_RESTORE_HOST=sushi-smoke-restore -e SUSHI_RESTORE_PORT=5432 \
+  -e SUSHI_RESTORE_USERNAME=sushi -e SUSHI_RESTORE_PASSWORD=sushi-ci -e SUSHI_RESTORE_SSLMODE=disable \
   -e LOG_CHANNEL=stderr -e LOG_LEVEL=warning -e PORT=8080
   -v sushi-smoke-storage:/var/www/html/storage)
 
@@ -56,3 +65,6 @@ docker restart sushi-smoke-app
 check_http
 docker exec --user www-data sushi-smoke-app php tests/container/smoke.php verify
 docker exec sushi-smoke-app php artisan queue:failed
+
+# Verify a real encrypted dump and isolated restore using PostgreSQL 18 clients.
+docker exec --user www-data sushi-smoke-app php artisan sushi:backup --rehearse

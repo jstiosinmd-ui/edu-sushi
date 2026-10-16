@@ -26,7 +26,20 @@ class ExamController extends Controller
         $exams->through(fn ($exam) => ['id' => $exam->id, 'title' => $exam->title, 'code' => $exam->code, 'settings' => $exam->settings, 'items_count' => count($exam->items), 'exports' => $exam->exports]);
 
         return Inertia::render('Exams', ['catalog' => StudyController::catalog(), 'exams' => $exams,
-            'presets' => DB::table('study_presets')->where('user_id', $r->user()->id)->get()->map(fn ($p) => ['id' => $p->id, 'name' => $p->name, 'settings' => json_decode($p->settings, true)]), 'students' => $r->user()->role === 'admin' ? User::where('role', 'student')->where('disabled', false)->get(['id', 'username']) : []]);
+            'presets' => DB::table('study_presets')->where(function ($q) use ($r) {
+                $q->where('user_id', $r->user()->id)->orWhere(function ($shared) use ($r) {
+                    $shared->where('shared', true)->where(function ($cohort) use ($r) {
+                        $cohort->whereNull('cohort');
+                        if ($r->user()->cohort) {
+                            $cohort->orWhere('cohort', $r->user()->cohort);
+                        }
+                        if ($r->user()->role === 'admin') {
+                            $cohort->orWhereNotNull('cohort');
+                        }
+                    });
+                });
+            })->get()->map(fn ($p) => ['id' => $p->id, 'name' => $p->name, 'shared' => $p->shared, 'cohort' => $p->cohort, 'settings' => json_decode($p->settings, true)]),
+            'students' => $r->user()->role === 'admin' ? User::where('role', 'student')->where('disabled', false)->where('invitation_pending', false)->whereNull('archived_at')->get(['id', 'username']) : []]);
     }
 
     public function store(Request $r, Catalog $catalog, Draw $draw)

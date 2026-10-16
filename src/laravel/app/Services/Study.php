@@ -6,7 +6,6 @@ use App\Models\Assignment;
 use App\Models\Attempt;
 use App\Models\AttemptItem;
 use App\Models\Progress;
-use App\Models\Question;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
@@ -23,16 +22,7 @@ class Study
         }
         $progress = Progress::where('user_id', $userId)->get()->keyBy('question_id');
         if (($settings['mode'] ?? '') === 'fresh') {
-            // The latest graded result across a duplicate-stem group determines retry eligibility.
-            $results = [];
-            foreach (Question::all() as $q) {
-                $p = $progress[$q->id] ?? null;
-                if ($p?->completed_at && (! isset($results[$q->stem_hash]) || $results[$q->stem_hash]['at'] < $p->completed_at)) {
-                    $results[$q->stem_hash] = ['at' => $p->completed_at, 'correct' => $p->latest_correct];
-                }
-            }
-
-            return array_values(array_filter($items, fn ($q) => ! ($results[Catalog::stemHash($q['stem'])]['correct'] ?? false)));
+            return app(FreshCatch::class)->eligible($userId);
         }
 
         $seen = DB::table('study_events')->where('user_id', $userId)->pluck('question_hash')->all();
@@ -71,13 +61,16 @@ class Study
                     if ($active) {
                         return $active;
                     }
-                    $user->update(['fresh_subjects' => $settings['subjects']]);
+                    $user->update(['fresh_subjects' => $settings['subjects'], 'fresh_unseen' => $settings['fresh_unseen'] ?? 7, 'fresh_balance' => $settings['fresh_balance'] ?? true]);
                     $settings['count'] = 10;
                     $settings['balance'] = false;
                     $settings['topics'] = [];
                     $settings['difficulty'] = 'All';
                 }
-                $items = $this->draw->select($this->eligible($user->id, $settings), $settings);
+                $items = $mode === 'fresh' ? app(FreshCatch::class)->select($user->id, $settings) : $this->draw->select($this->eligible($user->id, $settings), $settings);
+                if ($mode === 'fresh') {
+                    $settings['fresh_actual'] = collect($items)->countBy('fresh_kind')->all();
+                }
                 $deadline = $mode === 'exam' ? now()->addMinutes($settings['minutes']) : null;
             }
             $attempt = Attempt::create(['user_id' => $user->id, 'assignment_id' => $assignment?->id, 'mode' => $mode, 'settings' => $settings, 'deadline' => $deadline]);

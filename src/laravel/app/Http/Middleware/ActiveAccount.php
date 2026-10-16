@@ -11,7 +11,7 @@ class ActiveAccount
     public function handle(Request $request, Closure $next)
     {
         $u = $request->user();
-        if ($u->disabled || $request->session()->get('auth_version') !== $u->auth_version) {
+        if ($u->disabled || $u->archived_at || $u->invitation_pending || $request->session()->get('auth_version') !== $u->auth_version) {
             Auth::logout();
             $request->session()->invalidate();
             $request->session()->regenerateToken();

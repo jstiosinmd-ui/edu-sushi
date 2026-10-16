@@ -24,11 +24,11 @@ class AdminController extends Controller
 
     public function index(Request $r, Analytics $analytics)
     {
-        $users = User::orderBy('username')->get();
+        $users = User::whereNull('archived_at')->orderBy('username')->get();
         $student = $r->integer('student') ?: ($users->where('role', 'student')->first()?->id);
         abort_if($student && ! $users->contains('id', $student), 404);
 
-        return Inertia::render('Admin', ['users' => $users->map(fn ($u) => $u->only('id', 'username', 'role', 'disabled', 'cohort', 'last_active_at')),
+        return Inertia::render('Admin', ['users' => $users->map(fn ($u) => $u->only('id', 'username', 'role', 'disabled', 'invitation_pending', 'cohort', 'last_active_at')),
             'student' => $student, 'stats' => $student ? $analytics->for($student, $r->only('subject', 'topic', 'difficulty', 'mode', 'from', 'to')) : null,
             'engagement' => $student ? [
                 'habits' => app(Habits::class)->for(User::findOrFail($student)),
@@ -58,18 +58,24 @@ class AdminController extends Controller
 
     public function updateUser(Request $r, User $user)
     {
+        abort_if($user->archived_at, 404);
         $d = $r->validate(['disabled' => 'required|boolean', 'cohort' => 'nullable|string|max:100', 'password' => 'nullable|string|min:8|max:100']);
         abort_if($user->id === $r->user()->id && $d['disabled'], 422, 'You cannot disable your own account.');
-        $updates = ['disabled' => $d['disabled'], 'cohort' => $d['cohort'] ?? null];
-        if (! empty($d['password'])) {
-            $updates += ['password' => $d['password'], 'must_change_password' => true];
-        }
-        if ($d['disabled'] || ! empty($d['password'])) {
-            $updates['auth_version'] = $user->auth_version + 1;
-            DB::table('sessions')->where('user_id', $user->id)->delete();
-        }
-        $user->update($updates);
-        self::audit($r, 'user.updated', (string) $user->id, ['disabled' => $d['disabled'], 'password_reset' => ! empty($d['password'])]);
+        DB::transaction(function () use ($r, $user, $d) {
+            $user = User::lockForUpdate()->findOrFail($user->id);
+            $updates = ['disabled' => $d['disabled'], 'cohort' => $d['cohort'] ?? null];
+            if (! empty($d['password'])) {
+                $updates += ['password' => $d['password'], 'must_change_password' => true, 'invitation_pending' => false];
+            }
+            if ($d['disabled'] || ! empty($d['password'])) {
+                DB::table('learner_invitations')->where('user_id', $user->id)->whereNull('accepted_at')->update(['revoked_at' => now(), 'updated_at' => now()]);
+                $updates['auth_version'] = $user->auth_version + 1;
+                DB::table('sessions')->where('user_id', $user->id)->delete();
+            }
+            $user->update($updates);
+            self::audit($r, 'user.updated', (string) $user->id, ['disabled' => $d['disabled'], 'password_reset' => ! empty($d['password'])]);
+
+        });
 
         return back()->with('message', 'Student account updated.');
     }

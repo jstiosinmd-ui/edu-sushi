@@ -12,8 +12,8 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        foreach (['powquanico' => 'student', 'hannahquintero' => 'student', 'rachirpunla' => 'student', 'jstiosin' => 'admin', 'jstiosin-student' => 'student'] as $username => $role) {
-            User::firstOrCreate(['username' => $username], ['name' => $username, 'role' => $role, 'password' => 'password', 'must_change_password' => true]);
+        foreach (['powquanico' => 'student', 'hannahquintero' => 'student', 'rachirpunla' => 'student', 'jstiosin' => 'admin'] as $username => $role) {
+            User::firstOrCreate(['username' => $username], ['name' => $username, 'role' => $role, 'password' => 'password', 'must_change_password' => true, 'leaderboard_enabled' => $username === 'jstiosin']);
         }
         // Append missing bundled questions without replacing admin edits or learner history.
         foreach (['bank.json', 'subjects-20261014-v1.1.json', 'basic-sciences-20261014-v1.0.json', 'physiology-microbiology-20261014-v1.0.json', 'ple-top-up-20261016-v2.8.json'] as $file) {
