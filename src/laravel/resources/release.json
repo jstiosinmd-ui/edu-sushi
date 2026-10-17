@@ -1,10 +1,10 @@
 {
-  "id": "sushi-2.12",
-  "version": "2.12",
+  "id": "sushi-2.12.1",
+  "version": "2.12.1",
   "name": "Focused Study",
   "released_on": "2026-10-17",
   "tour_name": "Sushi Bar Hop",
-  "summary": "Less reading between questions, a clear Fresh Catch finish, and focused Memory Maki on every screen.",
+  "summary": "Focused study, clear Fresh Catch completion, and mobile controls that stay within reach.",
   "features": [
     {
       "category": "fixed",
@@ -35,6 +35,11 @@
       "category": "improved",
       "title": "Progress filters",
       "text": "Set filters in one sheet, then apply them together. Daily stamps and subject coverage open on demand."
+    },
+    {
+      "category": "fixed",
+      "title": "Menus on short screens",
+      "text": "The account menu scrolls within the screen, including phone landscape, so every action stays reachable."
     }
   ]
 }

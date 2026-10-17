@@ -51,3 +51,5 @@
  .study-focused .recall-buttons button{min-height:52px;padding:5px}
  .study-focused .rating-title{font-size:12px;margin-bottom:5px}
 }
+
+.compact-shell .account-dropdown{max-height:calc(100dvh - var(--header-height,66px) - 16px);overflow-y:auto;overscroll-behavior:contain}
