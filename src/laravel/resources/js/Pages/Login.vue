@@ -25,7 +25,7 @@ function submit(){
                     <div class="caption">
                         <p class="eyebrow">A little practice. A stronger you.</p>
                         <h1>Good things come<br>one roll at a time.</h1>
-                        <p>Meet your study crew, find your next challenge, and watch your progress grow with every round.</p>
+                        <p>Your questions, progress, and study crew in one place.</p>
                         <div class="crew" aria-label="Your study subjects">
                             <div v-for="(c,s) in crew" :key="s">
                                 <img :src="c.image" :alt="c.name" width="68" height="68">
@@ -39,9 +39,9 @@ function submit(){
             <section class="access" aria-labelledby="sign-in-title">
                 <div class="login-form">
                     <img class="seal" :src="art.logo" alt="SUSHI" width="64" height="64">
-                    <p class="eyebrow">Your seat at the counter</p>
-                    <h2 id="sign-in-title">Welcome back.</h2>
-                    <p class="muted">A fresh round is waiting for you.<br>Sign in to pick up where you left off.</p>
+
+                    <h2 id="sign-in-title">Welcome back</h2>
+
                     <Errors :errors="form.errors"/>
                     <form @submit.prevent="submit">
                         <label>Username
@@ -58,14 +58,11 @@ function submit(){
                             </span>
                         </label>
                         <button type="submit" class="primary full" :disabled="form.processing" :aria-busy="form.processing">
-                            {{form.processing?'Signing in…':"Let's roll"}} <span v-if="!form.processing" aria-hidden="true">→</span>
+                            {{form.processing?'Signing in…':"Sign in"}} <span v-if="!form.processing" aria-hidden="true">→</span>
                         </button>
                     </form>
                     <p class="help">Need help signing in? Contact your administrator.</p>
-                    <div class="login-note">
-                        <strong>Learn a little. Level up a little.</strong>
-                        <span>Every completed question counts toward your next tier.</span>
-                    </div>
+
                 </div>
             </section>
         </main>

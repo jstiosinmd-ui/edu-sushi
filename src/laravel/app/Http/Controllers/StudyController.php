@@ -45,7 +45,7 @@ class StudyController extends Controller
         $u = $r->user();
         $habits = app(Habits::class)->for($u);
         $attempt = Attempt::where('user_id', $u->id)->where('mode', 'fresh')->where('status', 'active')->latest('id')->first();
-        $latest = FlashcardDeck::where('user_id', $u->id)->with('items')->latest('updated_at')->first();
+        $latest = FlashcardDeck::where('user_id', $u->id)->with('items')->orderByRaw('CASE WHEN session_finished_at IS NULL THEN 0 ELSE 1 END')->latest('updated_at')->first();
         $available = app(CatchReminders::class)->available($u);
         $daily = [...$habits, 'attempt' => $attempt?->id, 'answered' => $attempt?->items()->whereNotNull('answer')->count() ?? 0,
             'subjects' => $u->fresh_subjects ?: Catalog::SUBJECTS, 'available' => $available, 'push_enabled' => $u->reminder_enabled,
@@ -63,6 +63,7 @@ class StudyController extends Controller
     {
         return Inertia::render('Practice', ['catalog' => self::catalog(), 'freshSubjects' => $r->user()->fresh_subjects ?: Catalog::SUBJECTS,
             'activeCatch' => Attempt::where('user_id', $r->user()->id)->where('mode', 'fresh')->where('status', 'active')->latest('id')->value('id'),
+            'today' => $r->query('mode') === 'bento' ? app(StudyGuide::class)->plan($r->user(), $r->user()->fresh_subjects ?: Catalog::SUBJECTS, 15) : null,
             'freshPreferences' => ['fresh_unseen' => $r->user()->fresh_unseen, 'fresh_balance' => $r->user()->fresh_balance]]);
     }
 
@@ -114,7 +115,11 @@ class StudyController extends Controller
     {
         $this->own($r, $attempt);
         $a = $study->expire($attempt);
-        $study->finish($a);
+        $a = $study->finish($a);
+
+        if ($r->expectsJson()) {
+            return response()->json(['attempt' => $study->present($a), 'achievement' => Achievements::for($r->user()->id), 'community' => CommunityController::summary($r->user())]);
+        }
 
         return redirect('/attempts/'.$a->id);
     }

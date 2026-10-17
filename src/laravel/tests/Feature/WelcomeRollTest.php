@@ -92,8 +92,8 @@ class WelcomeRollTest extends TestCase
         DB::table('feature_update_reads')->insert(['user_id' => $user->id, 'release' => 'sushi-2.10', 'read_at' => now()]);
         $notes = FeatureUpdates::for($user);
         $this->assertTrue($notes['unread']);
-        $this->assertSame('sushi-2.10', $notes['history'][0]['id']);
-        $this->assertSame('Welcome Roll', $notes['history'][0]['name']);
+        $this->assertSame('sushi-2.11', $notes['history'][0]['id']);
+        $this->assertSame('Counter Notes', $notes['history'][0]['name']);
         $this->assertNotEmpty($notes['history'][0]['features']);
         $this->actingAs($user)->withSession(['auth_version' => $user->auth_version]);
         $this->postJson('/feature-updates/read', ['release' => FeatureUpdates::id()])->assertOk();

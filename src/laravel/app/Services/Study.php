@@ -108,7 +108,7 @@ class Study
                 return $a;
             }
             if ($a->mode === 'fresh' && $a->items()->whereNull('answer')->exists()) {
-                throw ValidationException::withMessages(['answers' => 'Answer all 10 questions to finish your Fresh Catch.']);
+                throw ValidationException::withMessages(['answers' => 'Answer all '.$a->items()->count().' questions to finish your Fresh Catch.']);
             }
             foreach ($a->items as $item) {
                 $this->grade($a, $item);

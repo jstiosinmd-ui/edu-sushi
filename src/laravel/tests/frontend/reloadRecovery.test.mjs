@@ -84,7 +84,7 @@ test('attempt recovery shows completion and resets navigation when the previous 
 test('Memory Maki recovery adopts the current presentation token and clears stale feedback',async t=>{
     const old={id:2,reviews:0,goal_prompt:false,finished:false,session_number:1,question:{id:'OLD',token:'old',answer:null}};
     const {state,update}=await mount(t,'FlashcardDeck','deck',old);
-    state.sessionError='Old conflict';state.saved='Old confirmation';
+    state.sessionError='Old conflict';state.showQuestion=true;state.chosenGrade=3;
     state.reload();
     assert.equal(globalThis.__sushiReload.discards,1);
     assert.equal(globalThis.__sushiReload.reloads,1);
@@ -92,7 +92,8 @@ test('Memory Maki recovery adopts the current presentation token and clears stal
     assert.equal(state.data.reviews,7);
     assert.deepEqual(state.data.counts,[0,1,0,0,0,1]);
     assert.equal(state.sessionError,'');
-    assert.equal(state.saved,'');
+    assert.equal(state.showQuestion,false);
+    assert.equal(state.chosenGrade,null);
     await state.answer('B');
     assert.deepEqual(globalThis.__sushiReload.sent[0],{action:'answer',payload:{question_id:'NEW',answer:'B',token:'current'}});
 });

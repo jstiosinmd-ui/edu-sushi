@@ -21,8 +21,15 @@ class FlashcardController extends Controller
 {
     public function index(Request $r)
     {
+        if (! $r->boolean('decks') && ! $r->boolean('new')) {
+            $active = FlashcardDeck::where('user_id', $r->user()->id)->whereNull('session_finished_at')->latest('updated_at')->first();
+            if ($active) {
+                return redirect('/flashcards/decks/'.$active->id);
+            }
+        }
+
         return Inertia::render('Flashcards', ['catalog' => StudyController::catalog(),
-            'decks' => FlashcardDeck::where('user_id', $r->user()->id)->withCount('items')->latest()->limit(50)->get()]);
+            'decks' => FlashcardDeck::where('user_id', $r->user()->id)->withCount(['items', 'items as confident_count' => fn ($q) => $q->where('confidence', 5)])->latest('updated_at')->limit(50)->get()]);
     }
 
     private function filters(Request $r): array
@@ -122,7 +129,8 @@ class FlashcardController extends Controller
     {
         $this->own($r, $deck);
 
-        return Inertia::render('FlashcardDeck', ['deck' => $this->present($this->draw($deck))]);
+        return Inertia::render('FlashcardDeck', ['deck' => $this->present($this->draw($deck)),
+            'bookmarks' => DB::table('progress')->where('user_id', $r->user()->id)->where('bookmarked', true)->pluck('question_id')]);
     }
 
     public function answer(Request $r, FlashcardDeck $deck)

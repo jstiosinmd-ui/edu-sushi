@@ -5,6 +5,7 @@ import axios from 'axios';
 import {art,message} from '../art';
 import ReleaseChanges from './ReleaseChanges.vue';
 
+const props=defineProps({defer:Boolean});
 const page=usePage(),dialog=ref(null),busy=ref(false),error=ref('');
 const releaseDate=value=>new Intl.DateTimeFormat('en',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(value+'T12:00:00Z'));
 async function open(){
@@ -14,8 +15,8 @@ async function open(){
         dialog.value.querySelector('.journey-scroll')?.scrollTo({top:0});
     }
 }
-watch(()=>[page.props.featureUpdate?.release,page.props.featureUpdate?.unread,page.props.user?.id],()=>{
-    if(page.props.featureUpdate?.unread)open();
+watch(()=>[page.props.featureUpdate?.release,page.props.featureUpdate?.unread,page.props.user?.id,props.defer],()=>{
+    if(page.props.featureUpdate?.unread&&!props.defer)open();
 },{immediate:true});
 async function close(url){
     if(busy.value)return;

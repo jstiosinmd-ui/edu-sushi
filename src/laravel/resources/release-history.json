@@ -1,5 +1,57 @@
 [
   {
+    "id": "sushi-2.11",
+    "version": "2.11",
+    "name": "Counter Notes",
+    "released_on": "2026-10-16",
+    "tour_name": "Sushi Bar Hop",
+    "summary": "A dated changelog, complete Memory Maki progress, and fixes for study recovery, Bento recipes, and reminders.",
+    "features": [
+      {
+        "category": "added",
+        "title": "Release history",
+        "text": "Read previous release notes without leaving the update window."
+      },
+      {
+        "category": "improved",
+        "title": "What's New",
+        "text": "Updates now use concise entries grouped under Added, Improved, and Fixed. Each release shows its version and date."
+      },
+      {
+        "category": "fixed",
+        "title": "Resume from the latest saved answer",
+        "text": "Reloading after a save conflict now refreshes the question, timer, and session status in practice rounds and Memory Maki."
+      },
+      {
+        "category": "fixed",
+        "title": "Memory Maki progress",
+        "text": "Submitted answers now appear in coverage, accuracy, and Missed questions, including past answers. Filter My Progress by Memory Maki to see them."
+      },
+      {
+        "category": "fixed",
+        "title": "Bento question swaps",
+        "text": "Replacing a question respects your full recipe, including Any topic and All difficulties, while keeping the other questions in place."
+      },
+      {
+        "category": "fixed",
+        "title": "Fresh Catch reminder timing",
+        "text": "An old snooze no longer sends the next day’s reminder before your chosen time."
+      },
+      {
+        "category": "fixed",
+        "audience": "admin",
+        "title": "Head Chef reminders",
+        "text": "Administrators can receive Fresh Catch reminders when enabled, just like learners."
+      },
+      {
+        "category": "fixed",
+        "audience": "admin",
+        "title": "Cohort activity alerts",
+        "text": "Pending invitations, archived accounts, and disabled learners are excluded from cohort activity alerts and focused practice assignments."
+      }
+    ]
+  },
+  {
     "id": "sushi-2.10",
     "version": "2.10",
     "name": "Welcome Roll",

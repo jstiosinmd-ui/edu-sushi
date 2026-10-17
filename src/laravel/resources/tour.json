@@ -1,5 +1,5 @@
 {
-  "version": "2.10",
+  "version": "2.12",
   "stops": [
     {
       "id": "counter",
@@ -8,13 +8,13 @@
       "url": "/",
       "intro": "Your daily starting point after sign-in.",
       "steps": [
-        "Start Fresh Catch for ten new or previously missed questions.",
-        "Return to your Memory Maki deck, or choose a short Today’s Bento.",
-        "Use the sticky bar to check your tier, streak, and achievement collection."
+        "Start Fresh Catch or open Memory Maki from the two study cards.",
+        "Find other study tools and Today’s Bento in More.",
+        "Open your profile, Sushi journey, and changelog from the account menu."
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.10/counter.jpg",
+          "src": "/guide-screens/v2.12/counter.jpg",
           "alt": "Fresh Catch and Memory Maki are the two main cards on your Counter.",
           "caption": "Fresh Catch and Memory Maki are the two main cards on your Counter."
         }
@@ -27,15 +27,16 @@
       "url": "/practice?mode=fresh",
       "intro": "Choose the subjects and mix for your daily ten.",
       "steps": [
-        "Select the subjects you want to practice.",
-        "Move the unseen-versus-missed slider. The preview shows the actual mix available.",
-        "Answer all ten to earn a catch stamp. Wrong answers remain eligible for future catches."
+        "Edit subjects and optionally customize the unseen/missed mix.",
+        "Answer each question. Check answer opens feedback during the catch.",
+        "At question ten, choose Finish catch. Review unanswered items first when prompted.",
+        "Your completion screen confirms the score and daily stamp."
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.10/fresh.jpg",
-          "alt": "The mix preview adapts when your unseen or missed question pool is short.",
-          "caption": "The mix preview adapts when your unseen or missed question pool is short."
+          "src": "/guide-screens/v2.12/fresh.jpg",
+          "alt": "The last question provides an explicit Finish catch action after all answers are saved.",
+          "caption": "The last question provides an explicit Finish catch action after all answers are saved."
         }
       ]
     },
@@ -46,21 +47,21 @@
       "url": "/flashcards",
       "intro": "Answer, learn from the feedback, then rate your familiarity.",
       "steps": [
-        "Build a deck from selected subjects, topics, and a question range.",
-        "Answer the question to reveal its explanation immediately.",
-        "Rate familiarity from 1 to 5. Lower ratings return more often during the session.",
-        "Track the colored rating bar. At 80% rated 5, you can finish, keep rolling, or take a recall check."
+        "New deck walks through Subjects, Topics, and Cards, with 20 cards by default.",
+        "Answer, then open Explanation, Reference, or Notes/report when needed.",
+        "Rate recall with 1 Again, 2 Hard, 3 Okay, 4 Good, or 5 Easy. Lower ratings repeat more often.",
+        "Use the menu for deck progress or Finish session. At 80% rated 5, you can finish or keep going."
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.10/memory.jpg",
-          "alt": "The colored bar shows how many questions are unrated or rated 1 through 5.",
-          "caption": "The colored bar shows how many questions are unrated or rated 1 through 5."
+          "src": "/guide-screens/v2.12/memory.jpg",
+          "alt": "A focused question with progress and secondary tools in the menu.",
+          "caption": "A focused question with progress and secondary tools in the menu."
         },
         {
-          "src": "/guide-screens/v2.10/memory-ratings.jpg",
-          "alt": "After reading the feedback, choose how well you know the question.",
-          "caption": "After reading the feedback, choose how well you know the question."
+          "src": "/guide-screens/v2.12/memory-ratings.jpg",
+          "alt": "Answer feedback and five recall grades, with explanations available on demand.",
+          "caption": "Answer feedback and five recall grades, with explanations available on demand."
         }
       ]
     },
@@ -77,12 +78,12 @@
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.10/mentor.jpg",
+          "src": "/guide-screens/v2.12/mentor.jpg",
           "alt": "Maki Mentor uses a guided setup with a live count of matching questions.",
           "caption": "Maki Mentor uses a guided setup with a live count of matching questions."
         },
         {
-          "src": "/guide-screens/v2.10/rush.jpg",
+          "src": "/guide-screens/v2.12/rush.jpg",
           "alt": "Wasabi Rush adds a time limit before you start the challenge.",
           "caption": "Wasabi Rush adds a time limit before you start the challenge."
         }
@@ -102,7 +103,7 @@
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.10/library.jpg",
+          "src": "/guide-screens/v2.12/library.jpg",
           "alt": "Roll Call combines search, saved questions, and a study tray.",
           "caption": "Roll Call combines search, saved questions, and a study tray."
         }
@@ -122,9 +123,9 @@
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.10/builder.jpg",
-          "alt": "Quota rows let you set an exact count for each subject, topic, and difficulty.",
-          "caption": "Quota rows let you set an exact count for each subject, topic, and difficulty."
+          "src": "/guide-screens/v2.12/builder.jpg",
+          "alt": "Build an exam from selected subjects, topics, and reviewable question counts.",
+          "caption": "Build an exam from selected subjects, topics, and reviewable question counts."
         }
       ]
     },
@@ -135,19 +136,19 @@
       "url": "/progress",
       "intro": "See your learning patterns and collect your sushi crew.",
       "steps": [
-        "My Progress shows coverage and accuracy, with subject and time filters.",
-        "Memory Maki answers contribute to unique completion as soon as you answer.",
-        "Your Passport lists achievement requirements. Earn characters and equip them in your profile.",
-        "Every 200 unique completed questions earns a tier; the leaderboard counts weekly practice under its repeat rules."
+        "Open Filters, choose your criteria, then Apply filters.",
+        "Coverage and review totals are lifetime measures. Accuracy follows your filters.",
+        "Expand daily stamps or subject coverage when you want details.",
+        "Passport and your profile keep achievements and character choices available."
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.10/progress.jpg",
+          "src": "/guide-screens/v2.12/progress.jpg",
           "alt": "Your progress view keeps subject coverage and accuracy visible.",
           "caption": "Your progress view keeps subject coverage and accuracy visible."
         },
         {
-          "src": "/guide-screens/v2.10/passport.jpg",
+          "src": "/guide-screens/v2.12/passport.jpg",
           "alt": "Achievement cards show their character, requirement, and earned status.",
           "caption": "Achievement cards show their character, requirement, and earned status."
         }
@@ -168,7 +169,7 @@
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.10/chef.jpg",
+          "src": "/guide-screens/v2.12/chef.jpg",
           "alt": "Head Chef tools are grouped above the learner list. This screenshot uses demo accounts.",
           "caption": "Head Chef tools are grouped above the learner list. This screenshot uses demo accounts."
         }
