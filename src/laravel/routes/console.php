@@ -7,10 +7,25 @@ use App\Services\CatchReminders;
 use App\Services\DatabaseBackups;
 use App\Services\Learning;
 use App\Services\Passport;
+use App\Services\RetagQuestionsV3;
 use App\Services\Study;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schedule;
+use Illuminate\Validation\ValidationException;
+
+Artisan::command('sushi:retag-v3 {--apply : Apply after a successful read-only preview}', function (RetagQuestionsV3 $retag) {
+    try {
+        $this->info(json_encode($retag->run((bool) $this->option('apply')), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+    } catch (ValidationException $error) {
+        $this->error(implode(' ', Arr::flatten($error->errors())));
+
+        return 1;
+    }
+
+    return 0;
+})->purpose('Preview or apply the controlled taxonomy to the 6,000 existing questions');
 
 Artisan::command('sushi:backup {--rehearse}', function (DatabaseBackups $backups) {
     $result = $backups->create();

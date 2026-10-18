@@ -1,0 +1,1130 @@
+{
+  "PTH-Q0079": {
+    "topic_code": "PTH.15",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PTH-Q0096": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PTH-Q0113": {
+    "topic_code": "PTH.05",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PTH-Q0115": {
+    "topic_code": "ANA.03",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PTH-Q0120": {
+    "topic_code": "PTH.15",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0147": {
+    "topic_code": "PTH.04",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PTH-Q0163": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PTH-Q0168": {
+    "topic_code": "PHY.08",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PTH-Q0169": {
+    "topic_code": "BCH.11",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PTH-Q0190": {
+    "topic_code": "PTH.07",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PTH-Q0191": {
+    "topic_code": "PRV.10",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PRV-Q0147": {
+    "topic_code": "PRV.09",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PRV-Q0161": {
+    "topic_code": "IM.03",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "BCH-Q0153": {
+    "topic_code": "MPA.10",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "LGM-Q0021": {
+    "topic_code": "PED.02",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "LGM-Q0096": {
+    "topic_code": "LGM.08",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "LGM-Q0097": {
+    "topic_code": "LGM.08",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "LGM-Q0145": {
+    "topic_code": "LGM.10",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "LGM-Q0146": {
+    "topic_code": "PHY.01",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "LGM-Q0152": {
+    "topic_code": "LGM.13",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "LGM-Q0153": {
+    "topic_code": "LGM.09",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "LGM-Q0442": {
+    "topic_code": "LGM.08",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "LGM-Q0443": {
+    "topic_code": "LGM.08",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "LGM-Q0444": {
+    "topic_code": "LGM.08",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "LGM-Q0452": {
+    "topic_code": "LGM.08",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "MPA-Q0096": {
+    "topic_code": "BCH.09",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "MPA-Q0097": {
+    "topic_code": "BCH.09",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "MPA-Q0124": {
+    "topic_code": "MPA.08",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHA-Q0112": {
+    "topic_code": "PHA.10",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0010": {
+    "topic_code": "PHY.05",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0015": {
+    "topic_code": "PHY.07",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0026": {
+    "topic_code": "PHY.08",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0031": {
+    "topic_code": "ANA.05",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0040": {
+    "topic_code": "PHY.09",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0051": {
+    "topic_code": "PHY.03",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0056": {
+    "topic_code": "PHY.02",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0064": {
+    "topic_code": "PHY.10",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0076": {
+    "topic_code": "PHY.04",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0082": {
+    "topic_code": "PHY.05",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0132": {
+    "topic_code": "PHY.03",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0151": {
+    "topic_code": "PHY.02",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0152": {
+    "topic_code": "PHY.02",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0156": {
+    "topic_code": "PHY.10",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0158": {
+    "topic_code": "PHY.10",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PHY-Q0162": {
+    "topic_code": "PHY.03",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "BCH-Q0141": {
+    "topic_code": "PHA.11",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "BCH-Q0155": {
+    "topic_code": "PTH.14",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "LGM-Q0079": {
+    "topic_code": "PHY.05",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "LGM-Q0080": {
+    "topic_code": "IM.11",
+    "note": "Reviewed existing stem and objective; retained content and stable ID."
+  },
+  "PED|Neurology": {
+    "topic_code": "PED.16",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "OBG|Antenatal complications: preterm labor, membranes, fluid, growth, and multiple gestation": {
+    "topic_code": "OBG.04",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PRV|Disaster risk reduction": {
+    "topic_code": "PRV.15",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PRV|Cardiovascular prevention": {
+    "topic_code": "PRV.08",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PRV|Lipid management": {
+    "topic_code": "PRV.08",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PRV|Varicella prevention": {
+    "topic_code": "PRV.07",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PRV|Historical infant mortality": {
+    "topic_code": "PRV.14",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PRV|Qualitative research": {
+    "topic_code": "PRV.16",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PRV|Literature searching": {
+    "topic_code": "PRV.16",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PRV|Sampling": {
+    "topic_code": "PRV.05",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PRV|Philippine mental health law": {
+    "topic_code": "PRV.11",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "BCH|Ketogenic amino acids": {
+    "topic_code": "BCH.04",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "BCH|Glycogen storage disease": {
+    "topic_code": "BCH.10",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "BCH|Glycogen storage diseases": {
+    "topic_code": "BCH.10",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "BCH|One-carbon metabolism": {
+    "topic_code": "BCH.04",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "BCH|Amino acid derivatives": {
+    "topic_code": "BCH.04",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "BCH|Branched-chain amino acids": {
+    "topic_code": "BCH.04",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "BCH|Vitamin coenzymes": {
+    "topic_code": "BCH.09",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "BCH|Respiratory proton pumping": {
+    "topic_code": "BCH.02",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "BCH|Lipoproteins": {
+    "topic_code": "BCH.03",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "BCH|Cell trafficking": {
+    "topic_code": "BCH.07",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "BCH|Amino acid transport": {
+    "topic_code": "BCH.04",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "LGM|Sexual-assault examination": {
+    "topic_code": "LGM.13",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "LGM|Sexual-assault assessment": {
+    "topic_code": "LGM.13",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "LGM|Historical circulation tests": {
+    "topic_code": "LGM.09",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "LGM|Resuscitation terminology": {
+    "topic_code": "LGM.09",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "MPA|Antifungal drugs": {
+    "topic_code": "MPA.11",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "MPA|Mycobacterial infections": {
+    "topic_code": "MPA.04",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "MPA|Gram-positive cocci": {
+    "topic_code": "MPA.02",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "MPA|Gram-positive bacilli": {
+    "topic_code": "MPA.02",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "MPA|Gram-negative cocci": {
+    "topic_code": "MPA.03",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "MPA|Gram-negative bacilli": {
+    "topic_code": "MPA.03",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "MPA|Opportunistic mycoses": {
+    "topic_code": "MPA.06",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "MPA|Mycotoxins": {
+    "topic_code": "MPA.06",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "MPA|Antituberculous drugs": {
+    "topic_code": "MPA.11",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "MPA|Antiviral drugs": {
+    "topic_code": "MPA.11",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "MPA|Antimycobacterial therapy": {
+    "topic_code": "MPA.11",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PHA|Somatostatin analogs": {
+    "topic_code": "PHA.08",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PHA|Lipid-lowering drugs": {
+    "topic_code": "PHA.03",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PHA|Acetaminophen antidote": {
+    "topic_code": "PHA.12",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PHA|Acetaminophen toxicity": {
+    "topic_code": "PHA.12",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PHA|Amiodarone fetal effects": {
+    "topic_code": "PHA.03",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PHY|Calcium homeostasis": {
+    "topic_code": "PHY.08",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PHY|Endocrine signaling": {
+    "topic_code": "PHY.08",
+    "note": "Reviewed legacy topic meaning against controlled topic label."
+  },
+  "PHY-Q0001": {
+    "topic_code": "PHY.04",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0003": {
+    "topic_code": "PHY.04",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0005": {
+    "topic_code": "PHY.04",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0006": {
+    "topic_code": "PHY.04",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0069": {
+    "topic_code": "PHY.04",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0070": {
+    "topic_code": "PHY.04",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0071": {
+    "topic_code": "PHY.04",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0072": {
+    "topic_code": "PHY.04",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0077": {
+    "topic_code": "PHY.04",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0137": {
+    "topic_code": "PHY.04",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0009": {
+    "topic_code": "PHY.05",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0011": {
+    "topic_code": "PHY.05",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0038": {
+    "topic_code": "PHY.05",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0084": {
+    "topic_code": "PHY.05",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0085": {
+    "topic_code": "PHY.05",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0087": {
+    "topic_code": "PHY.05",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0088": {
+    "topic_code": "PHY.05",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0089": {
+    "topic_code": "PHY.05",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0090": {
+    "topic_code": "PHY.05",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0018": {
+    "topic_code": "PHY.07",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0093": {
+    "topic_code": "PHY.07",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0094": {
+    "topic_code": "PHY.07",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0097": {
+    "topic_code": "PHY.07",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0099": {
+    "topic_code": "PHY.07",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0102": {
+    "topic_code": "PHY.07",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0022": {
+    "topic_code": "PHY.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0029": {
+    "topic_code": "PHY.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0107": {
+    "topic_code": "PHY.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0110": {
+    "topic_code": "PHY.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0111": {
+    "topic_code": "PHY.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0112": {
+    "topic_code": "PHY.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0113": {
+    "topic_code": "PHY.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0115": {
+    "topic_code": "PHY.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0024": {
+    "topic_code": "PHY.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0041": {
+    "topic_code": "PHY.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0045": {
+    "topic_code": "PHY.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0141": {
+    "topic_code": "PHY.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0143": {
+    "topic_code": "PHY.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0144": {
+    "topic_code": "PHY.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0047": {
+    "topic_code": "PHY.03",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0065": {
+    "topic_code": "PHY.03",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0067": {
+    "topic_code": "PHY.03",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0136": {
+    "topic_code": "PHY.03",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0166": {
+    "topic_code": "PHY.03",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0053": {
+    "topic_code": "PHY.02",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0057": {
+    "topic_code": "PHY.02",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0058": {
+    "topic_code": "PHY.02",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0147": {
+    "topic_code": "PHY.02",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0148": {
+    "topic_code": "PHY.02",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0060": {
+    "topic_code": "PHY.10",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0155": {
+    "topic_code": "PHY.10",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0157": {
+    "topic_code": "PHY.10",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0079": {
+    "topic_code": "PHY.06",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0117": {
+    "topic_code": "PHY.06",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0118": {
+    "topic_code": "PHY.06",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PHY-Q0119": {
+    "topic_code": "PHY.06",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0074": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0075": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0076": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0090": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0091": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0093": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0094": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0095": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0110": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0111": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0112": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0136": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0137": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0138": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0139": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0140": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0151": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0152": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0153": {
+    "topic_code": "PTH.12",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0077": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0128": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0129": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0130": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0150": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0171": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0377": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0378": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0379": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0380": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0381": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0382": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0383": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0384": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0385": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0386": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0387": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0388": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0389": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0390": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0391": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0393": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0394": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0395": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0396": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0397": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0398": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0399": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0400": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0401": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0402": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0403": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0404": {
+    "topic_code": "PTH.11",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0078": {
+    "topic_code": "PTH.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0103": {
+    "topic_code": "PTH.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0124": {
+    "topic_code": "PTH.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0125": {
+    "topic_code": "PTH.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0126": {
+    "topic_code": "PTH.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0127": {
+    "topic_code": "PTH.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0134": {
+    "topic_code": "PTH.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0135": {
+    "topic_code": "PTH.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0177": {
+    "topic_code": "PTH.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0187": {
+    "topic_code": "PTH.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0188": {
+    "topic_code": "PTH.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0189": {
+    "topic_code": "PTH.09",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0080": {
+    "topic_code": "PTH.13",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0116": {
+    "topic_code": "PTH.13",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0167": {
+    "topic_code": "PTH.13",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0170": {
+    "topic_code": "PTH.13",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0081": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0097": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0118": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0131": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0132": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0133": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0157": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0158": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0159": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0162": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0180": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0181": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0478": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0491": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0492": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0493": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0494": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0495": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0496": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0497": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0498": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0499": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0500": {
+    "topic_code": "PTH.16",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0083": {
+    "topic_code": "PTH.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0084": {
+    "topic_code": "PTH.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0085": {
+    "topic_code": "PTH.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0086": {
+    "topic_code": "PTH.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0087": {
+    "topic_code": "PTH.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0088": {
+    "topic_code": "PTH.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0089": {
+    "topic_code": "PTH.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0092": {
+    "topic_code": "PTH.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0106": {
+    "topic_code": "PTH.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0107": {
+    "topic_code": "PTH.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0108": {
+    "topic_code": "PTH.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0109": {
+    "topic_code": "PTH.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0479": {
+    "topic_code": "PTH.08",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0121": {
+    "topic_code": "PTH.15",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0122": {
+    "topic_code": "PTH.15",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0123": {
+    "topic_code": "PTH.15",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0160": {
+    "topic_code": "PTH.15",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0161": {
+    "topic_code": "PTH.15",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0470": {
+    "topic_code": "PTH.15",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0471": {
+    "topic_code": "PTH.15",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0472": {
+    "topic_code": "PTH.15",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0473": {
+    "topic_code": "PTH.15",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0474": {
+    "topic_code": "PTH.15",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0475": {
+    "topic_code": "PTH.15",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0476": {
+    "topic_code": "PTH.15",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0477": {
+    "topic_code": "PTH.15",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0117": {
+    "topic_code": "PTH.10",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0119": {
+    "topic_code": "PTH.10",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0164": {
+    "topic_code": "PTH.10",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0165": {
+    "topic_code": "PTH.10",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0166": {
+    "topic_code": "PTH.10",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0184": {
+    "topic_code": "PTH.10",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0185": {
+    "topic_code": "PTH.10",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0186": {
+    "topic_code": "PTH.10",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0143": {
+    "topic_code": "PTH.14",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0154": {
+    "topic_code": "PTH.05",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0102": {
+    "topic_code": "PTH.03",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0104": {
+    "topic_code": "PTH.03",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0174": {
+    "topic_code": "PTH.02",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0182": {
+    "topic_code": "PTH.07",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0183": {
+    "topic_code": "PTH.07",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  },
+  "PTH-Q0175": {
+    "topic_code": "PTH.06",
+    "note": "Reviewed the existing learning objective to replace the broad legacy label; no content or key change."
+  }
+}

@@ -10,6 +10,7 @@ use App\Services\Analytics;
 use App\Services\Catalog;
 use App\Services\Habits;
 use App\Services\Passport;
+use App\Services\Taxonomy;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
@@ -87,17 +88,23 @@ class AdminController extends Controller
             $q->where(fn ($q) => $q->where('id', 'like', '%'.$r->string('search').'%')->orWhere('topic', 'like', '%'.$r->string('search').'%'));
         }
 
-        return Inertia::render('Questions', ['questions' => $q->orderBy('position')->paginate(20)->withQueryString(), 'search' => $r->string('search')->toString()]);
+        return Inertia::render('Questions', ['questions' => $q->orderBy('position')->paginate(20)->withQueryString(), 'search' => $r->string('search')->toString(),
+            'taxonomy' => array_values(Taxonomy::data()['topics'])]);
     }
 
     public function edit(Request $r, Question $question, Catalog $catalog)
     {
         $d = $r->validate(['content' => 'required|array', 'active' => 'required|boolean']);
         $d['content']['id'] = $question->id;
+        if (isset($d['content']['subject_code'])) {
+            $d['content']['review']['status'] = $d['active'] ? 'Active' : 'Retired';
+            $d['content']['status'] = $d['content']['review']['status'];
+            $d['content']['raw']['Review Status'] = $d['content']['status'];
+        }
         DB::transaction(function () use ($r, $question, $catalog, $d) {
             Question::whereKey($question->id)->lockForUpdate()->firstOrFail();
             $catalog->import(['items' => [$d['content']]], $r->user()->id);
-            $question->update(['active' => $d['active']]);
+            $question->refresh()->update(['active' => $d['active']]);
             self::audit($r, 'question.versioned', $question->id);
         });
 

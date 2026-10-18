@@ -37,7 +37,7 @@ class StudyController extends Controller
 
     public static function catalog(): array
     {
-        return ['subjects' => Catalog::SUBJECTS, 'topics' => Question::where('active', true)->select('subject', 'topic')->selectRaw('COUNT(*) as count')->groupBy('subject', 'topic')->orderBy('subject')->orderBy('topic')->get(), 'total' => Question::where('active', true)->count()];
+        return ['subjects' => Catalog::SUBJECTS, 'topics' => Question::where('active', true)->select('subject', 'topic', 'subject_code', 'topic_code')->selectRaw('COUNT(*) as count')->groupBy('subject', 'topic', 'subject_code', 'topic_code')->orderBy('subject')->orderBy('topic')->get(), 'total' => Question::where('active', true)->count()];
     }
 
     public function home(Request $r, Analytics $analytics)

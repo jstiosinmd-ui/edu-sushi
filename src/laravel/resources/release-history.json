@@ -1,5 +1,50 @@
 [
   {
+    "id": "sushi-2.12.1",
+    "version": "2.12.1",
+    "name": "Focused Study",
+    "released_on": "2026-10-17",
+    "tour_name": "Sushi Bar Hop",
+    "summary": "Focused study, clear Fresh Catch completion, and mobile controls that stay within reach.",
+    "features": [
+      {
+        "category": "fixed",
+        "title": "Finish your Fresh Catch",
+        "text": "The final question now shows Finish catch. Unanswered items are easy to revisit, and completion confirms your score and saved stamp."
+      },
+      {
+        "category": "improved",
+        "title": "Focused Memory Maki",
+        "text": "Answer, view the result, and rate recall with five thumb-friendly buttons. Open explanations, references, and notes when needed."
+      },
+      {
+        "category": "added",
+        "title": "Three-step deck setup",
+        "text": "Choose subjects, topics, and card count. Advanced ranges and exact question selection remain available."
+      },
+      {
+        "category": "improved",
+        "title": "Made for mobile",
+        "text": "Compact navigation and persistent study controls keep the question and next action within reach."
+      },
+      {
+        "category": "improved",
+        "title": "A simpler Counter",
+        "text": "Fresh Catch and Memory Maki lead the page. Find other study tools in More and your collection in Passport."
+      },
+      {
+        "category": "improved",
+        "title": "Progress filters",
+        "text": "Set filters in one sheet, then apply them together. Daily stamps and subject coverage open on demand."
+      },
+      {
+        "category": "fixed",
+        "title": "Menus on short screens",
+        "text": "The account menu scrolls within the screen, including phone landscape, so every action stays reachable."
+      }
+    ]
+  },
+  {
     "id": "sushi-2.12",
     "version": "2.12",
     "name": "Focused Study",
@@ -75,7 +120,7 @@
       {
         "category": "fixed",
         "title": "Fresh Catch reminder timing",
-        "text": "An old snooze no longer sends the next day’s reminder before your chosen time."
+        "text": "An old snooze no longer sends the next dayâ€™s reminder before your chosen time."
       },
       {
         "category": "fixed",
@@ -142,7 +187,7 @@
         "category": "added"
       },
       {
-        "title": "A clearer Chef’s Review",
+        "title": "A clearer Chefâ€™s Review",
         "text": "Track matching stems, missing references, and version-specific answer checks.",
         "url": "/admin/quality",
         "audience": "admin",

@@ -1,0 +1,424 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sushi.local/schema/question-content/v3",
+  "title": "Sushi bank question content, version 3",
+  "description": "Shape of question_versions.content in the Sushi app. Version 3 keeps every version 2 key (id, subject, topic, tier, stem, options, key, rationale, expl, raw) so the current Study, Fresh Catch and Memory Maki screens keep working, and adds the controlled taxonomy codes, provenance lineage, authority citations, media and review state. Source wording from samplexes or commercial books never enters this object; it lives only in the internal source_questions table.",
+  "type": "object",
+  "required": [
+    "id",
+    "subject",
+    "subject_code",
+    "topic",
+    "topic_code",
+    "tier",
+    "stem",
+    "options",
+    "key",
+    "rationale",
+    "expl",
+    "references",
+    "lineage",
+    "review"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(ANA|PHY|BCH|MPA|PHA|PTH|LGM|PRV|IM|PED|OBG|SUR)-Q[0-9]{4,5}$",
+      "description": "Stable bank ID; never reused after retirement."
+    },
+    "subject": {
+      "enum": [
+        "Anatomy",
+        "Physiology",
+        "Biochemistry",
+        "Microbiology-Parasitology",
+        "Pharmacology",
+        "Pathology",
+        "Legal Medicine-Ethics",
+        "Preventive Medicine",
+        "Internal Medicine",
+        "Pediatrics",
+        "OB-GYN",
+        "Surgery"
+      ],
+      "description": "Display name used by the current app (version 2 key)."
+    },
+    "subject_code": {
+      "enum": [
+        "ANA",
+        "PHY",
+        "BCH",
+        "MPA",
+        "PHA",
+        "PTH",
+        "LGM",
+        "PRV",
+        "IM",
+        "PED",
+        "OBG",
+        "SUR"
+      ]
+    },
+    "topic": {
+      "type": "string",
+      "description": "Display label (version 2 key). In version 3 it equals the taxonomy topic name for topic_code."
+    },
+    "topic_code": {
+      "type": "string",
+      "pattern": "^(ANA|PHY|BCH|MPA|PHA|PTH|LGM|PRV|IM|PED|OBG|SUR)\\.[0-9]{2}$",
+      "description": "Level 1 node of the controlled taxonomy, for example PED.10 Cardiology."
+    },
+    "subtopic_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^(ANA|PHY|BCH|MPA|PHA|PTH|LGM|PRV|IM|PED|OBG|SUR)\\.[0-9]{2}\\.[0-9]{2}$",
+      "description": "Level 2 node, for example PED.10.02 Cyanotic congenital heart disease. Null only while a curator has not placed the item."
+    },
+    "concept_key": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "maxLength": 80,
+      "description": "Short slug of the single fact the item tests (for example tet-spell-first-maneuver). Two active items in one subtopic may not share a concept_key; this is the repeat guard the October 2026 concept review did by hand."
+    },
+    "tier": {
+      "enum": [
+        "Easy",
+        "Average",
+        "Difficult"
+      ],
+      "description": "Declared difficulty (CSV column Difficulty)."
+    },
+    "cognitive": {
+      "enum": [
+        "Remember",
+        "Understand",
+        "Apply",
+        "Analyze",
+        "Evaluate"
+      ],
+      "description": "CSV column Cognitive Category."
+    },
+    "qtype": {
+      "enum": [
+        "Focused",
+        "Case"
+      ],
+      "description": "CSV column Question Type."
+    },
+    "stem": {
+      "type": "string",
+      "minLength": 15,
+      "maxLength": 1500
+    },
+    "options": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 300
+      },
+      "description": "Options A to D in display order. No all-of-the-above, none-of-the-above or combination options."
+    },
+    "key": {
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 20
+    },
+    "expl": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "string"
+      },
+      "description": "Per-option explanations A to D; the key's slot may be empty when the rationale covers it."
+    },
+    "objective": {
+      "type": "string",
+      "description": "CSV column Learning Objective."
+    },
+    "references": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/reference"
+      }
+    },
+    "lineage": {
+      "$ref": "#/$defs/lineage"
+    },
+    "media": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/media"
+      },
+      "default": []
+    },
+    "review": {
+      "$ref": "#/$defs/review"
+    },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "high-recurrence",
+          "philippine-specific",
+          "current-practice",
+          "book-mode",
+          "image-dependent",
+          "calculation",
+          "recalled-board-topic"
+        ]
+      }
+    },
+    "raw": {
+      "type": "object",
+      "description": "The row in the bank CSV contract (33 columns in version 2, 39 in version 3), kept for export to the Nelson-layout workbook and the exam generator."
+    },
+    "schema_version": {
+      "type": "integer",
+      "enum": [
+        3
+      ]
+    },
+    "status": {
+      "enum": [
+        "Draft",
+        "Active",
+        "Held",
+        "Retired"
+      ]
+    },
+    "source_review_status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "$defs": {
+    "reference": {
+      "type": "object",
+      "required": [
+        "authority_id",
+        "citation",
+        "locator"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "authority_id": {
+          "type": "string",
+          "description": "Key into the authorities table, for example FA2024, NEL21, BPOBG6 or MSD-chronic-obstructive-pulmonary-disease-copd."
+        },
+        "citation": {
+          "type": "string",
+          "description": "Full citation as published (CSV column Answer Source)."
+        },
+        "locator": {
+          "type": "string",
+          "description": "Physical page, section or table of the authority that supports the key."
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "accessed": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "supports": {
+          "enum": [
+            "key",
+            "rationale",
+            "explanation"
+          ],
+          "default": "key"
+        },
+        "verification_status": {
+          "enum": [
+            "legacy_unverified",
+            "verified"
+          ]
+        }
+      }
+    },
+    "lineage": {
+      "type": "object",
+      "required": [
+        "origin"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "origin": {
+          "enum": [
+            "sushi_conversion",
+            "school_conversion",
+            "authority_authored"
+          ],
+          "description": "sushi_conversion: rewritten from the Y4 2025 SUSHI folder. school_conversion: rewritten from a school or mock-board samplex in D:\\PLE. authority_authored: written from the answer authority to fill a subtopic, with commercial books used only as topic maps."
+        },
+        "source_groups": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "IDs of the duplicate groups (source_groups table) the item was converted from; empty for authority_authored."
+        },
+        "source_locators": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "File, page or table row, and item number of each contributing source question (CSV column Source Locator)."
+        },
+        "families": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Distinct exams (exam families) that asked the source question."
+        },
+        "recurrence": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Distinct source files that hold it (CSV column Recurrence Count)."
+        },
+        "course_tag": {
+          "type": "string"
+        },
+        "source_key_check": {
+          "enum": [
+            "Agrees",
+            "Corrected",
+            "Not comparable"
+          ]
+        },
+        "conversion_note": {
+          "type": "string"
+        },
+        "replaces": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "ID of an item this one replaced in a concept review."
+        }
+      }
+    },
+    "media": {
+      "type": "object",
+      "required": [
+        "asset_id",
+        "role",
+        "alt",
+        "license"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "asset_id": {
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "stem",
+            "explanation"
+          ]
+        },
+        "alt": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Text description that carries the tested finding for screen readers."
+        },
+        "credit": {
+          "type": "string"
+        },
+        "license": {
+          "enum": [
+            "original",
+            "public-domain",
+            "cc-by",
+            "cc-by-sa",
+            "permission-on-file"
+          ]
+        },
+        "required_for_answer": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "Draft",
+            "Active",
+            "Held",
+            "Retired"
+          ],
+          "description": "Held: no authority settles the key (To verify); kept out of drills."
+        },
+        "notes": {
+          "type": "string"
+        },
+        "source_review": {
+          "$ref": "#/$defs/signoff"
+        },
+        "cue_review": {
+          "$ref": "#/$defs/signoff"
+        },
+        "clinical_review": {
+          "$ref": "#/$defs/signoff"
+        }
+      }
+    },
+    "signoff": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "by",
+        "date"
+      ],
+      "properties": {
+        "by": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "outcome": {
+          "enum": [
+            "pass",
+            "revised",
+            "held"
+          ]
+        }
+      }
+    }
+  }
+}

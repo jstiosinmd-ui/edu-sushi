@@ -10,6 +10,7 @@ use App\Services\Achievements;
 use App\Services\Catalog;
 use App\Services\Learning;
 use App\Services\StudyGuide;
+use App\Services\Taxonomy;
 use App\Services\WeightedDeck;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -47,7 +48,7 @@ class FlashcardController extends Controller
     private function pool(array $s): array
     {
         return array_values(array_filter(app(Catalog::class)->items(), fn ($q) => in_array($q['subject'], $s['subjects'], true)
-            && (empty($s['topics']) || in_array($q['subject']."\x1f".$q['topic'], $s['topics'], true))
+            && Taxonomy::matchesAny($q, $s['topics'] ?? [])
             && ($s['difficulty'] === 'All' || $s['difficulty'] === $q['tier'])));
     }
 

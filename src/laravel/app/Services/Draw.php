@@ -39,7 +39,7 @@ class Draw
     {
         $rng = $this->random((int) $s['seed']);
         $pool = array_values(array_filter($items, fn ($q) => in_array($q['subject'], $s['subjects'], true)
-            && (empty($s['topics']) || in_array($q['subject']."\x1f".$q['topic'], $s['topics'], true))
+            && Taxonomy::matchesAny($q, $s['topics'] ?? [])
             && (($s['difficulty'] ?? 'All') === 'All' || $q['tier'] === $s['difficulty'])));
         if (! empty($s['blueprint'])) {
             return $this->shuffle(app(Blueprint::class)->select($this->shuffle($pool, $rng), $s['blueprint'], (int) $s['count']), $rng);
@@ -84,17 +84,24 @@ class Draw
         }
         $buckets = [];
         foreach ($groups as $group) {
-            $b = array_values(array_filter($eligible, fn ($q) => ($topics ? $q['subject']."\x1f".$q['topic'] : $q['subject']) === $group));
+            $b = array_values(array_filter($eligible, fn ($q) => $topics ? Taxonomy::matches($q, $group) : $q['subject'] === $group));
             if (! $b) {
                 throw ValidationException::withMessages(['subjects' => 'No matching questions for '.$group.'.']);
             }
             $buckets[] = $b;
         }
         $chosen = [];
+        $chosenHashes = [];
         while (count($chosen) < $count) {
             foreach ($buckets as &$b) {
-                if ($b && count($chosen) < $count) {
-                    $chosen[] = array_pop($b);
+                while ($b && count($chosen) < $count) {
+                    $next = array_pop($b);
+                    $hash = Catalog::stemHash($next['stem']);
+                    if (! isset($chosenHashes[$hash])) {
+                        $chosen[] = $next;
+                        $chosenHashes[$hash] = true;
+                        break;
+                    }
                 }
             }
         }

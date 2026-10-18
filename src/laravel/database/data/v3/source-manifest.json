@@ -1,0 +1,58 @@
+{
+  "built_from": [
+    {
+      "file": "taxonomy.txt",
+      "sha256": "b33fbcf72f06d742d61771f070de863cd36a007d078644047e0e3fe10cc4c83c"
+    },
+    {
+      "file": "sushi_mapped.csv",
+      "sha256": "1624e94fa69149147fae8a59e653907704d302c112ed7a28748ea031aa6984b6"
+    },
+    {
+      "file": "catalog_files.csv",
+      "sha256": "e1cbd6a1f2fa846212091b73d88f89e3b8388578eef7a756fca42d8cdc9ab0e7"
+    },
+    {
+      "file": "20261018_EDU_SushiDataModel_v1.0.sql",
+      "sha256": "6493f0f7056d2dccdcab42867a50bc990ac4d592af547daebc65fca3ac6a7452"
+    },
+    {
+      "file": "20261018_EDU_SushiQuestionSchema_v1.0.json",
+      "sha256": "643ed1ee5825d3ad48cd124c651a6bc364de24ec1426d803f730c0d3231925a5"
+    }
+  ],
+  "banks": [
+    {
+      "file": "bank.json",
+      "sha256": "f377321ab71778165ec46ef3afdacdcbf86eaf6851f4c0df818a1162561e427e"
+    },
+    {
+      "file": "subjects-20261014-v1.1.json",
+      "sha256": "82aaad17bd08be293850d83fc21b58e8e8679615871498754629d36cc9e1d0be"
+    },
+    {
+      "file": "basic-sciences-20261014-v1.0.json",
+      "sha256": "035d1a72e1a0fc991c77938333679f255c5240c17fd596f17976edec1cac7f5e"
+    },
+    {
+      "file": "physiology-microbiology-20261014-v1.0.json",
+      "sha256": "dd438c6f054acd1c947e1a9f8eb8a3ca40d04d2707eb79dc52d9930b7f307ae0"
+    },
+    {
+      "file": "ple-top-up-20261016-v2.8.json",
+      "sha256": "d796cf75f95146b60839e59d12a2be08e677fb54bbe7ef001637a41104feb2a6"
+    }
+  ],
+  "questions": 6000,
+  "mapping_methods": {
+    "label": 4315,
+    "label-preserved": 673,
+    "reviewed-override": 448,
+    "label+keywords": 402,
+    "keywords": 162
+  },
+  "overrides_sha256": "fbfb65d8008fec46ba4cd8bd230bd48d2dc4fa1c6dd7b8d47e99a67293fd6f20",
+  "builder_sha256": "321014d51adb257182733538e7a2d1cbe474df3f071c2231e050e16b8fb20da7",
+  "missing_topics": 0,
+  "unassigned_subtopics": 1492
+}

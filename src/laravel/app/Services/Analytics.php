@@ -25,7 +25,7 @@ class Analytics
             if (! empty($filters['subject']) && $r->q['subject'] !== $filters['subject']) {
                 return false;
             }
-            if (! empty($filters['topic']) && $r->q['topic'] !== $filters['topic']) {
+            if (! empty($filters['topic']) && $r->q['topic'] !== $filters['topic'] && ! Taxonomy::matches($r->q, $filters['topic']) && ! Taxonomy::matches($r->q, $r->q['subject']."\x1f".$filters['topic'])) {
                 return false;
             }
             if (! empty($filters['difficulty']) && $r->q['tier'] !== $filters['difficulty']) {

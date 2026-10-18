@@ -47,6 +47,8 @@ The initial password is password for all five accounts. Each must choose a new p
 
 ## Question bank and subject crew
 
+The local version 3 data-model implementation and unreleased changelog are documented in [Sushi version 3 data model](docs/20261018_EDU_SushiDataModel_v3.0.md). Applying its explicit retag command preserves all 6,000 IDs and adjusts 15 subject placements. The paragraph below describes the original v2 bank.
+
 The active bank contains 6,000 question records across twelve subjects, with 500 in each subject. The October 16 top-up adds 3,537 questions to the existing 2,463. It contains three repeated stem pairs, so draws group 5,997 distinct stems. Source CSV files remain unchanged. Application content uses Active status and retains the original review label in source_review_status. The original bank and its legacy progress-import hash remain unchanged.
 
 Each new subject has a character available throughout study screens and as an achievement avatar: Kappa Care, Tama Atlas, Inari Integrity, Ikura Insight, Ebi Remedy, Temaki Spark, Unagi Pulse, and Shimeji Scout. Correctly answering 50 distinct questions in that subject unlocks its portrait. Original four-subject achievements retain their Internal Medicine, OB-GYN, Pediatrics, and Surgery requirements.

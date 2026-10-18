@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Progress;
+use App\Models\Question;
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -30,9 +31,15 @@ class StudyHistory
 
         // A card can still hold the same answer after its rating was recorded.
         // Its review token identifies one answer, regardless of how many reads occur.
+        $taxonomy = Question::whereNotNull('topic_code')->get(['id', 'subject', 'topic', 'subject_code', 'topic_code', 'subtopic_code'])->keyBy('id');
+
         return $attempts->concat($reviews)->concat($unrated)->unique('source')
-            ->sortBy(fn ($r) => [$r->graded_at, $r->event_id ?? 0, $r->response_id, $r->source])->values()->map(function ($r) {
+            ->sortBy(fn ($r) => [$r->graded_at, $r->event_id ?? 0, $r->response_id, $r->source])->values()->map(function ($r) use ($taxonomy) {
                 $r->q = json_decode($r->snapshot, true);
+                // Reporting uses the current classification without changing saved answers or snapshots.
+                if ($current = $taxonomy->get($r->question_id)) {
+                    $r->q = array_replace($r->q, $current->only('subject', 'topic', 'subject_code', 'topic_code', 'subtopic_code'));
+                }
 
                 return $r;
             });

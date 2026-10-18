@@ -12,7 +12,7 @@ class Selection
         $rows = app(Study::class)->eligible($user->id, $s);
 
         return array_values(array_filter($rows, fn ($q) => in_array($q['subject'], $s['subjects'], true)
-            && (empty($s['topics']) || in_array($q['subject']."\x1f".$q['topic'], $s['topics'], true))
+            && Taxonomy::matchesAny($q, $s['topics'] ?? [])
             && (($s['difficulty'] ?? 'All') === 'All' || $s['difficulty'] === $q['tier'])));
     }
 

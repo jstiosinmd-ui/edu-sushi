@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
                     app(Catalog::class)->import(['items' => $items], notifyCorrections: false);
                 }
             });
-            Question::where('active', false)->update(['active' => true]);
+            Question::where('active', false)->update(['active' => true, 'status' => 'Active']);
         });
     }
 }
