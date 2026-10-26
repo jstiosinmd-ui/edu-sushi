@@ -1,5 +1,33 @@
 [
   {
+    "id": "sushi-3.0.1",
+    "version": "3.0.1",
+    "name": "Study Workspace",
+    "released_on": "2026-10-26",
+    "tour_name": "Sushi Bar Hop",
+    "summary": "A clearer study workspace with consistent layouts on desktop and mobile.",
+    "features": [
+      {
+        "category": "improved",
+        "title": "A simpler study home",
+        "text": "Start a daily catch, resume a saved deck, or open a practice exam from one screen.",
+        "url": "/"
+      },
+      {
+        "category": "improved",
+        "title": "Navigation organized around study",
+        "text": "Study, Library, and Progress stay easy to reach, with related tools grouped beneath each section.",
+        "url": "/library"
+      },
+      {
+        "category": "improved",
+        "title": "Consistent screens on every device",
+        "text": "Updated spacing, type, forms, question cards, and setup dialogs keep the same layout conventions throughout Sushi.",
+        "url": "/flashcards?decks=1"
+      }
+    ]
+  },
+  {
     "id": "sushi-3.0.0",
     "version": "3.0.0",
     "name": "Organized Study",
@@ -146,7 +174,7 @@
       {
         "category": "fixed",
         "title": "Fresh Catch reminder timing",
-        "text": "An old snooze no longer sends the next dayâ€™s reminder before your chosen time."
+        "text": "An old snooze no longer sends the next dayÃ¢â‚¬â„¢s reminder before your chosen time."
       },
       {
         "category": "fixed",
@@ -213,7 +241,7 @@
         "category": "added"
       },
       {
-        "title": "A clearer Chefâ€™s Review",
+        "title": "A clearer ChefÃ¢â‚¬â„¢s Review",
         "text": "Track matching stems, missing references, and version-specific answer checks.",
         "url": "/admin/quality",
         "audience": "admin",

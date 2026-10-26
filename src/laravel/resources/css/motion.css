@@ -1,0 +1,72 @@
+/* Stable outer geometry; only the content inside each frame moves. */
+html{scrollbar-gutter:stable}
+html:has(dialog[open]){overflow:hidden}
+.section-nav{min-height:50px}
+.page-heading,.page-title{min-height:76px}
+.slide-stage{position:relative;isolation:isolate;min-width:0;min-height:0;flex:1;overflow:hidden}
+.slide-page{position:absolute;inset:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:24px;outline:none}
+.slide-page>:first-child{margin-top:0}.slide-page>:last-child{margin-bottom:0}
+.slide-page[inert]{pointer-events:none}
+.panel-next-enter-active,.panel-back-enter-active{transition:transform 200ms ease-out,opacity 200ms ease-out}
+.panel-next-leave-active,.panel-back-leave-active{transition:transform 160ms ease-in,opacity 160ms ease-in}
+.panel-next-enter-from,.panel-back-leave-to{transform:translateX(20px);opacity:0}
+.panel-next-leave-to,.panel-back-enter-from{transform:translateX(-20px);opacity:0}
+
+/* Dialog title, progress, and actions keep the same coordinates at every step. */
+.study-sheet.stable-sheet{height:min(720px,calc(100svh - 48px));max-height:calc(100dvh - 24px);margin:auto}
+.stable-sheet[open]{animation:sheet-arrive 180ms ease-out}
+.stable-sheet>.sheet-body{flex:1;min-height:0;scrollbar-gutter:stable}
+.sheet-intro{flex-shrink:0;padding:0 24px;border-bottom:1px solid var(--ui-line)}
+.sheet-intro .setup-steps{margin:0;min-height:56px;align-items:center}
+.sheet-intro .setup-steps li{padding:16px 0}
+.sheet-stage>.slide-page{padding:24px}
+.deck-setup .sheet-actions{display:grid;grid-template-columns:120px minmax(0,1fr) 140px;min-height:78px}
+.deck-setup .sheet-actions>button{width:100%;white-space:nowrap;padding-inline:8px}
+.deck-setup .setup-count{margin:0;text-align:center}
+.stable-sheet .setup-topics,.stable-sheet .deck-question-list{max-height:none;overflow:visible}
+@keyframes sheet-arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* Round setup uses the same scrolling frame, including custom coverage lists. */
+.fresh-setup:has(.round-builder){max-width:none}
+.builder-workspace{height:clamp(360px,calc(100svh - 430px),680px);display:flex;flex-direction:column;border:1px solid var(--ui-line);border-radius:10px;overflow:hidden}
+.builder-workspace .builder-actions{flex-shrink:0;margin:0;padding:16px 20px;border-top:1px solid var(--ui-line);background:#fff}
+.builder-workspace .builder-actions>button{min-width:128px}
+.builder-summary{min-width:0;height:240px;overflow:auto;max-height:680px}
+
+/* Study pages reserve room for status and controls before the first answer. */
+.compact-shell.stable-study .main{max-width:1168px;height:calc(100svh - var(--header-height,72px));min-height:420px;flex:none;display:flex;flex-direction:column;gap:12px;padding:20px 24px 16px;overflow:hidden}
+.stable-study .study-heading{flex-shrink:0;min-height:54px;margin:0}
+.stable-study .study-progress{flex-shrink:0;margin:0;height:5px}
+.study-status{display:grid;grid-template-columns:minmax(0,1fr) 80px;align-items:center;gap:8px;flex:0 0 44px;min-height:44px;font-size:12px;color:var(--ui-muted)}
+.study-status>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.study-status>button{min-height:44px;font-size:12px;padding:8px}
+.stable-study .study-card-stage{width:100%;margin:0;padding:0;min-height:0;flex:1}
+.study-card-stage>.slide-page{padding:24px max(24px,calc((100% - 800px)/2));background:#fff}
+.stable-study .study-dock{position:static;flex-shrink:0;width:100%;margin:0;padding:8px max(0px,calc((100% - 800px)/2)) max(8px,env(safe-area-inset-bottom));border:0;box-shadow:none;background:transparent}
+.stable-study .rating-title{min-height:20px;margin:0 0 8px;line-height:20px}
+.stable-study .recall-buttons button{min-height:64px;height:64px}
+.stable-study .round-actions{display:grid;grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr);gap:8px}
+.stable-study .round-actions.with-check{grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr) minmax(0,1fr)}
+.stable-study .round-actions>button{min-width:0;height:48px;min-height:48px;padding:8px;line-height:18px}
+.stable-study .main>.panel:not(.study-card-stage){flex:1;min-height:0;overflow:auto;margin:0}
+.stable-study .question-stem:focus,.stable-study .feedback:focus{outline:none}
+
+@media(max-width:760px){
+ .section-nav{min-height:46px}.page-heading,.page-title{min-height:72px}
+ .study-sheet.stable-sheet{width:100%;height:calc(100svh - 16px);max-height:calc(100dvh - 8px);margin:auto 0 0;border-radius:16px 16px 0 0;left:0;right:0;box-sizing:border-box}
+ .sheet-intro{padding:0 20px}.sheet-intro .setup-steps{min-height:52px}.sheet-intro .setup-steps li{padding:14px 0}
+ .sheet-stage>.slide-page{padding:20px}
+ .deck-setup .sheet-actions{grid-template-columns:72px minmax(0,1fr) 120px;min-height:70px;padding:12px 16px max(12px,env(safe-area-inset-bottom));gap:8px}
+ .builder-workspace{height:clamp(300px,calc(100svh - 420px),680px)}.builder-workspace .slide-page{padding:16px}.builder-workspace .builder-actions{padding:12px}.builder-workspace .builder-actions>button{min-width:0;flex:1}
+ .builder-summary{height:180px;max-height:180px;overflow:auto}
+ .compact-shell.stable-study .main{height:calc(100svh - var(--header-height,64px));min-height:360px;padding:12px 12px 8px;gap:8px}
+ .stable-study .study-heading{min-height:48px}.study-card-stage>.slide-page{padding:20px 16px}
+ .stable-study .study-dock{padding:4px 0 max(4px,env(safe-area-inset-bottom));margin:0;background:transparent}
+ .stable-study .recall-buttons button{min-height:60px;height:60px}.stable-study .rating-title{font-size:12px}
+ .stable-study .round-actions{gap:6px;grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr)}
+ .stable-study .round-actions.with-check{grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr) minmax(0,1fr)}
+ .stable-study .round-actions>button{height:56px;padding:8px 4px;font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){
+ .slide-page,.stable-sheet[open]{animation:none!important;transition:none!important;transform:none!important}
+}

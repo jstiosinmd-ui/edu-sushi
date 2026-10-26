@@ -3,6 +3,7 @@ import '../css/studio.css';
 import '../css/learning.css';
 import '../css/focused.css';
 import '../css/refresh.css';
+import '../css/motion.css';
 import './bootstrap';
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';

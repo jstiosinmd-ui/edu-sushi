@@ -1,27 +1,27 @@
 {
-  "id": "sushi-3.0.1",
-  "version": "3.0.1",
-  "name": "Study Workspace",
-  "released_on": "2026-10-26",
+  "id": "sushi-3.0.2",
+  "version": "3.0.2",
+  "name": "Steady Study",
+  "released_on": "2026-10-27",
   "tour_name": "Sushi Bar Hop",
-  "summary": "A clearer study workspace with consistent layouts on desktop and mobile.",
+  "summary": "Stable study frames and short transitions keep your place between steps and questions.",
   "features": [
     {
-      "category": "improved",
-      "title": "A simpler study home",
-      "text": "Start a daily catch, resume a saved deck, or open a practice exam from one screen.",
-      "url": "/"
+      "category": "fixed",
+      "title": "Setup stays in place",
+      "text": "Deck and round setup keep the same frame and action positions as you move between steps.",
+      "url": "/flashcards?new=1"
     },
     {
       "category": "improved",
-      "title": "Navigation organized around study",
-      "text": "Study, Library, and Progress stay easy to reach, with related tools grouped beneath each section.",
-      "url": "/library"
+      "title": "Smooth question changes",
+      "text": "Questions and answers slide within a stable workspace. Long content scrolls inside the card, and study controls remain available.",
+      "url": "/practice?mode=tutor"
     },
     {
-      "category": "improved",
-      "title": "Consistent screens on every device",
-      "text": "Updated spacing, type, forms, question cards, and setup dialogs keep the same layout conventions throughout Sushi.",
+      "category": "fixed",
+      "title": "Steady save feedback",
+      "text": "Saving, retry messages, and recall ratings keep their space without moving the page. Reduced-motion preferences are respected.",
       "url": "/flashcards?decks=1"
     }
   ]
