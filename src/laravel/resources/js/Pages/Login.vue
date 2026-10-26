@@ -23,24 +23,18 @@ function submit(){
                     <img class="banner" :src="art.loginBanner" width="1440" height="480"
                          alt="SUSHI Clerks Comprehensive Exam Reviewer" fetchpriority="high">
                     <div class="caption">
-                        <p class="eyebrow">A little practice. A stronger you.</p>
-                        <h1>Good things come<br>one roll at a time.</h1>
-                        <p>Your questions, progress, and study crew in one place.</p>
-                        <div class="crew" aria-label="Your study subjects">
-                            <div v-for="(c,s) in crew" :key="s">
-                                <img :src="c.image" :alt="c.name" width="68" height="68">
-                                <strong>{{s==='Internal Medicine'?'Medicine':s}}</strong>
-                            </div>
-                        </div>
-                        <p class="bank-summary"><span aria-hidden="true">●</span> {{questionCount.toLocaleString()}} questions · {{Object.keys(crew).length}} subjects · Your own pace</p>
+                        <h1>Build your knowledge,<br>one roll at a time.</h1>
+                        <p>Practice questions, review what you missed, and follow your progress.</p>
+                        <p class="bank-summary">{{questionCount.toLocaleString()}} questions · {{Object.keys(crew).length}} subjects</p>
                     </div>
+                    <div class="login-art" aria-hidden="true"><img :src="art.temaki" alt="" width="100" height="100"><img :src="art.memo" alt="" width="100" height="100"><img :src="art.wasabi" alt="" width="100" height="100"></div>
                 </div>
             </section>
             <section class="access" aria-labelledby="sign-in-title">
                 <div class="login-form">
-                    <img class="seal" :src="art.logo" alt="SUSHI" width="64" height="64">
 
-                    <h2 id="sign-in-title">Welcome back</h2>
+                    <h2 id="sign-in-title">Sign in</h2>
+                    <p class="muted">Continue your study.</p>
 
                     <Errors :errors="form.errors"/>
                     <form @submit.prevent="submit">

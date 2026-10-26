@@ -1,5 +1,31 @@
 [
   {
+    "id": "sushi-3.0.0",
+    "version": "3.0.0",
+    "name": "Organized Study",
+    "released_on": "2026-10-18",
+    "tour_name": "Sushi Bar Hop",
+    "summary": "Consistent topics across study, Memory Maki, and progress.",
+    "features": [
+      {
+        "category": "improved",
+        "title": "Clearer study topics",
+        "text": "All 6,000 questions now use consistent topic names across study, Memory Maki, and progress."
+      },
+      {
+        "category": "fixed",
+        "title": "Questions in the right subject",
+        "text": "Reassigned questions appear under their appropriate subjects. Your saved answers, bookmarks, and history stay available."
+      },
+      {
+        "category": "added",
+        "title": "Controlled question editing",
+        "text": "Choose from a controlled topic list and maintain structured references for each question version.",
+        "audience": "admin"
+      }
+    ]
+  },
+  {
     "id": "sushi-2.12.1",
     "version": "2.12.1",
     "name": "Focused Study",

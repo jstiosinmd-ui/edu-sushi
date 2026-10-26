@@ -10,7 +10,7 @@ function select(id){if(tray.value.includes(id))tray.value=tray.value.filter(x=>x
 async function reveal(q){answers.value[q.id]=!answers.value[q.id];if(answers.value[q.id]){try{const r=await axios.post('/questions/'+q.id+'/view',{mode:'library'});page.props.community=r.data.community}catch(e){error.value=message(e)}}}
 function start(mode){busy.value=true;error.value='';router.post('/library/study',{mode,selected_ids:tray.value},{preserveScroll:true,onError:e=>error.value=Object.values(e).join(' '),onFinish:()=>busy.value=false})}
 </script>
-<template><Head title="Roll Call"/><div class="page-title"><div><h1>Roll Call</h1></div><img class="portrait" :src="'/art/nori-librarian.png'" alt="Nori Librarian"></div>
+<template><Head title="Question library"/><div class="page-title"><div><h1>Question library</h1><p class="section-description">Roll Call · Browse, save, and build a study tray.</p></div></div>
 <form class="library-search" @submit.prevent="filter"><label>Search questions<input v-model="search" placeholder="Search a question, topic, or ID"></label><label>Subject<select v-model="subject" @change="filter"><option value="">All subjects</option><option v-for="s in catalog.subjects" :key="s">{{s}}</option></select></label><button class="primary">Search</button></form>
 <div class="library-tools"><div class="segmented"><button v-for="[id,label] in [['all','All'],['new','Unseen'],['missed','Missed'],['bookmarks','Saved']]" :key="id" :class="{selected:view===id}" @click="view=id;filter()">{{label}}</button></div><small>{{questions.total}} questions found</small></div>
 <p v-if="error" class="notice error" role="alert">{{error}}</p>

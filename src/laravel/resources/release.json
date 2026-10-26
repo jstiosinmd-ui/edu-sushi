@@ -1,26 +1,28 @@
 {
-  "id": "sushi-3.0.0",
-  "version": "3.0.0",
-  "name": "Organized Study",
-  "released_on": "2026-10-18",
+  "id": "sushi-3.0.1",
+  "version": "3.0.1",
+  "name": "Study Workspace",
+  "released_on": "2026-10-26",
   "tour_name": "Sushi Bar Hop",
-  "summary": "Consistent topics across study, Memory Maki, and progress.",
+  "summary": "A clearer study workspace with consistent layouts on desktop and mobile.",
   "features": [
     {
       "category": "improved",
-      "title": "Clearer study topics",
-      "text": "All 6,000 questions now use consistent topic names across study, Memory Maki, and progress."
+      "title": "A simpler study home",
+      "text": "Start a daily catch, resume a saved deck, or open a practice exam from one screen.",
+      "url": "/"
     },
     {
-      "category": "fixed",
-      "title": "Questions in the right subject",
-      "text": "Reassigned questions appear under their appropriate subjects. Your saved answers, bookmarks, and history stay available."
+      "category": "improved",
+      "title": "Navigation organized around study",
+      "text": "Study, Library, and Progress stay easy to reach, with related tools grouped beneath each section.",
+      "url": "/library"
     },
     {
-      "category": "added",
-      "title": "Controlled question editing",
-      "text": "Choose from a controlled topic list and maintain structured references for each question version.",
-      "audience": "admin"
+      "category": "improved",
+      "title": "Consistent screens on every device",
+      "text": "Updated spacing, type, forms, question cards, and setup dialogs keep the same layout conventions throughout Sushi.",
+      "url": "/flashcards?decks=1"
     }
   ]
 }
