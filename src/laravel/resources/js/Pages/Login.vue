@@ -23,7 +23,7 @@ function submit(){
                     <img class="banner" :src="art.loginBanner" width="1440" height="480"
                          alt="SUSHI Clerks Comprehensive Exam Reviewer" fetchpriority="high">
                     <div class="caption">
-                        <h1>Build your knowledge,<br>one roll at a time.</h1>
+                        <h1>Build your knowledge, <br>one roll at a time.</h1>
                         <p>Practice questions, review what you missed, and follow your progress.</p>
                         <p class="bank-summary">{{questionCount.toLocaleString()}} questions · {{Object.keys(crew).length}} subjects</p>
                     </div>
