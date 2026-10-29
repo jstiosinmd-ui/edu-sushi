@@ -1,5 +1,33 @@
 [
   {
+    "id": "sushi-3.0.2",
+    "version": "3.0.2",
+    "name": "Steady Study",
+    "released_on": "2026-10-27",
+    "tour_name": "Sushi Bar Hop",
+    "summary": "Stable study frames and short transitions keep your place between steps and questions.",
+    "features": [
+      {
+        "category": "fixed",
+        "title": "Setup stays in place",
+        "text": "Deck and round setup keep the same frame and action positions as you move between steps.",
+        "url": "/flashcards?new=1"
+      },
+      {
+        "category": "improved",
+        "title": "Smooth question changes",
+        "text": "Questions and answers slide within a stable workspace. Long content scrolls inside the card, and study controls remain available.",
+        "url": "/practice?mode=tutor"
+      },
+      {
+        "category": "fixed",
+        "title": "Steady save feedback",
+        "text": "Saving, retry messages, and recall ratings keep their space without moving the page. Reduced-motion preferences are respected.",
+        "url": "/flashcards?decks=1"
+      }
+    ]
+  },
+  {
     "id": "sushi-3.0.1",
     "version": "3.0.1",
     "name": "Study Workspace",

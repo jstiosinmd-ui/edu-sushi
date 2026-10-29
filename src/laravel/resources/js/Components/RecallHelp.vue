@@ -1,0 +1,5 @@
+<script setup>
+import {ref} from 'vue';import StudySheet from './StudySheet.vue';
+const sheet=ref(null);
+</script>
+<template><button class="recall-help plain" type="button" @click="sheet.open()">How recall ratings work</button><StudySheet ref="sheet" title="Recall ratings"><p>Rate how well you recalled the answer before reading the explanation. Your rating is separate from whether your answer was correct.</p><dl class="recall-meaning"><dt>1 · Again</dt><dd>I could not recall it.</dd><dt>2 · Hard</dt><dd>I recalled very little or needed a guess.</dd><dt>3 · Okay</dt><dd>I recalled it with some effort.</dd><dt>4 · Good</dt><dd>I recalled it with little effort.</dd><dt>5 · Easy</dt><dd>I recalled it readily and can explain it.</dd></dl><p>Unrated and lower-rated cards appear more often. Among eligible cards, ratings 1–5 use relative draw weights of 6, 4, 3, 2, and 1. The deck avoids the last three cards when its size permits.</p><p>These weights affect which card comes next. They do not schedule a fixed number of days until the next review.</p></StudySheet></template>

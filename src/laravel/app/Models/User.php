@@ -17,6 +17,6 @@ class User extends Authenticatable
     protected function casts(): array
     {
         return ['password' => 'hashed', 'disabled' => 'boolean', 'invitation_pending' => 'boolean', 'must_change_password' => 'boolean', 'last_active_at' => 'datetime',
-            'pinned_badges' => 'array', 'fresh_subjects' => 'array', 'fresh_balance' => 'boolean', 'reminder_enabled' => 'boolean', 'reminder_snoozed_until' => 'datetime', 'timezone_changed_at' => 'datetime'];
+            'study_preferences' => 'array', 'pinned_badges' => 'array', 'fresh_subjects' => 'array', 'fresh_balance' => 'boolean', 'reminder_enabled' => 'boolean', 'reminder_snoozed_until' => 'datetime', 'timezone_changed_at' => 'datetime'];
     }
 }

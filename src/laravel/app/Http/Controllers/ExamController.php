@@ -46,7 +46,7 @@ class ExamController extends Controller
     {
         $s = StudyController::settings($r);
         $r->validate(['title' => 'required|string|max:150']);
-        $items = $draw->select($catalog->items(), $s);
+        $items = $catalog->hydrate($draw->select($catalog->candidates($s), $s));
         Exam::create(['user_id' => $r->user()->id, 'title' => $r->string('title')->toString(), 'code' => 'SUSHI-'.strtoupper(Str::random(10)), 'settings' => $s, 'items' => $items]);
 
         return back()->with('message', 'Exam saved. Its question versions and item order are frozen.');

@@ -17,14 +17,14 @@ class WorkbenchController extends Controller
     {
         $s = StudyController::settings($r);
         $pool = $selection->pool($r->user(), $s);
-        $distinct = collect($pool)->unique(fn ($q) => Catalog::stemHash($q['stem']));
+        $distinct = collect($pool)->unique(fn ($q) => Catalog::questionHash($q));
         $problem = null;
         try {
             $draw->select($pool, $s);
         } catch (ValidationException $e) {
             $problem = collect($e->errors())->flatten()->first();
         }
-        $topics = collect($selection->pool($r->user(), [...$s, 'topics' => []]))->groupBy(fn ($q) => $q['subject']."\x1f".$q['topic'])->map(fn ($qs) => $qs->unique(fn ($q) => Catalog::stemHash($q['stem']))->count());
+        $topics = collect($selection->pool($r->user(), [...$s, 'topics' => []]))->groupBy(fn ($q) => $q['subject']."\x1f".$q['topic'])->map(fn ($qs) => $qs->unique(fn ($q) => Catalog::questionHash($q))->count());
 
         return response()->json(['available' => $distinct->count(), 'subjects' => $distinct->countBy('subject'), 'topics' => $topics, 'problem' => $problem]);
     }

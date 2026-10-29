@@ -22,8 +22,8 @@ class CohortInsights
 
     public function overview(Collection $users): array
     {
-        $questions = collect(app(Catalog::class)->items())->unique(fn ($q) => Catalog::stemHash($q['stem']));
-        $byHash = $questions->keyBy(fn ($q) => Catalog::stemHash($q['stem']));
+        $questions = collect(app(Catalog::class)->candidates())->unique(fn ($q) => Catalog::questionHash($q));
+        $byHash = $questions->keyBy(fn ($q) => Catalog::questionHash($q));
         $events = DB::table('study_events')->whereIn('user_id', $users->pluck('id'))->where('mode', '!=', 'assigned')
             ->orderBy('occurred_at')->orderBy('id')->get();
         $firstByUser = app(StudyGuide::class)->knownFirst($events)->groupBy('user_id');
@@ -42,7 +42,7 @@ class CohortInsights
                     ->filter(fn ($t) => $t['correct'] < $t['total'])->sortBy(fn ($t) => $t['correct'] / $t['total'])->take(3)->values()->all();
 
                 return ['subject' => $s, 'available' => $questions->where('subject', $s)->count(), 'attempted' => $attempted->count(),
-                    'covered' => $questions->where('subject', $s)->filter(fn ($q) => $covered->has(Catalog::stemHash($q['stem'])))->count(),
+                    'covered' => $questions->where('subject', $s)->filter(fn ($q) => $covered->has(Catalog::questionHash($q)))->count(),
                     'correct' => $attempted->where('correct', true)->count(), 'topics' => $topics];
             }, Catalog::SUBJECTS);
             $right = $first->where('correct', true)->count();
@@ -55,7 +55,7 @@ class CohortInsights
             }
 
             return ['id' => $u->id, 'username' => $u->username, 'cohort' => $u->cohort, 'last_active_at' => $u->last_active_at?->toIso8601String(),
-                'attempted' => $questions->filter(fn ($q) => $covered->has(Catalog::stemHash($q['stem'])))->count(),
+                'attempted' => $questions->filter(fn ($q) => $covered->has(Catalog::questionHash($q)))->count(),
                 'first_total' => $first->count(), 'correct' => $right, 'subjects' => $subjects, 'support' => $support];
         })->values();
 

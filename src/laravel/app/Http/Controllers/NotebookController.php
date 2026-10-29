@@ -17,7 +17,7 @@ class NotebookController extends Controller
     {
         $d = $r->validate(['subject' => 'nullable|in:'.implode(',', Catalog::SUBJECTS), 'status' => 'nullable|in:all,needs_practice,recovered',
             'reason' => 'nullable|in:unknown,confused,misread,guessed']);
-        $all = $notebook->rows($r->user()->id);
+        $all = $notebook->rows($r->user()->id, withContent: false);
         $rows = $all->filter(fn ($q) => (empty($d['subject']) || $q['subject'] === $d['subject'])
             && (empty($d['reason']) || $q['reason'] === $d['reason'])
             && match ($d['status'] ?? 'needs_practice') {
@@ -26,8 +26,11 @@ class NotebookController extends Controller
                 default => true,
             })->values();
         $page = max(1, $r->integer('page', 1));
+        $slice = $rows->slice(($page - 1) * 12, 12)->values();
+        $content = collect(app(Catalog::class)->hydrate($slice->all()))->keyBy('id');
+        $slice = $slice->map(fn ($q) => [...$q, ...Catalog::publicQuestion($content[$q['id']], true)]);
 
-        return Inertia::render('Notebook', ['questions' => new LengthAwarePaginator($rows->slice(($page - 1) * 12, 12)->values(), $rows->count(), 12, $page,
+        return Inertia::render('Notebook', ['questions' => new LengthAwarePaginator($slice, $rows->count(), 12, $page,
             ['path' => '/progress/notebook', 'query' => $r->query()]), 'filters' => $d, 'subjects' => Catalog::SUBJECTS,
             'counts' => ['all' => $all->count(), 'needs_practice' => $all->where('latest_correct', '!==', true)->count(), 'recovered' => $all->where('latest_correct', true)->count()]]);
     }

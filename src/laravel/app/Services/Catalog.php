@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Question;
 use App\Models\QuestionVersion;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
@@ -118,9 +119,67 @@ class Catalog
         });
     }
 
-    public function items(): array
+    /** Selection metadata deliberately excludes clinical content and answer keys. */
+    public function candidates(array $filters = []): array
     {
-        return Question::where('active', true)->with('currentVersion')->orderBy('position')->orderBy('id')->get()->map(fn ($q) => [...$q->currentVersion->content, 'version' => $q->currentVersion->version, 'version_id' => $q->current_version_id])->all();
+        $query = Question::where('active', true)->whereNotNull('current_version_id');
+        if (isset($filters['subjects'])) {
+            $query->whereIn('subject', $filters['subjects']);
+        }
+        if (isset($filters['ids'])) {
+            $query->whereIn('id', $filters['ids']);
+        }
+        if (($filters['difficulty'] ?? 'All') !== 'All') {
+            $query->where('difficulty', $filters['difficulty']);
+        }
+        $rows = $query->orderBy('position')->orderBy('id')->get(['id', 'subject', 'topic', 'subject_code', 'topic_code', 'subtopic_code', 'difficulty', 'stem_hash', 'current_version_id'])
+            ->map(fn ($q) => [...$q->only('id', 'subject', 'topic', 'subject_code', 'topic_code', 'subtopic_code', 'stem_hash'), 'tier' => $q->difficulty, 'version_id' => $q->current_version_id])->all();
+
+        return array_values(array_filter($rows, fn ($q) => Taxonomy::matchesAny($q, $filters['topics'] ?? [])));
+    }
+
+    public static function questionHash(array $question): string
+    {
+        return $question['stem_hash'] ?? self::stemHash($question['stem']);
+    }
+
+    /** Preserve selection order and pin the immutable version seen during selection. */
+    public function hydrate(array $selected): array
+    {
+        $versions = QuestionVersion::whereIn('id', array_column($selected, 'version_id'))->get()->keyBy('id');
+
+        return array_map(function ($q) use ($versions) {
+            // Existing snapshots may also pass through this boundary.
+            if (isset($q['stem'])) {
+                return $q;
+            }
+            $version = $versions->get($q['version_id']);
+            if (! $version || $version->question_id !== $q['id']) {
+                throw ValidationException::withMessages(['count' => 'A selected question is unavailable. Start again.']);
+            }
+
+            return [...$version->content, 'version' => $version->version, 'version_id' => $version->id,
+                ...(isset($q['fresh_kind']) ? ['fresh_kind' => $q['fresh_kind']] : [])];
+        }, $selected);
+    }
+
+    public function summary(): array
+    {
+        $revision = (int) DB::table('catalog_revisions')->where('id', 1)->value('revision');
+        $load = function () use ($revision) {
+            $topics = Question::where('active', true)->whereNotNull('current_version_id')->select('subject', 'topic', 'subject_code', 'topic_code')
+                ->selectRaw('COUNT(*) as count')->groupBy('subject', 'topic', 'subject_code', 'topic_code')->orderBy('subject')->orderBy('topic')->get()->toArray();
+
+            return ['subjects' => self::SUBJECTS, 'topics' => $topics, 'total' => array_sum(array_column($topics, 'count')), 'revision' => $revision];
+        };
+
+        // Uncommitted imports must never populate a shared cache entry.
+        return DB::transactionLevel() > 0 ? $load() : Cache::remember('catalog:summary:v1:'.$revision, 3600, $load);
+    }
+
+    public function items(?array $ids = null): array
+    {
+        return $this->hydrate($this->candidates($ids === null ? [] : ['ids' => $ids]));
     }
 
     public static function publicQuestion(array $q, bool $feedback = false): array

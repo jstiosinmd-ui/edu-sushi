@@ -13,12 +13,13 @@ class Analytics
 {
     public function for(int $userId, array $filters = []): array
     {
+        $filters = ProgressScope::dates($filters);
         $attempts = Attempt::where('user_id', $userId);
         if (! empty($filters['mode'])) {
             $attempts->where('mode', $filters['mode']);
         }
         // First-ever response is determined before filtering dates or modes.
-        $all = app(StudyHistory::class)->responses($userId);
+        $all = app(StudyHistory::class)->responses($userId)->filter(fn ($r) => $r->mode !== 'assigned' || $r->feedback_released);
         $unknown = Progress::where('user_id', $userId)->where('history_unknown', true)->pluck('question_id')->all();
         $first = $all->reject(fn ($r) => in_array($r->question_id, $unknown, true))->unique('question_id');
         $keep = function ($r) use ($filters) {
@@ -48,7 +49,10 @@ class Analytics
         $activeCompleted = $p->whereIn('question_id', $activeIds)->count();
         $due = Flashcard::where('user_id', $userId)->whereNotNull('confidence')->where('confidence', '<=', 2)->count();
 
-        return ['completed' => $p->count(), 'active_completed' => $activeCompleted, 'bank_total' => $activeIds->count(),
+        $scope = app(ProgressScope::class)->for($userId, $filters, $all);
+        unset($scope['review_ids']);
+
+        return ['scope' => $scope, 'completed' => $p->count(), 'active_completed' => $activeCompleted, 'bank_total' => $activeIds->count(),
             'legacy' => $p->where('legacy', true)->count(), 'first_correct' => $firstFiltered->filter(fn ($r) => (bool) $r->correct)->count(), 'first_total' => $firstFiltered->count(),
             'graded_correct' => $filtered->filter(fn ($r) => (bool) $r->correct)->count(), 'graded_total' => $filtered->count(),
             'latest_correct' => $p->where('latest_correct', true)->count(), 'latest_total' => $p->count(),

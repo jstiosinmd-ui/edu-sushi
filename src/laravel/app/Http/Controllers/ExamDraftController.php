@@ -30,7 +30,7 @@ class ExamDraftController extends Controller
     {
         $s = StudyController::settings($r);
         $r->validate(['title' => 'required|string|max:150']);
-        $items = $draw->select($selection->pool($r->user(), $s), $s);
+        $items = app(Catalog::class)->hydrate($draw->select($selection->pool($r->user(), $s), $s));
         $draft = ExamDraft::create(['id' => (string) Str::uuid(), 'user_id' => $r->user()->id, 'title' => $r->input('title'), 'settings' => $s, 'items' => $items, 'expires_at' => now()->addHours(24)]);
 
         return response()->json($this->present($draft));
@@ -47,9 +47,9 @@ class ExamDraftController extends Controller
             $items = $draft->items;
             abort_unless(isset($items[$d['position']]), 422);
             $old = $items[$d['position']];
-            $hashes = array_map(fn ($q) => Catalog::stemHash($q['stem']), $items);
+            $hashes = array_map(fn ($q) => Catalog::questionHash($q), $items);
             $choices = array_values(array_filter($selection->pool($r->user(), $draft->settings), fn ($q) => $q['subject'] === $old['subject']
-                && ! in_array(Catalog::stemHash($q['stem']), $hashes, true)));
+                && ! in_array(Catalog::questionHash($q), $hashes, true)));
             $replacement = null;
             $cells = [];
             foreach (collect($choices)->shuffle() as $q) {
@@ -69,7 +69,7 @@ class ExamDraftController extends Controller
                         continue;
                     }
                 }
-                $replacement = $q;
+                $replacement = app(Catalog::class)->hydrate([$q])[0];
                 break;
             }
             if (! $replacement) {

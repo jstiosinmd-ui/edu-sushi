@@ -1,28 +1,46 @@
 {
-  "id": "sushi-3.0.2",
-  "version": "3.0.2",
-  "name": "Steady Study",
-  "released_on": "2026-10-27",
+  "id": "sushi-3.1.0",
+  "version": "3.1.0",
+  "name": "Study Flow",
+  "released_on": "2026-10-30",
   "tour_name": "Sushi Bar Hop",
-  "summary": "Stable study frames and short transitions keep your place between steps and questions.",
+  "summary": "A shared study setup, inline answer feedback, and filtered progress with direct review actions.",
   "features": [
     {
-      "category": "fixed",
-      "title": "Setup stays in place",
-      "text": "Deck and round setup keep the same frame and action positions as you move between steps.",
-      "url": "/flashcards?new=1"
+      "category": "improved",
+      "title": "Faster question selection",
+      "text": "Sessions choose matching questions before loading their full text and explanations.",
+      "url": "/"
     },
     {
       "category": "improved",
-      "title": "Smooth question changes",
-      "text": "Questions and answers slide within a stable workspace. Long content scrolls inside the card, and study controls remain available.",
-      "url": "/practice?mode=tutor"
+      "title": "One study setup",
+      "text": "Choose Practice, Flashcards, or Exam from Study. Resume an unfinished session from the same screen.",
+      "url": "/"
     },
     {
-      "category": "fixed",
-      "title": "Steady save feedback",
-      "text": "Saving, retry messages, and recall ratings keep their space without moving the page. Reduced-motion preferences are respected.",
+      "category": "improved",
+      "title": "Feedback beside your answer",
+      "text": "Read the explanation, alternate choices, and reference directly below a checked answer. Exam feedback follows its existing release rules.",
+      "url": "/"
+    },
+    {
+      "category": "improved",
+      "title": "Progress with matching filters",
+      "text": "First-answer accuracy, questions covered, and questions needing review follow the same filters. Start a review from a topic.",
+      "url": "/progress"
+    },
+    {
+      "category": "improved",
+      "title": "Separate question tools",
+      "text": "Bookmark a question, make a private note, or report a problem with separate controls. Recall-rating help is beside the grades.",
       "url": "/flashcards?decks=1"
+    },
+    {
+      "category": "improved",
+      "title": "Remembered setup",
+      "text": "Start with 5, 10, or 20 questions, or customize the pool, difficulty, and topics. Your setup is remembered after a successful start.",
+      "url": "/"
     }
   ]
 }

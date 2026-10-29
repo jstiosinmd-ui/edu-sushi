@@ -47,7 +47,7 @@ class Draw
         $seen = [];
         $eligible = [];
         foreach ($this->shuffle($pool, $rng) as $q) {
-            $h = Catalog::stemHash($q['stem']);
+            $h = Catalog::questionHash($q);
             if (! isset($seen[$h])) {
                 $seen[$h] = true;
                 $eligible[] = $q;
@@ -96,7 +96,7 @@ class Draw
             foreach ($buckets as &$b) {
                 while ($b && count($chosen) < $count) {
                     $next = array_pop($b);
-                    $hash = Catalog::stemHash($next['stem']);
+                    $hash = Catalog::questionHash($next);
                     if (! isset($chosenHashes[$hash])) {
                         $chosen[] = $next;
                         $chosenHashes[$hash] = true;

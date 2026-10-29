@@ -10,7 +10,6 @@ use App\Services\Achievements;
 use App\Services\Catalog;
 use App\Services\Learning;
 use App\Services\StudyGuide;
-use App\Services\Taxonomy;
 use App\Services\WeightedDeck;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -47,9 +46,7 @@ class FlashcardController extends Controller
 
     private function pool(array $s): array
     {
-        return array_values(array_filter(app(Catalog::class)->items(), fn ($q) => in_array($q['subject'], $s['subjects'], true)
-            && Taxonomy::matchesAny($q, $s['topics'] ?? [])
-            && ($s['difficulty'] === 'All' || $s['difficulty'] === $q['tier'])));
+        return app(Catalog::class)->candidates($s);
     }
 
     public function preview(Request $r)
@@ -57,6 +54,8 @@ class FlashcardController extends Controller
         $s = $this->filters($r);
         $items = $this->pool($s);
         $slice = array_slice($items, $s['range_start'] - 1, min(500, $s['range_end'] - $s['range_start'] + 1));
+
+        $slice = app(Catalog::class)->hydrate($slice);
 
         return response()->json(['total' => count($items), 'questions' => array_map(fn ($q) => array_intersect_key($q, array_flip(['id', 'subject', 'topic', 'stem'])), $slice)]);
     }
@@ -68,8 +67,9 @@ class FlashcardController extends Controller
         $pool = array_slice($this->pool($s), $s['range_start'] - 1, min(500, $s['range_end'] - $s['range_start'] + 1));
         $items = array_values(array_filter($pool, fn ($q) => in_array($q['id'], $d['selected_ids'], true)));
         abort_unless(count($items) === count($d['selected_ids']), 422, 'Preview the current range and select questions again.');
-        $hashes = array_map(fn ($q) => Catalog::stemHash($q['stem']), $items);
+        $hashes = array_map(fn ($q) => Catalog::questionHash($q), $items);
         abort_unless(count(array_unique($hashes)) === count($items), 422, 'Your selection contains duplicate question stems. Include only one copy.');
+        $items = app(Catalog::class)->hydrate($items);
         $deck = DB::transaction(function () use ($r, $s, $d, $items) {
             $deck = FlashcardDeck::create(['user_id' => $r->user()->id, 'title' => $d['title'], 'settings' => $s]);
             foreach ($items as $q) {
@@ -217,15 +217,16 @@ class FlashcardController extends Controller
         $latest = app(StudyGuide::class)->events($r->user()->id)->keyBy('question_hash');
         $ratings = DB::table('flashcards')->where('user_id', $r->user()->id)->pluck('confidence', 'question_id');
         $saved = DB::table('progress')->where('user_id', $r->user()->id)->where('bookmarked', true)->pluck('question_id')->all();
-        $items = collect(app(Catalog::class)->items())->whereIn('subject', $d['subjects'])->unique(fn ($q) => Catalog::stemHash($q['stem']))
+        $items = collect(app(Catalog::class)->candidates())->whereIn('subject', $d['subjects'])->unique(fn ($q) => Catalog::questionHash($q))
             ->filter(fn ($q) => match ($d['pool']) {
-                'missed' => ($event = $latest->get(Catalog::stemHash($q['stem']))) && ! $event->correct,
+                'missed' => ($event = $latest->get(Catalog::questionHash($q))) && ! $event->correct,
                 'low' => isset($ratings[$q['id']]) && $ratings[$q['id']] <= 2,
                 'bookmarks' => in_array($q['id'], $saved, true),
             })->shuffle()->take(20)->values();
         if ($items->isEmpty()) {
             throw ValidationException::withMessages(['pool' => 'No matching cards yet. Try another preset or select more subjects.']);
         }
+        $items = collect(app(Catalog::class)->hydrate($items->all()));
         $deck = DB::transaction(function () use ($r, $d, $items) {
             $title = ['missed' => 'Second Serving', 'low' => 'A Little More Practice', 'bookmarks' => 'Saved Favorites'][$d['pool']];
             $deck = FlashcardDeck::create(['user_id' => $r->user()->id, 'title' => $title.' · '.$items->count().' cards', 'settings' => $d]);

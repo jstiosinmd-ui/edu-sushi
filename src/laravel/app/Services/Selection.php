@@ -18,7 +18,7 @@ class Selection
 
     public function exact(array $ids): array
     {
-        $items = array_values(array_filter(app(Catalog::class)->items(), fn ($q) => in_array($q['id'], $ids, true)));
+        $items = app(Catalog::class)->items($ids);
         if (count($items) !== count($ids)) {
             throw ValidationException::withMessages(['selected_ids' => 'Some questions are no longer available. Update your tray.']);
         }

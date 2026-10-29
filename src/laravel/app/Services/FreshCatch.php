@@ -26,8 +26,8 @@ class FreshCatch
             }
         }
         $out = [];
-        foreach (app(Catalog::class)->items() as $q) {
-            $last = $results[Catalog::stemHash($q['stem'])] ?? null;
+        foreach (app(Catalog::class)->candidates() as $q) {
+            $last = $results[Catalog::questionHash($q)] ?? null;
             if (! ($last['correct'] ?? false)) {
                 $out[] = [...$q, 'fresh_kind' => $last ? 'missed' : 'unseen'];
             }
@@ -39,7 +39,7 @@ class FreshCatch
     public function select(int $userId, array $settings): array
     {
         $pool = collect($this->eligible($userId))->whereIn('subject', $settings['subjects'])
-            ->sortBy(fn ($q) => hash('sha256', $settings['seed'].':'.$q['id']))->unique(fn ($q) => Catalog::stemHash($q['stem']))->values();
+            ->sortBy(fn ($q) => hash('sha256', $settings['seed'].':'.$q['id']))->unique(fn ($q) => Catalog::questionHash($q))->values();
         if ($pool->count() < 10) {
             throw ValidationException::withMessages(['count' => 'Only '.$pool->count().' unseen or previously missed questions remain. Choose more subjects.']);
         }

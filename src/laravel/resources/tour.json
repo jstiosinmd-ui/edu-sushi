@@ -1,22 +1,22 @@
 {
-  "version": "2.12",
+  "version": "3.1.0",
   "stops": [
     {
       "id": "counter",
       "name": "The Counter",
       "art": "logo",
       "url": "/",
-      "intro": "Your daily starting point after sign-in.",
+      "intro": "Start or resume a session from Study.",
       "steps": [
-        "Start Fresh Catch or open Memory Maki from the two study cards.",
-        "Find other study tools and Today’s Bento in More.",
-        "Open your profile, Sushi journey, and changelog from the account menu."
+        "Choose Practice, Flashcards, or Exam. Resume appears when a session is available.",
+        "Choose a subject and 5, 10, or 20 questions. Customize opens pools, difficulty, and topics.",
+        "Your setup is remembered after a successful start. Bookmarked questions, notes, saved sets, and progress remain nearby."
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.12/counter.jpg",
-          "alt": "Fresh Catch and Memory Maki are the two main cards on your Counter.",
-          "caption": "Fresh Catch and Memory Maki are the two main cards on your Counter."
+          "src": "/guide-screens/v3.1.0/counter.jpg",
+          "alt": "Study groups session modes, Resume, and quick setup on one screen. This image uses synthetic software test questions.",
+          "caption": "Study groups session modes, Resume, and quick setup on one screen. This image uses synthetic software test questions."
         }
       ]
     },
@@ -34,7 +34,7 @@
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.12/fresh.jpg",
+          "src": "/guide-screens/v3.1.0/fresh.jpg",
           "alt": "The last question provides an explicit Finish catch action after all answers are saved.",
           "caption": "The last question provides an explicit Finish catch action after all answers are saved."
         }
@@ -47,21 +47,21 @@
       "url": "/flashcards",
       "intro": "Answer, learn from the feedback, then rate your familiarity.",
       "steps": [
-        "New deck walks through Subjects, Topics, and Cards, with 20 cards by default.",
-        "Answer, then open Explanation, Reference, or Notes/report when needed.",
-        "Rate recall with 1 Again, 2 Hard, 3 Okay, 4 Good, or 5 Easy. Lower ratings repeat more often.",
+        "Start quickly from the Flashcards tab on Study, or use the advanced deck setup to choose exact cards.",
+        "Answer, then read the explanation, alternatives, and source inline. Bookmark, Make a note, and Report a problem have separate controls.",
+        "Rate recall with 1 Again, 2 Hard, 3 Okay, 4 Good, or 5 Easy. How recall ratings work explains the weighting beside the buttons.",
         "Use the menu for deck progress or Finish session. At 80% rated 5, you can finish or keep going."
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.12/memory.jpg",
+          "src": "/guide-screens/v3.1.0/memory.jpg",
           "alt": "A focused question with progress and secondary tools in the menu.",
           "caption": "A focused question with progress and secondary tools in the menu."
         },
         {
-          "src": "/guide-screens/v2.12/memory-ratings.jpg",
-          "alt": "Answer feedback and five recall grades, with explanations available on demand.",
-          "caption": "Answer feedback and five recall grades, with explanations available on demand."
+          "src": "/guide-screens/v3.1.0/memory-ratings.jpg",
+          "alt": "Inline feedback and separate question tools sit above the recall grades. This image uses a synthetic software test question.",
+          "caption": "Inline feedback and separate question tools sit above the recall grades. This image uses a synthetic software test question."
         }
       ]
     },
@@ -70,22 +70,22 @@
       "name": "Mentor and Rush",
       "art": "wasabi",
       "url": "/practice?mode=tutor",
-      "intro": "Choose immediate teaching or a timed challenge.",
+      "intro": "Choose practice or a timed exam.",
       "steps": [
-        "Maki Mentor checks each answer and provides feedback during the round.",
-        "Wasabi Rush uses a timer and reveals feedback after submission.",
-        "Both use the same three-step setup: coverage, round settings, and review."
+        "Use the Practice tab on Study for feedback after each checked answer.",
+        "Use the Exam tab for a timed session with feedback after submission.",
+        "Customize links to advanced setup for balanced subjects, exact questions, and exam quotas."
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.12/mentor.jpg",
-          "alt": "Maki Mentor uses a guided setup with a live count of matching questions.",
-          "caption": "Maki Mentor uses a guided setup with a live count of matching questions."
+          "src": "/guide-screens/v3.1.0/mentor.jpg",
+          "alt": "A topic review starts a focused practice session. This image uses a synthetic test account.",
+          "caption": "A topic review starts a focused practice session. This image uses a synthetic test account."
         },
         {
-          "src": "/guide-screens/v2.12/rush.jpg",
-          "alt": "Wasabi Rush adds a time limit before you start the challenge.",
-          "caption": "Wasabi Rush adds a time limit before you start the challenge."
+          "src": "/guide-screens/v3.1.0/rush.jpg",
+          "alt": "The Exam tab adds a time limit to shared setup. This image uses a synthetic test account.",
+          "caption": "The Exam tab adds a time limit to shared setup. This image uses a synthetic test account."
         }
       ]
     },
@@ -103,7 +103,7 @@
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.12/library.jpg",
+          "src": "/guide-screens/v3.1.0/library.jpg",
           "alt": "Roll Call combines search, saved questions, and a study tray.",
           "caption": "Roll Call combines search, saved questions, and a study tray."
         }
@@ -123,7 +123,7 @@
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.12/builder.jpg",
+          "src": "/guide-screens/v3.1.0/builder.jpg",
           "alt": "Build an exam from selected subjects, topics, and reviewable question counts.",
           "caption": "Build an exam from selected subjects, topics, and reviewable question counts."
         }
@@ -137,18 +137,18 @@
       "intro": "See your learning patterns and collect your sushi crew.",
       "steps": [
         "Open Filters, choose your criteria, then Apply filters.",
-        "Coverage and review totals are lifetime measures. Accuracy follows your filters.",
-        "Expand daily stamps or subject coverage when you want details.",
-        "Passport and your profile keep achievements and character choices available."
+        "First-answer accuracy, questions covered, and questions needing review use the same filters. Need review uses the latest overall released answer.",
+        "Choose Review next or review a topic to start up to 20 matching questions.",
+        "Older lifetime summaries remain labeled below the filtered cards. Passport and your profile keep achievements available."
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.12/progress.jpg",
-          "alt": "Your progress view keeps subject coverage and accuracy visible.",
-          "caption": "Your progress view keeps subject coverage and accuracy visible."
+          "src": "/guide-screens/v3.1.0/progress.jpg",
+          "alt": "Filtered progress cards include direct review actions. This image uses a synthetic test account.",
+          "caption": "Filtered progress cards include direct review actions. This image uses a synthetic test account."
         },
         {
-          "src": "/guide-screens/v2.12/passport.jpg",
+          "src": "/guide-screens/v3.1.0/passport.jpg",
           "alt": "Achievement cards show their character, requirement, and earned status.",
           "caption": "Achievement cards show their character, requirement, and earned status."
         }
@@ -169,7 +169,7 @@
       ],
       "screens": [
         {
-          "src": "/guide-screens/v2.12/chef.jpg",
+          "src": "/guide-screens/v3.1.0/chef.jpg",
           "alt": "Head Chef tools are grouped above the learner list. This screenshot uses demo accounts.",
           "caption": "Head Chef tools are grouped above the learner list. This screenshot uses demo accounts."
         }

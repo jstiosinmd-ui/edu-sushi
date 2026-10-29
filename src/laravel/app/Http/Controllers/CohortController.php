@@ -34,10 +34,10 @@ class CohortController extends Controller
         abort_unless($user->role === 'student' && ! $user->disabled && ! $user->invitation_pending && ! $user->archived_at, 422, 'Choose an active student.');
         $d = $r->validate(['subject' => 'required|in:'.implode(',', Catalog::SUBJECTS), 'topic' => 'nullable|string|max:255',
             'count' => 'required|integer|between:1,50', 'minutes' => 'required|integer|between:5,180', 'days' => 'required|integer|between:1,30']);
-        $items = collect(app(Catalog::class)->items())->where('subject', $d['subject'])
-            ->filter(fn ($q) => empty($d['topic']) || $q['topic'] === $d['topic'])->unique(fn ($q) => Catalog::stemHash($q['stem']));
+        $items = collect(app(Catalog::class)->candidates())->where('subject', $d['subject'])
+            ->filter(fn ($q) => empty($d['topic']) || $q['topic'] === $d['topic'])->unique(fn ($q) => Catalog::questionHash($q));
         abort_if($items->count() < $d['count'], 422, 'Only '.$items->count().' questions match. Reduce the count or broaden the topic.');
-        $items = $items->shuffle()->take($d['count'])->values()->all();
+        $items = app(Catalog::class)->hydrate($items->shuffle()->take($d['count'])->values()->all());
         DB::transaction(function () use ($r, $user, $d, $items) {
             $exam = Exam::create(['user_id' => $r->user()->id, 'title' => 'Focused practice · '.$d['subject'].(! empty($d['topic']) ? ' · '.$d['topic'] : ''),
                 'code' => 'FOCUS-'.Str::upper(Str::random(12)), 'settings' => ['subjects' => [$d['subject']], 'count' => count($items), 'mode' => 'assigned', 'targeted' => true], 'items' => $items]);

@@ -18,7 +18,7 @@ class Blueprint
             foreach ($pool as $q) {
                 if ($q['subject'] === $row['subject'] && (empty($row['topic']) || $q['topic'] === $row['topic'] || Taxonomy::matches($q, $row['topic']) || Taxonomy::matches($q, $row['subject']."\x1f".$row['topic']))
                     && ($row['difficulty'] === 'All' || $q['tier'] === $row['difficulty'])) {
-                    $choices[$i][Catalog::stemHash($q['stem'])] ??= $q;
+                    $choices[$i][Catalog::questionHash($q)] ??= $q;
                 }
             }
             if (count($choices[$i]) < $row['count']) {

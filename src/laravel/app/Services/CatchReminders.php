@@ -18,7 +18,7 @@ class CatchReminders
         $subjects = $u->fresh_subjects ?: Catalog::SUBJECTS;
         $pool = app(Study::class)->eligible($u->id, ['mode' => 'fresh']);
 
-        return collect($pool)->whereIn('subject', $subjects)->unique(fn ($q) => Catalog::stemHash($q['stem']))->count() >= 10;
+        return collect($pool)->whereIn('subject', $subjects)->unique(fn ($q) => Catalog::questionHash($q))->count() >= 10;
     }
 
     public function incomplete(User $u): bool

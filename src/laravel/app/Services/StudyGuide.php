@@ -30,21 +30,22 @@ class StudyGuide
     {
         $events = $this->events($user->id);
         $latest = $events->keyBy('question_hash');
-        $items = collect(app(Catalog::class)->items())->whereIn('subject', $subjects)
-            ->unique(fn ($q) => Catalog::stemHash($q['stem']));
+        $items = collect(app(Catalog::class)->candidates(['subjects' => $subjects]))
+            ->unique(fn ($q) => Catalog::questionHash($q));
         $ratings = DB::table('flashcards')->where('user_id', $user->id)->pluck('confidence', 'question_id');
         $day = now()->timezone($user->timezone ?: 'Asia/Manila')->toDateString();
         $ordered = $items->sortBy(function ($q) use ($latest, $ratings, $user, $day) {
-            $event = $latest->get(Catalog::stemHash($q['stem']));
+            $event = $latest->get(Catalog::questionHash($q));
             $priority = $event && ! $event->correct ? 0 : (($ratings[$q['id']] ?? 5) <= 2 ? 1 : (! $event ? 2 : 3));
 
             return $priority.hash('sha256', $user->id.$day.$q['id']);
         })->take([5 => 3, 15 => 10, 30 => 20][$minutes])->values();
-        $missed = $ordered->filter(fn ($q) => ($e = $latest->get(Catalog::stemHash($q['stem']))) && ! $e->correct)->count();
-        $unseen = $ordered->filter(fn ($q) => ! $latest->has(Catalog::stemHash($q['stem'])))->count();
+        $missed = $ordered->filter(fn ($q) => ($e = $latest->get(Catalog::questionHash($q))) && ! $e->correct)->count();
+        $unseen = $ordered->filter(fn ($q) => ! $latest->has(Catalog::questionHash($q)))->count();
         $low = $ordered->filter(fn ($q) => ($ratings[$q['id']] ?? 5) <= 2)->count();
-        $deck = FlashcardDeck::where('user_id', $user->id)->whereNull('session_finished_at')->with('items')->latest('updated_at')->get()
-            ->first(fn ($d) => $d->items->isNotEmpty() && $d->items->every(fn ($i) => in_array($i->snapshot['subject'], $subjects, true)));
+        $deck = FlashcardDeck::where('user_id', $user->id)->whereNull('session_finished_at')->whereHas('items')
+            ->whereDoesntHave('items', fn ($q) => $q->whereNull('snapshot->subject')->orWhereNotIn('snapshot->subject', $subjects))
+            ->latest('updated_at')->first(['id', 'title']);
 
         return ['minutes' => $minutes, 'count' => $ordered->count(), 'subjects' => $subjects,
             'selected_ids' => $ordered->pluck('id')->all(), 'missed' => $missed, 'unseen' => $unseen,

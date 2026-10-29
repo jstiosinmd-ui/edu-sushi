@@ -14,10 +14,11 @@ class StudyHistory
     public function responses(int $userId): Collection
     {
         $attempts = DB::table('attempt_items as i')->join('attempts as a', 'a.id', '=', 'i.attempt_id')
+            ->leftJoin('assignments as assignment', 'assignment.id', '=', 'a.assignment_id')
             ->leftJoin('study_events as e', 'e.source', '=', DB::raw("CONCAT('attempt:', i.id)"))
             ->where('a.user_id', $userId)->whereNotNull('i.graded_at')->whereNotNull('i.answer')
             ->select('i.question_id', 'i.snapshot', 'i.answer', 'i.correct', 'i.graded_at', 'a.mode', 'e.id as event_id', 'i.id as response_id')
-            ->selectRaw("CONCAT('attempt:', i.id) as source")->get();
+            ->selectRaw("CONCAT('attempt:', i.id) as source, (a.mode != 'assigned' OR COALESCE(assignment.release_answers, false)) as feedback_released")->get();
         $reviews = DB::table('flashcard_reviews as r')->join('flashcard_deck_items as i', 'i.id', '=', 'r.flashcard_deck_item_id')
             ->leftJoin('study_events as e', 'e.source', '=', DB::raw("CONCAT('memory:', r.review_token)"))
             ->where('r.user_id', $userId)->whereNotNull('r.answer')->whereNotNull('r.correct')

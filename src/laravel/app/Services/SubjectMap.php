@@ -8,7 +8,7 @@ class SubjectMap
 {
     public function for(int $userId): array
     {
-        $items = collect(app(Catalog::class)->items())->unique(fn ($q) => Catalog::stemHash($q['stem']));
+        $items = collect(app(Catalog::class)->candidates())->unique(fn ($q) => Catalog::questionHash($q));
         $events = app(StudyGuide::class)->events($userId);
         $first = app(StudyGuide::class)->knownFirst($events)->keyBy('question_hash');
         $covered = $events->keyBy('question_hash');
@@ -19,12 +19,12 @@ class SubjectMap
 
         return array_map(function ($subject) use ($items, $first, $covered, $imported, $correct, $ratings, $earned) {
             $pool = $items->where('subject', $subject);
-            $attempted = $pool->filter(fn ($q) => $covered->has(Catalog::stemHash($q['stem'])) || $imported->has(Catalog::stemHash($q['stem'])));
-            $known = $pool->filter(fn ($q) => $first->has(Catalog::stemHash($q['stem'])));
-            $right = $known->filter(fn ($q) => $first->get(Catalog::stemHash($q['stem']))->correct)->count();
-            $everRight = $pool->filter(fn ($q) => $correct->has(Catalog::stemHash($q['stem'])))->count();
+            $attempted = $pool->filter(fn ($q) => $covered->has(Catalog::questionHash($q)) || $imported->has(Catalog::questionHash($q)));
+            $known = $pool->filter(fn ($q) => $first->has(Catalog::questionHash($q)));
+            $right = $known->filter(fn ($q) => $first->get(Catalog::questionHash($q))->correct)->count();
+            $everRight = $pool->filter(fn ($q) => $correct->has(Catalog::questionHash($q)))->count();
             $topics = $known->groupBy('topic')->map(fn ($qs, $topic) => ['topic' => $topic, 'total' => $qs->count(),
-                'correct' => $qs->filter(fn ($q) => $first->get(Catalog::stemHash($q['stem']))->correct)->count()])
+                'correct' => $qs->filter(fn ($q) => $first->get(Catalog::questionHash($q))->correct)->count()])
                 ->filter(fn ($t) => $t['correct'] < $t['total'])->sortBy(fn ($t) => $t['correct'] / $t['total'])->take(3)->values()->all();
             $badges = collect(Passport::definitions())->where('group', $subject)->sortBy('target');
             $unlock = $badges->first();

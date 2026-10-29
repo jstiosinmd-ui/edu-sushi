@@ -19,6 +19,7 @@ use App\Http\Controllers\QuestionQualityController;
 use App\Http\Controllers\ReminderController;
 use App\Http\Controllers\StudyController;
 use App\Http\Controllers\StudyGuideController;
+use App\Http\Controllers\StudySetupController;
 use App\Http\Controllers\WorkbenchController;
 use App\Models\Question;
 use App\Services\FeatureUpdates;
@@ -39,6 +40,8 @@ Route::middleware(['auth', 'active'])->group(function () {
     Route::get('/password', fn () => Inertia::render('Password'));
     Route::post('/password', [AuthController::class, 'password']);
     Route::get('/', [StudyController::class, 'home'])->name('dashboard');
+    Route::post('/study/start', [StudySetupController::class, 'start'])->middleware('throttle:30,1');
+    Route::post('/progress/review', [StudyController::class, 'review'])->middleware('throttle:30,1');
     Route::get('/tour', fn (Request $r) => Inertia::render('Tour', ['tour' => TourGuide::for($r->user())]));
     Route::post('/today-bento/preview', [StudyGuideController::class, 'preview']);
     Route::post('/today-bento/start', [StudyGuideController::class, 'start'])->middleware('throttle:30,1');

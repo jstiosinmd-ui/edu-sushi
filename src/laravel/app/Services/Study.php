@@ -16,25 +16,26 @@ class Study
 
     public function eligible(int $userId, array $settings): array
     {
-        $items = $this->catalog->items();
         if (! empty($settings['selected_ids'])) {
             return app(Selection::class)->exact($settings['selected_ids']);
         }
         if (($settings['mode'] ?? '') === 'fresh') {
             return app(FreshCatch::class)->eligible($userId);
         }
+        $items = $this->catalog->candidates($settings);
+        $ratings = ($settings['pool'] ?? '') === 'low' ? DB::table('flashcards')->where('user_id', $userId)->where('confidence', '<=', 2)->pluck('question_id')->flip() : collect();
         $progress = in_array($settings['pool'] ?? 'all', ['new', 'missed'], true)
             ? app(StudyHistory::class)->progress($userId)
             : Progress::where('user_id', $userId)->get()->keyBy('question_id');
 
-        $seen = DB::table('study_events')->where('user_id', $userId)->pluck('question_hash')->all();
+        $seen = DB::table('study_events')->where('user_id', $userId)->pluck('question_hash')->flip();
 
-        return array_values(array_filter($items, function ($q) use ($progress, $settings, $seen) {
+        return array_values(array_filter($items, function ($q) use ($progress, $settings, $seen, $ratings) {
             $p = $progress[$q['id']] ?? null;
 
             return match ($settings['pool'] ?? 'all') {
-                'new' => ! $p?->completed_at && ! in_array(Catalog::stemHash($q['stem']), $seen, true), 'missed' => $p?->completed_at && ! $p->latest_correct,
-                'bookmarks' => (bool) $p?->bookmarked, default => true
+                'new' => ! $p?->completed_at && ! $seen->has(Catalog::questionHash($q)), 'missed' => $p?->completed_at && ! $p->latest_correct,
+                'bookmarks' => (bool) $p?->bookmarked, 'low' => $ratings->has($q['id']), default => true
             };
         }));
     }
@@ -70,6 +71,7 @@ class Study
                     $settings['difficulty'] = 'All';
                 }
                 $items = $mode === 'fresh' ? app(FreshCatch::class)->select($user->id, $settings) : $this->draw->select($this->eligible($user->id, $settings), $settings);
+                $items = $this->catalog->hydrate($items);
                 if ($mode === 'fresh') {
                     $settings['fresh_actual'] = collect($items)->countBy('fresh_kind')->all();
                 }

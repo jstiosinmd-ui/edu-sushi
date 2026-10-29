@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Assignment;
 use App\Models\Attempt;
-use App\Models\FlashcardDeck;
 use App\Models\Progress;
 use App\Models\Question;
 use App\Models\User;
@@ -14,12 +13,15 @@ use App\Services\Catalog;
 use App\Services\CatchReminders;
 use App\Services\FreshCatch;
 use App\Services\Habits;
-use App\Services\Leaderboard;
+use App\Services\ProgressScope;
 use App\Services\Study;
 use App\Services\StudyGuide;
+use App\Services\StudySetup;
 use App\Services\SubjectMap;
+use App\Services\Taxonomy;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\ValidationException;
 use Inertia\Inertia;
 
 class StudyController extends Controller
@@ -29,7 +31,7 @@ class StudyController extends Controller
         return $r->validate(['mode' => 'required|in:tutor,exam,fresh', 'count' => 'required|integer|min:1|max:10000',
             'seed' => 'required|integer|min:0|max:4294967295', 'subjects' => 'required|array|min:1|max:'.count(Catalog::SUBJECTS),
             'subjects.*' => 'required|distinct|in:'.implode(',', Catalog::SUBJECTS), 'topics' => 'required_if:topic_scope,custom|array|max:500', 'topics.*' => 'string|max:600|distinct',
-            'difficulty' => 'required|in:All,Easy,Average,Difficult', 'balance' => 'boolean', 'allocation' => 'array|max:'.count(Catalog::SUBJECTS), 'allocation.*' => 'integer|min:0|max:10000', 'topic_scope' => 'in:all,custom', 'pool' => 'in:all,new,missed,bookmarks', 'minutes' => 'required|integer|min:1|max:360',
+            'difficulty' => 'required|in:All,Easy,Average,Difficult', 'balance' => 'boolean', 'allocation' => 'array|max:'.count(Catalog::SUBJECTS), 'allocation.*' => 'integer|min:0|max:10000', 'topic_scope' => 'in:all,custom', 'pool' => 'in:all,new,missed,low,bookmarks', 'minutes' => 'required|integer|min:1|max:360',
             'blueprint' => 'array|max:120', 'blueprint.*' => 'array:subject,topic,difficulty,count', 'blueprint.*.subject' => 'required|in:'.implode(',', Catalog::SUBJECTS),
             'blueprint.*.topic' => 'nullable|string|max:255', 'blueprint.*.difficulty' => 'required|in:All,Easy,Average,Difficult', 'blueprint.*.count' => 'required|integer|min:1|max:10000',
             'fresh_unseen' => 'integer|min:0|max:10', 'fresh_balance' => 'boolean']);
@@ -37,7 +39,7 @@ class StudyController extends Controller
 
     public static function catalog(): array
     {
-        return ['subjects' => Catalog::SUBJECTS, 'topics' => Question::where('active', true)->select('subject', 'topic', 'subject_code', 'topic_code')->selectRaw('COUNT(*) as count')->groupBy('subject', 'topic', 'subject_code', 'topic_code')->orderBy('subject')->orderBy('topic')->get(), 'total' => Question::where('active', true)->count()];
+        return app(Catalog::class)->summary();
     }
 
     public function home(Request $r, Analytics $analytics)
@@ -45,17 +47,14 @@ class StudyController extends Controller
         $u = $r->user();
         $habits = app(Habits::class)->for($u);
         $attempt = Attempt::where('user_id', $u->id)->where('mode', 'fresh')->where('status', 'active')->latest('id')->first();
-        $latest = FlashcardDeck::where('user_id', $u->id)->with('items')->orderByRaw('CASE WHEN session_finished_at IS NULL THEN 0 ELSE 1 END')->latest('updated_at')->first();
         $available = app(CatchReminders::class)->available($u);
         $daily = [...$habits, 'attempt' => $attempt?->id, 'answered' => $attempt?->items()->whereNotNull('answer')->count() ?? 0,
             'subjects' => $u->fresh_subjects ?: Catalog::SUBJECTS, 'available' => $available, 'push_enabled' => $u->reminder_enabled,
             'remind' => $available && app(CatchReminders::class)->incomplete($u)];
-        $deck = $latest ? ['id' => $latest->id, 'title' => $latest->title, 'total' => $latest->items->count(), 'confident' => $latest->items->where('confidence', 5)->count(),
-            'low' => $latest->items->whereIn('confidence', [1, 2])->count(), 'unrated' => $latest->items->whereNull('confidence')->count()] : null;
 
         return Inertia::render('Home', ['catalog' => self::catalog(), 'stats' => $analytics->for($r->user()->id),
-            'today' => app(StudyGuide::class)->plan($u, $u->fresh_subjects ?: Catalog::SUBJECTS, 15),
-            'daily' => $daily, 'deck' => $deck, 'leaders' => app(Leaderboard::class)->for($u),
+            'preferences' => app(StudySetup::class)->preferences($u), 'resumable' => app(StudySetup::class)->resumable($u),
+            'daily' => $daily,
             'assignments' => Assignment::where('user_id', $r->user()->id)->with('exam:id,title,code')->latest()->get()]);
     }
 
@@ -155,16 +154,16 @@ class StudyController extends Controller
 
     public function library(Request $r)
     {
+        $r->validate(['view' => 'nullable|in:all,new,missed,bookmarks', 'subject' => 'nullable|in:'.implode(',', Catalog::SUBJECTS), 'search' => 'nullable|string|max:200']);
         $q = Question::with('currentVersion')->where('active', true);
         if ($r->filled('subject')) {
             $q->where('subject', $r->string('subject'));
         }
         if ($r->filled('search')) {
             $term = mb_strtolower(mb_substr($r->string('search'), 0, 200));
-            $ids = $q->get()->filter(fn ($q) => str_contains(mb_strtolower($q->id.' '.$q->topic.' '.$q->currentVersion->content['stem']), $term))->pluck('id');
-            $q->whereIn('id', $ids);
+            $pattern = '%'.str_replace(['\\', '%', '_'], ['\\\\', '\\%', '\\_'], $term).'%';
+            $q->whereRaw("LOWER(id || ' ' || topic || ' ' || COALESCE((SELECT content->>'stem' FROM question_versions WHERE question_versions.id = questions.current_version_id), '')) LIKE ?", [$pattern]);
         }
-        $r->validate(['view' => 'nullable|in:all,new,missed,bookmarks', 'subject' => 'nullable|in:'.implode(',', Catalog::SUBJECTS), 'search' => 'nullable|string|max:200']);
         $view = $r->input('view', $r->boolean('bookmarks') ? 'bookmarks' : 'all');
         if ($view !== 'all') {
             $q->whereIn('id', array_column(app(Study::class)->eligible($r->user()->id, ['mode' => 'tutor', 'pool' => $view]), 'id'));
@@ -178,9 +177,32 @@ class StudyController extends Controller
 
     public function progress(Request $r, Analytics $analytics)
     {
-        $filters = $r->validate(['period' => 'nullable|in:all,1,7,30,custom', 'subject' => 'nullable|string|max:100', 'topic' => 'nullable|string|max:255', 'difficulty' => 'nullable|in:Easy,Average,Difficult', 'mode' => 'nullable|in:tutor,exam,fresh,memory,assigned', 'from' => 'nullable|date_format:Y-m-d', 'to' => 'nullable|date_format:Y-m-d|after_or_equal:from']);
+        $filters = $this->progressFilters($r);
 
         return Inertia::render('Progress', ['stats' => $analytics->for($r->user()->id, $filters), 'filters' => $filters, 'catalog' => self::catalog(),
             'subjectMap' => app(SubjectMap::class)->for($r->user()->id)]);
+    }
+
+    private function progressFilters(Request $r): array
+    {
+        return ProgressScope::dates($r->validate(['period' => 'nullable|in:all,1,7,30,custom', 'subject' => 'nullable|in:'.implode(',', Catalog::SUBJECTS), 'topic' => 'nullable|string|max:600', 'difficulty' => 'nullable|in:Easy,Average,Difficult', 'mode' => 'nullable|in:tutor,exam,fresh,memory,assigned', 'from' => 'nullable|date_format:Y-m-d', 'to' => 'nullable|date_format:Y-m-d|after_or_equal:from']));
+    }
+
+    public function review(Request $r, ProgressScope $scope, Catalog $catalog, Study $study)
+    {
+        $filters = $this->progressFilters($r);
+        $topic = $r->validate(['review_subject' => 'nullable|in:'.implode(',', Catalog::SUBJECTS), 'review_topic' => 'nullable|string|max:600']);
+        $ids = $scope->for($r->user()->id, $filters)['review_ids'];
+        $selected = collect($catalog->candidates(['ids' => $ids]))
+            ->filter(fn ($q) => (empty($topic['review_subject']) || $q['subject'] === $topic['review_subject'])
+                && (empty($topic['review_topic']) || Taxonomy::matches($q, $topic['review_topic'])))
+            ->unique(fn ($q) => Catalog::questionHash($q))->take(20)->values();
+        if ($selected->isEmpty()) {
+            throw ValidationException::withMessages(['review' => 'No questions still need review in these filters. Refresh your progress.']);
+        }
+        $attempt = $study->start($r->user(), ['mode' => 'tutor', 'count' => $selected->count(), 'selected_ids' => $selected->pluck('id')->all(),
+            'subjects' => $selected->pluck('subject')->unique()->values()->all(), 'topics' => [], 'difficulty' => 'All', 'pool' => 'all', 'balance' => false, 'minutes' => 30, 'seed' => random_int(0, 4294967295)]);
+
+        return redirect('/attempts/'.$attempt->id);
     }
 }
