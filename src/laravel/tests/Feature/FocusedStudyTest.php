@@ -66,7 +66,11 @@ class FocusedStudyTest extends TestCase
         $this->assertSame(0, $props['decks'][0]['confident_count']);
         FlashcardDeck::create(['user_id' => $user->id, 'title' => 'Finished deck', 'settings' => $settings,
             'session_finished_at' => now(), 'updated_at' => now()->addMinute()]);
-        $this->assertSame($deck->id, $this->get('/')->assertOk()->viewData('page')['props']['deck']['id']);
+        $resumable = $this->get('/')->assertOk()->viewData('page')['props']['resumable'];
+        $this->assertCount(1, $resumable);
+        $this->assertSame('deck-'.$deck->id, $resumable[0]['id']);
+        $this->assertSame('/flashcards/decks/'.$deck->id, $resumable[0]['url']);
+        $this->assertSame('flashcards', $resumable[0]['mode']);
         $deck->update(['session_finished_at' => now()]);
         $this->get('/flashcards')->assertOk();
         $this->postJson('/flashcards/preview', [...$settings, 'topic_scope' => 'custom', 'topics' => []])->assertUnprocessable();
