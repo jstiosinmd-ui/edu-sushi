@@ -1,0 +1,1650 @@
+{
+  "slug": "pathology-2027",
+  "title": "Pathology 2027",
+  "subject_code": "PTH",
+  "version": 1,
+  "source_file": "PATHOLOGY QUESTIONS - 2027.pdf",
+  "source_sha256": "6e36f7500e51d07641f0b58a43061d1e3cc4366d23f1cecaff56726765fab341",
+  "note": "Rationales and proposed answers authored for study. No complete official answer key was supplied. Items with ambiguous, incomplete, or outdated premises are review-only and excluded from scores. Original question numbering and choices are retained; PDF extraction errors and table formatting are repaired. Targeted external source checks are linked where available; this is not a full textbook-page verification of every item.",
+  "items": [
+    {
+      "id": "PTH-2027-001",
+      "number": 1,
+      "page": 1,
+      "stem": "Which of the following disorders is an example of metaplasia?",
+      "options": {
+        "A": "Increased goblet cells in mainstem bronchus of a smoker",
+        "B": "Squamous epithelium in the mainstem bronchus of a smoker",
+        "C": "Proliferative endometrial glands in a woman on unopposed estrogen",
+        "D": "Multinucleated giant cells in a granuloma"
+      },
+      "key": "B",
+      "rationale": "Metaplasia replaces one mature cell type with another: smoking can replace bronchial ciliated columnar epithelium with stratified squamous epithelium. Increased goblet cells and proliferating endometrial glands describe hyperplasia.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-002",
+      "number": 2,
+      "page": 1,
+      "stem": "45-year-old male is suspected to have of acute pancreatitis. Which of the following cellular changes in the pancreas may present in this case?",
+      "options": {
+        "A": "Coagulative necrosis of the pancreatic ducts",
+        "B": "Apoptosis in the pancreatic acini and ducts",
+        "C": "Enzymatic fat necrosis of pancreatic ducts and acini",
+        "D": "Fibrinoid necrosis of pancreatic ducts"
+      },
+      "key": null,
+      "rationale": "Pancreatic enzyme release produces enzymatic fat necrosis, particularly in peripancreatic fat, with saponification. The source option inaccurately localizes fat necrosis to ducts and acini; those structures sustain pancreatic parenchymal necrosis.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-003",
+      "number": 3,
+      "page": 1,
+      "stem": "Pathologist notes cloudy swelling and fatty change in the liver of a patient with history of alcohol abuse. These morphological changes are all examples of which of the following?",
+      "options": {
+        "A": "Hyaline change",
+        "B": "Early neoplastic change consistent with dysplasia",
+        "C": "Patterns of cell death",
+        "D": "Reversible cell injury"
+      },
+      "key": "D",
+      "rationale": "Cell swelling and fatty change are classic manifestations of reversible injury. They do not by themselves establish dysplasia or irreversible cell death.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-004",
+      "number": 4,
+      "page": 1,
+      "stem": "What is cellular aging a consequence of?",
+      "options": {
+        "A": "Free radical injury",
+        "B": "Defective DNA repair mechanism",
+        "C": "Replicative senescence",
+        "D": "All of the above"
+      },
+      "key": "D",
+      "rationale": "Aging involves accumulated oxidative and DNA damage, impaired repair, and telomere-associated replicative senescence. These mechanisms interact rather than representing mutually exclusive explanations.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-005",
+      "number": 5,
+      "page": 1,
+      "stem": "A 35-year-old male from Western Africa complained of bilateral swelling of his lower extremities. Work-up of patient points to Filaria organism as the etiologic agent. What is the likely mechanism of edema formation in this case?",
+      "options": {
+        "A": "Nutritional Hypoalbuminemia",
+        "B": "Increase hydrostatic pressure related to venous obstruction of lower extremities",
+        "C": "Lymphatic obstruction due to inflammation and scarring",
+        "D": "Incompetent venous valves of lower extremities"
+      },
+      "key": "C",
+      "rationale": "Lymphatic filariasis causes inflammation, fibrosis, and obstruction of lymphatic drainage. Protein-rich interstitial fluid accumulates, producing lymphedema.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-006",
+      "number": 6,
+      "page": 2,
+      "stem": "A 57-year-old female died after a long history of dyspnea, orthopnea, distended neck veins, hepatomegaly and bipedal edema. An autopsy was requested to ascertain the cause of death. The pathologist who examined the lung saw many heart failure cells on the alveolar sac with thickening and fibrosis of septal wall and distended alveolar capillary vessels. The findings are most consistent with what hemodynamic derangement?",
+      "options": {
+        "A": "Acute pulmonary edema and congestion",
+        "B": "Pulmonary hemorrhages",
+        "C": "Acute passive congestion",
+        "D": "Chronic passive congestion"
+      },
+      "key": "D",
+      "rationale": "Hemosiderin-laden alveolar macrophages, congested capillaries, and septal fibrosis indicate chronic pulmonary venous congestion. Acute congestion alone does not explain established fibrosis and abundant heart-failure cells.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-007",
+      "number": 7,
+      "page": 2,
+      "stem": "Lines of Zahn are formed by which of the following mechanism?",
+      "options": {
+        "A": "Formation of layers of platelets, fibrin, and red blood cells in a thrombus",
+        "B": "Postmortem separation of the solid component of blood",
+        "C": "Progressive lysis of thrombus",
+        "D": "Fragmentation and venous deportation"
+      },
+      "key": "A",
+      "rationale": "Lines of Zahn alternate pale platelet-fibrin layers with darker erythrocyte-rich layers. Their formation in flowing blood supports an antemortem thrombus rather than a postmortem clot.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-008",
+      "number": 8,
+      "page": 2,
+      "stem": "All of the following hemodynamic events are correctly matched with the associated condition , EXCEPT :",
+      "options": {
+        "A": "Coronary artery thrombosis – white / anemic infarct",
+        "B": "Left cerebral artery thrombotic occlusion – red / hemorrhagic infarct",
+        "C": "Pulmonary thrombo-embolism – red / hemorrhagic infarct",
+        "D": "Renal artery thrombotic occlusion – white anemic infarct"
+      },
+      "key": "B",
+      "rationale": "An unreperfused cerebral arterial infarct is typically an ischemic, pale infarct that undergoes liquefactive necrosis. Hemorrhagic transformation can occur after reperfusion; pulmonary infarcts are commonly hemorrhagic because of dual blood supply.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-009",
+      "number": 9,
+      "page": 2,
+      "stem": "Which of these cardiovascular findings is NOT associated with aging?",
+      "options": {
+        "A": "Lambl excrescences",
+        "B": "Lipofuscin pigment in cardiac myocytes.",
+        "C": "Fatty streak in the coronary and aorta",
+        "D": "Tortuous aorta"
+      },
+      "key": "C",
+      "rationale": "Fatty streaks can begin in childhood and are not specific evidence of aging. Lipofuscin accumulation, aortic elongation/tortuosity, and valvular Lambl excrescences are recognized age-associated findings.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-010",
+      "number": 10,
+      "page": 2,
+      "stem": "What is the earliest light microscopic evidence that a myocardial infarction has occurred?",
+      "options": {
+        "A": "infiltration of the myocardium with leukocytes",
+        "B": "intercellular edema with “wavy change” of affected myocytes",
+        "C": "coagulation necrosis",
+        "D": "proliferation of fibroblasts"
+      },
+      "key": "B",
+      "rationale": "Wavy fibers at an infarct border and interstitial edema are among the earliest light-microscopic changes. Neutrophilic infiltration, established coagulative necrosis, and reparative fibroblasts appear later.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-011",
+      "number": 11,
+      "page": 2,
+      "stem": "What congenital anomaly is incompatible with life?",
+      "options": {
+        "A": "VSD",
+        "B": "ASD",
+        "C": "Patent ductus arteriosus",
+        "D": "Transposition of the great vessels"
+      },
+      "key": null,
+      "rationale": "Complete transposition creates parallel systemic and pulmonary circuits. Survival requires mixing through an atrial or ventricular communication or a patent ductus; the source's unqualified claim of incompatibility with life requires this qualification.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-012",
+      "number": 12,
+      "page": 3,
+      "stem": "A 35-year-old female with a 10-year history of thalassemia had frequent whole blood transfusions. She developed progressive, intractable heart failure resulting in death. The microscopic appearance on autopsy reveals presence of diffuse iron deposits on the myocardium. Which of the following type of cardiomyopathy did she mostl likely have?",
+      "options": {
+        "A": "Restrictive Cardiomyopathy",
+        "B": "Dilated Cardiomyopathy",
+        "C": "Arrthymogenic cardiomyopathy",
+        "D": "Hypertrophic cardiomyopathy"
+      },
+      "key": null,
+      "rationale": "Advanced transfusional iron overload can cause a dilated cardiomyopathy with systolic failure. Early iron overload can instead produce restrictive physiology, so iron deposition alone cannot distinguish the two; a corrected question should specify ventricular dimensions and systolic function.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "Iron overload and restrictive/dilated cardiomyopathy",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8932380/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "PTH-2027-013",
+      "number": 13,
+      "page": 3,
+      "stem": "A cervical cone biopsy was performed on a 38-year-old, sexually active female who had a history of a “positive” Pap smear. The pathologist who interpreted the tissue biopsy described the lesion as having disordered maturation of atypical proliferating cells involving more than one half ( ½) of the mucosal epithelium. Also noted were scattered squamous cells containing atypical nuclei and perinuclear halo. The findings here correlate with:",
+      "options": {
+        "A": "Penetration of the mucosal basement membrane",
+        "B": "Genomic integration of HSV sequences in PCR testing",
+        "C": "Possible regression of 30% of cases and persistence with progression into carcinoma in 10%",
+        "D": "Majority are associated with serologic type 6 and 11"
+      },
+      "key": null,
+      "rationale": "High-grade cervical squamous intraepithelial lesions can persist, regress, or progress to invasion. They are associated with high-risk HPV, not HSV or predominantly HPV 6/11; basement-membrane invasion would establish carcinoma rather than an intraepithelial lesion. The source's fixed progression percentages are not reliable without grade, follow-up, and population.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-014",
+      "number": 14,
+      "page": 3,
+      "stem": "A 68-year-old postmenopausal woman presents for evaluation of the recent onset of vaginal bleeding, and a diagnosis of Type I endometrial carcinoma is made on endometrial biopsy. Which of the following is a risk factor for this condition?",
+      "options": {
+        "A": "Early sexual activity with multiple partners",
+        "B": "Obesity",
+        "C": "Multiparity",
+        "D": "Endometriosis"
+      },
+      "key": "B",
+      "rationale": "Obesity increases peripheral conversion of androgens to estrogen and can create prolonged unopposed estrogen exposure. This raises the risk of endometrioid endometrial carcinoma, historically called type I.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-015",
+      "number": 15,
+      "page": 3,
+      "stem": "Which one is an incorrect association?",
+      "options": {
+        "A": "Circummarginate placenta - redundant, doubled-back membrane fold found in the fetal surface",
+        "B": "Hydropic placenta – polyhydramios",
+        "C": "Retroplacental hematoma- Couvelaire uterus",
+        "D": "Single umbilical artery – congenital anomaly like sirenomelic fetus"
+      },
+      "key": "A",
+      "rationale": "A raised, doubled-back membrane fold describes a circumvallate placenta. A circummarginate placenta has a flatter membrane insertion without that prominent rolled ridge.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "University of Chicago: placental examination",
+          "url": "https://voices.uchicago.edu/grosspathology/peds-perinatal/placenta-singleton/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "PTH-2027-016",
+      "number": 16,
+      "page": 3,
+      "stem": "Which of the following fungi can undergo phenotypic switching to evade host defenses?",
+      "options": {
+        "A": "Aspergillus spp.",
+        "B": "Cryptococcus spp.",
+        "C": "Mucor spp.",
+        "D": "None of the above"
+      },
+      "key": "B",
+      "rationale": "Cryptococcus can undergo phenotypic switching, including changes in capsule and colony characteristics that affect host interactions. Candida also switches phenotypes but is not among the listed options.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-017",
+      "number": 17,
+      "page": 4,
+      "stem": "A 68-year-old Pakistani businessman presented with weight loss, hepatomegaly, swollen lymph nodes and fever. CBC revealed pancytopenia. During confinement, he developed secondary pneumonia. Bone marrow exam revealed enlarged macrophages filled with parasitic amastigotes. This is a case of:",
+      "options": {
+        "A": "Cutaneous leishmaniasis",
+        "B": "Diffuse cutaneous leishmaniasis",
+        "C": "Mucocutaneous leishmaniasis",
+        "D": "Visceral leishmaniasis"
+      },
+      "key": "D",
+      "rationale": "Fever, weight loss, hepatosplenomegaly, pancytopenia, and macrophages containing amastigotes indicate visceral leishmaniasis. Cutaneous and mucocutaneous forms predominantly affect skin and mucosal tissues.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-018",
+      "number": 18,
+      "page": 4,
+      "stem": "Which of the following protozoan infections can cause high levels of parasitemia, fever and hemolytic anemia?",
+      "options": {
+        "A": "P. vivax malaria",
+        "B": "P. ovale malaria",
+        "C": "Babesiosis",
+        "D": "Leishmaniasis"
+      },
+      "key": "C",
+      "rationale": "Babesia infects erythrocytes and can cause high parasitemia with fever and hemolytic anemia, especially in asplenic patients. Vivax and ovale malaria preferentially invade reticulocytes and generally produce lower parasitemia.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-019",
+      "number": 19,
+      "page": 4,
+      "stem": "This structure attaches teeth to the alveolar bone, hence, inflammation in this area can lead to eventual tooth loss:",
+      "options": {
+        "A": "Cementum",
+        "B": "Dentin",
+        "C": "Periodontal ligament",
+        "D": "Enamel"
+      },
+      "key": "C",
+      "rationale": "The periodontal ligament anchors root cementum to alveolar bone. Destruction of this supporting apparatus in periodontitis causes loss of attachment and eventual tooth loss.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-020",
+      "number": 20,
+      "page": 4,
+      "stem": "What is TRUE of a thyroglossal duct cyst?",
+      "options": {
+        "A": "Also known as cervical lymphoepithelial cyst",
+        "B": "Pseudostratified columnar epithelium near the base of the tongue",
+        "C": "Presence of lymphoid aggregates",
+        "D": "Stratified squamous epithelium in lower locations"
+      },
+      "key": null,
+      "rationale": "A thyroglossal duct cyst arises from persistent remnants along the thyroid's embryologic descent. Its lining may be squamous or respiratory, and thyroid follicles may be present in its wall. The source has no unambiguously correct option: cervical lymphoepithelial cyst denotes a branchial cleft cyst, and the proposed epithelial-location relationships are unreliable.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "Clinicopathologic series of thyroglossal duct remnants",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/pmid/27161104/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "PTH-2027-021",
+      "number": 21,
+      "page": 4,
+      "stem": "A 75-year-old politician has a 4-year history of a painless, movable mass anterior to his left ear. Histologic sections show papillary structures with a double cell layer resting on a florid lymphoid stroma with germinal centers. What is TRUE of this salivary gland tumor?",
+      "options": {
+        "A": "It is a benign tumor commonly seen in elderly females.",
+        "B": "The oncocytic appearance of the epithelial cells are due to packed mitochondria.",
+        "C": "It has a high probability of malignant transformation.",
+        "D": "It is the most common benign tumor of the salivary gland."
+      },
+      "key": "B",
+      "rationale": "Warthin tumor has papillary cystic architecture, a bilayered oncocytic epithelium, and lymphoid stroma. Abundant mitochondria account for the granular eosinophilic oncocytic cytoplasm; pleomorphic adenoma is the most common benign salivary tumor.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-022",
+      "number": 22,
+      "page": 4,
+      "stem": "A 14-year-old girl complained of a 2-year history of intermittent right head pain. On examination, there is a right tympanic membrane perforation with protruding granulation tissue and draining exudate. A 2 cm cystic middle ear mass was then excised. What is TRUE of this lesion?",
+      "options": {
+        "A": "This is a complication of acute otitis media.",
+        "B": "There is ingrowth of the squamous epithelium or metaplasia of the middle ear lining.",
+        "C": "This is secondary to a ruptured epithelial inclusion cyst.",
+        "D": "Hypercholesterolemia is a risk factor for the development of this neoplasm."
+      },
+      "key": "B",
+      "rationale": "Cholesteatoma contains keratinizing squamous epithelium and accumulated keratin within the middle ear. Acquired disease commonly accompanies chronic ear disease and can erode bone; it is not a cholesterol-driven neoplasm.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-023",
+      "number": 23,
+      "page": 5,
+      "stem": "A 25-year-old male consulted for a slow-growing, painless, movable mass anterior to his left ear. The lesion is excised and diagnosed as a benign mixed tumor. After 15 years, a mass arises in the same area and rapidly increases in size. Biopsy done showed undifferentiated carcinoma. What could explain the second tumor?",
+      "options": {
+        "A": "The undifferentiated carcinoma is unrelated to the first mixed tumor.",
+        "B": "Malignant transformation of the mixed tumor occurred after 15 years.",
+        "C": "The undifferentiated carcinoma is a metastasis from another site.",
+        "D": "It is not possible for a benign mixed tumor to transform into an undifferentiated carcinoma."
+      },
+      "key": "B",
+      "rationale": "A longstanding or recurrent pleomorphic adenoma can undergo malignant transformation into carcinoma ex pleomorphic adenoma. Rapid enlargement after years of slow growth raises this concern.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-024",
+      "number": 24,
+      "page": 5,
+      "stem": "Which of the following is the etiologic agent of Tinea versicolor?",
+      "options": {
+        "A": "Pox virus",
+        "B": "Malassezia furfur",
+        "C": "HPV 6,11",
+        "D": "Staphylococcus aureus"
+      },
+      "key": "B",
+      "rationale": "Pityriasis versicolor is caused by Malassezia species, classically M. furfur. The other choices cause unrelated viral or bacterial diseases.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-025",
+      "number": 25,
+      "page": 5,
+      "stem": "The term “rodent ulcers” refers to which of the following disorders?",
+      "options": {
+        "A": "squamous cell carcinoma",
+        "B": "basal cell carcinoma",
+        "C": "melanoma",
+        "D": "melanocytic nevus"
+      },
+      "key": "B",
+      "rationale": "Rodent ulcer is a historical term for an ulcerating basal cell carcinoma. It reflects local tissue destruction, not the metastatic behavior characteristic of many other malignancies.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-026",
+      "number": 26,
+      "page": 5,
+      "stem": "A 40-year-old male patient came in due to pruritic rashes on his elbows and knees. PE showed pinkish plaques covered by silver- white scales. Biopsy was done which revealed marked epidermal acanthosis and neutrophilic aggregates in the scale. Which of the following is the most likely diagnosis?",
+      "options": {
+        "A": "Erythema multiforme",
+        "B": "Ichthyosis",
+        "C": "Psoriasis",
+        "D": "Seborrheic dermatitis"
+      },
+      "key": "C",
+      "rationale": "Extensor plaques with silvery scale, epidermal acanthosis, and neutrophils in the stratum corneum are typical of psoriasis. The neutrophilic collections are Munro microabscesses.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-027",
+      "number": 27,
+      "page": 5,
+      "stem": "Which of the following characterizes pemphigus vulgaris?",
+      "options": {
+        "A": "tense bullae (blisters that do not rupture easily)",
+        "B": "linear pattern of immunofluorescence",
+        "C": "autoantibodies against desmosomes",
+        "D": "subepidermal blister"
+      },
+      "key": "C",
+      "rationale": "Pemphigus vulgaris involves antibodies against desmogleins in desmosomes, producing intraepidermal acantholysis and fragile blisters. Tense subepidermal bullae and linear basement-membrane immunofluorescence favor bullous pemphigoid.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-028",
+      "number": 28,
+      "page": 5,
+      "stem": "A 60-year-old male heavy smoker presents with chronic dyspnea and productive cough. He also has bouts of easy fatigability. Patient also presents with increased anteroposterior diameter of the chest wall. If the attending octor diagnoses his condition as emphysema, what type does he likely have?",
+      "options": {
+        "A": "panacinar",
+        "B": "centrilobular",
+        "C": "paraseptal",
+        "D": "irregular"
+      },
+      "key": "B",
+      "rationale": "Smoking most strongly associates with centriacinar/centrilobular emphysema, often greatest in upper lobes. Alpha-1 antitrypsin deficiency classically causes panacinar emphysema.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-029",
+      "number": 29,
+      "page": 6,
+      "stem": "A septic ICU patient died due to respiratory failure despite 100% oxygenation; Laboratory findings show positive blood culture results and an elevated white blood cell count. An autopsy shows hyaline membranes lining distended alveolar sacs with necrotic epithelial cells, edema fluid, and interstitial inflammation. Which of the following is the most likely mechanism underlying these morphologic changes?",
+      "options": {
+        "A": "leukocyte-mediated diffuse alveolar damage",
+        "B": "aspiration of oropharyngeal secretions",
+        "C": "release of fibrogenic cytokines by macrophages",
+        "D": "reduced production of surfactant"
+      },
+      "key": "A",
+      "rationale": "Sepsis can trigger acute respiratory distress syndrome through inflammatory injury to the alveolar-capillary barrier. Diffuse alveolar damage produces protein-rich edema and hyaline membranes, impairing oxygenation despite supplemental oxygen.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-030",
+      "number": 30,
+      "page": 6,
+      "stem": "A 65-year-old male, retired miner has had progressively worsening dyspnea over the past 5 years, as well as a 4 kg. weight loss in the past 2 years. He has a chronic cough with minimal sputum production and no chest pain. On physical examination, he is afebrile and normotensive. A chest radiograph shows extensive interstitial disease and \"egg-shell\" calcification over the hilar region. Increased exposure to which of the following is most likely to produce these findings?",
+      "options": {
+        "A": "tobacco smoke",
+        "B": "asbestos",
+        "C": "silica",
+        "D": "moldy hay"
+      },
+      "key": "C",
+      "rationale": "Silica exposure causes fibrotic pneumoconiosis and can produce eggshell calcification of hilar lymph nodes. Asbestos instead commonly produces pleural plaques and lower-lobe interstitial fibrosis.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-031",
+      "number": 31,
+      "page": 6,
+      "stem": "A 44-year-old female nonsmoker has had chronic nonproductive cough for the past 6 months with accompanying weight loss of 6 kg. Chest xray revealed a mass in the right lower lobe. Lobectomy was performed with microscopic findings showing glands invading the lung. Which of the following features is associated with this lesion?",
+      "options": {
+        "A": "associated with chromosomal deletions involving CDKN2A gene",
+        "B": "commonly associated with paraneoplastic syndromes",
+        "C": "associated with gain of function mutations in genes encoding receptor tyrosine kinase",
+        "D": "carries the highest mutational burden among lung cancers"
+      },
+      "key": "C",
+      "rationale": "Pulmonary adenocarcinoma, particularly in never-smokers, may contain activating receptor-tyrosine-kinase pathway alterations such as EGFR mutations. Gland formation supports adenocarcinoma rather than small-cell or squamous carcinoma.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-032",
+      "number": 32,
+      "page": 6,
+      "stem": "A 45-year-old man has experienced increasing malaise and reduced urine output for the past 3 days. On PE, he is afebrile and normotensive. Laboratory findings show a serum creatinine level of 7.5 mg/dL. Urinalysis shows hematuria, but no pyuria or glucosuria. A renal biopsy is done; the light microscopic picture shows formation of crescents due to proliferation of parietal cells and linear pattern on immunofluorescence, which of the following feature is most likely associated with this disorder?",
+      "options": {
+        "A": "Anti-neutrophil cytoplasmic antibody",
+        "B": "Anti-GBM antibody",
+        "C": "anti-phospholipase 2 receptor’",
+        "D": "anti-Spe B exotoxin"
+      },
+      "key": "B",
+      "rationale": "Linear glomerular-basement-membrane staining with crescentic glomerulonephritis indicates anti-GBM disease. ANCA-associated crescentic disease is usually pauci-immune; PLA2R antibodies are associated with membranous nephropathy.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-033",
+      "number": 33,
+      "page": 7,
+      "stem": "A hemolytic transfusion reaction occurred in a patient who was given the wrong blood unit. He developed renal manifestations such as oliguria, elevated BUN, hyperkalemia and uremic manifestations in the next few days. Which of the following histologic structures would likely be greatly affected?",
+      "options": {
+        "A": "tubules",
+        "B": "glomerulus",
+        "C": "renal arterioles",
+        "D": "interstitium"
+      },
+      "key": "A",
+      "rationale": "Intravascular hemolysis can cause pigment-associated acute tubular injury through hemoglobin toxicity and obstruction. The principal injury is tubular rather than a primary glomerular immune lesion.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-034",
+      "number": 34,
+      "page": 7,
+      "stem": "Members of a clan with a history of renal cancers undergo ultrasound screening. Three adult family members are found to have a unilateral renal mass on ultrasound. Nephrectomy done on one revealed a yellow, gray-white spherical mass with foci of hemorrhage on its upper pole. Biopsy shows tumor cells having a rounded or polygonal shape and abundant clear or granular cytoplasm. Mutation involving which gene is most likely involved in this clan?",
+      "options": {
+        "A": "MET",
+        "B": "VHL",
+        "C": "Kras",
+        "D": "PKD1"
+      },
+      "key": "B",
+      "rationale": "Clear-cell renal cell carcinoma is associated with loss of VHL function on chromosome 3p. Hereditary papillary renal carcinoma instead associates with activating MET mutations.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-035",
+      "number": 35,
+      "page": 7,
+      "stem": "A 75 y.o woman presents with progressive memory loss, impaired thinking, disorientation and changes in personality and mood, with no associated abnormal motor movements. CT scan done shows brain atrophy. Which of the following findings/statement is NOT consistent with this condition?",
+      "options": {
+        "A": "Atrophy of the caudate and putamen is expected.",
+        "B": "The brain atrophy is due to deposits of abnormal Tau protein and βamyloid",
+        "C": "Neurofibrillary tangles and senile plaques are characteristic lesions histologically.",
+        "D": "Hydrocephalus ex vacuo is expected."
+      },
+      "key": "A",
+      "rationale": "Alzheimer disease causes cortical atrophy with amyloid plaques and tau tangles, often with ventricular enlargement ex vacuo. Prominent caudate and putamen atrophy suggests Huntington disease rather than the described syndrome.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-036",
+      "number": 36,
+      "page": 7,
+      "stem": "A 30-year-old woman had a 1-week history of eye pain, mild tremor in her arm, and impaired balance when walking. Symptoms disappear the following week. A year later, the symptoms recur. Neurologic exam: positive for ataxia, dysarthria and decreased vibratory sense in her legs, increased DTRs and Babinski sign on the left. What is the likely diagnosis?",
+      "options": {
+        "A": "Multiple Sclerosis",
+        "B": "Parkinson’s Disease",
+        "C": "Amyotrophic Lateral Sclerosis",
+        "D": "Acute Disseminated Encephalomyelitis (ADEM)"
+      },
+      "key": "A",
+      "rationale": "Neurologic deficits separated in time and affecting different central nervous system sites suggest multiple sclerosis. Optic neuritis, ataxia, sensory changes, and upper-motor-neuron findings are typical manifestations.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-037",
+      "number": 37,
+      "page": 8,
+      "stem": "A 75-year-old obese diabetic patient with longstanding uncontrolled hypertension was rushed to the ER after the patient was found lying unconscious on the floor of his room. CT scan showed a large left intraparenchymal hemorrhage in the basal ganglia with extension to the left lateral ventricle. Despite heroic measures, patient expired after five days. Which of the following findings is LEAST likely to be seen at autopsy?",
+      "options": {
+        "A": "Ruptured saccular aneurysm",
+        "B": "Ruptured Charcot Burchard aneurysm",
+        "C": "Lacunar Infarcts",
+        "D": "Hyaline arteriolosclerosis of the lenticulostriate arteries"
+      },
+      "key": "A",
+      "rationale": "Chronic hypertension can cause deep basal-ganglia hemorrhage from small penetrating vessels and Charcot-Bouchard microaneurysms. Rupture of a saccular aneurysm more typically causes subarachnoid hemorrhage.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-038",
+      "number": 38,
+      "page": 8,
+      "stem": "A 12-year-old boy had fever and productive cough for the past 4 days. He was born at term, but developed abdominal distention in the first week of life from meconium ileus. He had persistent steatorrhea for the past 4 years. He had frequent episodes of pneumonia with cough productive of thick, mucoid sputum for 3 years. Culture of the sputum has usually grown Pseudomonas aeruginosa, but the latest culture done resulted to growth of Burkholderia cenocepacia. An abnormality involving which of the following laboratory tests is most likely to be found in this patient?",
+      "options": {
+        "A": "Hemoglobin A1c",
+        "B": "Galactose-1-phosphate uridyl transferase (GALT)",
+        "C": "Sweat chloride",
+        "D": "Serum phenylalanine"
+      },
+      "key": "C",
+      "rationale": "Meconium ileus, pancreatic malabsorption, and recurrent infections with Pseudomonas or Burkholderia strongly suggest cystic fibrosis. Elevated sweat chloride supports the diagnosis when obtained and interpreted using standard diagnostic criteria.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-039",
+      "number": 39,
+      "page": 8,
+      "stem": "Compared to their counterparts in adults, the malignant tumors in children:",
+      "options": {
+        "A": "Have a tendency to regress or differentiate spontaneously",
+        "B": "Have decreased survival or cure rates in most tumors",
+        "C": "Mostly involve the skin, lung, breast, prostate and colon",
+        "D": "Appear less primitive and more differentiated histologically"
+      },
+      "key": "A",
+      "rationale": "Some childhood malignancies, particularly certain neuroblastomas, can spontaneously regress or mature. This is a tendency of selected tumor types, not a universal property of pediatric cancer; many childhood cancers have favorable treatment responses.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-040",
+      "number": 40,
+      "page": 8,
+      "stem": "A neonate is born at 35 weeks’ gestation with a birth weight and height measured at the 30th percentile. No congenital anomalies are noted. Which of the following factors is more likely to increase the risk of neonatal respiratory distress syndrome in the neonate?",
+      "options": {
+        "A": "Antenatal glucocorticoid therapy of the mother",
+        "B": "Delivery by cesarean section",
+        "C": "Paternal diabetes mellitus",
+        "D": "Oligohydramnios"
+      },
+      "key": "B",
+      "rationale": "Prelabor cesarean delivery increases neonatal respiratory morbidity, and prematurity increases surfactant-deficiency risk. Antenatal corticosteroids reduce respiratory distress syndrome risk; maternal, not paternal, diabetes is the relevant additional risk factor.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-041",
+      "number": 41,
+      "page": 8,
+      "stem": "What is a large benign ovarian mass containing single or multiple cystic structures?",
+      "options": {
+        "A": "Corpus Luteal cyst",
+        "B": "Cystadenoma",
+        "C": "Dermoid cyst",
+        "D": "Follicular cyst"
+      },
+      "key": "B",
+      "rationale": "An ovarian cystadenoma is a benign epithelial tumor that may become large and unilocular or multilocular. Functional follicular or corpus-luteum cysts are not epithelial cystadenomas.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-042",
+      "number": 42,
+      "page": 9,
+      "stem": "A 50-year-old woman presents with hirsutism, deepening of the voice, and clitoromegaly. Imaging reveals a unilateral solid ovarian mass. Which of the following is the most likely diagnosis?",
+      "options": {
+        "A": "Dysgerminoma",
+        "B": "Fibroma",
+        "C": "Leydig cell tumor",
+        "D": "Thecoma"
+      },
+      "key": "C",
+      "rationale": "An ovarian Leydig cell tumor may secrete androgens and cause virilization. Thecomas more commonly produce estrogen; fibromas are usually hormonally inactive.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-043",
+      "number": 43,
+      "page": 9,
+      "stem": "Which of the following organs is the most common site of metastasis within the gynecologic tract?",
+      "options": {
+        "A": "Cervix",
+        "B": "Endometrium",
+        "C": "Fallopian tube",
+        "D": "Ovary"
+      },
+      "key": "D",
+      "rationale": "The ovary is a common recipient of metastases from gastrointestinal, breast, and other primary tumors and is the most frequent metastatic site within the female genital tract in this comparison. Bilaterality and signet-ring cells can suggest metastatic disease.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-044",
+      "number": 44,
+      "page": 9,
+      "stem": "A 35-year-old female had an oophorocystectomy. The ovarian lesion removed measures 7.0 cm in widest diameter. It has a tan to white, glistening, smooth surface. Cut sections show a locule filled with a sticky fluid and nodular areas. Microscopic sections show a cyst lined by multiple layers of atypical columnar cells with apical mucin. What is the diagnosis?",
+      "options": {
+        "A": "Serous Cystadenoma",
+        "B": "Borderline Serous Tumor",
+        "C": "Mucinous Cystadenoma",
+        "D": "Borderline Mucinous Tumor"
+      },
+      "key": "D",
+      "rationale": "Mucinous epithelium with stratification and cytologic atypia, without destructive stromal invasion, supports a borderline mucinous tumor. This interpretation assumes no destructive invasion; documented invasion would change classification.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-045",
+      "number": 45,
+      "page": 9,
+      "stem": "The cysts in Polycystic Ovarian Syndrome (PCOS) are formed by:",
+      "options": {
+        "A": "Cystic degeneration of ovarian cortex",
+        "B": "Failure of atretic follicles to undergo apoptosis",
+        "C": "Multiple corpus lutea",
+        "D": "Oocyte proliferation"
+      },
+      "key": null,
+      "rationale": "The small follicles of polycystic ovary syndrome reflect arrested follicular development and failed dominant-follicle selection. The source's apoptosis wording oversimplifies this process; multiple corpora lutea are inconsistent with chronic anovulation.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-046",
+      "number": 46,
+      "page": 9,
+      "stem": "A mother brings her 15-month-old son to you and complains that he bled too much after scraping his knee. You find that he has a prolonged bleeding time, prolonged PTT, and normal PT. He has a normal platelet count as well. What is the likely diagnosis?",
+      "options": {
+        "A": "Hemophilia A",
+        "B": "Christmas disease",
+        "C": "Bernard-Soulier disease",
+        "D": "Vitamin K deficiency",
+        "E": "von Willebrand disease"
+      },
+      "key": "E",
+      "rationale": "Von Willebrand factor supports platelet adhesion and stabilizes factor VIII. Its deficiency can prolong platelet-function testing and aPTT while leaving platelet count and PT normal; hemophilia ordinarily does not prolong bleeding time.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-047",
+      "number": 47,
+      "page": 9,
+      "stem": "A 2 yr old child with failure to thrive is found to have a hemoglobin of 4.4 g/dl. The peripheral smear shows very small red cells with marked pallor. Electrophoresis shows that the child has very low levels of hemoglobin A, with elevated fractions of hemoglobin A2 and hemoglobin F. What is the most likely diagnosis?",
+      "options": {
+        "A": "beta- thalassemia",
+        "B": "alpha - thalassemia",
+        "C": "Sickle cell Anemia",
+        "D": "G-6PD"
+      },
+      "key": "A",
+      "rationale": "Severe microcytic anemia with very low HbA and increased HbF/HbA2 suggests beta-thalassemia. Reduced beta-globin synthesis decreases HbA, while alpha-chain disorders have a different hemoglobin pattern.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-048",
+      "number": 48,
+      "page": 10,
+      "stem": "A farmer with pallor has the following CBC result: Hb 7.5 mg/dl; WBC: 3,400. Platelet count of 65,000. Reticulocyte count is 0.2%. What do you expect to find in the bone marrow biopsy",
+      "options": {
+        "A": "Replacement of marrow by tumor",
+        "B": "Increased myeloid precursors",
+        "C": "Increased erythroid precursors",
+        "D": "Increased fat cells"
+      },
+      "key": "D",
+      "rationale": "Pancytopenia with a very low reticulocyte count suggests marrow production failure. Aplastic anemia has a hypocellular marrow replaced by fat; the exposure history alone does not establish its cause.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-049",
+      "number": 49,
+      "page": 10,
+      "stem": "Which histological subtype of Hodgkin's lymphoma is described in this statement? ‘Collagen bands extend from the node capsule to encircle nodules of abnormal tissue. A characteristic lacunar cell variant of the Reed-Sternberg cell is often found. The cellular infiltrate may be of the lymphocyte‐predominant, mixed cellularity or lymphocyte‐depleted type; eosinophilia is frequent.’",
+      "options": {
+        "A": "Nodular sclerosis",
+        "B": "Lymphocyte predominant",
+        "C": "Lymphocyte depleted",
+        "D": "Mixed cellularity"
+      },
+      "key": "A",
+      "rationale": "Broad collagen bands dividing a lymph node into nodules and lacunar Reed-Sternberg variants characterize nodular-sclerosis classical Hodgkin lymphoma. The architecture is the key discriminator.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-050",
+      "number": 50,
+      "page": 10,
+      "stem": "A 4-year-old boy has appeared listless during the past week. He exhibits irritability when his arms and legs are touched. In the past 2 days, large ecchymoses have appeared on the right thigh and left shoulder. CBC shows Hb 9.3 g/dl, Hct 28.7%; MCV 96, platelet count 45,000, WBC count of 19,500. PBS shows blasts cells that lack peroxidase positive granules bur contains PAS positive aggregates. Flow cytometry shows blasts to be CD 19+ CD 3 -. Which of the folloeing is the most likely diagnosis?",
+      "options": {
+        "A": "ALL",
+        "B": "AML",
+        "C": "CLL",
+        "D": "CML"
+      },
+      "key": "A",
+      "rationale": "A child with marrow-failure findings and CD19-positive, myeloperoxidase-negative blasts most likely has B-lymphoblastic leukemia. CD3 negativity argues against T-lineage disease.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-051",
+      "number": 51,
+      "page": 10,
+      "stem": "A 61-year-old man complain back pain for 5 months. He has recently developed a cough that is productive of yellow sputum. On PE he is febrile and diffuse rales are heard on auscultation of the lungs. He has no lymphadenopathy or splenomegaly. The serum creatinine is high. The skull xray shows soap bubble appearance. A bone marrow biopsy shows an increased number of which of the following?",
+      "options": {
+        "A": "Myeloblasts",
+        "B": "Lymphoblasts",
+        "C": "Plasma cells",
+        "D": "Neutrophils"
+      },
+      "key": "C",
+      "rationale": "Bone pain, punched-out skull lesions, renal dysfunction, and recurrent infections suggest plasma-cell myeloma. Bone marrow shows clonal plasma cells, which produce monoclonal immunoglobulin or light chains.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-052",
+      "number": 52,
+      "page": 11,
+      "stem": "A 16-year-old girl with amenorrhea is concerned because of delayed onset of menses. She has a shortened stature and a wide webbed neck, a broad chest, and secondary sexual charcteristics consistent with those of a much younger girl. Which of the following chromosomal changes is most consistent with these findings?",
+      "options": {
+        "A": "22q11-",
+        "B": "45XO",
+        "C": "46XY",
+        "D": "47XXY"
+      },
+      "key": "B",
+      "rationale": "Short stature, webbed neck, broad chest, and gonadal dysgenesis suggest Turner syndrome, classically 45,X. A 47,XXY karyotype causes Klinefelter syndrome in a phenotypic male.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-053",
+      "number": 53,
+      "page": 11,
+      "stem": "A 16-year-old student wanted to try out for the basketball team of the school. Routine medical examination for athletes in school showed that he had long arms and legs. He was tall with a height of 6 ft 2 in and with spinal kyphosis. He has a history of frequent fall from loose jointedness. What is your diagnosis?",
+      "options": {
+        "A": "Fragile X Syndrome",
+        "B": "Marfans Syndrome",
+        "C": "Von Recklinghausens Disease",
+        "D": "McArdles Disease"
+      },
+      "key": "B",
+      "rationale": "Long limbs, joint laxity, and skeletal deformity suggest Marfan syndrome due to fibrillin-1 abnormalities. Cardiovascular and ocular assessment is important because aortic disease and lens dislocation may coexist.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-054",
+      "number": 54,
+      "page": 11,
+      "stem": "A newborn is seen in the nursery referred to you due to poor suck. You notice that the eyes have epicanthic folds and palpebral fissures that are obliquely located. Tongue is slightly protruded and the ears are small and low set. Examination of the hands show a Simian crease with broad hands. Startle reflex is absent. Which of the following lab findings is INCORRECT for this patient?",
+      "options": {
+        "A": "three Barr bodies on buccal smear",
+        "B": "FISH with 3 fluorescent dots",
+        "C": "karyotype of 47 XX 21+",
+        "D": "trisomy on karyotype"
+      },
+      "key": "A",
+      "rationale": "The phenotype suggests trisomy 21, which affects an autosome rather than the number of inactive X chromosomes. Three Barr bodies would indicate four X chromosomes, not typical Down syndrome.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-055",
+      "number": 55,
+      "page": 11,
+      "stem": "A 65-year-old male with a history of painless hematuria is found to have an exophytic mass on cystoscopy. If this lesion is malignant, which of the following statements/s is/are true of this lesion?",
+      "options": {
+        "A": "Urothelium is the most common cell of origin",
+        "B": "Smoking is the single biggest risk factor",
+        "C": "Urothelial Papillary Neoplasm is a precursor lesion",
+        "D": "All of the above"
+      },
+      "key": null,
+      "rationale": "Most bladder cancers are urothelial, and smoking is a major risk factor. Noninvasive papillary urothelial lesions can precede invasive disease, although not every papillary lesion progresses and benign papilloma should not be equated with inevitable carcinoma.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-056",
+      "number": 56,
+      "page": 11,
+      "stem": "A 70-year-old male with a history of lower urinary tract symptoms is found to have an enlarged prostate on a digital rectal exam. Biopsy of the lesion revealed BPH (benign prostatic hyperplasia). Which of the following statements is TRUE of this lesion?",
+      "options": {
+        "A": "It is neoplastic in nature.",
+        "B": "It is commonly located in the peripheral zone",
+        "C": "It is a precursor lesion to Prostate adenocarcinoma",
+        "D": "Dihydrotestosterone (DHT) is the major stimulus for its growth"
+      },
+      "key": "D",
+      "rationale": "Dihydrotestosterone promotes prostatic stromal and epithelial growth in benign prostatic hyperplasia. BPH usually involves the transition/periurethral region and is neither a carcinoma nor an established premalignant lesion.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-057",
+      "number": 57,
+      "page": 12,
+      "stem": "A 35-year-old male consulted because of an enlarging right testicular mass. The mass appears solid and homogenous on ultrasound. Laboratory examination shows an elevated LDH but both AFP and hCG are not elevated. The orchiectomy specimen shows a bulky homogenous solid mass with no areas of necrosis or hemorrhage. Microscopic sections show a germ cell tumor with lobular arrangement of tumor cells, with distinct septae and abundant lymphocytes. Tumor cells have distinct cellular borders, clear cytoplasm, round to polygonal nuclei and prominent nucleoli. Which of the following tumors best correlates with the clinical and gross and microscopic findings?",
+      "options": {
+        "A": "Choriocarcinoma",
+        "B": "Embryonal ca",
+        "C": "Seminoma",
+        "D": "Teratoma"
+      },
+      "key": "C",
+      "rationale": "A homogeneous testicular mass with clear germ cells separated by lymphocyte-rich fibrous septa is characteristic of seminoma. AFP elevation would argue against a pure seminoma; hCG may be normal or mildly elevated.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-058",
+      "number": 58,
+      "page": 12,
+      "stem": "A 65-year-old male presents with multiple gray-white lesions involving the glans and foreskin. Biopsy of the lesion shows nests of neoplastic keratin-forming cells, connected by intercellular bridges, and with invasion of the subepithelial stroma. Which of the following tumors best correlates with the clinical and pathologic findings?",
+      "options": {
+        "A": "Adenocarcinoma",
+        "B": "Bowen’s Disease",
+        "C": "Bowenoid Papulosis",
+        "D": "Squamous cell carcinoma"
+      },
+      "key": "D",
+      "rationale": "Keratin formation, intercellular bridges, and invasion through the basement membrane establish invasive squamous cell carcinoma. Bowen disease and bowenoid papulosis are intraepithelial lesions without the described stromal invasion.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-059",
+      "number": 59,
+      "page": 12,
+      "stem": "A 27-year-old woman is given intravenous penicillin. Within minutes, she begins to have severe difficulty breathing and suddenly develops an erythematous, skin rash over her body. Her symptoms are most likely to be produced by the release of which of the following chemical mediators?",
+      "options": {
+        "A": "Interleukin 1",
+        "B": "Bradykinin",
+        "C": "Complement C5a",
+        "D": "Histamine"
+      },
+      "key": "D",
+      "rationale": "Immediate penicillin anaphylaxis involves mast-cell mediator release, including histamine, after IgE-dependent activation. Histamine contributes to vasodilation, increased vascular permeability, and bronchoconstriction.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-060",
+      "number": 60,
+      "page": 12,
+      "stem": "A 17-year-old female presented with a 1-month history of cough, night sweats and weight loss. You were suspecting TB and ordered a PPD skin test. Which of the following will be seen at the site of induration?",
+      "options": {
+        "A": "vascular dilatation, edema, smooth muscle contraction, tissue injury, inflammation",
+        "B": "phagocytosis and lysis of cells",
+        "C": "inflammation, necrotizing vasculitis",
+        "D": "perivascular cellular infiltrates, edema",
+        "E": "none of the above"
+      },
+      "key": "D",
+      "rationale": "A tuberculin skin reaction is delayed, T-cell-mediated hypersensitivity with perivascular mononuclear inflammation and edema. It is not an immediate IgE reaction or antibody-mediated erythrocyte lysis.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-061",
+      "number": 61,
+      "page": 13,
+      "stem": "A 36-year-old trauma patient is transported to your facility for emergency surgery. A sample is received in the blood bank for pre- transfusion testing. After infusion of 100 mL of 6th unit, the patient became hypotensive. As the attending physician, you suspect a transfusion reaction. Which of the following explains the patient condition?",
+      "options": {
+        "A": "Vascular dilatation, edema, smooth muscle contraction, tissue injury, inflammation",
+        "B": "phagocytosis and lysis of cells",
+        "C": "inflammation, necrotizing vasculitis",
+        "D": "perivascular cellular infiltrates, edema",
+        "E": "none of the above"
+      },
+      "key": null,
+      "rationale": "An acute hemolytic transfusion reaction is a type II hypersensitivity reaction in which recipient antibodies activate complement against transfused erythrocytes. Hypotension alone is not specific; the original question supplies no hemolysis evidence to distinguish other transfusion reactions.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "Hemolytic transfusion reaction differential diagnosis",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK448158/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "PTH-2027-062",
+      "number": 62,
+      "page": 13,
+      "stem": "A 25-year-old male develops ascending paralysis after a flu-like infection. A lumbar tap was done. What is the expected finding in his CSF analysis?",
+      "options": {
+        "A": "Hypoglycorrhachia -low glucose in CSF",
+        "B": "Albumino-cytologic dissociation",
+        "C": "Multiple oligoclonal bands",
+        "D": "Leukocytosis"
+      },
+      "key": "B",
+      "rationale": "Guillain-Barre syndrome often produces elevated cerebrospinal-fluid protein with few cells, termed albuminocytologic dissociation. The result may be normal early; marked pleocytosis should prompt evaluation for another cause.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-063",
+      "number": 63,
+      "page": 13,
+      "stem": "A 39-year-old woman has had a worsening headache for the past week. A head CT scan reveals a solitary 3 cm diameter mass lesion located in the right parietal lobe with areas of calcification. A biopsy is performed, and it shows monomorphic cells with a “fried egg” appearance and “chicken wire” capillary pattern. Which of the following is the most likely diagnosis?",
+      "options": {
+        "A": "Astrocytoma",
+        "B": "Oligodendroglioma",
+        "C": "Medulloblastoma",
+        "D": "Glioblastoma"
+      },
+      "key": "B",
+      "rationale": "Oligodendroglioma classically shows perinuclear clearing and delicate branching capillaries, often with calcification. Modern classification also requires an IDH mutation and whole-arm 1p/19q codeletion.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-064",
+      "number": 64,
+      "page": 13,
+      "stem": "A 66 year old female presents bradykinesia, cogwheel rigidity and a resting tremor. Which of the following is likely present in this patient?",
+      "options": {
+        "A": "Hemosiderosis of the mammillary bodies",
+        "B": "Hippocampal neurofibrillary tangles",
+        "C": "Abnormal accumulation of tau proteins",
+        "D": "Loss of pigmented neurons in her substantia nigra"
+      },
+      "key": "D",
+      "rationale": "Parkinson disease involves loss of dopaminergic pigmented neurons in the substantia nigra pars compacta. Lewy bodies contain alpha-synuclein; tau tangles are not the characteristic inclusion of typical Parkinson disease.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-065",
+      "number": 65,
+      "page": 13,
+      "stem": "For the past 4 months, a 50-year-old man has noticed episodes of intense local pain involving his left foot. Each episode follows a meal in which he consumes a bottle of wine. Physical examination identifies the right metatarsophalangeal joint as the focus of this pain. There is tenderness and swelling, but minimal loss of joint mobility. Beneath the eroded skin is a chalky white deposit of soft material surrounded by erythematous soft tissue. Which of the following mechanisms is most important in causing joint injury in his disease?",
+      "options": {
+        "A": "Activation of neutrophils by phagocytosis of urate crystals",
+        "B": "Release of TNF causing acute joint inflammation",
+        "C": "Deposition of urate crystals into the synovium",
+        "D": "Granulomatous inflammation caused by Mycobacterium tuberculosis infection"
+      },
+      "key": "A",
+      "rationale": "Monosodium urate crystals activate innate inflammatory pathways and recruit neutrophils, whose response damages the joint. Crystal deposition initiates the process, but neutrophil-mediated inflammation explains the painful acute attack.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-066",
+      "number": 66,
+      "page": 14,
+      "stem": "A 30-year-old man has experienced pain in the left knee for more than 1 month. On physical examination, there is tenderness to palpation of the distal left thigh and knee. The area is firm, but there is no erythema or warmth. X-ray of the left leg shows a 7-cm mass in the distal femoral epiphyseal area, with a “soap bubble” appearance. Microscopic examination of a biopsy specimen of the lesion shows multinucleated cells in a stroma predominantly composed of spindle-shaped mononuclear cells. What is the most likely diagnosis?",
+      "options": {
+        "A": "Ewing sarcoma",
+        "B": "Osteoblastoma",
+        "C": "Enchondroma",
+        "D": "Giant-cell tumor"
+      },
+      "key": "D",
+      "rationale": "A skeletally mature adult with an epiphyseal, expansile soap-bubble lesion containing osteoclast-type giant cells most likely has a giant-cell tumor of bone. Ewing sarcoma usually affects younger patients and commonly involves the diaphysis.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-067",
+      "number": 67,
+      "page": 14,
+      "stem": "A 6-month-old baby was brought in for seizures and hypotonia, with associated feeding problems and arrest in expected psychomotor development. Diagnostic examinations showed extra-ocular palsies, muscle weakness and lactic acidemia. What condition will MOST likely be considered?",
+      "options": {
+        "A": "Myoclonic epilepsy and ragged red fiber (MERRF)",
+        "B": "Leigh syndrome",
+        "C": "Ataxia-Telangiectasia",
+        "D": "Anton’s syndrome"
+      },
+      "key": "B",
+      "rationale": "Early developmental regression, hypotonia, ocular motor abnormalities, and lactic acidosis suggest Leigh syndrome, a mitochondrial energy-metabolism disorder. MERRF more typically features myoclonus and characteristic muscle findings.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-068",
+      "number": 68,
+      "page": 14,
+      "stem": "Anton’s syndrome is neurological visual impairment/disturbance resulting from abnormality or damage in the brain rather than due to eye abnormalities. The main pathology behind the condition is:",
+      "options": {
+        "A": "due to accumulation of storage material within neurons, typically followed by neuronal death",
+        "B": "mutations of genes involved in the generation, maintenance and turnover of myelin",
+        "C": "mutations in mitochondria DNA that interfere with the infant’s energy generation",
+        "D": "early neuronal death due to maternal exposure to environmental toxins of drugs"
+      },
+      "key": null,
+      "rationale": "Anton syndrome is cortical blindness accompanied by denial of blindness, usually from bilateral occipital injury. None of the original options states this mechanism; a corrected option would need to state bilateral occipital injury with visual anosognosia.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "Anton syndrome: bilateral occipital injury",
+          "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK538155/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "PTH-2027-069",
+      "number": 69,
+      "page": 14,
+      "stem": "A 50-year-old female non-alcoholic presents with jaundice, elevated total bilirubin and AST/ALT, normal ALP, and normal GGT. ANA and ASMA titers are elevated . Hepatitis profile all markers are non- reactive. Her liver biopsy will most likely show which of the following?",
+      "options": {
+        "A": "Mallory Denk bodies",
+        "B": "hepatocyte rosettes",
+        "C": "ground glass hepatocytes",
+        "D": "giant cells"
+      },
+      "key": "B",
+      "rationale": "Autoimmune hepatitis can show interface hepatitis, plasma cells, and hepatocyte rosettes, supported here by ANA and smooth-muscle antibodies. Ground-glass hepatocytes suggest hepatitis B; Mallory-Denk bodies are associated with steatohepatitis and other injuries.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-070",
+      "number": 70,
+      "page": 15,
+      "stem": "A liver mass is composed of primitive epithelial structures resembling acini and papillary structures. What is the diagnosis?",
+      "options": {
+        "A": "primary HCC classic type",
+        "B": "cholangiocarcinoma",
+        "C": "primary HCC fibrolamellar type",
+        "D": "hepatoblastoma"
+      },
+      "key": null,
+      "rationale": "Hepatoblastoma can contain primitive fetal or embryonal epithelial patterns, including acinar or tubular structures. Age is essential to this distinction, but the source gives no age, leaving the diagnosis less securely determined.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-071",
+      "number": 71,
+      "page": 15,
+      "stem": "A 50-year-old chronic alcoholic had severe hematemesis. Examination revealed numerous ruptured esophageal varices. This can be attributed to:",
+      "options": {
+        "A": "impaired estrogen metabolism",
+        "B": "inability to detoxify ammonia",
+        "C": "hypoproteinemia",
+        "D": "vascular shunting"
+      },
+      "key": "D",
+      "rationale": "Portal hypertension creates portosystemic collateral channels, including gastroesophageal varices. Rupture of these dilated vessels explains hematemesis; impaired ammonia or estrogen metabolism explains different complications of liver disease.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-072",
+      "number": 72,
+      "page": 15,
+      "stem": "A 30-year-old female has an anterior neck mass. Post thyroidectomy, histopathology of the tumor showed tumor cells arranged in a leaf like pattern with a fibrovascular core. The individual follicular cells show optical clearing. Numerous psammoma bodies are also noted. What is the diagnosis?",
+      "options": {
+        "A": "Follicular carcinoma",
+        "B": "Papillary carcinoma",
+        "C": "Tall cell carcinoma",
+        "D": "Medullary carcinoma"
+      },
+      "key": "B",
+      "rationale": "Papillae with fibrovascular cores, optically clear nuclei, and psammoma bodies are characteristic of papillary thyroid carcinoma. Follicular carcinoma requires capsular or vascular invasion rather than these nuclear features.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-073",
+      "number": 73,
+      "page": 15,
+      "stem": "The following hormones are secreted by the pituitary glands , EXCEPT:",
+      "options": {
+        "A": "prolactin",
+        "B": "ADH",
+        "C": "FSH",
+        "D": "ACTH"
+      },
+      "key": null,
+      "rationale": "ADH is synthesized in hypothalamic neurons and transported to the posterior pituitary for storage and release. Prolactin, FSH, and ACTH are synthesized by anterior-pituitary cells. The original wording incorrectly asks about secretion by the whole pituitary.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-074",
+      "number": 74,
+      "page": 15,
+      "stem": "What are the effects of insulin on tissues?",
+      "options": {
+        "A": "increase glycogenesis, decrease glycogenolysis, decrease gluconeogenesis",
+        "B": "decrease glycogenesis, increase glycogenolysis, increase gluconeogenesis",
+        "C": "decrease glycogenesis, decrease glycogenolysis, decrease gluconeogenesis",
+        "D": "increase glycogenesis, increase glycogenolysis, increase gluconeogenesis"
+      },
+      "key": "A",
+      "rationale": "Insulin promotes glycogen synthesis and suppresses hepatic glycogen breakdown and gluconeogenesis. Together these effects lower hepatic glucose output and favor fuel storage.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-075",
+      "number": 75,
+      "page": 15,
+      "stem": "A 15-year-old male presents with polyuria, polydipsia and polyphagia. His fasting blood sugar is 270 mg/dl, and his HgbA1c is 7.7 %. If a biopsy of his pancreas is performed, which of the following change/s is/are expected?",
+      "options": {
+        "A": "amyloid deposits in the islets",
+        "B": "lymphocytic infiltrates in the islets",
+        "C": "normal number of islet cells",
+        "D": "islet cell hypertrophy"
+      },
+      "key": "B",
+      "rationale": "New-onset autoimmune type 1 diabetes involves immune-mediated beta-cell destruction, with lymphocytic insulitis when present. Islet amyloid is associated with type 2 diabetes; biopsy is not required to diagnose routine diabetes.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-076",
+      "number": 76,
+      "page": 16,
+      "stem": "What renal lesion/s is/are seen in long term diabetics?",
+      "options": {
+        "A": "Wire loop lesion",
+        "B": "Nodular glomerulosclerosis",
+        "C": "epithelial crescents",
+        "D": "mesangial proliferation"
+      },
+      "key": "B",
+      "rationale": "Diabetic nephropathy can produce nodular mesangial sclerosis, called Kimmelstiel-Wilson nodules. Wire-loop lesions suggest lupus nephritis, and crescents indicate severe glomerular injury of another pattern.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-077",
+      "number": 77,
+      "page": 16,
+      "stem": "A 45-year-old woman presents with acute appendicitis. Histologic examination of the appendix shows numerous neutrophils infiltrating the tissue. Which of the following mediators is most responsible for neutrophil chemotaxis in acute inflammation?",
+      "options": {
+        "A": "Interleukin-10 (IL-10)",
+        "B": "Leukotriene B4 (LTB4)",
+        "C": "Platelet-derived growth factor (PDGF)",
+        "D": "Transforming growth factor-beta (TGF-β)"
+      },
+      "key": "B",
+      "rationale": "Leukotriene B4 is a potent neutrophil chemoattractant and activator. IL-10 is primarily anti-inflammatory, while PDGF and TGF-beta are important in repair and fibrosis.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-078",
+      "number": 78,
+      "page": 16,
+      "stem": "A 32-year-old man sustains a deep cut while working in a metal workshop. Over the next several weeks, he develops excessive scar tissue at the wound site, forming a raised, firm lesion. Which of the following best describes this process?",
+      "options": {
+        "A": "Hypertrophic scar formation",
+        "B": "Keloid formation",
+        "C": "Primary intention healing",
+        "D": "Secondary intention healing"
+      },
+      "key": null,
+      "rationale": "A hypertrophic scar is raised but remains within the original wound boundaries; a keloid extends beyond them. The original item omits this essential distinction, so the original cannot distinguish the two.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-079",
+      "number": 79,
+      "page": 16,
+      "stem": "A patient presents with chronic inflammation due to a persistent Mycobacterium tuberculosis infection. Histologic examination of the lung biopsy reveals activated macrophages with abundant pink cytoplasm arranged in a granuloma. Which of the following cytokines is most responsible for the formation of granulomas?",
+      "options": {
+        "A": "Interleukin-1 (IL-1)",
+        "B": "Interferon-gamma (IFN-γ)",
+        "C": "Interleukin-6 (IL-6)",
+        "D": "Tumor necrosis factor-alpha (TNF-α)"
+      },
+      "key": null,
+      "rationale": "Th1-derived interferon-gamma activates macrophages and promotes epithelioid transformation in granulomatous inflammation. TNF is also important, particularly for granuloma maintenance, so a revised question should specifically ask about macrophage activation to make IFN-gamma unique.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-080",
+      "number": 80,
+      "page": 16,
+      "stem": "Which of the following best defines neoplasia?",
+      "options": {
+        "A": "Adaptive increase in cell size in response to stress",
+        "B": "Programmed cell death mechanism to remove damaged cells",
+        "C": "Temporary increase in cell number due to hormonal stimulation",
+        "D": "Uncontrolled, irreversible, and uncoordinated proliferation of cells"
+      },
+      "key": "D",
+      "rationale": "Neoplasia is an abnormal, relatively autonomous proliferation that persists beyond the initiating stimulus. It differs from coordinated adaptive hypertrophy and hyperplasia; not every neoplasm is malignant.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-081",
+      "number": 81,
+      "page": 16,
+      "stem": "Which of the following is a hallmark feature of malignant tumors?",
+      "options": {
+        "A": "Complete lack of blood supply",
+        "B": "Encapsulation and well-demarcated borders",
+        "C": "Local invasion and metastasis",
+        "D": "Slow growth and minimal mitotic activity"
+      },
+      "key": "C",
+      "rationale": "Malignant tumors invade surrounding tissues and may metastasize. Metastasis establishes malignancy when present, although some malignant tumors rarely metastasize; encapsulation and slow growth alone do not reliably classify a tumor.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-082",
+      "number": 82,
+      "page": 17,
+      "stem": "A 58-year-old man presents with unexplained weight loss and persistent cough. A lung biopsy reveals an invasive carcinoma with mucin-producing glandular structures. Molecular testing identifies an EGFR mutation. What is the most likely diagnosis?",
+      "options": {
+        "A": "Adenocarcinoma of the lung",
+        "B": "Mesothelioma",
+        "C": "Small cell carcinoma",
+        "D": "Squamous cell carcinoma of the lung"
+      },
+      "key": "A",
+      "rationale": "Mucin-producing malignant glands with an EGFR mutation support lung adenocarcinoma. Squamous and small-cell carcinomas have different morphology and usual molecular profiles.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-083",
+      "number": 83,
+      "page": 17,
+      "stem": "Which of the following best describes the role of dysplasia in the progression of neoplasia?",
+      "options": {
+        "A": "A benign proliferation with no atypical cellular features",
+        "B": "A fully reversible process with no risk of cancer progression",
+        "C": "A precursor lesion with the potential to progress to carcinoma",
+        "D": "An invasive malignancy with metastatic potential"
+      },
+      "key": "C",
+      "rationale": "Epithelial dysplasia is disordered maturation with cytologic atypia and may precede invasive carcinoma. It is not synonymous with invasion, and progression is not inevitable.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-084",
+      "number": 84,
+      "page": 17,
+      "stem": "Which of the following correctly describes the concept of tumor grading?",
+      "options": {
+        "A": "High-grade tumors are always slow-growing and have a better prognosis.",
+        "B": "Tumor grading is based on tumor cells' degree of differentiation and mitotic activity.",
+        "C": "The extent of tumor spread and metastasis determines tumor grading.",
+        "D": "Tumor grading refers to the TNM (tumor-node-metastasis) staging system."
+      },
+      "key": "B",
+      "rationale": "Grade describes microscopic aggressiveness, commonly using differentiation and mitotic activity. Stage instead describes anatomic extent, including primary tumor, lymph nodes, and distant metastases.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-085",
+      "number": 85,
+      "page": 17,
+      "stem": "A 65-year-old man presents with progressive memory loss, disorientation, and difficulty performing daily activities. MRI reveals cortical atrophy, particularly in the temporal and parietal lobes. Histologic examination shows extracellular amyloid plaques and intracellular neurofibrillary tangles. Which of the following proteins is most likely implicated in the pathogenesis of this disease?",
+      "options": {
+        "A": "Beta-amyloid",
+        "B": "Huntingtin",
+        "C": "Prion protein",
+        "D": "Tau protein"
+      },
+      "key": null,
+      "rationale": "Extracellular senile plaques contain beta-amyloid, whereas intracellular neurofibrillary tangles contain abnormal tau. Both participate in Alzheimer disease, so the original question has two valid choices; a corrected question should specify whether it asks about plaques or tangles.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-086",
+      "number": 86,
+      "page": 17,
+      "stem": "A 45-year-old man presents with progressive headaches, seizures, and focal neurological deficits. MRI reveals a ring-enhancing lesion in the cerebral hemisphere, crossing the corpus callosum (\"butterfly lesion\"). Histopathology shows pleomorphic astrocytic cells with areas of necrosis surrounded by pseudopalisading tumor cells. Which of the following is the most likely diagnosis?",
+      "options": {
+        "A": "Glioblastoma multiforme",
+        "B": "Meningioma",
+        "C": "Oligodendroglioma",
+        "D": "Pilocytic astrocytoma"
+      },
+      "key": "A",
+      "rationale": "A cerebral tumor crossing the corpus callosum with necrosis and pseudopalisading malignant astrocytes is characteristic of glioblastoma. Current terminology uses integrated molecular classification rather than relying on morphology alone.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-087",
+      "number": 87,
+      "page": 18,
+      "stem": "A 7-year-old child presented with cough, colds and reddish, watery eyes After a few days, the patient had a blotchy, red rash which started on the face and spread downward to the trunk and the extremities. Microscopic examination of the sputum showed Warthin-Finkelday cells. This patient most probably has which of the following types of infection?",
+      "options": {
+        "A": "Mumps parotitis",
+        "B": "Measles",
+        "C": "Chickenpox",
+        "D": "Infectious mononucleosis"
+      },
+      "key": "B",
+      "rationale": "Cough, coryza, conjunctivitis, and a descending maculopapular rash suggest measles. Warthin-Finkeldey multinucleated giant cells are a recognized histologic finding.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-088",
+      "number": 88,
+      "page": 18,
+      "stem": "Granulomatous inflammation is the characteristic histologic pattern of tissue reaction of which of the following lesions?",
+      "options": {
+        "A": "Soft chancre",
+        "B": "Eschar",
+        "C": "Gumma",
+        "D": "Chancroid"
+      },
+      "key": "C",
+      "rationale": "A gumma is a granulomatous lesion of tertiary syphilis. Soft chancre/chancroid describes the painful ulcer of Haemophilus ducreyi and is not the classic gummatous lesion.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-089",
+      "number": 89,
+      "page": 18,
+      "stem": "Which of the following is a risk factor for the development of pigment stones in the gallbladder?",
+      "options": {
+        "A": "Female gender",
+        "B": "Obesity",
+        "C": "Rapid weight reduction",
+        "D": "Parasitic infestation of the biliary tract"
+      },
+      "key": "D",
+      "rationale": "Biliary infection and parasitic infestation favor brown pigment stone formation. Obesity, estrogen exposure, and rapid weight loss are more strongly associated with cholesterol gallstones.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-090",
+      "number": 90,
+      "page": 18,
+      "stem": "Rokitansky-Aschoff sinuses are microscopic findings which are seen in which of the following diseases?",
+      "options": {
+        "A": "Gallbladder empyema",
+        "B": "Acute cholecystitis",
+        "C": "Chronic cholecystitis",
+        "D": "Porcelain gallbladder"
+      },
+      "key": "C",
+      "rationale": "Rokitansky-Aschoff sinuses are mucosal outpouchings extending into the gallbladder wall, commonly associated with chronic cholecystitis and adenomyomatosis. They are not specific evidence of acute empyema.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-091",
+      "number": 91,
+      "page": 18,
+      "stem": "What is the most common precursor lesion of pancreatic adenocarcinoma?",
+      "options": {
+        "A": "Biliary Intraepithelial Neoplasia",
+        "B": "Intracholecystic papillary-tubular neoplasm",
+        "C": "Pancreatic Intraepithelial Neoplasia",
+        "D": "Serous cystadenoma of the pancreas"
+      },
+      "key": "C",
+      "rationale": "Pancreatic intraepithelial neoplasia is a common microscopic precursor to pancreatic ductal adenocarcinoma. Serous cystadenoma is usually benign and is not the usual precursor.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-092",
+      "number": 92,
+      "page": 18,
+      "stem": "A 35-year-old woman has experienced multiple bouts of severe necrotizing pneumonia with since childhood. She now complains of productive cough of foul-smelling sputum for the past 4 weeks. A bronchogram shows marked dilation of right lower lobe bronchi. Which of the following mechanisms is the most likely cause of airspace dilation in this patient?",
+      "options": {
+        "A": "Unopposed action of neutrophil-derived elastase",
+        "B": "Congenital weakness of supporting structures of the bronchial wall",
+        "C": "Diffuse alveolar damage",
+        "D": "Destruction of bronchial wall due to recurrent inflammation"
+      },
+      "key": "D",
+      "rationale": "Recurrent necrotizing infection destroys bronchial muscle and elastic tissue, producing permanent bronchial dilation in bronchiectasis. Emphysema instead enlarges airspaces distal to terminal bronchioles.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-093",
+      "number": 93,
+      "page": 19,
+      "stem": "A 55-year-old male smoker with rapid weight loss and persistent cough is diagnosed with a lung carcinoma. Imaging showed a perihilar mass. Resection specimen revealed sheets of basophilic cells with fine (‘salt and pepper’) nuclear chromatin, nuclear molding, and scant cytoplasm. Numerous mitotic figures and basophilic encrustation of blood vessel walls are seen. What is the diagnosis?",
+      "options": {
+        "A": "Squamous cell carcinoma",
+        "B": "Small cell carcinoma",
+        "C": "Adenocarcinoma",
+        "D": "Lymphoma"
+      },
+      "key": "B",
+      "rationale": "Small-cell lung carcinoma shows scant cytoplasm, nuclear molding, finely granular chromatin, brisk mitoses, and sometimes DNA encrustation of vessels. It is strongly associated with smoking and commonly arises centrally.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-094",
+      "number": 94,
+      "page": 19,
+      "stem": "What is the most common lung carcinoma in non-smokers and what associated mutation is more likely when this carcinoma is found in non-smokers rather than smokers?",
+      "options": {
+        "A": "Adenocarcinoma – KRAS",
+        "B": "Small cell carcinoma -KRAS",
+        "C": "Adenocarcinoma -EGFR",
+        "D": "Small cell carcinoma -EGFR"
+      },
+      "key": "C",
+      "rationale": "Adenocarcinoma is the most common lung carcinoma in never-smokers, and activating EGFR mutations are enriched in this group. KRAS mutations are more strongly associated with smoking-related adenocarcinoma in many populations.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-095",
+      "number": 95,
+      "page": 19,
+      "stem": "A patient with silicosis is at increased risk for which disease?",
+      "options": {
+        "A": "Emphysema",
+        "B": "Sarcoidosis",
+        "C": "Tuberculosis",
+        "D": "Asthma"
+      },
+      "key": "C",
+      "rationale": "Silicosis increases tuberculosis risk by impairing macrophage function and pulmonary host defense. This association is clinically important when evaluating symptoms or radiographic changes in silica-exposed workers.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-096",
+      "number": 96,
+      "page": 19,
+      "stem": "A 4-year-old child has a history of frequent respiratory infections, and his skin appears dry and rough. He has difficulty seeing in low light and complains about his eyes feeling dry and uncomfortable. Upon examination, there are foamy, white patches on his conjunctiva. What vitamin deficiency should be suspected?",
+      "options": {
+        "A": "Vitamin A",
+        "B": "Vitamin D",
+        "C": "Vitamin E",
+        "D": "Vitamin K"
+      },
+      "key": "A",
+      "rationale": "Vitamin A deficiency causes impaired dark adaptation, xerophthalmia, and Bitot spots. It also disrupts epithelial differentiation and contributes to susceptibility to infection.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-097",
+      "number": 97,
+      "page": 19,
+      "stem": "Which of the following properties of particulate matter or ‘soot’ is most important in inducing pulmonary inflammation and secondary cardiovascular disease?",
+      "options": {
+        "A": "Charge",
+        "B": "Weight",
+        "C": "Shape",
+        "D": "Size"
+      },
+      "key": "D",
+      "rationale": "Particle size strongly influences where inhaled particulate matter deposits and how deeply it penetrates the respiratory tract. Fine and ultrafine particles can produce pulmonary and systemic inflammatory effects.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-098",
+      "number": 98,
+      "page": 20,
+      "stem": "A 50-year-old man complains of colicky abdominal pain for the past 5 months. He reports feeling fatigued and has noticed a bluish discoloration along his gum line. Laboratory tests reveal microcytic hypochromic anemia with basophilic stippling of red blood cells. What type of chronic heavy metal poisoning should be suspected?",
+      "options": {
+        "A": "Lead",
+        "B": "Arsenic",
+        "C": "Mercury",
+        "D": "Cadmium"
+      },
+      "key": "A",
+      "rationale": "Lead inhibits heme synthesis and causes abdominal colic, anemia with basophilic stippling, and sometimes a gingival lead line. Exposure history and blood lead measurement are needed for clinical confirmation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-099",
+      "number": 99,
+      "page": 20,
+      "stem": "Which of the following is an expected detrimental effect of climate change?",
+      "options": {
+        "A": "Increase in malnutrition",
+        "B": "Reduction of forest cover",
+        "C": "Reduction in the ozone layer",
+        "D": "Increase in autoimmune disease incidence"
+      },
+      "key": "A",
+      "rationale": "Climate change threatens food security through heat, drought, flooding, and reduced crop productivity, increasing malnutrition risk. Ozone depletion is a distinct environmental process and should not be treated as synonymous with climate change.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PTH-2027-100",
+      "number": 100,
+      "page": 20,
+      "stem": "A hiker is poisoned by a snake and treated with serum immunoglobulin. This causes an antibody-mediated systemic inflammation and itchy rash two days later. What type of hypersensitivity reaction is this?",
+      "options": {
+        "A": "Type I",
+        "B": "Type II",
+        "C": "Type III",
+        "D": "Type IV"
+      },
+      "key": null,
+      "rationale": "Serum sickness is a type III hypersensitivity reaction caused by circulating immune-complex deposition. It usually appears after about one to two weeks on first exposure; onset within two days is more plausible after prior sensitization, which the original question does not specify.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "Serum sickness",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK538312/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    }
+  ]
+}

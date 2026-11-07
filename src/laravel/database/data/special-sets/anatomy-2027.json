@@ -1,0 +1,1650 @@
+{
+  "slug": "anatomy-2027",
+  "title": "Anatomy 2027",
+  "subject_code": "ANA",
+  "version": 1,
+  "source_file": "ANATOMY QUESTIONS - 2027.pdf",
+  "source_sha256": "daa648871bdf1a3ac70ab3b5c136ad6fbf1149d181e6db3382085cea49ecda64",
+  "note": "Rationales and proposed answers authored for study. No complete official answer key was supplied. Items with ambiguous, incomplete, or outdated premises are review-only and excluded from scores. Original question numbering and choices are retained; PDF extraction errors and table formatting are repaired. Targeted external source checks are linked where available; this is not a full textbook-page verification of every item.",
+  "items": [
+    {
+      "id": "ANA-2027-001",
+      "number": 1,
+      "page": 1,
+      "stem": "Shared scenario for questions 1-3: A 30-year-old woman sustained multiple upper-limb fractures in a vehicular accident.\n\nA fracture was noted at the spiral groove of the humerus. Which of the following muscles were most likely affected?",
+      "options": {
+        "A": "Anconeus",
+        "B": "Biceps Brachii",
+        "C": "Flexor carpi radialis",
+        "D": "Dorsal interossei"
+      },
+      "key": "A",
+      "rationale": "Anconeus is supplied by the radial nerve, which is vulnerable in the humeral radial groove. The other muscles are supplied by musculocutaneous, median, or ulnar nerves; the degree of anconeus involvement depends on the lesion's relation to its motor branch.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-002",
+      "number": 2,
+      "page": 1,
+      "stem": "Shared scenario for questions 1-3: A 30-year-old woman sustained multiple upper-limb fractures in a vehicular accident. The fracture is at the spiral groove of the humerus.\n\nGiven the same scenario, which of the following nerves were most likely affected?",
+      "options": {
+        "A": "Axillary",
+        "B": "Musculocutaneous",
+        "C": "Median",
+        "D": "Radial"
+      },
+      "key": "D",
+      "rationale": "The radial nerve travels with the profunda brachii artery in the humeral radial groove. A shaft fracture at this site can cause wrist and finger-extension weakness.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-003",
+      "number": 3,
+      "page": 1,
+      "stem": "Shared scenario for questions 1-3: A 30-year-old woman sustained multiple upper-limb fractures in a vehicular accident.\n\nAssuming the axillary nerve was affected, through which of the following spaces would it pass through?",
+      "options": {
+        "A": "Anatomic snuffbox",
+        "B": "Quadrangular space",
+        "C": "Triangular interval",
+        "D": "Triangular space"
+      },
+      "key": "B",
+      "rationale": "The axillary nerve and posterior circumflex humeral vessels traverse the quadrangular space. The radial nerve instead passes through the triangular interval.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-004",
+      "number": 4,
+      "page": 1,
+      "stem": "A 54-year-old male cotton farmer visits the outpatient clinic because of a penetrating injury to his forearm from a baling hook. After the limb is anesthetized, the site of the wound is opened and flushed thoroughly to remove all debris. The patient is not able to oppose the tip of the thumb to the tip of the index finger, as in making the OK sign. He is able to touch the tips of the ring and little fingers to the pad of his thumb. What nerve has most likely been injured?",
+      "options": {
+        "A": "Recurrent median",
+        "B": "Posterior interosseous",
+        "C": "Anterior interosseous",
+        "D": "Median",
+        "E": "Radial"
+      },
+      "key": "C",
+      "rationale": "Anterior interosseous nerve injury weakens flexor pollicis longus and the index-finger portion of flexor digitorum profundus, impairing the tip-to-tip OK sign. Thumb opposition may remain intact because the recurrent median branch is spared.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-005",
+      "number": 5,
+      "page": 2,
+      "stem": "Intramuscular injection on the lower limbs may be safety carried out in which of the following locations?",
+      "options": {
+        "A": "Anterolateral aspect of the thigh",
+        "B": "Cheek of the buttock",
+        "C": "Gluteal fold",
+        "D": "Lower outer quadrant of the buttock"
+      },
+      "key": "A",
+      "rationale": "The anterolateral thigh contains the vastus lateralis, a standard intramuscular injection site. The vague buttock locations listed do not reliably avoid the sciatic nerve or major vessels.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-006",
+      "number": 6,
+      "page": 2,
+      "stem": "Which is the most reliable landmark for palpation of the dorsalis pedis pulse?",
+      "options": {
+        "A": "Between the second and third metatarsal space",
+        "B": "Distal to the cuboid bone",
+        "C": "Lateral to the extensor digitorum longus tendon",
+        "D": "Lateral to the extensor hallucis longus tendon"
+      },
+      "key": "D",
+      "rationale": "The dorsalis pedis pulse is usually palpable just lateral to the extensor hallucis longus tendon on the dorsum of the foot. This tendon becomes more visible with great-toe extension.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-007",
+      "number": 7,
+      "page": 2,
+      "stem": "You needed to perform an emergency saphenous vein cutdown. Where is the best location to insert the needle?",
+      "options": {
+        "A": "Anterior to the medial malleolus",
+        "B": "Anterior to the lateral condyle of the femur",
+        "C": "Posterior to the lateral malleolus",
+        "D": "Posterior to the medial condyle of the femur"
+      },
+      "key": "A",
+      "rationale": "The great saphenous vein passes anterior to the medial malleolus. This superficial course provides the traditional landmark for distal saphenous access.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-008",
+      "number": 8,
+      "page": 2,
+      "stem": "Which of the following is TRUE regarding the curvatures of the back?",
+      "options": {
+        "A": "The cervical curvature is present at birth.",
+        "B": "The lumbar curvature develops as the person begins to stand and walk.",
+        "C": "The primary curvatures are the cervical and thoracic curvatures.",
+        "D": "The secondary curvatures are the lumbar and sacral curvatures."
+      },
+      "key": "B",
+      "rationale": "Lumbar lordosis develops with standing and walking, while cervical lordosis develops with head control. Thoracic and sacral curves are the primary fetal curvatures.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-009",
+      "number": 9,
+      "page": 2,
+      "stem": "Which of the following is true regarding the intervertebral discs?",
+      "options": {
+        "A": "Avascular",
+        "B": "Centrally located",
+        "C": "Concentric lamellae",
+        "D": "Elastic cartilage"
+      },
+      "key": null,
+      "rationale": "An adult intervertebral disc is largely avascular, and its annulus fibrosus is arranged in concentric lamellae. Thus both A and C are substantially true; the disc is fibrocartilaginous rather than elastic cartilage.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "Intervertebral-disc structure and vascularity",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10019070/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "ANA-2027-010",
+      "number": 10,
+      "page": 2,
+      "stem": "Which of the following ligaments of the vertebral column is attached MAINLY to the intervertebral discs and prevents hemiation of the nucleus pulposus?",
+      "options": {
+        "A": "Anterior longitudinal",
+        "B": "Ligamentum flava",
+        "C": "Ligamentum nuchae",
+        "D": "Posterior longitudinal"
+      },
+      "key": "D",
+      "rationale": "The posterior longitudinal ligament is relatively broad over the intervertebral discs and limits posterior protrusion. Its narrower lateral coverage helps explain the tendency for posterolateral disc herniation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-011",
+      "number": 11,
+      "page": 2,
+      "stem": "The emissary veins are located in which layer of the scalp?",
+      "options": {
+        "A": "Aponeurosis",
+        "B": "Dense connective tissue",
+        "C": "Loose connective tissue",
+        "D": "Periosteum"
+      },
+      "key": "C",
+      "rationale": "Emissary veins cross the loose areolar connective-tissue layer of the scalp and communicate with intracranial venous sinuses. This communication underlies the traditional 'danger area' description.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-012",
+      "number": 12,
+      "page": 2,
+      "stem": "Which of the following structures forms the posterior boundary of the carotid triangle?",
+      "options": {
+        "A": "Anterior belly of digastric",
+        "B": "Sternocleidomastoid",
+        "C": "Superior belly of omohyoid",
+        "D": "Hyoid bone"
+      },
+      "key": "B",
+      "rationale": "The anterior border of sternocleidomastoid forms the posterior boundary of the carotid triangle. The other principal boundaries are the posterior digastric belly and superior omohyoid belly.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-013",
+      "number": 13,
+      "page": 3,
+      "stem": "Malformation of the muscles of facial expression would lead the pediatrician to suspect problems with the development of the following pharyngeal arches?",
+      "options": {
+        "A": "First",
+        "B": "Second",
+        "C": "Third",
+        "D": "Fourth"
+      },
+      "key": "B",
+      "rationale": "Muscles of facial expression arise from the second pharyngeal arch and are supplied by the facial nerve. First-arch muscles include the muscles of mastication, supplied by mandibular trigeminal branches.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-014",
+      "number": 14,
+      "page": 3,
+      "stem": "Both lateral ventricles of a 30-year-old female patient are enlarged, while the 3rd and 4th ventricles are within normal measurements. If you are suspecting CSF flow obstruction, where would it be?",
+      "options": {
+        "A": "Foramen of Magendie",
+        "B": "Foramen of Monro",
+        "C": "Foramen of Luschka",
+        "D": "Arachnoid villi"
+      },
+      "key": "B",
+      "rationale": "Each lateral ventricle communicates with the third ventricle through an interventricular foramen of Monro. Bilateral obstruction can enlarge both lateral ventricles while sparing the third and fourth.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-015",
+      "number": 15,
+      "page": 3,
+      "stem": "A 50 year old female complained of headache, with right-sided diplopia and ptosis. Magnetic resonance angiography revealed a berry aneurysm in the cerebral arterial circle. On which one of the following arteries will aneurysm be most likely found?",
+      "options": {
+        "A": "Anterior communicating",
+        "B": "Anterior spinal",
+        "C": "Basilar",
+        "D": "Ophthalmic",
+        "E": "Posterior communicating"
+      },
+      "key": "E",
+      "rationale": "A posterior communicating artery aneurysm can compress the adjacent oculomotor nerve, causing ptosis and diplopia, often with pupillary dilation. The pattern is an important compressive third-nerve-palsy association.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-016",
+      "number": 16,
+      "page": 3,
+      "stem": "A patient with a previous history of varicella presented at the OPD with one-sided facial paralysis and increased sensitivity to sound, with pain behind the ear; upon further examination she was also noted to have loss of taste on the anterior tongue and decreased salivation on the same side as the facial paralysis. Where would you localize the lesion?",
+      "options": {
+        "A": "Parotid gland",
+        "B": "Facial canal",
+        "C": "Geniculate ganglion",
+        "D": "Internal auditory meatus",
+        "E": "Pons"
+      },
+      "key": "C",
+      "rationale": "Varicella-zoster reactivation involving the geniculate ganglion can cause Ramsay Hunt syndrome with painful facial palsy. Proximal facial-nerve involvement can also affect stapedius function, taste, and salivation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-017",
+      "number": 17,
+      "page": 3,
+      "stem": "A 70 year old male presented at the OPD as his daughter noticed he appeared to have tremors while he was sedentary and slow, stiff movements; his head appeared to be protruded forward. Where would you localize the lesion?",
+      "options": {
+        "A": "Caudate nucleus",
+        "B": "Putamen",
+        "C": "Globus pallidus",
+        "D": "Substantia nigra pars compacta",
+        "E": "Substantia nigra pars reticulata"
+      },
+      "key": "D",
+      "rationale": "Parkinsonian resting tremor, rigidity, and bradykinesia are associated with degeneration of dopaminergic neurons in the substantia nigra pars compacta. The pars reticulata is a different basal-ganglia output structure.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-018",
+      "number": 18,
+      "page": 4,
+      "stem": "You were contemplating referring a patient to a speech pathologist as the patient was noted to have difficulty understanding either written or spoken speech, with unintelligible speech. Given the clinical findings, to the territory of which artery would you localize the lesion?",
+      "options": {
+        "A": "Anterior cerebral",
+        "B": "Middle cerebral",
+        "C": "Posterior cerebral",
+        "D": "Basilar"
+      },
+      "key": "B",
+      "rationale": "Wernicke-region language dysfunction usually involves the dominant posterior temporal region, commonly supplied by the inferior division of the middle cerebral artery. It causes fluent but poorly meaningful speech and impaired comprehension.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-019",
+      "number": 19,
+      "page": 4,
+      "stem": "A 50 year old patient presented with loss of pain and temperature on the left half of his face and right side of his body, with vertigo and nystagmus, loss of taste on the left half of the tongue, and hoarseness and dysphagia. Where will you localize the lesion?",
+      "options": {
+        "A": "Right Medial midbrain",
+        "B": "Left Lateral midbrain",
+        "C": "Left Lateral medulla",
+        "D": "Right Medial medulla",
+        "E": "Right Lateral pons"
+      },
+      "key": "C",
+      "rationale": "Ipsilateral facial and contralateral body pain-temperature loss with vertigo, dysphagia, and hoarseness localizes to the lateral medulla. Nucleus ambiguus involvement explains the bulbar symptoms.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-020",
+      "number": 20,
+      "page": 4,
+      "stem": "A patient was noted to have a decreased right biceps reflex with increased right patellar reflex, with loss of pain and temperature sensation on the left half of the body starting from his little finger to his toes and loss of proprioception and vibratory sense on the right half of the body from his thumb downwards. Which of the following most likely represents the correct localization?",
+      "options": {
+        "A": "C5 complete transection",
+        "B": "C6 right hemisection",
+        "C": "C7 left hemisection",
+        "D": "C7 Syringomyelia",
+        "E": "C8 anterior cord syndrome"
+      },
+      "key": "B",
+      "rationale": "Right cervical hemicord injury produces ipsilateral motor and dorsal-column deficits below the lesion with contralateral pain-temperature loss beginning lower. A segmental biceps-reflex deficit and thumb sensory level support approximately C6 involvement.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-021",
+      "number": 21,
+      "page": 4,
+      "stem": "Which of the following clinical findings is MOST suggestive of a cerebellar lesion?",
+      "options": {
+        "A": "dysmetria",
+        "B": "hemiparesis",
+        "C": "nystagmus",
+        "D": "(+) Romberg sign"
+      },
+      "key": "A",
+      "rationale": "Dysmetria is inaccurate scaling of movement and strongly suggests cerebellar dysfunction. Nystagmus has several possible causes, and a positive Romberg test often indicates impaired proprioceptive or vestibular input.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-022",
+      "number": 22,
+      "page": 4,
+      "stem": "Intracranial pressure can be measured precisely by using a central venous catheter. Which of the following veins are usually used first?",
+      "options": {
+        "A": "Right External jugular vein",
+        "B": "Right Internal jugular vein",
+        "C": "Left Superficial temporal vein",
+        "D": "Left Subclavian vein"
+      },
+      "key": null,
+      "rationale": "A standard central venous catheter measures central venous pressure, not intracranial pressure. The right internal jugular is a common central-access route, but precise intracranial pressure requires an appropriate intracranial monitor; the source premise is incorrect.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-023",
+      "number": 23,
+      "page": 4,
+      "stem": "A patient was discovered to have a herniation of the cerebellum and brainstem into the foramen magnum and a defect in the lower back with extruded meninges and spinal cord. Which of the following spinal defects is indicated?",
+      "options": {
+        "A": "Spina bífida occulta",
+        "B": "Spina bífida meningocoele",
+        "C": "Spina bifida myelomeningocoele",
+        "D": "Syringomyelia"
+      },
+      "key": "C",
+      "rationale": "A defect containing both meninges and spinal cord is a myelomeningocele. Associated hindbrain herniation is characteristic of Chiari II malformation; a meningocele contains meninges without neural tissue.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-024",
+      "number": 24,
+      "page": 5,
+      "stem": "Schwann cells are derived from which of the following cells?",
+      "options": {
+        "A": "Gliablast",
+        "B": "Multipolar neuroblast",
+        "C": "Neural crest",
+        "D": "Neuroepithelial"
+      },
+      "key": "C",
+      "rationale": "Schwann cells arise from neural crest and myelinate peripheral axons. Central nervous system oligodendrocytes arise from the neural tube.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-025",
+      "number": 25,
+      "page": 5,
+      "stem": "A 53-year-old man was noted to have decreased hearing and loss of taste sensation in the anterior ⅔ of the tongue. A CT scan shows a tumor compressing the nerve exiting the skull through which of the following openings?",
+      "options": {
+        "A": "Foramen ovale",
+        "B": "Foramen rotundum",
+        "C": "Internal acoustic meatus",
+        "D": "Jugular foramen",
+        "E": "Superior orbital fissure"
+      },
+      "key": "C",
+      "rationale": "The facial and vestibulocochlear nerves travel through the internal acoustic meatus. A lesion there can combine hearing impairment with facial-nerve-related taste dysfunction.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-026",
+      "number": 26,
+      "page": 5,
+      "stem": "A 54-year-old man is brought to the neurology clinic by his family due to significant changes in his behavior over the past few months. He has become unusually docile, exhibiting a lack of fear and reduced aggression, even in situations where he previously would have reacted strongly. Additionally, he has developed hyperorality, frequently putting non-food objects in his mouth, and has been displaying hypersexual behavior, attempting inappropriate advances. On examination, the patient appears disoriented but is cooperative, and no significant motor or sensory deficits are noted. Which of the following structures are most likely affected?",
+      "options": {
+        "A": "Amygdala",
+        "B": "Caudate nucleus",
+        "C": "Frontal lobe",
+        "D": "Pons"
+      },
+      "key": "A",
+      "rationale": "Bilateral amygdala/anterior temporal injury can produce the Kluver-Bucy pattern of placidity, hyperorality, and hypersexuality. The amygdala is important in emotional salience and fear responses.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-027",
+      "number": 27,
+      "page": 5,
+      "stem": "Which muscle is innervated by the facial nerve and forms the inferior border of the digastric triangle?",
+      "options": {
+        "A": "Posterior belly of digastric",
+        "B": "Superior belly of omohyoid",
+        "C": "Anterior belly of digastric",
+        "D": "Sternocleidomastoid",
+        "E": "Inferior belly of omohyoid"
+      },
+      "key": "A",
+      "rationale": "The posterior belly of digastric is supplied by the facial nerve and forms the posteroinferior boundary of the submandibular triangle. The anterior belly is supplied through the mylohyoid nerve from V3.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-028",
+      "number": 28,
+      "page": 5,
+      "stem": "Which of the following vessels is obliterated very early in the development of the umbilical cord?",
+      "options": {
+        "A": "Right umbilical a.",
+        "B": "Left umbilical a.",
+        "C": "Right umbilical v.",
+        "D": "Left umbilical v."
+      },
+      "key": "C",
+      "rationale": "The right umbilical vein regresses, leaving the left umbilical vein to carry oxygenated placental blood toward the fetus. Both umbilical arteries persist prenatally.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-029",
+      "number": 29,
+      "page": 6,
+      "stem": "Which of the following nerves innervates the skin around the umbilicus?",
+      "options": {
+        "A": "T8",
+        "B": "T10",
+        "C": "T12",
+        "D": "Iliohypogastric",
+        "E": "Subcostal"
+      },
+      "key": "B",
+      "rationale": "The umbilicus is the classic T10 dermatome landmark. T4 corresponds approximately to the nipple and L1 to the inguinal region in standard surface maps.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-030",
+      "number": 30,
+      "page": 6,
+      "stem": "The thoracic duct passes through this structure in the diaphragm.",
+      "options": {
+        "A": "Aortic hiatus",
+        "B": "Esophageal hiatus",
+        "C": "Vena caval hiatus",
+        "D": "Perforations in the crura"
+      },
+      "key": "A",
+      "rationale": "The thoracic duct passes with the aorta through the aortic hiatus, approximately at T12. The esophageal hiatus is at T10 and the caval opening at T8.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-031",
+      "number": 31,
+      "page": 6,
+      "stem": "Which of the following epithelial transitional zones describe the anal transition zone?",
+      "options": {
+        "A": "Simple columnar with abundant goblet cells → simple squamous",
+        "B": "Simple columnar with abundant goblet cells → stratified squamous",
+        "C": "Stratified squamous → simple columnar with brush border",
+        "D": "Stratified squamous → simple cuboidal"
+      },
+      "key": "B",
+      "rationale": "The distal colorectal columnar lining transitions toward stratified squamous epithelium in the anal canal. The anal transitional zone itself may have mixed epithelial features, so the option describes the broad transition.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-032",
+      "number": 32,
+      "page": 6,
+      "stem": "A 23-year-old weightlifter sought consult for a bulging mass in lower right abdominal wall. After history-taking and PE, he has a direct inguinal hernia. Which is true about the case?",
+      "options": {
+        "A": "The herniating viscus can extend to the scrotum",
+        "B": "The hernia is found medial to the linea semilunaris of the rectus abdominis",
+        "C": "The herniation occurred medial to the inferior epigastric vessels",
+        "D": "The hernia is below the inguinal ligament"
+      },
+      "key": "C",
+      "rationale": "A direct inguinal hernia protrudes through the posterior inguinal-canal wall medial to the inferior epigastric vessels. An indirect hernia enters the deep ring lateral to those vessels.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-033",
+      "number": 33,
+      "page": 6,
+      "stem": "The hindgut starts at which of the following segments of the intestine?",
+      "options": {
+        "A": "Distal third of transverse colon",
+        "B": "Duodenojejunal flexure",
+        "C": "Second part of the duodenum",
+        "D": "Splenic flexure"
+      },
+      "key": "A",
+      "rationale": "The hindgut begins at the distal third of the transverse colon and extends to the upper anal canal. The proximal two thirds of the transverse colon are midgut-derived.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-034",
+      "number": 34,
+      "page": 6,
+      "stem": "Emergency exploratory surgery of a stab wound victim revealed a laceration of segment of the small intestines. Which feature would identify this segment as JEJUNUM?",
+      "options": {
+        "A": "Few arterial arcades",
+        "B": "Low and sparse mucosal folds",
+        "C": "Short vasa recta",
+        "D": "Many Peyer’s patches"
+      },
+      "key": "A",
+      "rationale": "Jejunum typically has fewer arterial arcades, longer vasa recta, and prominent circular folds. Ileum has more arcades, shorter vasa recta, and more conspicuous Peyer patches.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-035",
+      "number": 35,
+      "page": 6,
+      "stem": "The large intestine can be differentiated from the small intestine by this EXTERNAL characteristic:",
+      "options": {
+        "A": "Plicae semilunares",
+        "B": "Taenia coli",
+        "C": "Thinner wall",
+        "D": "All of the above"
+      },
+      "key": "B",
+      "rationale": "Taeniae coli are externally visible longitudinal muscle bands characteristic of much of the colon. Semilunar folds are internal; wall thickness varies and is not the defining external feature.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-036",
+      "number": 36,
+      "page": 7,
+      "stem": "The porta hepatis contains the following structures EXCEPT",
+      "options": {
+        "A": "Common bile duct",
+        "B": "Hepatic a.",
+        "C": "Hepatic v.",
+        "D": "Portal v."
+      },
+      "key": null,
+      "rationale": "Hepatic veins drain toward the inferior vena cava on the posterior liver and do not pass through the porta hepatis. The porta transmits portal-vein and hepatic-artery branches and hepatic ducts; 'common bile duct' in A is anatomically imprecise.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-037",
+      "number": 37,
+      "page": 7,
+      "stem": "The following veins drain directly into the IVC EXCEPT:",
+      "options": {
+        "A": "Hepatic vein",
+        "B": "Inferior mesenteric vein",
+        "C": "Lumbar vein",
+        "D": "Right testicular (ovarian) v."
+      },
+      "key": "B",
+      "rationale": "The inferior mesenteric vein drains into the portal system, usually through the splenic vein. Hepatic, lumbar, and right gonadal veins can drain directly into the inferior vena cava.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-038",
+      "number": 38,
+      "page": 7,
+      "stem": "The triangle of Calot is an important anatomical space which helps us locate and identify which structure?",
+      "options": {
+        "A": "Common bile duct",
+        "B": "Pylorus",
+        "C": "Porta hepatis",
+        "D": "Cystic a."
+      },
+      "key": "D",
+      "rationale": "The cystic artery is sought within the hepatocystic region traditionally called Calot's triangle. Careful identification of biliary anatomy is necessary because arterial and ductal variations are common.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-039",
+      "number": 39,
+      "page": 7,
+      "stem": "Which of the following anatomic relationships about the pancreas is TRUE?",
+      "options": {
+        "A": "The head fits in the concavity of the duodenum.",
+        "B": "The splenic artery runs along the lower border of the body and tail.",
+        "C": "The uncinate process is part of the tail.",
+        "D": "It lies above the omental bursa."
+      },
+      "key": "A",
+      "rationale": "The pancreatic head sits within the C-shaped duodenal curve. The splenic artery follows the superior pancreatic border, and the uncinate process projects from the head.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-040",
+      "number": 40,
+      "page": 7,
+      "stem": "The blood supply of the pituitary gland are branches of which vessel?",
+      "options": {
+        "A": "Adrenal gland",
+        "B": "Kidney",
+        "C": "Pancreas",
+        "D": "Spleen"
+      },
+      "key": null,
+      "rationale": "The superior and inferior hypophyseal arteries arise principally from the internal carotid arterial system. All supplied options name organs rather than vessels, so the source has no valid answer.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-041",
+      "number": 41,
+      "page": 7,
+      "stem": "Corpora arenacea, midline calcified bodies which are visible on skull x-ray, are normal structures in which of the following organs?",
+      "options": {
+        "A": "Hypothalamus",
+        "B": "Pituitary gland",
+        "C": "Pineal gland",
+        "D": "Mamillary bodies"
+      },
+      "key": "C",
+      "rationale": "Corpora arenacea, or brain sand, are calcified concretions of the pineal gland. Their midline position can be visible radiographically.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-042",
+      "number": 42,
+      "page": 7,
+      "stem": "After undergoing thyroidectomy, the patient developed spasms of hands and feet and (+) Chvostek’s sign. What was/were injured?",
+      "options": {
+        "A": "Recurrent laryngeal nerve",
+        "B": "Cervical esophagus",
+        "C": "Parathyroid glands",
+        "D": "Thymus gland"
+      },
+      "key": "C",
+      "rationale": "Parathyroid injury or devascularization can cause postoperative hypocalcemia, producing tetany and a positive Chvostek sign. Recurrent laryngeal nerve injury instead causes vocal-cord dysfunction.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-043",
+      "number": 43,
+      "page": 8,
+      "stem": "Which part of the adrenal gland produces the hormone that results in reabsorption of water at the distal convoluted tubule?",
+      "options": {
+        "A": "Adrenal medulla",
+        "B": "Zona fasciculate",
+        "C": "Zona reticularis",
+        "D": "Zona glomerulosa"
+      },
+      "key": "D",
+      "rationale": "The zona glomerulosa produces aldosterone, which increases distal-nephron sodium reabsorption and potassium secretion. Water retention follows sodium when water is available and the nephron is water-permeable; ADH, not aldosterone, directly regulates collecting-duct water permeability.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-044",
+      "number": 44,
+      "page": 8,
+      "stem": "The islet of Langerhans is most abundant in the:",
+      "options": {
+        "A": "Uncinate process",
+        "B": "Head",
+        "C": "Body",
+        "D": "Tail"
+      },
+      "key": "D",
+      "rationale": "Pancreatic islets are relatively abundant in the tail. The head and uncinate process contain a greater proportion of exocrine tissue.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-045",
+      "number": 45,
+      "page": 8,
+      "stem": "Which of the following blood findings is NOT considered normal in a newborn?",
+      "options": {
+        "A": "Hypercellular bone marrow",
+        "B": "Increased lymphocyte count",
+        "C": "Increased RBC count",
+        "D": "Presence of normoblast in PBS"
+      },
+      "key": null,
+      "rationale": "At birth, neutrophils generally predominate, with lymphocyte predominance developing during the first postnatal week. Neonates also have high red-cell counts, cellular marrow, and sometimes circulating nucleated red cells. 'Newborn' spans a period in which the leukocyte pattern changes, so B needs a precise age and comparator.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-046",
+      "number": 46,
+      "page": 8,
+      "stem": "Which cell has a “clock face” chromatin distribution pattern and eccentric nucleus?",
+      "options": {
+        "A": "Monocyte",
+        "B": "Plasma cells",
+        "C": "Macrophages",
+        "D": "Dendritic cells"
+      },
+      "key": "B",
+      "rationale": "Plasma cells have an eccentric nucleus with coarse clock-face chromatin and a perinuclear pale Golgi zone. Their abundant rough endoplasmic reticulum supports antibody production.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-047",
+      "number": 47,
+      "page": 8,
+      "stem": "63-year-old male with elevated WBC count and predominance of granulocytes on peripheral blood is suspected to have chronic myelogenous leukemia. Bone marrow biopsy also showed proliferation of their myeloid precursors. At which stage of granulopoiesis do the precursors acquire the specific granules that differentiate them into the three types?",
+      "options": {
+        "A": "Myeloblast",
+        "B": "Metamyelocyte",
+        "C": "Promyelocyte",
+        "D": "Myelocyte"
+      },
+      "key": "D",
+      "rationale": "Specific secondary granules first become evident at the myelocyte stage and distinguish neutrophilic, eosinophilic, and basophilic lineages. Promyelocytes mainly contain primary azurophilic granules.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-048",
+      "number": 48,
+      "page": 8,
+      "stem": "What is the last cell in the red cell series capable of self-replication?",
+      "options": {
+        "A": "Polychromatophilic erythroblast",
+        "B": "Proerythroblast",
+        "C": "Orthochromic erythroblast",
+        "D": "Basophilic erythroblast"
+      },
+      "key": "A",
+      "rationale": "The polychromatophilic erythroblast is the last usual erythroid stage capable of mitosis. Orthochromatic erythroblasts condense and extrude the nucleus rather than continuing division.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-049",
+      "number": 49,
+      "page": 9,
+      "stem": "Which of the following histologic features characterizes the spleen?",
+      "options": {
+        "A": "Lymphatic nodule",
+        "B": "Afferent lymphatic vessel",
+        "C": "Lymphatic cords",
+        "D": "Periarterial lymphoid sheaths"
+      },
+      "key": "D",
+      "rationale": "Periarteriolar lymphoid sheaths are the T-cell-rich white-pulp sleeves around splenic central arterioles. Lymphatic nodules are also present but are not specific to the spleen; afferent lymphatics are absent.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-050",
+      "number": 50,
+      "page": 9,
+      "stem": "Which of the following structures is located in BOTH the superior and inferior mediastina?",
+      "options": {
+        "A": "Ascending aorta",
+        "B": "Left recurrent laryngeal nerve",
+        "C": "Lesser splanchnic nerve",
+        "D": "Thoracic duct"
+      },
+      "key": "D",
+      "rationale": "The thoracic duct ascends through the posterior part of the inferior mediastinum and continues into the superior mediastinum. The ascending aorta is in the middle mediastinum.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-051",
+      "number": 51,
+      "page": 9,
+      "stem": "The sternal angle lies at which intervertebral disc level?",
+      "options": {
+        "A": "T2-T3",
+        "B": "T3-T4",
+        "C": "T4-T5",
+        "D": "T5-T6"
+      },
+      "key": "C",
+      "rationale": "The sternal angle corresponds approximately to the T4-T5 intervertebral disc and defines the transverse thoracic plane. It is a useful landmark for rib counting and mediastinal division.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-052",
+      "number": 52,
+      "page": 9,
+      "stem": "Which of the following features is unique to the right atrium?",
+      "options": {
+        "A": "Auricle",
+        "B": "Pectinate muscles",
+        "C": "Trabeculae carneae",
+        "D": "Sinus venarum"
+      },
+      "key": "D",
+      "rationale": "The sinus venarum is the smooth-walled venous receiving portion of the right atrium. Both atria have auricles and pectinate muscle, while trabeculae carneae are ventricular structures.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-053",
+      "number": 53,
+      "page": 9,
+      "stem": "Cardiac dominance is determined by the coronary artery that gives rise to which of the following arteries?",
+      "options": {
+        "A": "Circumflex",
+        "B": "Left anterior descending",
+        "C": "Posterior interventricular",
+        "D": "Right marginal"
+      },
+      "key": "C",
+      "rationale": "Coronary dominance is defined by the artery supplying the posterior interventricular, or posterior descending, artery. Most people have right-dominant circulation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-054",
+      "number": 54,
+      "page": 9,
+      "stem": "In the majority of people, the SA node is supplied by which of the following arteries?",
+      "options": {
+        "A": "Anterior interventricular",
+        "B": "Left coronary",
+        "C": "Left marginal",
+        "D": "Right coronary",
+        "E": "Posterior interventricular"
+      },
+      "key": "D",
+      "rationale": "The sinoatrial nodal artery most often arises from the right coronary artery, with a substantial minority arising from the circumflex. The source asks for the majority pattern rather than an invariant rule.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-055",
+      "number": 55,
+      "page": 9,
+      "stem": "Which of the following veins accompanies the posterior interventricular artery?",
+      "options": {
+        "A": "Anterior cardiac vein",
+        "B": "Great cardiac vein",
+        "C": "Middle cardiac vein",
+        "D": "Oblique cardiac vein",
+        "E": "Small cardiac vein"
+      },
+      "key": "C",
+      "rationale": "The middle cardiac vein runs in the posterior interventricular groove with the posterior interventricular artery. The great cardiac vein accompanies the anterior interventricular artery for part of its course.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-056",
+      "number": 56,
+      "page": 10,
+      "stem": "Auscultation of the aortic valve is BEST done along which of the following locations?",
+      "options": {
+        "A": "2nd ICS, left parasternal border",
+        "B": "2nd ICS, right parasternal border",
+        "C": "4th ICS, left parasternal border",
+        "D": "5th ICS, left midclavicular line"
+      },
+      "key": "B",
+      "rationale": "The standard aortic auscultation area is the second right intercostal space at the sternal border. This listening point differs from the valve's exact anatomic projection.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-057",
+      "number": 57,
+      "page": 10,
+      "stem": "The accessory hemiazygos vein receives blood from which of the following posterior intercostal veins?",
+      "options": {
+        "A": "1st",
+        "B": "2nd-4th",
+        "C": "5th-8th",
+        "D": "9th-11th"
+      },
+      "key": "C",
+      "rationale": "The accessory hemiazygos vein commonly drains the middle left posterior intercostal spaces, approximately the fifth through eighth. The hemiazygos receives more inferior spaces, with substantial variation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-058",
+      "number": 58,
+      "page": 10,
+      "stem": "A patient came in with a chief complaint of sudden onset of chest pain of 1 hour duration. In doing the ECG, where would you place the V4 lead?",
+      "options": {
+        "A": "4th ICS LPSB",
+        "B": "4th ICS RPSB",
+        "C": "Midclavicular Line, 5th LICS",
+        "D": "Anterior Axillary Line, 5th LICS",
+        "E": "Midaxillary Line, 5th ICS"
+      },
+      "key": "C",
+      "rationale": "V4 is placed in the fifth left intercostal space at the midclavicular line. V5 and V6 lie horizontally level with V4 rather than being independently placed by rib count alone.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-059",
+      "number": 59,
+      "page": 10,
+      "stem": "Needle thoracotomy (thoracentesis) is being done to aspirate pus in a 54- year-old male with pleural effusion. Care is made to avoid hitting the intercostal vessels and nerve as the needle is inserted. Between which thoracic wall layers are they located?",
+      "options": {
+        "A": "External intercostal muscles & internal intercostal muscles",
+        "B": "Innermost intercostal muscles & endothoracic fascia",
+        "C": "Endothoracic fascia & costal parietal pleura",
+        "D": "Internal intercostal muscles & innermost intercostal muscles"
+      },
+      "key": "D",
+      "rationale": "The main intercostal neurovascular bundle lies between internal and innermost intercostal muscles, near the rib's inferior border. Procedural access uses imaging and appropriate technique to reduce vascular and organ injury.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-060",
+      "number": 60,
+      "page": 10,
+      "stem": "The atrioventricular (AV) node is found in the right atrium inside Koch triangle. The following are landmarks of Koch triangle EXCEPT:",
+      "options": {
+        "A": "Coronary sinus",
+        "B": "Crista terminalis",
+        "C": "Septal leaflet of tricuspid valve",
+        "D": "Tendon of Todaro"
+      },
+      "key": "B",
+      "rationale": "Koch's triangle is bounded by the tendon of Todaro, septal tricuspid leaflet attachment, and coronary-sinus ostium region. The crista terminalis is not one of its defining boundaries.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-061",
+      "number": 61,
+      "page": 10,
+      "stem": "Which of the following embryonic structures becomes the sinus venarum?",
+      "options": {
+        "A": "Bulbus cordis",
+        "B": "Left horn of sinus venosus",
+        "C": "Right horn of sinus venosus",
+        "D": "Ductus venosus"
+      },
+      "key": "C",
+      "rationale": "The right horn of the sinus venosus is incorporated into the smooth sinus venarum of the right atrium. The left horn contributes to the coronary sinus.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-062",
+      "number": 62,
+      "page": 10,
+      "stem": "The 8th anterior intercostal artery is a branch of which artery?",
+      "options": {
+        "A": "Internal thoracic",
+        "B": "Musculophrenic",
+        "C": "Subclavian",
+        "D": "Superior epigastric"
+      },
+      "key": "B",
+      "rationale": "Anterior intercostal arteries of the seventh through ninth spaces generally arise from the musculophrenic artery. The upper six usually arise from the internal thoracic artery.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-063",
+      "number": 63,
+      "page": 11,
+      "stem": "Which of the following nodal beds serves as the PRIMARY reservoir of lymphatic drainage from the breast?",
+      "options": {
+        "A": "Axillary",
+        "B": "Inframammary",
+        "C": "Internal Thoracic",
+        "D": "Scapular"
+      },
+      "key": "A",
+      "rationale": "Most breast lymph drains to axillary lymph nodes, especially the anterior/pectoral group. Medial breast regions also drain to parasternal nodes.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-064",
+      "number": 64,
+      "page": 11,
+      "stem": "Which of the following structures may be found at the transverse thoracic plane?",
+      "options": {
+        "A": "Carina",
+        "B": "Hemiazygos vein",
+        "C": "Pulmonary ligament",
+        "D": "Pulmonary vein"
+      },
+      "key": "A",
+      "rationale": "The tracheal bifurcation is classically near the sternal-angle/T4-T5 plane, with variation during respiration and posture. This plane also separates superior from inferior mediastinum.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-065",
+      "number": 65,
+      "page": 11,
+      "stem": "The LOWEST point of the visceral pleura at the scapular line reaches what rib level?",
+      "options": {
+        "A": "6th",
+        "B": "8th",
+        "C": "10th",
+        "D": "12th"
+      },
+      "key": "C",
+      "rationale": "The inferior lung border and visceral pleura reach approximately the tenth rib posteriorly at the scapular line during quiet respiration. Parietal pleura extends farther inferiorly, approximately to the twelfth rib.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-066",
+      "number": 66,
+      "page": 11,
+      "stem": "Which of the following structures lies MOST SUPERIOR in the root of the LEFT lung?",
+      "options": {
+        "A": "Lobar bronchus",
+        "B": "Pulmonary artery",
+        "C": "Pulmonary ligament",
+        "D": "Pulmonary vein"
+      },
+      "key": "B",
+      "rationale": "At the left lung root, the pulmonary artery lies superior to the main bronchus. On the right, an eparterial upper-lobe bronchus lies above the pulmonary artery.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-067",
+      "number": 67,
+      "page": 11,
+      "stem": "A 75-year-old woman was admitted to a local hospital because a chest radiograph revealed a right lung mass and a bronchoscopy revealed lung carcinoma. Which of the following structures or characteristics does the cancerous lung contain?",
+      "options": {
+        "A": "Horizontal fissure",
+        "B": "Groove for trachea",
+        "C": "Lingula",
+        "D": "8 bronchopulmonary segments only"
+      },
+      "key": null,
+      "rationale": "A horizontal fissure is a characteristic feature of the right lung, and its mediastinal surface may also bear a tracheal impression. Thus A is clearly intended but B is not reliably false; the item needs a more specific distinguishing feature.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "Lung anatomy",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK470197/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "ANA-2027-068",
+      "number": 68,
+      "page": 11,
+      "stem": "A 30-year-old is brought to the emergency department after suffering a fall from a low-rise building. Physical examination and computed tomography (CT) scan reveal a dislocation fracture of the upper thoracic vertebrae. The fractured body of the T3 vertebra articulates with which of the following parts of the ribs?",
+      "options": {
+        "A": "Head of the third rib",
+        "B": "Neck of the fourth rib",
+        "C": "Tubercle of the fourth rib",
+        "D": "Head of the fifth rib",
+        "E": "Tubercle of the fifth rib"
+      },
+      "key": "A",
+      "rationale": "The T3 body articulates with the head of the third rib through its superior costal demifacet and also contributes to the fourth-rib-head joint inferiorly. Rib tubercles articulate with transverse processes rather than vertebral bodies.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-069",
+      "number": 69,
+      "page": 11,
+      "stem": "Which of the following muscles is primarily responsible for increasing the vertical dimension of the thoracic cavity during inspiration?",
+      "options": {
+        "A": "Diaphragm",
+        "B": "External intercostal muscles",
+        "C": "Internal intercostal muscles",
+        "D": "Levatores costarum"
+      },
+      "key": "A",
+      "rationale": "Diaphragmatic contraction lowers the central tendon and increases the vertical thoracic dimension. Intercostal activity primarily changes anteroposterior and transverse dimensions.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-070",
+      "number": 70,
+      "page": 12,
+      "stem": "A 5-day-old boy is brought to the emergency department by his mother because of excessive drooling and choking during feeding. Ihe mother says the newborn became cyanotic when swallowing milk. An x-ray of the chest shows a nasogastric tube coiling in the thorax with air bubbles in the stomach. Which of the following structures failed to develop in this patient?",
+      "options": {
+        "A": "Esophagus",
+        "B": "Trachea",
+        "C": "Tongue",
+        "D": "Tracheoesophageal septum",
+        "E": "Pharynx"
+      },
+      "key": "D",
+      "rationale": "Esophageal atresia with a distal tracheoesophageal fistula causes a coiled nasogastric tube proximally and air in the stomach. It reflects abnormal separation of the embryonic foregut into tracheal and esophageal channels.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-071",
+      "number": 71,
+      "page": 12,
+      "stem": "Which of the following interalveolar septal cells takes up and eliminates foreign particles within the lung alveoli?",
+      "options": {
+        "A": "Club Cell",
+        "B": "Dust Cell",
+        "C": "Type I pneumocyte",
+        "D": "Type II pneumocyte"
+      },
+      "key": "B",
+      "rationale": "Alveolar macrophages, historically called dust cells, ingest inhaled particles and debris. Type I pneumocytes provide the thin gas-exchange surface, while type II cells produce surfactant.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-072",
+      "number": 72,
+      "page": 12,
+      "stem": "Which of the following statements about hair follicles is true?",
+      "options": {
+        "A": "They are always associated with an eccrine sweat gland.",
+        "B": "They are present in thin skin but not in thick skin.",
+        "C": "Their associated arrector pili muscle is composed of striated fibers.",
+        "D": "Their hair shaft inserts into the papillary layer of the epidermis.",
+        "E": "They do not extend into the dermis."
+      },
+      "key": "B",
+      "rationale": "Hair follicles occur in thin skin and are absent from the thick skin of palms and soles. Arrector pili are smooth muscle, and follicles extend into the dermis.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-073",
+      "number": 73,
+      "page": 12,
+      "stem": "Which of the following cells found in the epidermis is essential for skin repair?",
+      "options": {
+        "A": "Keratinocytes",
+        "B": "Langerhan cells",
+        "C": "Melanocytes",
+        "D": "Merkel cells"
+      },
+      "key": "A",
+      "rationale": "Keratinocytes proliferate and migrate to restore the epidermal barrier after injury. Melanocytes produce pigment, Langerhans cells support immune surveillance, and Merkel cells participate in touch sensation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-074",
+      "number": 74,
+      "page": 12,
+      "stem": "What connects keratin in basal cells to the underlying basement membrane?",
+      "options": {
+        "A": "Collagen fibers",
+        "B": "Hemidesmosomes",
+        "C": "Desmosomes",
+        "D": "Adherens junction"
+      },
+      "key": "B",
+      "rationale": "Hemidesmosomes anchor basal-cell keratin intermediate filaments to the basement membrane. Desmosomes link adjacent cells to one another.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-075",
+      "number": 75,
+      "page": 12,
+      "stem": "What is the other name of the greater vestibular glands of the vagina?",
+      "options": {
+        "A": "Skene’s glands",
+        "B": "Cowper’s glands",
+        "C": "Bulbourethral glands",
+        "D": "Bartholin glands"
+      },
+      "key": "D",
+      "rationale": "The greater vestibular glands are Bartholin glands. They open into the vestibule; Skene glands are paraurethral, and Cowper/bulbourethral glands are male structures.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-076",
+      "number": 76,
+      "page": 12,
+      "stem": "A 13/M suffers a traumatic injury that lacerates the penile urethra. Urine leaks out into the peritoneum. Where else might the extravasated urine be found?",
+      "options": {
+        "A": "Ischiorectal fossa",
+        "B": "Anterior thigh",
+        "C": "Anterior abdominal wall",
+        "D": "Rectovesical pouch"
+      },
+      "key": null,
+      "rationale": "Rupture of the spongy urethra with fascial disruption can spread urine into the superficial perineal space, scrotum, and anterior abdominal wall, making C the intended answer. The source incorrectly says 'peritoneum'; that compartment implies a different injury and must not be silently equated with the perineum.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-077",
+      "number": 77,
+      "page": 13,
+      "stem": "You are preparing to do a nerve block to anesthetize the perineum during the delivery of your patient. What structure do you need to palpate to perform this procedure?",
+      "options": {
+        "A": "Ischial spine",
+        "B": "Ischial tuberosity",
+        "C": "Pubic tubercle",
+        "D": "Cervix"
+      },
+      "key": "A",
+      "rationale": "The pudendal nerve passes close to the ischial spine and sacrospinous ligament, providing the classic landmark for a pudendal block. It carries much of the somatic sensory supply to the perineum.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-078",
+      "number": 78,
+      "page": 13,
+      "stem": "Which of the following structures helps prevent uterine prolapse after a normal vaginal delivery?",
+      "options": {
+        "A": "Round ligament of the uterus",
+        "B": "Transverse cervical ligament",
+        "C": "Proper ovarian ligament",
+        "D": "Suspensory ligament"
+      },
+      "key": "B",
+      "rationale": "The transverse cervical, or cardinal, ligaments support the cervix and upper vagina. Pelvic-floor muscles and uterosacral supports are also important; the round ligament mainly helps maintain uterine position.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-079",
+      "number": 79,
+      "page": 13,
+      "stem": "A patient complains of a boil located on her labia majora. Lymphatic spread of the infection would most likely enlarge which nodes?",
+      "options": {
+        "A": "Internal iliac",
+        "B": "Sacral",
+        "C": "External iliac",
+        "D": "Superficial inguinal"
+      },
+      "key": "D",
+      "rationale": "Most superficial lymph from the labia majora drains to superficial inguinal nodes. Deeper pelvic structures follow different lymphatic routes.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-080",
+      "number": 80,
+      "page": 13,
+      "stem": "Which of the following arteries directly supply the functional layer of the endometrium?",
+      "options": {
+        "A": "Arcuate",
+        "B": "Radial",
+        "C": "Coiled",
+        "D": "Superficial inguinal"
+      },
+      "key": "C",
+      "rationale": "Spiral/coiled arteries supply the functional endometrial layer that is shed during menstruation. Straight arteries supply the basal layer.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-081",
+      "number": 81,
+      "page": 13,
+      "stem": "Which of the following statements about the cells in the testis is CORRECT?",
+      "options": {
+        "A": "The spermatozoa are the largest cells in the seminiferous tubules.",
+        "B": "The Sertoli cells are resistant to ionizing radiation.",
+        "C": "The Leydig cells secrete androgen binding protein.",
+        "D": "The most mature spermatocytes rest on the basement membrane."
+      },
+      "key": "B",
+      "rationale": "Sertoli cells are relatively resistant to radiation compared with rapidly dividing germ cells. They produce androgen-binding protein and support developing sperm; Leydig cells produce testosterone.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-082",
+      "number": 82,
+      "page": 13,
+      "stem": "The following are the components of the spermatic cord, EXCEPT:",
+      "options": {
+        "A": "Epididymis",
+        "B": "Lymph vessels",
+        "C": "Pampiniform venous plexus",
+        "D": "Vas deferens"
+      },
+      "key": "A",
+      "rationale": "The epididymis lies on the posterior testis and is not a spermatic-cord component. The cord contains the ductus deferens, vessels, pampiniform plexus, nerves, and lymphatics.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-083",
+      "number": 83,
+      "page": 13,
+      "stem": "A 70/M was diagnosed with prostatitis. The seminal colliculus of his prostate gland is infected and its openings are closed. Which of the following structures are most likely affected?",
+      "options": {
+        "A": "Ducts of the prostate gland",
+        "B": "Prostatic utricle",
+        "C": "Ejaculatory ducts",
+        "D": "Ducts of the seminal vesicle"
+      },
+      "key": null,
+      "rationale": "The prostatic utricle opens at the seminal colliculus, and the ejaculatory ducts open on either side. Obstruction of unspecified 'openings' can therefore involve both B and C; the source does not distinguish them.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "Dissection of prostatic urethral openings",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11365459/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "ANA-2027-084",
+      "number": 84,
+      "page": 14,
+      "stem": "Which of the following is the deepest covering of the testis?",
+      "options": {
+        "A": "External spermatic fascia",
+        "B": "Dastos fascia",
+        "C": "Tunica vaginalis",
+        "D": "Internal spermastic fascia"
+      },
+      "key": "C",
+      "rationale": "Among the listed coverings, the visceral tunica vaginalis lies deepest. The fibrous tunica albuginea lies deeper still but is omitted, so this answer is limited to the supplied choices.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-085",
+      "number": 85,
+      "page": 14,
+      "stem": "Which of the following cells is part of the blood-testis barrier?",
+      "options": {
+        "A": "Spermatid",
+        "B": "Sertoli cell",
+        "C": "Primary spermatocytes",
+        "D": "Secondary spermatocytes"
+      },
+      "key": "B",
+      "rationale": "Tight junctions between neighboring Sertoli cells form the principal blood-testis barrier. This separates basal from adluminal germ-cell compartments.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-086",
+      "number": 86,
+      "page": 14,
+      "stem": "A 24/F with a ruptured ectopic pregnancy is admitted for culdocentesis. The needle is most efficiently inserted through which of the following structures?",
+      "options": {
+        "A": "Anterior fornix of the vagina",
+        "B": "Posterior fornix of the vagina",
+        "C": "Anterior wall of the rectum",
+        "D": "Posterior wall of the bladder"
+      },
+      "key": "B",
+      "rationale": "The posterior vaginal fornix lies adjacent to the rectouterine pouch and is the traditional culdocentesis access route. Modern assessment of suspected ectopic pregnancy generally relies on ultrasound and appropriate laboratory testing.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-087",
+      "number": 87,
+      "page": 14,
+      "stem": "In the kidneys, which cells is considered as modified afferent arteriole?",
+      "options": {
+        "A": "Mesangial cells",
+        "B": "JG cells",
+        "C": "Macula densa",
+        "D": "Podocytes"
+      },
+      "key": "B",
+      "rationale": "Juxtaglomerular granular cells are modified vascular smooth-muscle cells, chiefly in the afferent arteriole, that secrete renin. Macula-densa cells sense distal tubular sodium-chloride delivery.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-088",
+      "number": 88,
+      "page": 14,
+      "stem": "Stones in the renal pelvis will most likely be lodged in these parts of the ureter, EXCEPT:",
+      "options": {
+        "A": "Ureteropelvic junction",
+        "B": "Intramural position",
+        "C": "As it is crossed by the ductus deferens",
+        "D": "As it crosses the pelvic brim"
+      },
+      "key": "C",
+      "rationale": "Classic ureteric narrowing sites include the ureteropelvic junction, pelvic-brim crossing, and intramural ureter/ureterovesical junction. The ductus-deferens crossing is not one of the standard three.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-089",
+      "number": 89,
+      "page": 14,
+      "stem": "The transitional epithelium lining the urethra and the bladder is derived from?",
+      "options": {
+        "A": "Mesoderm",
+        "B": "Endoderm",
+        "C": "Urogenital ridge",
+        "D": "Paramesonephric duct"
+      },
+      "key": "B",
+      "rationale": "Most bladder and urethral epithelium derives from endoderm of the urogenital sinus. Mesonephric contributions to the trigone and the distal male urethra require embryologic qualification beyond the simplified stem.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-090",
+      "number": 90,
+      "page": 14,
+      "stem": "Which part of the adrenal gland produces the hormone that results in reabsorption of sodium and water at the DCT?",
+      "options": {
+        "A": "Adrenal medulla",
+        "B": "Zona fasciculata",
+        "C": "Zona reticularis",
+        "D": "Zona glomerulosa"
+      },
+      "key": "D",
+      "rationale": "Aldosterone is produced by the zona glomerulosa and increases distal-nephron sodium reabsorption. Water retention is secondary and depends on water balance and permeability.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-091",
+      "number": 91,
+      "page": 15,
+      "stem": "Within the renal sinus, the upper expanded end of the ureter divides into which of the following structures?",
+      "options": {
+        "A": "12 major calyces",
+        "B": "Renal pyramid",
+        "C": "Renal papilla",
+        "D": "Two or three major calyces"
+      },
+      "key": "D",
+      "rationale": "The renal pelvis commonly divides into two or three major calyces, which receive minor calyces around renal papillae. Pyramids are medullary tissue rather than branches of the collecting space.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-092",
+      "number": 92,
+      "page": 15,
+      "stem": "Podocytes are associated with which of the following parts of the urinary system?",
+      "options": {
+        "A": "Distal convoluted tubules",
+        "B": "Thick limb of loop of Henle",
+        "C": "Major calyces",
+        "D": "Visceral layer of Bowman’s capsule"
+      },
+      "key": "D",
+      "rationale": "Podocytes form the visceral epithelial layer of Bowman's capsule and contribute slit diaphragms to the filtration barrier. They are not tubular epithelial cells.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-093",
+      "number": 93,
+      "page": 15,
+      "stem": "Which of the following structures is related to the posterior surface of the left kidney?",
+      "options": {
+        "A": "Projection of 11th rib",
+        "B": "Costodiaphragmatic recess",
+        "C": "Ilioinguinal nerve",
+        "D": "Quadratus lumborum"
+      },
+      "key": null,
+      "rationale": "The posterior left kidney relates to the eleventh and twelfth ribs, diaphragm/pleural recess, quadratus lumborum, and crossing lumbar nerves including the ilioinguinal nerve. Several supplied options are therefore correct; specifying a single muscle would make D unique.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "Renal anatomy and innervation",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK459339/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "ANA-2027-094",
+      "number": 94,
+      "page": 15,
+      "stem": "If a patient presented with a permanently dilated pupil, which one of the following nerves could be assumed to be involved?",
+      "options": {
+        "A": "Optic",
+        "B": "Ophthalmic",
+        "C": "Sympathetic trunk",
+        "D": "Oculomotor"
+      },
+      "key": "D",
+      "rationale": "Parasympathetic fibers traveling with the oculomotor nerve supply the pupillary sphincter through the ciliary ganglion. Their injury can cause mydriasis; a fixed dilated pupil has other possible causes and requires clinical context.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-095",
+      "number": 95,
+      "page": 15,
+      "stem": "Taste sensation from the posterior 1/3 of the tongue is mediated by which nerve?",
+      "options": {
+        "A": "Glossopharyngeal",
+        "B": "Facial",
+        "C": "Trigeminal",
+        "D": "Hypoglossal"
+      },
+      "key": "A",
+      "rationale": "The glossopharyngeal nerve carries taste from the posterior third of the tongue. The facial nerve carries anterior two-thirds taste through chorda tympani, and the vagus supplies the epiglottic region.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-096",
+      "number": 96,
+      "page": 15,
+      "stem": "Which of the following structures is normally NOT seen in the fundus using an ophthalmoscope?",
+      "options": {
+        "A": "Central artery",
+        "B": "Central vein",
+        "C": "Optic disk",
+        "D": "Vorticose vein"
+      },
+      "key": "D",
+      "rationale": "Routine fundoscopy shows the optic disc and retinal vessels derived from the central retinal artery and vein. Vortex veins drain the choroid and are not ordinarily identified as part of the routine fundus view.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-097",
+      "number": 97,
+      "page": 15,
+      "stem": "The olfactory nerve reaches the olfactory region of the nasal cavity by passing through which structure?",
+      "options": {
+        "A": "Cribriform plate",
+        "B": "Palatine process of maxilla",
+        "C": "Foramen cecum",
+        "D": "Olfactory canal"
+      },
+      "key": "A",
+      "rationale": "Olfactory nerve filaments pass through the cribriform plate between the nasal olfactory mucosa and olfactory bulb. The foramen cecum is not their normal route.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-098",
+      "number": 98,
+      "page": 16,
+      "stem": "The scala vestibuli and tympani are continuous at the?",
+      "options": {
+        "A": "Modiolus",
+        "B": "Helicotrema",
+        "C": "Spiral lamina",
+        "D": "None of the above"
+      },
+      "key": "B",
+      "rationale": "The scala vestibuli and scala tympani communicate at the helicotrema near the cochlear apex. Both contain perilymph; the cochlear duct contains endolymph.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-099",
+      "number": 99,
+      "page": 16,
+      "stem": "A severe infection that obstructs the middle meatus would affect drainage from each of the following sinuses EXCEPT?",
+      "options": {
+        "A": "Maxillary sinus",
+        "B": "Frontal sinus",
+        "C": "Nasolacrimal duct",
+        "D": "Anterior ethmoidal cells"
+      },
+      "key": "C",
+      "rationale": "The nasolacrimal duct opens into the inferior nasal meatus. The maxillary, frontal, and anterior ethmoidal drainage pathways communicate with the middle-meatus region.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "ANA-2027-100",
+      "number": 100,
+      "page": 16,
+      "stem": "What is the anterior transparent part of the eyeball called?",
+      "options": {
+        "A": "Lens",
+        "B": "Anterior chamber",
+        "C": "Cornea",
+        "D": "Sclera"
+      },
+      "key": "C",
+      "rationale": "The cornea is the transparent anterior part of the fibrous coat of the eye and provides substantial refractive power. The sclera is opaque, and the lens lies internally behind the iris.",
+      "review_only": false,
+      "references": []
+    }
+  ]
+}

@@ -24,7 +24,9 @@ test('progress overview does not also activate on notebook', () => {
 });
 test('context links expose real tools without adding a third nav level', () => {
     assert.equal(primaryLinks.length, 3);
-    assert.equal(secondaryLinks('/').length, 5);
+    assert.equal(secondaryLinks('/').length, 6);
+    assert.equal(navigationSection('/special-sets/pathology-2027'), '/');
+    assert.equal(activeLink('/special-sets/pathology-2027', '/special-sets'), true);
     assert.equal(secondaryLinks('/progress/notebook').length, 4);
     assert.deepEqual(secondaryLinks('/library'), []);
     assert.deepEqual(secondaryLinks('/admin'), []);

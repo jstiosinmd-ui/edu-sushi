@@ -17,7 +17,7 @@ watch(()=>page.url,()=>menu.value='');
 watch(journeyTab,()=>nextTick(()=>{const scroller=tierDialog.value?.querySelector('.journey-scroll');if(scroller)scroller.scrollTop=0}));
 onMounted(()=>{observer=new ResizeObserver(()=>document.documentElement.style.setProperty('--header-height',header.value.offsetHeight+'px'));observer.observe(header.value);document.addEventListener('pointerdown',closeMenu);document.addEventListener('keydown',closeMenu)});
 onUnmounted(()=>{observer?.disconnect();document.removeEventListener('pointerdown',closeMenu);document.removeEventListener('keydown',closeMenu)});
-const practice=[['Maki Mentor','/practice?mode=tutor'],['Wasabi Rush','/practice?mode=exam'],['Roll Call','/library'],['Bento Builder','/exams']];
+const practice=[['Special sets 2027','/special-sets'],['Maki Mentor','/practice?mode=tutor'],['Wasabi Rush','/practice?mode=exam'],['Roll Call','/library'],['Bento Builder','/exams']];
 const social=[['Sushi Passport','/passport'],['Leaderboard','/leaderboard']];
 </script>
 <template><div class="app-shell compact-shell" :class="{'study-focused':studyPage,'stable-study':['Attempt','FlashcardDeck'].includes(page.component),'counter-page':page.component==='Home'}"><a class="skip-link" href="#main">Skip to content</a><header ref="header" class="sticky compact-header"><div class="compact-topbar">

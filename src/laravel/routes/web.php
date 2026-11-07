@@ -18,6 +18,7 @@ use App\Http\Controllers\QuestionFeedbackController;
 use App\Http\Controllers\QuestionQualityController;
 use App\Http\Controllers\ReminderController;
 use App\Http\Controllers\StudyController;
+use App\Http\Controllers\SpecialSetController;
 use App\Http\Controllers\StudyGuideController;
 use App\Http\Controllers\StudySetupController;
 use App\Http\Controllers\WorkbenchController;
@@ -40,6 +41,10 @@ Route::middleware(['auth', 'active'])->group(function () {
     Route::get('/password', fn () => Inertia::render('Password'));
     Route::post('/password', [AuthController::class, 'password']);
     Route::get('/', [StudyController::class, 'home'])->name('dashboard');
+    Route::get('/special-sets', [SpecialSetController::class, 'index']);
+    Route::get('/special-set-assets/{asset}', [SpecialSetController::class, 'image']);
+    Route::get('/special-sets/{slug}', [SpecialSetController::class, 'show']);
+    Route::post('/special-sets/{slug}/answers', [SpecialSetController::class, 'answer'])->middleware('throttle:120,1');
     Route::post('/study/start', [StudySetupController::class, 'start'])->middleware('throttle:30,1');
     Route::post('/progress/review', [StudyController::class, 'review'])->middleware('throttle:30,1');
     Route::get('/tour', fn (Request $r) => Inertia::render('Tour', ['tour' => TourGuide::for($r->user())]));

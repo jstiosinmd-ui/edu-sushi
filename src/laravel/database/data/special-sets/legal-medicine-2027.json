@@ -1,0 +1,1869 @@
+{
+  "slug": "legal-medicine-2027",
+  "title": "Legal Medicine 2027",
+  "subject_code": "LGM",
+  "version": 1,
+  "source_file": "LEGAL MEDICINE QUESTIONS - 2027.pdf",
+  "source_sha256": "6a56e5b3cf59336ae6773d887c9358d8bcc4a9741536dfe73f03f73996fb559c",
+  "note": "Rationales and proposed answers authored for study. No complete official answer key was supplied. Items with ambiguous, incomplete, or outdated premises are review-only and excluded from scores. Original question numbering and choices are retained; PDF extraction errors and table formatting are repaired. Targeted external source checks are linked where available; this is not a full textbook-page verification of every item.",
+  "items": [
+    {
+      "id": "LGM-2027-001",
+      "number": 1,
+      "page": 1,
+      "stem": "Which of the following is NOT a physiological or psychological signs and symptoms of guilt:",
+      "options": {
+        "A": "Good eye to eye contact",
+        "B": "Sweating",
+        "C": "Fidgeting",
+        "D": "Dryness of mouth"
+      },
+      "key": null,
+      "rationale": "Sweating, dry mouth, and fidgeting can reflect autonomic arousal, but none reliably establishes guilt or deception. Good eye contact does not exclude guilt. A is probably the intended classroom answer, but the underlying premise is unsuitable for factual scoring.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-002",
+      "number": 2,
+      "page": 1,
+      "stem": "This interrogation technique requires at least 2 investigators with opposite character",
+      "options": {
+        "A": "Mutt and Jeff technique",
+        "B": "Bluff on split-pair technique",
+        "C": "Stern approach",
+        "D": "Emotional appeal"
+      },
+      "key": "A",
+      "rationale": "The historical Mutt-and-Jeff technique uses contrasting interrogator roles, commonly described as friendly and hostile. Naming the technique does not establish the reliability or legal admissibility of information obtained through coercion.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-003",
+      "number": 3,
+      "page": 1,
+      "stem": "Which of the following regarding Child Abuse is NOT correct?",
+      "options": {
+        "A": "Child neglect is characterized by failure to provide for the child’s material needs",
+        "B": "The failure to provide for the care and support of a child for at least six (6) continuous months for no valid reason is considered abandoned",
+        "C": "Employment of children below 15 years of age who force, suffer to work for money is child labor",
+        "D": "Child trafficking is the act of trading or dealing with children"
+      },
+      "key": null,
+      "rationale": "The question does not identify the governing definition or time period. Under RA 11642, the adoption-law definition of abandonment uses at least three continuous months and an NACC declaration; six months occurs in other historical contexts. Child neglect also includes more than material deprivation, and lawful child-work exceptions require qualification.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "Republic Act 11642, abandoned-child definition",
+          "url": "https://lawphil.net/statutes/repacts/ra2022/ra_11642_2022.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-004",
+      "number": 4,
+      "page": 1,
+      "stem": "Nancy, an 18-year-old female, was brought to the hospital due to a physical injury induced by her father. The father is liable under this law.",
+      "options": {
+        "A": "Physical injury",
+        "B": "Violence against women and children",
+        "C": "Child abuse",
+        "D": "Emotional abuse"
+      },
+      "key": null,
+      "rationale": "An 18-year-old is not automatically a child under RA 7610, although disability-related coverage may extend beyond 18. Physical-injury provisions may apply, while RA 9262 depends on the statutory relationship and circumstances. The facts are insufficient to exclude overlapping offenses or establish one charge conclusively.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "Republic Act 7610, child definition and offenses",
+          "url": "https://lawphil.net/statutes/repacts/ra1992/ra_7610_1992.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-005",
+      "number": 5,
+      "page": 1,
+      "stem": "Gem, a 6-year-old child, was taken to the emergency room owing to a whitish, non-foul-smelling discharge. The child and her parents deny any allegations of sexual abuse. Gram staining was ordered, and the results revealed Gram-negative intracellular diplococci. What will your conclusion be?",
+      "options": {
+        "A": "Definite evidence of sexual abuse",
+        "B": "The child is physically abused",
+        "C": "No signs of sexual abuse",
+        "D": "All the answers are correct"
+      },
+      "key": null,
+      "rationale": "A Gram stain alone cannot reliably diagnose or exclude gonorrhea in a prepubertal child. Obtain appropriate confirmatory testing and a specialist child-protection assessment; confirmed postnatally acquired gonorrhea is strongly concerning for sexual abuse. None of the supplied categorical conclusions is justified by this result alone.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "CDC: sexual assault or abuse of children and STI testing",
+          "url": "https://www.cdc.gov/std/treatment-guidelines/sexual-assault-children.htm",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-006",
+      "number": 6,
+      "page": 2,
+      "stem": "One of the basis for using the Bertillon System of Identification, includes the following, EXCEPT:",
+      "options": {
+        "A": "There are no two identical fingerprints",
+        "B": "Human skeleton is unchangeable after the 20th year",
+        "C": "It is impossible to find two human beings having bones exactly alike",
+        "D": "The necessary tool can easily be taken with the aid of simple instrument"
+      },
+      "key": "A",
+      "rationale": "The Bertillon system used anthropometric measurements and descriptive identification, not fingerprint uniqueness as its defining basis. Its historical assumptions about skeletal stability and individual measurements are not equivalent to modern validated identification methods.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-007",
+      "number": 7,
+      "page": 2,
+      "stem": "It is produced when the outstretched skin is impaled, sandwiched, and crushed between the outgoing bullet and the unyielding object is over the exit site, thus making the wound circular, with abrasion collar at its margin:",
+      "options": {
+        "A": "Shored gunshot wound of exit",
+        "B": "Shored gunshot wound of entry",
+        "C": "Ricochet bullet",
+        "D": "Tandem bullet"
+      },
+      "key": "A",
+      "rationale": "A shored exit wound occurs when skin is supported against a firm surface as the bullet exits. The supporting surface can create an abrasion resembling an entrance-wound collar.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-008",
+      "number": 8,
+      "page": 2,
+      "stem": "Leby was hit with a lead pipe at the frontal area with a concomitant subdural hematoma at the frontal lobe of the brain. A physical injury which is located only at the site of application of force is known as?",
+      "options": {
+        "A": "Coup Injury",
+        "B": "Contre-coup Injury",
+        "C": "Coup Contre-coup Injury",
+        "D": "Locus Minoris Resistencia"
+      },
+      "key": "A",
+      "rationale": "A coup injury lies at the site of impact. A contrecoup injury lies opposite the impact, and both may coexist in one head injury.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-009",
+      "number": 9,
+      "page": 2,
+      "stem": "This extrinsic factor includes rings, bracelet, necklace, earrings lapel pin:",
+      "options": {
+        "A": "Ornamentations",
+        "B": "Personal belongings",
+        "C": "Wearing apparel",
+        "D": "Foreign bodies"
+      },
+      "key": "A",
+      "rationale": "Jewelry and decorative items are traditionally grouped as ornamentation in descriptive identification. Such possessions provide circumstantial leads and do not independently establish identity.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-010",
+      "number": 10,
+      "page": 2,
+      "stem": "How is the caliber of the firearms determined accurately?",
+      "options": {
+        "A": "The measurement involves measuring the distance between 2 lands",
+        "B": "The measurement involves measuring the size of the chamber of the gun",
+        "C": "The measurement involves measuring the length of the bullet",
+        "D": "The measurement involves measuring the distance between 2 grooves"
+      },
+      "key": "A",
+      "rationale": "For a conventionally rifled barrel, bore caliber is measured between opposite lands. Cartridge naming and actual bullet or groove diameters can differ, so nominal caliber is not always a literal measurement.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-011",
+      "number": 11,
+      "page": 3,
+      "stem": "It is the science of handwriting analysis. It is the study of documents, and writing materials, to determine its genuineness or authorship.",
+      "options": {
+        "A": "Bibliotics",
+        "B": "Poroscopy",
+        "C": "Graphology",
+        "D": "Dactylography"
+      },
+      "key": "A",
+      "rationale": "Bibliotics is the historical term for examining documents and writing materials for authenticity or authorship. Graphology usually denotes personality inference from handwriting, which should not be confused with forensic document comparison.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-012",
+      "number": 12,
+      "page": 3,
+      "stem": "A teacher was ambushed by a rival and shot with a sling shot injuring the right eye requiring enucleation. A doctor’s certificate confirmed the injury. What category of injury was it?",
+      "options": {
+        "A": "serious physical injury",
+        "B": "mutilation",
+        "C": "less serious physical injury",
+        "D": "slight physical injury"
+      },
+      "key": "A",
+      "rationale": "Loss of an eye is classified among serious physical injuries under Article 263 of the Revised Penal Code. Mutilation has additional intent and act requirements that are not established merely by traumatic injury followed by medical enucleation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-013",
+      "number": 13,
+      "page": 3,
+      "stem": "Injuries on which part of the body least likely represent defensive injuries?",
+      "options": {
+        "A": "Back",
+        "B": "Feet",
+        "C": "Hands",
+        "D": "Arms"
+      },
+      "key": "A",
+      "rationale": "Defense injuries most commonly involve hands and forearms raised to block or grasp an attacking object; feet may be involved in kicking defense. An isolated back injury is less characteristic but no location alone determines the circumstances.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-014",
+      "number": 14,
+      "page": 3,
+      "stem": "Where the head is free and mobile, a blow on the occiput may produce laceration or contusion of the frontal lobe of the brain. This is what type of injury",
+      "options": {
+        "A": "contre coup",
+        "B": "coup contre coup",
+        "C": "coup",
+        "D": "direct"
+      },
+      "key": "A",
+      "rationale": "A frontal contusion after an occipital impact is a contrecoup injury, occurring opposite the force application. Coup-contrecoup describes injuries at both sites.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-015",
+      "number": 15,
+      "page": 3,
+      "stem": "After a recent fire in a depressed area in Manila, several persons were found dead in the remains their upper and lower extremities flexed and the hands clenched. This condition is known as \"Pugilistic attitude\", what cause this condition?",
+      "options": {
+        "A": "There is coagulation of muscle protein causing stiffening.",
+        "B": "There is release of intracellular calcium causing contraction",
+        "C": "There is complete consumption of ATP",
+        "D": "There is loss of the exchange pumps causing cellular rupture"
+      },
+      "key": "A",
+      "rationale": "Heat causes muscle-protein coagulation and shortening, often producing flexed limbs and clenched hands. Pugilistic posture can occur after death and does not prove the victim fought or was alive during the fire.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-016",
+      "number": 16,
+      "page": 4,
+      "stem": "The type of explosive used was one which results in the extremely rapid decomposition of nitrogenous compounds resulting to detonation. This is known as?",
+      "options": {
+        "A": "High order condensed reactant explosive",
+        "B": "Low order condensed reactant explosive",
+        "C": "Diffuse reactant explosive",
+        "D": "Hydrostatic explosion"
+      },
+      "key": "A",
+      "rationale": "High explosives detonate through a rapidly propagating shock-driven reaction in a condensed material. Low explosives typically deflagrate, with a slower combustion front.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-017",
+      "number": 17,
+      "page": 4,
+      "stem": "A 2-year- old female child, while playing, was accidentally trapped inside a discarded refrigerator. After 2 hours, she was found lifeless by her relative. Post-mortem examination shows no external injuries on the body. What is the most probable cause of death?",
+      "options": {
+        "A": "Asphyxia secondary to entrapment suffocation",
+        "B": "Asphyxia secondary to environmental suffocation",
+        "C": "Asphyxia secondary to smothering",
+        "D": "Mechanical asphyxia"
+      },
+      "key": "A",
+      "rationale": "Confinement in an airtight refrigerator can cause entrapment suffocation as available oxygen falls and carbon dioxide rises. Environmental oxygen depletion describes the underlying mechanism, so the options partly overlap; A is the more specific scenario label.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-018",
+      "number": 18,
+      "page": 4,
+      "stem": "A form of asphyxia characterized by closure of the blood vessels and air passages",
+      "options": {
+        "A": "Strangulation",
+        "B": "Smothering",
+        "C": "Choking",
+        "D": "Mechanical asphyxia"
+      },
+      "key": "A",
+      "rationale": "Strangulation involves external neck compression that can obstruct neck vessels and the airway. Smothering obstructs the external nose and mouth, while choking obstructs the internal airway.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-019",
+      "number": 19,
+      "page": 4,
+      "stem": "This type of asphyxia is associated with failure of the arterial blood to become normally saturated with oxygen may be due to high altitude:",
+      "options": {
+        "A": "Anoxic death",
+        "B": "Anemic anoxic death",
+        "C": "Stagnant anoxic death",
+        "D": "Histotoxic anoxic death"
+      },
+      "key": "A",
+      "rationale": "High altitude lowers inspired oxygen partial pressure, producing hypoxic or anoxic hypoxia. Anemic, stagnant, and histotoxic hypoxia respectively involve oxygen-carrying capacity, circulation, or cellular oxygen use.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-020",
+      "number": 20,
+      "page": 4,
+      "stem": "This type of asphyxia is virtually always an accident and is associated with alcohol or drug intoxication",
+      "options": {
+        "A": "Positional Asphyxia",
+        "B": "Suffocating gases",
+        "C": "Riot asphyxia",
+        "D": "Traumatic asphyxia"
+      },
+      "key": "A",
+      "rationale": "Positional asphyxia occurs when body position impairs ventilation or airway protection, often with intoxication limiting escape. It is frequently accidental, but the source's 'virtually always' wording should not replace case-specific investigation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-021",
+      "number": 21,
+      "page": 5,
+      "stem": "Which of the following statement is NOT true of electrocution?",
+      "options": {
+        "A": "Electrical currents follow the longest path",
+        "B": "Electrical current runs from point to point",
+        "C": "Ventricular fibrillation is occasionally self-reversible",
+        "D": "All statements are correct"
+      },
+      "key": null,
+      "rationale": "Electrical current distributes according to impedance rather than choosing the longest path, making A false. Ventricular fibrillation is also not reliably self-terminating, so C is misleading; the item contains more than one problematic statement.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-022",
+      "number": 22,
+      "page": 5,
+      "stem": "Which of the following statements is TRUE of lightning?",
+      "options": {
+        "A": "Lightning may kill a person by conduction through another object",
+        "B": "A lightning bolt may injure or kill an individual by a direct strike only.",
+        "C": "In a side-flash strike, the bolt of lightning hits the side of the body",
+        "D": "All statements are correct"
+      },
+      "key": "A",
+      "rationale": "Lightning can injure through direct strike, contact with an energized object, side flash, or ground current. A side flash jumps from a nearby object and is not defined simply by hitting the side of the body.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-023",
+      "number": 23,
+      "page": 5,
+      "stem": "Deaths from lightning are caused by:",
+      "options": {
+        "A": "High voltage direct current",
+        "B": "High voltage indirect current",
+        "C": "Both direct and indirect current",
+        "D": "None of the statements are correct"
+      },
+      "key": "A",
+      "rationale": "Lightning is conventionally described as a very high-voltage, short-duration unidirectional electrical discharge. 'Indirect current' is not an electrical-current category and should not be confused with indirect lightning exposure.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-024",
+      "number": 24,
+      "page": 5,
+      "stem": "Lesions pathognomonic for lightning injury:",
+      "options": {
+        "A": "Arborescent",
+        "B": "Fern like injury",
+        "C": "Lichtenberg figures",
+        "D": "All answers are correct"
+      },
+      "key": "D",
+      "rationale": "Arborescent, fern-like markings and Lichtenberg figures describe the same transient branching pattern associated with lightning. Their absence does not exclude lightning injury.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-025",
+      "number": 25,
+      "page": 5,
+      "stem": "Drunkenness of the deep is also known as:",
+      "options": {
+        "A": "Nitrogen narcosis",
+        "B": "Hypobarism",
+        "C": "Dysbarism",
+        "D": "Euphoria"
+      },
+      "key": "A",
+      "rationale": "Nitrogen narcosis is the reversible narcotic effect of increased nitrogen partial pressure during deep diving. It differs from decompression sickness caused by gas-bubble formation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-026",
+      "number": 26,
+      "page": 5,
+      "stem": "Adipocere formation is characterized by all, EXCEPT:",
+      "options": {
+        "A": "Cheesy color",
+        "B": "Foul smelling",
+        "C": "Whole body is affected",
+        "D": "Develops in moist area"
+      },
+      "key": "C",
+      "rationale": "Adipocere is a waxy fatty transformation favored by moist, relatively oxygen-poor conditions. It can be localized rather than involving the entire body, so whole-body involvement is not required.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-027",
+      "number": 27,
+      "page": 5,
+      "stem": "In putrefaction greenish discoloration of skin 1st develop in:",
+      "options": {
+        "A": "Right iliac fossa",
+        "B": "Head",
+        "C": "Chest",
+        "D": "Axilla"
+      },
+      "key": "A",
+      "rationale": "In the traditional temperate-climate description, putrefactive green discoloration often begins over the right iliac fossa near the cecum. Sequence and timing vary substantially with environment and body condition.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-028",
+      "number": 28,
+      "page": 6,
+      "stem": "If a body has been found in a hotel room with a body temperature which was 4.5 degrees lower than average. What is the approximate time of death of the person?",
+      "options": {
+        "A": "3 hours",
+        "B": "4 hours",
+        "C": "1 hour",
+        "D": "2 hours"
+      },
+      "key": null,
+      "rationale": "A 4.5-degree temperature drop cannot determine time since death without units, measurement site, ambient temperature, initial body temperature, clothing, and other conditions. A fixed cooling-rate calculation is only a crude historical teaching exercise.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-029",
+      "number": 29,
+      "page": 6,
+      "stem": "A person is presumed dead for all purposes in which of the following circumstances EXCEPT:",
+      "options": {
+        "A": "A person in the armed forces who went to war has been missing for 4 years",
+        "B": "A person on board a vessel lost during a sea voyage after 4 years",
+        "C": "A person who has been in danger of death under other circumstances such as illness and has not been seen for 4 years",
+        "D": "A person over 65 years of age who has been missing for over 5 years"
+      },
+      "key": "D",
+      "rationale": "Civil Code Article 390 uses disappearance after age 75, not 65, for the five-year succession presumption. Article 391 separately addresses specified dangerous disappearances after four years; ordinary illness alone does not automatically establish its danger-of-death condition.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Civil Code, Articles 390-391, 2180, 2217, and 2179",
+          "url": "https://lawphil.net/statutes/repacts/ra1949/ra_386_1949.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-030",
+      "number": 30,
+      "page": 6,
+      "stem": "This is a period immediately after death when the sphincters become relaxed which causes voiding of bowel contents.",
+      "options": {
+        "A": "Period of primary flaccidity",
+        "B": "Period of Cadaveric rigidity",
+        "C": "Period of secondary flaccidity",
+        "D": "Rigor mortis"
+      },
+      "key": "A",
+      "rationale": "Primary flaccidity immediately follows somatic death and includes loss of muscle tone and sphincter relaxation. Rigor develops subsequently and later resolves into secondary flaccidity.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-031",
+      "number": 31,
+      "page": 6,
+      "stem": "This is a modification of putrefaction which occurs in a cold and humid climate with low oxygen tension?",
+      "options": {
+        "A": "Saponification",
+        "B": "Mummification",
+        "C": "Marbolization",
+        "D": "Maceration"
+      },
+      "key": "A",
+      "rationale": "Adipocere formation, historically called saponification, is favored by moisture and relatively limited oxygen. Mummification instead requires drying; maceration classically describes autolysis of a retained dead fetus.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-032",
+      "number": 32,
+      "page": 6,
+      "stem": "May arise especially in hysteria, uremia, catalepsy and electric shock, drowning, still-birth:",
+      "options": {
+        "A": "Apparent Death",
+        "B": "Somatic Death",
+        "C": "Brain Death",
+        "D": "Molecular Death"
+      },
+      "key": "A",
+      "rationale": "Apparent death is a historical description of vital signs being so difficult to detect that a living person may be mistaken for dead. It is not a valid substitute for modern criteria and careful assessment of circulation, respiration, and neurologic function.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-033",
+      "number": 33,
+      "page": 6,
+      "stem": "Last internal organ to putrefy:",
+      "options": {
+        "A": "Uterus / prostate",
+        "B": "Testes",
+        "C": "Ovary",
+        "D": "Adrenals"
+      },
+      "key": "A",
+      "rationale": "Traditional forensic descriptions identify the nonpregnant uterus and prostate as relatively resistant to decomposition. This is a relative pattern rather than an invariant chronological rule for every body.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-034",
+      "number": 34,
+      "page": 7,
+      "stem": "A body is found in a swamp in Pampanga whereby the body is grossly swollen and disfigured, hairs and nails loose, tissue soft and discolored. Based on these findings, how many hours have passed after the person’s death?",
+      "options": {
+        "A": "72",
+        "B": "48",
+        "C": "36",
+        "D": "24"
+      },
+      "key": null,
+      "rationale": "Bloating, skin discoloration, and loosening hair or nails indicate decomposition but cannot establish a precise 24-, 36-, 48-, or 72-hour interval. Temperature, water exposure, insects, clothing, and other factors strongly modify the timeline.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-035",
+      "number": 35,
+      "page": 7,
+      "stem": "An autopsy technique where the cause of death is an educated guess, resulting in an overestimation of the common causes of death:",
+      "options": {
+        "A": "View and Grant",
+        "B": "Rokitansky",
+        "C": "Ghon",
+        "D": "Virchow"
+      },
+      "key": "A",
+      "rationale": "'View and grant' refers to certification based on external viewing and available history without full dissection. This can misclassify cause of death; it is not equivalent to the Rokitansky, Ghon, or Virchow dissection techniques.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-036",
+      "number": 36,
+      "page": 7,
+      "stem": "Which of the following statement is NOT true of RA 9262",
+      "options": {
+        "A": "Sexual relation refers to multiple sexual act that may result in the bearing of a child",
+        "B": "Children refers to those below 18 years of age",
+        "C": "Children includes biological children of the victim and other children under her care.",
+        "D": "Includes lesbian relationship"
+      },
+      "key": "A",
+      "rationale": "RA 9262 defines sexual relations to include a single sexual act, whether or not a common child results. It does not require multiple acts; its child definition also includes certain older persons unable to care for themselves.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Rustan Ang v. Court of Appeals, RA 9262 definitions",
+          "url": "https://lawphil.net/judjuris/juri2010/apr2010/gr_182835_2010.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-037",
+      "number": 37,
+      "page": 7,
+      "stem": "James and Kris are legally married. On February 14, 2014, Y the husband died of heart attack. 285 days after, X gave birth to a baby boy. The child is presumed to be,",
+      "options": {
+        "A": "Legitimate proper",
+        "B": "Legitimated",
+        "C": "Illegitimate",
+        "D": "Adopted"
+      },
+      "key": "A",
+      "rationale": "A child born 285 days after a spouse's death falls within the traditional 300-day presumption associated with conception during marriage, subject to the Family Code's rules and rebuttal provisions. Legitimation is a different process concerning qualifying children born outside marriage.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-038",
+      "number": 38,
+      "page": 7,
+      "stem": "Which of the following is NOT a sign of fetal death?",
+      "options": {
+        "A": "Elevated HCG",
+        "B": "The size remains stationary even after the lapse of a number of weeks or months.",
+        "C": "Cessation of fetal movement after they have been felt.",
+        "D": "Absence of fetal heart sounds after repeated and prolonged examination."
+      },
+      "key": "A",
+      "rationale": "An elevated hCG concentration alone is not a sign of fetal death and can persist after pregnancy loss. Absent movement or heart sounds also requires proper clinical and ultrasound assessment rather than diagnosis from one historical sign.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-039",
+      "number": 39,
+      "page": 8,
+      "stem": "Which of the following is true of Wredins Test?",
+      "options": {
+        "A": "The middle ear of the child before birth is filled with gelatinous, and disappear after birth",
+        "B": "The lungs float in water",
+        "C": "Mummification of umbilical cord",
+        "D": "None of the answers are correct"
+      },
+      "key": "A",
+      "rationale": "Wreden's historical middle-ear test concerns changes in the fetal middle-ear contents after birth. Such historical tests are not independently reliable proof of live birth and must be interpreted with the full investigation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-040",
+      "number": 40,
+      "page": 8,
+      "stem": "A patient is suffering severe pain from a stage 4 brain cancer. While injecting the medication of the patient, the doctor suddenly noticed that he was injecting the wrong drug. The patient died as a result. Which is valid?",
+      "options": {
+        "A": "The doctor committed murder",
+        "B": "The doctor committed homicide",
+        "C": "The doctor committed reckless imprudence",
+        "D": "The doctor did not commit a crime"
+      },
+      "key": "C",
+      "rationale": "A fatal medication error may support reckless imprudence resulting in homicide if culpable negligence and causation are proven. Lack of intent distinguishes the proposed negligent offense from intentional homicide or murder; an error does not automatically establish criminal guilt.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-041",
+      "number": 41,
+      "page": 8,
+      "stem": "Which tests uses involves shining a light thru the patient’s hand to determine the presence of active circulation?",
+      "options": {
+        "A": "Magnus Test",
+        "B": "Icard's Test",
+        "C": "Winslow's Test",
+        "D": "Diaphanous Test"
+      },
+      "key": "D",
+      "rationale": "The historical diaphanous test uses transillumination of tissue as a supposed indicator of circulation. It is not an accepted modern standalone test for certifying death.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-042",
+      "number": 42,
+      "page": 8,
+      "stem": "This is a phenomenon when the body temperature goes up instead of going down in the initial hours after death. This is known as:",
+      "options": {
+        "A": "Postmortem Caloricity",
+        "B": "Postmortem Lividity",
+        "C": "Postmortem suggillation",
+        "D": "Postmortem putrefaction"
+      },
+      "key": "A",
+      "rationale": "Postmortem caloricity describes an early postmortem rise or persistence of body temperature in certain circumstances. Lividity instead refers to gravitational pooling of blood.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-043",
+      "number": 43,
+      "page": 8,
+      "stem": "According to the Code of Sanitation, how many meters from away a dwelling can a burial be done?",
+      "options": {
+        "A": "25 meters",
+        "B": "50 meters",
+        "C": "75 meters",
+        "D": "100 meters"
+      },
+      "key": "A",
+      "rationale": "PD 856, Section 90, sets a minimum distance of 25 meters between a burial ground and a dwelling. It separately specifies distances from rivers and water supplies.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "PD 856, Section 90",
+          "url": "https://www.lawphil.net/statutes/presdecs/pd1975/pd_856_1975.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-044",
+      "number": 44,
+      "page": 8,
+      "stem": "This causes a stiffening of all the muscles of his body starting from the eyelid down to the extremity and is complete at around 12 hour post mortem.",
+      "options": {
+        "A": "Complete consumption of ATP causing rigor",
+        "B": "Loss of the exchange pumps causing cellular rupture",
+        "C": "Coagulation of muscle protein causing stiffening.",
+        "D": "Loss of intracellular integrity due to enzyme degradation"
+      },
+      "key": "A",
+      "rationale": "After death, ATP depletion prevents actin-myosin detachment and produces rigor mortis. Its onset and completeness vary; the stated 12-hour timing is an approximation, not a precise postmortem clock.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-045",
+      "number": 45,
+      "page": 9,
+      "stem": "Which of the following tests will allow the forensic examiner to determine if the sample of semen is of human origin or not?",
+      "options": {
+        "A": "Precipitin Test",
+        "B": "Kastle-Mayer Test",
+        "C": "Magnus Test",
+        "D": "Takayama Test"
+      },
+      "key": "A",
+      "rationale": "A species-specific precipitin reaction can identify human protein in a biological sample. It does not by itself establish that a stain is semen; blood and semen identification require appropriate separate tests.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-046",
+      "number": 46,
+      "page": 9,
+      "stem": "When livor mortis is colored cherry red, what is the probable cause of death?",
+      "options": {
+        "A": "cyanide poisoning",
+        "B": "arsenic poisoning",
+        "C": "conotoxin poisoning",
+        "D": "carbon monoxide poisoning"
+      },
+      "key": "D",
+      "rationale": "Cherry-red lividity is classically associated with carboxyhemoglobin in carbon monoxide poisoning. Color alone is not diagnostic and can overlap with other exposures or environmental effects.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-047",
+      "number": 47,
+      "page": 9,
+      "stem": "In an abandoned car, a shirt found with the bones had rust colored stains. A presumptive test known as Adler Test was used on the sample. What is the reagent used in this test?",
+      "options": {
+        "A": "Leucomalachite Green",
+        "B": "Benzidine",
+        "C": "Phenolpthalein",
+        "D": "Mercury Hydroxide"
+      },
+      "key": "B",
+      "rationale": "The historical Adler presumptive blood test uses benzidine and an oxidizing system. Benzidine is carcinogenic and this identification question is not a recommendation to use it in current practice.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-048",
+      "number": 48,
+      "page": 9,
+      "stem": "Which of the following is true of the DNA?",
+      "options": {
+        "A": "The DNA is positively charged",
+        "B": "The DNA is negatively charged",
+        "C": "The DNA is neutral in charge",
+        "D": "The DNA is sometimes negative and sometimes positively charged"
+      },
+      "key": "B",
+      "rationale": "DNA has an overall negative charge because of phosphate groups in its backbone. This contributes to its movement toward the positive electrode during electrophoresis.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-049",
+      "number": 49,
+      "page": 9,
+      "stem": "Upon analysis using alternative lighting, the stains in the bedroom floor were determined to be a mixture of semen and blood. In order to further bring out the pattern of blood in the room, chemiluminescence was used. Which of the following is such an agent?",
+      "options": {
+        "A": "Luminol",
+        "B": "Fluorescein",
+        "C": "Leucomalachite green",
+        "D": "Benzidine"
+      },
+      "key": "A",
+      "rationale": "Luminol produces chemiluminescence in an oxidation reaction enhanced by heme-associated catalytic activity. It is presumptive, can yield false positives, and does not alone establish human blood.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-050",
+      "number": 50,
+      "page": 9,
+      "stem": "The human body contains how many cells?",
+      "options": {
+        "A": "100 million cells",
+        "B": "100 billion cells",
+        "C": "100 trillion cells",
+        "D": "10 billion cells"
+      },
+      "key": null,
+      "rationale": "The old estimate of 100 trillion human cells is not a reliable current single value. Modern estimates are on the order of tens of trillions and vary with body size, age, and counting assumptions; none of the offered numbers is an adequate general answer.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "The human cell count and size distribution",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10523466/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-051",
+      "number": 51,
+      "page": 10,
+      "stem": "Who owns hospital medical records?",
+      "options": {
+        "A": "the patient",
+        "B": "the attending physician",
+        "C": "the hospital",
+        "D": "the State"
+      },
+      "key": "C",
+      "rationale": "The hospital is ordinarily custodian of the institutional record and is the conventional answer for ownership of the physical chart. Patients retain rights to their personal information and access; ownership of paper does not eliminate confidentiality or data-subject rights.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-052",
+      "number": 52,
+      "page": 10,
+      "stem": "Which are allowable contents of a physician’s professional card?",
+      "options": {
+        "A": "Name of the physician",
+        "B": "Post-graduate training abroad",
+        "C": "Past connections with hospitals",
+        "D": "All of the above"
+      },
+      "key": "A",
+      "rationale": "The physician's name is permitted. The 2019 Code restricts promotional publication of postgraduate training and similar superiority claims.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "PRC/PMA Code of Ethics, 2019",
+          "url": "https://prc.gov.ph/sites/default/files/Medicine%20Code%20of%20Ethics.pdf",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-053",
+      "number": 53,
+      "page": 10,
+      "stem": "Which are allowable contents of an ad in a physician’s clinic?",
+      "options": {
+        "A": "Clinic hours and addresses",
+        "B": "Special certificates or diplomas",
+        "C": "Specific operative techniques",
+        "D": "All of the above"
+      },
+      "key": "D",
+      "rationale": "The 2019 Code permits certificates and treatment-method information within the clinic or residence, while public advertisements have narrower permitted content.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "PRC/PMA Code of Ethics, 2019",
+          "url": "https://prc.gov.ph/sites/default/files/Medicine%20Code%20of%20Ethics.pdf",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-054",
+      "number": 54,
+      "page": 10,
+      "stem": "The medical fee is allocated between the physician and the drug company:",
+      "options": {
+        "A": "Package deal",
+        "B": "Fee splitting",
+        "C": "Fee for all",
+        "D": "None of the above"
+      },
+      "key": "B",
+      "rationale": "Sharing professional fees with a drug company constitutes fee splitting; the Code prohibits fee splitting and referral rebates.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "PRC/PMA Code of Ethics, 2019",
+          "url": "https://prc.gov.ph/sites/default/files/Medicine%20Code%20of%20Ethics.pdf",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-055",
+      "number": 55,
+      "page": 10,
+      "stem": "Imposes direct liability to a hospital:",
+      "options": {
+        "A": "Doctrine of Respondeat Superior",
+        "B": "Doctrine of Apparent Authority",
+        "C": "Doctrine of Corporate Negligence",
+        "D": "Doctrine of Res Ipsa Loquitur"
+      },
+      "key": "C",
+      "rationale": "Corporate negligence concerns a hospital's breach of its own institutional duties, such as appropriate oversight. Respondeat superior and apparent authority instead address forms of responsibility for another person's conduct.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Professional Services v. Agana, final resolution and scope",
+          "url": "https://lawphil.net/judjuris/juri2010/feb2010/gr_126297_2010.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-056",
+      "number": 56,
+      "page": 10,
+      "stem": "What is a lawful remedy of the hospital in case the family of the deceased patient cannot fully pay the hospital bill?",
+      "options": {
+        "A": "hold the cadaver",
+        "B": "hold the death certificate",
+        "C": "compel the execution of a promissory note with security",
+        "D": "all of the above"
+      },
+      "key": null,
+      "rationale": "RA 9439 requires release of relevant documents for a deceased patient and prohibits covered detention for unpaid bills. It does not make coercing relatives into a secured personal promise the necessary remedy. Lawful debt recovery is distinct; none of the listed categorical choices is satisfactory.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "Republic Act 9439, Sections 1-2",
+          "url": "https://lawphil.net/statutes/repacts/ra2007/ra_9439_2007.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-057",
+      "number": 57,
+      "page": 11,
+      "stem": "Hospitals which may not be sued without its consent:",
+      "options": {
+        "A": "Government hospitals",
+        "B": "Private charitable hospitals",
+        "C": "Eleemosynary hospitals",
+        "D": "All hospitals when sued for treating charity patients"
+      },
+      "key": null,
+      "rationale": "An unincorporated government hospital may share state immunity, but consent, charter provisions, legal personality, and the nature of the action matter. Not every government hospital is automatically immune, so A is only a qualified classroom answer.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-058",
+      "number": 58,
+      "page": 11,
+      "stem": "That cause, which, in natural and continuous sequence, unbroken by any efficient intervening cause, produces the injury, and without which the result would not have occurred:",
+      "options": {
+        "A": "Immediate cause",
+        "B": "Remote cause",
+        "C": "Proximate cause",
+        "D": "Indirect cause"
+      },
+      "key": "C",
+      "rationale": "Proximate cause is the legally significant cause connecting the wrongful act to the injury through a natural sequence without a superseding efficient cause. Temporal proximity alone is insufficient.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-059",
+      "number": 59,
+      "page": 11,
+      "stem": "Test for determining employer-employee relationship:",
+      "options": {
+        "A": "Sine qua non test",
+        "B": "Substantial factor test",
+        "C": "“but for” test",
+        "D": "Four-fold test"
+      },
+      "key": "D",
+      "rationale": "The four-fold test considers engagement, payment, dismissal power, and control of work. Control over the means and methods is generally the most important element.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Supreme Court: four-fold test and control",
+          "url": "https://www.lawphil.net/judjuris/juri2021/jun2021/gr_231579_2021.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-060",
+      "number": 60,
+      "page": 11,
+      "stem": "Physicians are obliged to observe __________ care in their treatment of their patients.",
+      "options": {
+        "A": "ordinary",
+        "B": "extraordinary",
+        "C": "utmost",
+        "D": "special"
+      },
+      "key": "A",
+      "rationale": "A physician must exercise the reasonable skill and care expected of a similarly situated competent practitioner. 'Ordinary' means the applicable professional standard, not an excuse for careless treatment.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Reyes v. Sisters of Mercy Hospital: malpractice elements",
+          "url": "https://chief5.lawphil.net/judjuris/juri2000/oct2000/gr_130547_2000.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-061",
+      "number": 61,
+      "page": 11,
+      "stem": "Primary regulatory agency of Philippine medical education:",
+      "options": {
+        "A": "Department of Health",
+        "B": "Board of Medicine",
+        "C": "PAASCU",
+        "D": "Commission on Higher Education"
+      },
+      "key": "D",
+      "rationale": "The Commission on Higher Education regulates higher education, including medical degree programs. The Board of Medicine regulates professional licensure and practice rather than serving as the primary medical-school regulator.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-062",
+      "number": 62,
+      "page": 11,
+      "stem": "What is the legal consenting age in the Philippines?",
+      "options": {
+        "A": "16",
+        "B": "18",
+        "C": "21",
+        "D": "25"
+      },
+      "key": null,
+      "rationale": "The question does not specify the type of consent. General legal majority is 18 under RA 6809, while sexual-consent rules use different thresholds and exceptions; treatment consent also depends on capacity and statutory context.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "Republic Act 6809, age of majority",
+          "url": "https://lawphil.net/statutes/repacts/ra1989/ra_6809_1989.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-063",
+      "number": 63,
+      "page": 12,
+      "stem": "A PhilHealth accredited health care provider who commits unethical act under PHIC rules and regulations may be held liable ________",
+      "options": {
+        "A": "administratively",
+        "B": "criminally",
+        "C": "administratively and criminally",
+        "D": "administratively, criminally and civilly"
+      },
+      "key": "D",
+      "rationale": "A provider's conduct can support administrative sanctions and, when the relevant elements are met, criminal and civil liability. RA 11223 Section 38 expressly addresses provider penalties and criminal violation; separate civil liability requires its own legal basis and proof.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Republic Act 11223, Section 38",
+          "url": "https://www.philhealth.gov.ph/about_us/RA11223_UHC.pdf",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-064",
+      "number": 64,
+      "page": 12,
+      "stem": "Which of the following is prohibited for physicians under the Code of Ethics of the Medical Profession?",
+      "options": {
+        "A": "Publicly giving a favorable verbal review of a moisturizing soap for free",
+        "B": "Publicly giving a favorable verbal review of a moisturizing soap for a fee",
+        "C": "Allowing one’s name and face to appear on a billboard advertising a moisturizing soap",
+        "D": "All of the above"
+      },
+      "key": null,
+      "rationale": "Commercial endorsement of health products is prohibited. A free, evidence-based educational comment is not automatically commercial endorsement; the source lacks context.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "PRC/PMA Code of Ethics, 2019",
+          "url": "https://prc.gov.ph/sites/default/files/Medicine%20Code%20of%20Ethics.pdf",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-065",
+      "number": 65,
+      "page": 12,
+      "stem": "The responsibility of the hospital under the doctrine of respondeat superior shall cease when it has proven that _______________",
+      "options": {
+        "A": "it is an independent contractor",
+        "B": "it does not have apparent authority",
+        "C": "it observed all the diligence of a good father of a family to prevent damage",
+        "D": "all of the above"
+      },
+      "key": "C",
+      "rationale": "Under Civil Code Article 2180, an employer may defeat the applicable presumed-negligence claim by proving the required diligence in preventing damage. This defense does not automatically defeat separate hospital liability under other legal theories.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Civil Code, Articles 390-391, 2180, 2217, and 2179",
+          "url": "https://lawphil.net/statutes/repacts/ra1949/ra_386_1949.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-066",
+      "number": 66,
+      "page": 12,
+      "stem": "The doctrine of apparent authority is based on ___________",
+      "options": {
+        "A": "an expressed agency",
+        "B": "the concept of estoppel",
+        "C": "a contractual relationship",
+        "D": "the deliberate deceit of a patient"
+      },
+      "key": "B",
+      "rationale": "Apparent authority rests on estoppel: a principal's representations can justify a third party's reasonable reliance on another's authority. Actual employment is not always required, but the doctrine's elements must be proven.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Professional Services v. Agana, final resolution and scope",
+          "url": "https://lawphil.net/judjuris/juri2010/feb2010/gr_126297_2010.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-067",
+      "number": 67,
+      "page": 12,
+      "stem": "The physician’s oath:",
+      "options": {
+        "A": "The Socratic Oath",
+        "B": "The Aesculapian Oath",
+        "C": "The Healer’s Oath",
+        "D": "The Hippocratic Oath"
+      },
+      "key": "D",
+      "rationale": "The Hippocratic Oath is the historically recognized physician's oath among the options. Contemporary professional pledges and ethical codes may use revised formulations.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-068",
+      "number": 68,
+      "page": 13,
+      "stem": "The communication between the physician and his patient is considered privileged in which of the following instances?",
+      "options": {
+        "A": "In criminal cases",
+        "B": "When all the parties in the case are claiming through the deceased patient",
+        "C": "In a medical malpractice suit brought by the patient against the physician",
+        "D": "None of the above"
+      },
+      "key": null,
+      "rationale": "Philippine Rule 130 protects qualifying confidential treatment communications in civil cases. The source lists proposed exceptions without enough facts to determine waiver or applicability; 'claiming through a deceased patient' should not be imported automatically from attorney-client privilege exceptions.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "2019 Amendments to the Rules on Evidence, Rule 130",
+          "url": "https://lawphil.net/courts/rules/pdf/am_19-08-15-sc_2019.pdf",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-069",
+      "number": 69,
+      "page": 13,
+      "stem": "The patient’s right to refuse treatment is based upon which basic ethical principle?",
+      "options": {
+        "A": "Beneficence",
+        "B": "Non-maleficence",
+        "C": "Autonomy",
+        "D": "Veracity"
+      },
+      "key": "C",
+      "rationale": "Respect for autonomy supports a capable patient's informed refusal. Capacity, adequate information, voluntariness, and applicable exceptions remain essential.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "PRC/PMA Code of Ethics, 2019",
+          "url": "https://prc.gov.ph/sites/default/files/Medicine%20Code%20of%20Ethics.pdf",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-070",
+      "number": 70,
+      "page": 13,
+      "stem": "Living related organ donors are those who are related to the recipient within _________",
+      "options": {
+        "A": "the 3rd degree of consanguinity",
+        "B": "the 3rd degree of consanguinity or affinity",
+        "C": "the 4th degree of consanguinity",
+        "D": "the 4th degree of consanguinity or affinity"
+      },
+      "key": "C",
+      "rationale": "The cited DOH living-donor policy defines living related donors by blood relationship within the fourth degree of consanguinity. Spouses and relatives by affinity fall under emotionally related/non-blood-related categories in that framework.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "DOH AO 2008-0004, donor definitions",
+          "url": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/10/55267",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-071",
+      "number": 71,
+      "page": 13,
+      "stem": "The quantum of proof necessary in administrative cases:",
+      "options": {
+        "A": "Substantial evidence",
+        "B": "Preponderance of evidence",
+        "C": "Clear and convincing evidence",
+        "D": "Proof beyond reasonable doubt"
+      },
+      "key": "A",
+      "rationale": "Administrative liability generally requires substantial evidence: relevant evidence that a reasonable mind could accept as adequate. This is lower than proof beyond reasonable doubt required for criminal conviction.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Supreme Court: standards of evidence",
+          "url": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/17/33406",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-072",
+      "number": 72,
+      "page": 13,
+      "stem": "Within how many hours should a physician report a suspected case child abuse?",
+      "options": {
+        "A": "12",
+        "B": "24",
+        "C": "36",
+        "D": "48"
+      },
+      "key": "D",
+      "rationale": "The child-abuse reporting rules require designated health professionals to report suspected abuse within 48 hours of knowledge. Reporting need not await conclusive proof; immediate protection may be necessary sooner.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Rules on reporting and investigation of child abuse, Section 4",
+          "url": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/10/38174",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-073",
+      "number": 73,
+      "page": 13,
+      "stem": "The damages paid to the plaintiff for physical suffering, mental anguish, fright, serious anxiety, besmirched reputation, wounded feelings, moral shock, social humiliation, and similar injury:",
+      "options": {
+        "A": "Actual",
+        "B": "Temperate",
+        "C": "Moral",
+        "D": "Exemplary"
+      },
+      "key": "C",
+      "rationale": "Civil Code Article 2217 describes moral damages for specified forms of physical and emotional suffering. Actual damages address proved pecuniary loss, while exemplary damages serve a different purpose.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Civil Code, Articles 390-391, 2180, 2217, and 2179",
+          "url": "https://lawphil.net/statutes/repacts/ra1949/ra_386_1949.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-074",
+      "number": 74,
+      "page": 14,
+      "stem": "The Hospital Detention Law (R.A. 9439) does not apply to ______________",
+      "options": {
+        "A": "patients who stayed in private rooms",
+        "B": "patients who were admitted in charity wards",
+        "C": "deceased patients",
+        "D": "living patients who have partially recovered only"
+      },
+      "key": "A",
+      "rationale": "RA 9439 expressly excludes patients who stayed in private rooms from its coverage. The statute otherwise includes qualifying living and deceased patients; other legal duties may still apply outside this Act.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Republic Act 9439, Sections 1-2",
+          "url": "https://lawphil.net/statutes/repacts/ra2007/ra_9439_2007.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-075",
+      "number": 75,
+      "page": 14,
+      "stem": "The applicability of which of the following mitigates liability of the defendant?",
+      "options": {
+        "A": "Doctrine of Continuing Negligence",
+        "B": "Doctrine of Contributory Negligence",
+        "C": "Doctrine of Foreseeabilty",
+        "D": "None of the above"
+      },
+      "key": "B",
+      "rationale": "Contributory negligence can reduce recoverable damages when the defendant's negligence remains the proximate cause. It differs from a finding that the plaintiff's own negligence was the immediate and proximate cause.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Civil Code, Articles 390-391, 2180, 2217, and 2179",
+          "url": "https://lawphil.net/statutes/repacts/ra1949/ra_386_1949.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-076",
+      "number": 76,
+      "page": 14,
+      "stem": "Testimony on which of the following requires the witness to be qualified as an expert?",
+      "options": {
+        "A": "The physical exam findings of the patient as seen by the physician",
+        "B": "The history given by the patient on interview by the physician",
+        "C": "The necessary treatment for the condition of the patient",
+        "D": "All of the above"
+      },
+      "key": "C",
+      "rationale": "An opinion about medically necessary treatment depends on specialized knowledge and generally requires expert qualification. A witness can describe personal observations as facts, although interpretation of those findings may also require expertise.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "2019 Amendments to the Rules on Evidence, Rule 130",
+          "url": "https://lawphil.net/courts/rules/pdf/am_19-08-15-sc_2019.pdf",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-077",
+      "number": 77,
+      "page": 14,
+      "stem": "The quantum of proof necessary in civil cases:",
+      "options": {
+        "A": "Substantial evidence",
+        "B": "Preponderance of evidence",
+        "C": "Clear and convincing evidence",
+        "D": "Proof beyond reasonable doubt"
+      },
+      "key": "B",
+      "rationale": "The ordinary standard in civil cases is preponderance of evidence. Particular issues may require a different standard, but the general rule differs from criminal proof beyond reasonable doubt.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Supreme Court: standards of evidence",
+          "url": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/17/33406",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-078",
+      "number": 78,
+      "page": 14,
+      "stem": "A physician may lawfully disclose information learned from his patient in the course of attending to the patient in his professional capacity when required in the promotion of _____________",
+      "options": {
+        "A": "justice",
+        "B": "safety",
+        "C": "public health",
+        "D": "all of the above"
+      },
+      "key": null,
+      "rationale": "Confidential information may be disclosed when a specific legal duty or recognized exception applies. Broad appeals to justice, safety, or public health alone do not authorize unrestricted disclosure; necessity and scope must be established.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-079",
+      "number": 79,
+      "page": 15,
+      "stem": "Defense available to the hospital for the negligence of one of its employees while under the supervision and control of a consultant physician:",
+      "options": {
+        "A": "Borrowed Servant Doctrine",
+        "B": "Independent Contractor Theory",
+        "C": "Fellow Servant Doctrine",
+        "D": "Doctrine of Assumption of Risk"
+      },
+      "key": "A",
+      "rationale": "The borrowed-servant doctrine considers whether control of a worker's relevant conduct shifted to another employer or supervising physician. Its application is fact-specific and does not automatically extinguish every hospital duty.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-080",
+      "number": 80,
+      "page": 15,
+      "stem": "Administers the internship matching program:",
+      "options": {
+        "A": "Commission on Higher Education",
+        "B": "Board of Medicine",
+        "C": "Association of Philippine Medical Colleges",
+        "D": "Philippine Medical Association"
+      },
+      "key": "C",
+      "rationale": "The Association of Philippine Medical Colleges administers the national internship matching process through its matching system. Medical-school regulation and professional licensure are separate functions.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-081",
+      "number": 81,
+      "page": 15,
+      "stem": "Which has the power to revoke the license to practice medicine?",
+      "options": {
+        "A": "Secretary of Health",
+        "B": "Secretary of Justice",
+        "C": "Any court of law",
+        "D": "Board of Medicine"
+      },
+      "key": "D",
+      "rationale": "The Professional Regulatory Board of Medicine can suspend or revoke professional registration through the prescribed disciplinary process, subject to PRC authority and review. The Department of Health does not issue the physician's professional registration.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Republic Act 2382, Sections 8, 22-24, 28",
+          "url": "https://lawphil.net/statutes/repacts/ra1959/ra_2382_1959.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-082",
+      "number": 82,
+      "page": 15,
+      "stem": "NMAT as an admission requirement in medical school:",
+      "options": {
+        "A": "Taken within 1 year with at least 40th percentile score",
+        "B": "Taken within 1 year with at least 50th percentile score",
+        "C": "Taken within 2 years with at least 40th percentile score",
+        "D": "Taken within 2 years with at least 50th percentile score"
+      },
+      "key": "C",
+      "rationale": "Current CEM guidance states a two-year NMAT validity period and a minimum of the 40th percentile or the school's higher cutoff. Meeting the national minimum does not guarantee admission.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "CEM NMAT frequently asked questions, 2025",
+          "url": "https://www.cem-inc.org.ph/nmat/files/downloads/NMAT_FAQs_02122025.pdf",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-083",
+      "number": 83,
+      "page": 15,
+      "stem": "An unlawful act under the Anti-hospital Deposit Law:",
+      "options": {
+        "A": "requesting advance payment as prerequisite for administering basic emergency care",
+        "B": "accepting advance payment as prerequisite for administering basic emergency care",
+        "C": "refusing to administer medical treatment and support for whatever reason in emergency cases",
+        "D": "all of the above"
+      },
+      "key": "D",
+      "rationale": "RA 10932 prohibits requiring or accepting advance payment as a condition for emergency care and prohibits unlawful refusal of necessary emergency treatment. Properly stabilized and coordinated transfer under the statute is expressly distinguished from prohibited refusal.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Republic Act 10932",
+          "url": "https://lawphil.net/statutes/repacts/ra2017/ra_10932_2017.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-084",
+      "number": 84,
+      "page": 16,
+      "stem": "Requisite to practice medicine:",
+      "options": {
+        "A": "At least 21 years of age",
+        "B": "In possession of 2 certificates of good moral character from two medical school professors",
+        "C": "Holder of a Certificate of Registration issued by the DOH",
+        "D": "All of the above"
+      },
+      "key": "A",
+      "rationale": "RA 2382 Section 8 states the minimum age of 21, passage of the examination, and valid Board-issued registration. A certificate purportedly issued by the DOH does not meet the stated professional-registration requirement.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Republic Act 2382, Sections 8, 22-24, 28",
+          "url": "https://lawphil.net/statutes/repacts/ra1959/ra_2382_1959.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-085",
+      "number": 85,
+      "page": 16,
+      "stem": "Illegal practice of medicine is punishable by a maximum prison term of __________",
+      "options": {
+        "A": "1 year",
+        "B": "5 years",
+        "C": "6 years",
+        "D": "10 years"
+      },
+      "key": "B",
+      "rationale": "RA 2382 Section 28 specifies imprisonment of one to five years for illegal practice, with statutory fine alternatives or combination. The maximum imprisonment among these choices is five years.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Republic Act 2382, Sections 8, 22-24, 28",
+          "url": "https://lawphil.net/statutes/repacts/ra1959/ra_2382_1959.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-086",
+      "number": 86,
+      "page": 16,
+      "stem": "The nature of a physician-patient relationship",
+      "options": {
+        "A": "contractual",
+        "B": "consensual",
+        "C": "fiduciary",
+        "D": "all of the above"
+      },
+      "key": "D",
+      "rationale": "A therapeutic physician-patient relationship is commonly described as consensual, contractual, and fiduciary. Emergency duties and other legal obligations can arise even without an express negotiated contract.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Reyes v. Sisters of Mercy Hospital: malpractice elements",
+          "url": "https://chief5.lawphil.net/judjuris/juri2000/oct2000/gr_130547_2000.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-087",
+      "number": 87,
+      "page": 16,
+      "stem": "There is no physician-patient relationship in which of the following instances?",
+      "options": {
+        "A": "Medical examination of an alleged rape victim who voluntarily submitted herself to such medical examination",
+        "B": "Medical examination of an alleged rapist upon order of the court",
+        "C": "The performance of basic life support by a physician while on a flight upon a person who appears to have suffered cardiac arrest",
+        "D": "None of the above"
+      },
+      "key": "B",
+      "rationale": "A court-ordered forensic examination ordinarily creates an examiner-examinee relationship for evidence rather than a therapeutic treatment relationship. Ethical duties and duties of reasonable care still exist; therapeutic care can create an additional relationship.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-088",
+      "number": 88,
+      "page": 16,
+      "stem": "The provision of what medical service would it still be ethical for a physician to charge professional fees against a colleague?",
+      "options": {
+        "A": "Medical service delivered at home",
+        "B": "Rhinoplasty on a colleague for cosmetic purposes",
+        "C": "Skin grafting on a colleague who is a burn victim",
+        "D": "None of the above"
+      },
+      "key": "B",
+      "rationale": "Purely elective cosmetic rhinoplasty falls outside the Code's required fee waiver for essential evidence-based care of colleagues.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "PRC/PMA Code of Ethics, 2019",
+          "url": "https://prc.gov.ph/sites/default/files/Medicine%20Code%20of%20Ethics.pdf",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-089",
+      "number": 89,
+      "page": 17,
+      "stem": "Inherent right of a physician:",
+      "options": {
+        "A": "Right to choose his patients",
+        "B": "Right to determine appropriate treatment procedures",
+        "C": "Right to avail of hospital services",
+        "D": "All of the above"
+      },
+      "key": null,
+      "rationale": "Physician choice is constrained by emergencies, continuity, nondiscrimination, consent, and professional duties. Hospital privileges require authorization, and treatment choice must respect patient consent; none of these is an unlimited inherent right.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-090",
+      "number": 90,
+      "page": 17,
+      "stem": "The application of which of the following results in the imposition of vicariously liability?",
+      "options": {
+        "A": "Captain of the ship doctrine",
+        "B": "Res ipsa loquitur doctrine",
+        "C": "Rescue doctrine",
+        "D": "Doctrine of last clear chance"
+      },
+      "key": "A",
+      "rationale": "The captain-of-the-ship doctrine is a historical vicarious-liability concept based on operative control. Res ipsa loquitur is an evidentiary inference, not itself a rule making one person liable for another.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-091",
+      "number": 91,
+      "page": 17,
+      "stem": "“Let the master answer”:",
+      "options": {
+        "A": "Trust Fund Doctrine",
+        "B": "Borrowed Servant Doctrine",
+        "C": "Doctrine of Corporate Negligence",
+        "D": "Doctrine of Respondeat Superior"
+      },
+      "key": "D",
+      "rationale": "Respondeat superior means 'let the master answer' and concerns employer responsibility for covered employee conduct. Liability still depends on the governing law and facts.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-092",
+      "number": 92,
+      "page": 17,
+      "stem": "Defense of a hospital in a malpractice suit involving one of its consultant surgeons and assisting resident physician, EXCEPT:",
+      "options": {
+        "A": "Captain of the ship doctrine",
+        "B": "Borrowed servant doctrine",
+        "C": "Independent contractor theory",
+        "D": "None of the above"
+      },
+      "key": null,
+      "rationale": "Borrowed-servant, independent-contractor, and captain-of-the-ship arguments all depend on control and the actual relationship. They are not automatic hospital defenses; without facts the 'EXCEPT' question has no sound unique answer.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-093",
+      "number": 93,
+      "page": 17,
+      "stem": "“The thing speaks for itself”:",
+      "options": {
+        "A": "Res Ipsa Loquitur Doctrine",
+        "B": "Doctrine of Foreseeability",
+        "C": "Fellow Servant Doctrine",
+        "D": "Doctrine of Ostensible Agency"
+      },
+      "key": "A",
+      "rationale": "Res ipsa loquitur means 'the thing speaks for itself.' It permits a negligence inference in qualifying circumstances and does not make every poor outcome proof of malpractice.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Reyes v. Sisters of Mercy Hospital: malpractice elements",
+          "url": "https://chief5.lawphil.net/judjuris/juri2000/oct2000/gr_130547_2000.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-094",
+      "number": 94,
+      "page": 17,
+      "stem": "Application results in the award of damages to the plaintiff- patient for the failure of the hospital to review treatment rendered to the plaintiff-patient:",
+      "options": {
+        "A": "Doctrine of command responsibility",
+        "B": "Doctrine of apparent authority",
+        "C": "Doctrine of corporate responsibility",
+        "D": "Res ipsa loquitur doctrine"
+      },
+      "key": "C",
+      "rationale": "Failure to perform the hospital's own oversight duties is the core of corporate responsibility/negligence. The precise duty, breach, and causal link must still be shown.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Professional Services v. Agana, final resolution and scope",
+          "url": "https://lawphil.net/judjuris/juri2010/feb2010/gr_126297_2010.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-095",
+      "number": 95,
+      "page": 17,
+      "stem": "If an employee was injured on account of the negligence of another employee, the employer cannot be held liable:",
+      "options": {
+        "A": "Doctrine of imputed negligence",
+        "B": "Borrowed servant doctrine",
+        "C": "Doctrine of ostensible agency",
+        "D": "Fellow servant doctrine"
+      },
+      "key": "D",
+      "rationale": "The historical fellow-servant doctrine limits employer liability for one employee's injury caused by a coworker. It must not be treated as a blanket statement of current Philippine employee-remedy law.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "LGM-2027-096",
+      "number": 96,
+      "page": 18,
+      "stem": "Allowable forms of promoting medical practice, EXCEPT:",
+      "options": {
+        "A": "Employing agents or recruiters",
+        "B": "Professional cards",
+        "C": "Billboards within hospital premises",
+        "D": "None of the above"
+      },
+      "key": "A",
+      "rationale": "The Code expressly prohibits employing agents to solicit or recruit patients. Permitted cards and signs remain subject to content and placement limits.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "PRC/PMA Code of Ethics, 2019",
+          "url": "https://prc.gov.ph/sites/default/files/Medicine%20Code%20of%20Ethics.pdf",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-097",
+      "number": 97,
+      "page": 18,
+      "stem": "Which are allowable contents of an ad in a physician’s website?",
+      "options": {
+        "A": "Clinic hours and addresses",
+        "B": "Special certificates or diplomas",
+        "C": "Specific operative techniques",
+        "D": "All of the above"
+      },
+      "key": "A",
+      "rationale": "The 2019 Code permits limited factual internet postings such as office hours. Promotional certificates and specific operative-technique advertising are restricted.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "PRC/PMA Code of Ethics, 2019",
+          "url": "https://prc.gov.ph/sites/default/files/Medicine%20Code%20of%20Ethics.pdf",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-098",
+      "number": 98,
+      "page": 18,
+      "stem": "How long is the waiting period for next of kin before authority for organ donation may be sought from the designated officer of the hospital?",
+      "options": {
+        "A": "12 hours",
+        "B": "24 hours",
+        "C": "36 hours",
+        "D": "48 hours"
+      },
+      "key": "D",
+      "rationale": "RA 7170 as amended describes reasonable efforts within 48 hours to locate relatives in specified deceased-donor circumstances. RA 7885 provides a distinct 12-hour corneal provision; the 48 hours is not a universal instruction to delay all donations.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Republic Act 7885 amending RA 7170",
+          "url": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/2889",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-099",
+      "number": 99,
+      "page": 18,
+      "stem": "A physician may commercially endorse which of the following?",
+      "options": {
+        "A": "facial wash and soaps",
+        "B": "blood components",
+        "C": "fluoride toothpaste",
+        "D": "none of the above"
+      },
+      "key": "D",
+      "rationale": "The Code prohibits physicians from commercially endorsing medical or health products. None of these products supplies an exemption.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "PRC/PMA Code of Ethics, 2019",
+          "url": "https://prc.gov.ph/sites/default/files/Medicine%20Code%20of%20Ethics.pdf",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "LGM-2027-100",
+      "number": 100,
+      "page": 18,
+      "stem": "Which among the following elements of the four-fold test is the most important?",
+      "options": {
+        "A": "selection and engagement of services",
+        "B": "payment of wages or salaries",
+        "C": "the power to fire",
+        "D": "the power to control conduct"
+      },
+      "key": "D",
+      "rationale": "The power to control how work is performed is the most important element of the four-fold employment test. Payment and hiring evidence remain relevant but are not alone decisive.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Supreme Court: four-fold test and control",
+          "url": "https://www.lawphil.net/judjuris/juri2021/jun2021/gr_231579_2021.html",
+          "accessed": "2026-11-08"
+        }
+      ]
+    }
+  ]
+}

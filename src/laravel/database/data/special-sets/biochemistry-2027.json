@@ -1,0 +1,1659 @@
+{
+  "slug": "biochemistry-2027",
+  "title": "Biochemistry 2027",
+  "subject_code": "BCH",
+  "version": 1,
+  "source_file": "BIOCHEMISTRY QUESTIONS - 2027.pdf",
+  "source_sha256": "a85031dce3eb3074cd85ad179a34ec24d1397766777c2c1a1f9de2d73d74cad6",
+  "note": "Rationales and proposed answers authored for study. No complete official answer key was supplied. Items with ambiguous, incomplete, or outdated premises are review-only and excluded from scores. Original question numbering and choices are retained; PDF extraction errors and table formatting are repaired. Targeted external source checks are linked where available; this is not a full textbook-page verification of every item.",
+  "items": [
+    {
+      "id": "BCH-2027-001",
+      "number": 1,
+      "page": 1,
+      "stem": "If the amount of enzyme is constant and the substrate concentration is continuously increased, the rate of reaction",
+      "options": {
+        "A": "Will continuously increase proportional to the amount of substrate",
+        "B": "Will continuously increase until it reaches its optimum in which it will reach a plateau",
+        "C": "Will continuously decrease proportional to the amount of substrate",
+        "D": "Will continuously decrease until it reaches its optimum in which it will reach a plateau"
+      },
+      "key": "B",
+      "rationale": "With a fixed enzyme concentration, increasing substrate raises reaction velocity until catalytic sites become saturated and velocity approaches Vmax. Adding further substrate cannot increase the available enzyme's maximal capacity.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Assay Guidance Manual: enzyme mechanisms and inhibition",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK92001/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "BCH-2027-002",
+      "number": 2,
+      "page": 1,
+      "stem": "Which is a correct function of the active site of enzymes?",
+      "options": {
+        "A": "Allows substrates to enter through channels",
+        "B": "Regulates through allosteric effectors",
+        "C": "Serves as binding sites of substrates",
+        "D": "Serves as scaffolding of the 3D structure"
+      },
+      "key": "C",
+      "rationale": "The active site binds substrate and contains the residues involved in catalysis. Allosteric effectors typically bind a distinct regulatory site.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Assay Guidance Manual: enzyme mechanisms and inhibition",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK92001/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "BCH-2027-003",
+      "number": 3,
+      "page": 1,
+      "stem": "What does the Gibbs free energy of activation (ΔGo) represent in an enzyme-catalyzed reaction?",
+      "options": {
+        "A": "Energy level of the transition state complex",
+        "B": "Energy required to convert all substrates to products",
+        "C": "Energy required to convert all substrates to transition state",
+        "D": "Net energy change from initial substrate state to products"
+      },
+      "key": "C",
+      "rationale": "Activation free energy is the energy barrier between reactants and the transition state. Its proper notation is delta G double-dagger; delta G or delta G standard instead describes the overall reaction free-energy change.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Assay Guidance Manual: enzyme mechanisms and inhibition",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK92001/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "BCH-2027-004",
+      "number": 4,
+      "page": 1,
+      "stem": "How does an enzyme increase the rate of reactions?",
+      "options": {
+        "A": "Decreases the activation energy",
+        "B": "Decreases the energy of the products",
+        "C": "Increases the activation energy",
+        "D": "Increases the energy of the reactant"
+      },
+      "key": "A",
+      "rationale": "Enzymes accelerate reactions by lowering the activation-energy barrier. They do not change the reaction's equilibrium constant or overall free-energy difference between substrates and products.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Assay Guidance Manual: enzyme mechanisms and inhibition",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK92001/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "BCH-2027-005",
+      "number": 5,
+      "page": 1,
+      "stem": "Which is true of allosteric enzyme inhibition?",
+      "options": {
+        "A": "All active sites are unchanged.",
+        "B": "Enzymes can still bind to its substrate.",
+        "C": "Inhibitor binds to the active site.",
+        "D": "Shape of active site is altered."
+      },
+      "key": null,
+      "rationale": "An allosteric inhibitor binds a regulatory site and changes enzyme conformation or conformational populations, reducing activity. Substrate binding may still occur, so B can also be true; the stem does not ensure a unique answer.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "Assay Guidance Manual: enzyme mechanisms and inhibition",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK92001/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "BCH-2027-006",
+      "number": 6,
+      "page": 1,
+      "stem": "These are enzymes that facilitate the transfer of phosphates from one substrate to another.",
+      "options": {
+        "A": "Kinases",
+        "B": "Oxidases",
+        "C": "Ligases",
+        "D": "Lyases"
+      },
+      "key": "A",
+      "rationale": "Kinases transfer phosphoryl groups, commonly from ATP to a substrate. Oxidases mediate oxidation, whereas ligases join molecules using energy and lyases catalyze selected nonhydrolytic bond cleavage or addition reactions.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-007",
+      "number": 7,
+      "page": 2,
+      "stem": "Which of the following is increased by competitive inhibitors?",
+      "options": {
+        "A": "Vmax",
+        "B": "Km",
+        "C": "½ Vmax",
+        "D": "Enzyme concentration"
+      },
+      "key": "B",
+      "rationale": "A competitive inhibitor raises apparent Km because more substrate is required to reach half-maximal velocity. Vmax is unchanged when sufficiently high substrate concentrations overcome reversible competition.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Assay Guidance Manual: enzyme mechanisms and inhibition",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK92001/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "BCH-2027-008",
+      "number": 8,
+      "page": 2,
+      "stem": "Dr. Kay Nis found out that substance X decreases the substrate affinity of an enzyme without affecting the Vmax. Substance X is most likely a/an:",
+      "options": {
+        "A": "Allosteric activator",
+        "B": "Competitive inhibitor",
+        "C": "Noncompetitive inhibitor",
+        "D": "Uncompetitive inhibitor"
+      },
+      "key": "B",
+      "rationale": "Increased apparent Km with unchanged Vmax is the classic reversible competitive-inhibition pattern. Pure noncompetitive inhibition reduces Vmax; uncompetitive inhibition reduces both apparent Km and Vmax.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Assay Guidance Manual: enzyme mechanisms and inhibition",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK92001/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "BCH-2027-009",
+      "number": 9,
+      "page": 2,
+      "stem": "A low Km indicates which enzyme kinetics?",
+      "options": {
+        "A": "High affinity for its [S]",
+        "B": "↓[E-S] complexes formed",
+        "C": "Needs ↑ [S] for saturation",
+        "D": "Vmax reached at ↑ [S]"
+      },
+      "key": "A",
+      "rationale": "In simple Michaelis-Menten comparisons, a lower Km means half-maximal velocity is reached at a lower substrate concentration and is often interpreted as higher apparent affinity. Km is not universally identical to a binding dissociation constant.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Assay Guidance Manual: enzyme mechanisms and inhibition",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK92001/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "BCH-2027-010",
+      "number": 10,
+      "page": 2,
+      "stem": "Which of the following food items will stimulate the action of salivary alpha amylase?",
+      "options": {
+        "A": "Bread",
+        "B": "Eggs",
+        "C": "Fish",
+        "D": "Nuts"
+      },
+      "key": "A",
+      "rationale": "Salivary alpha-amylase begins starch digestion by hydrolyzing internal alpha-1,4 glycosidic bonds. Bread supplies abundant starch; protein-rich eggs and fish are not its substrates.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-011",
+      "number": 11,
+      "page": 2,
+      "stem": "Aside from the ability to perform actions and reactions, which factor is involved in the central concept of thermodynamics?",
+      "options": {
+        "A": "Biochemical property",
+        "B": "Energy",
+        "C": "Physical equilibrium",
+        "D": "Temperature"
+      },
+      "key": "B",
+      "rationale": "Thermodynamics concerns energy, its transfer, and the constraints governing physical and chemical change. Biological work includes chemical synthesis, transport, and mechanical movement.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-012",
+      "number": 12,
+      "page": 2,
+      "stem": "Which of the following statements defines Zeroth Law of Thermodynamics?",
+      "options": {
+        "A": "If two systems are each in thermal equilibrium with a third, they are also in thermal equilibrium with each other.",
+        "B": "The change in internal energy is less than the thermodynamic work.",
+        "C": "The microscopic properties of individual molecules are related to the observable macroscopic properties of the material/",
+        "D": "Heat does not spontaneously flow from a colder body to a hotter one."
+      },
+      "key": "A",
+      "rationale": "The zeroth law expresses the transitive nature of thermal equilibrium and provides the basis for temperature measurement. Spontaneous heat flow from hot to cold is associated with the second law.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-013",
+      "number": 13,
+      "page": 2,
+      "stem": "A reaction is exergonic if:",
+      "options": {
+        "A": "∆ G is negative",
+        "B": "∆ G is zero",
+        "C": "∆ G is positive",
+        "D": "∆ G is equal to ∆ H"
+      },
+      "key": "A",
+      "rationale": "An exergonic reaction has a negative Gibbs free-energy change under the stated conditions. Thermodynamic favorability does not imply that a reaction occurs rapidly without catalysis.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-014",
+      "number": 14,
+      "page": 3,
+      "stem": "Which is the final electron acceptor at the end of the electron transport chain necessary to generate NAD+ and FAD?",
+      "options": {
+        "A": "Cytochrome c",
+        "B": "Fe+3",
+        "C": "O2",
+        "D": "CoQ"
+      },
+      "key": "C",
+      "rationale": "Molecular oxygen accepts electrons at complex IV and is reduced to water. Electron transfer through the chain permits reoxidation of NADH and FAD-linked reducing equivalents.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-015",
+      "number": 15,
+      "page": 3,
+      "stem": "Main site of oxidative phosphorylation:",
+      "options": {
+        "A": "CytosoL",
+        "B": "Inner mitochondrial membrane",
+        "C": "Intermembrane space",
+        "D": "Mitochondrial matrix"
+      },
+      "key": "B",
+      "rationale": "The electron-transport complexes and ATP synthase lie in the inner mitochondrial membrane. Their arrangement couples proton pumping to ATP synthesis across that membrane.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-016",
+      "number": 16,
+      "page": 3,
+      "stem": "Which of the following best describes the consequence of a mutation in the gene encoding cytochrome c oxidase within the electron transport chain?",
+      "options": {
+        "A": "The proton gradient across the inner mitochondrial membrane will be unaffected",
+        "B": "ATP production in the mitochondria will decrease significantly.",
+        "C": "Oxygen consumption in the cell will increase as a compensatory mechanism.",
+        "D": "The reduced NADH will accumulate, as it cannot be oxidized properly."
+      },
+      "key": null,
+      "rationale": "A damaging complex-IV defect impairs electron transfer to oxygen, lowers oxidative ATP production, and can also cause NADH accumulation. Therefore both B and D can be true, and the original item is unsuitable for single-answer scoring.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-017",
+      "number": 17,
+      "page": 3,
+      "stem": "If a cell were exposed to a compound that inhibits the ATP synthase complex, what would be the most likely consequence on the proton gradient across the mitochondrial membrane?",
+      "options": {
+        "A": "The proton gradient would increase, as protons accumulate in the intermembrane space.",
+        "B": "The proton gradient would dissipate, and there would be no proton movement across the membrane.",
+        "C": "The proton gradient would be unaffected, but ATP production would decrease.",
+        "D": "The proton gradient would decrease as protons move freely through the inner membrane."
+      },
+      "key": "A",
+      "rationale": "Blocking ATP synthase initially prevents proton return through its channel, increasing the electrochemical gradient. The resulting backpressure then slows electron transport; this is distinct from an uncoupler, which dissipates the gradient.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-018",
+      "number": 18,
+      "page": 3,
+      "stem": "The brain is highly dependent on this pathway for its complete oxidation of glucose to CO2",
+      "options": {
+        "A": "Electron Transport Chain",
+        "B": "Hexose Monophosphate shunt",
+        "C": "Pyruvate dehydrogenase complex",
+        "D": "Tricarboxylic Acid Cycle"
+      },
+      "key": "D",
+      "rationale": "The tricarboxylic-acid cycle oxidizes acetyl groups to carbon dioxide and generates reducing equivalents. Complete glucose oxidation also requires glycolysis, pyruvate dehydrogenase, and electron transport; the cycle is the best listed carbon-oxidation pathway.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-019",
+      "number": 19,
+      "page": 3,
+      "stem": "Inhibition of ATP synthesis during oxidative phosphorylation by oligomycin is thought to be due to",
+      "options": {
+        "A": "Blocking of the proton gradient between NADH-Q reductase & QH2",
+        "B": "Blocking of the proton gradient between cytochrome C1 and cytochrome C",
+        "C": "Dissociation of cytochrome c from mitochondrial membranes",
+        "D": "Inhibition of mitochondrial ATPase"
+      },
+      "key": "D",
+      "rationale": "Oligomycin inhibits the proton-conducting portion of mitochondrial ATP synthase, historically called mitochondrial ATPase. Proton flow through this complex and ATP formation are consequently blocked.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-020",
+      "number": 20,
+      "page": 4,
+      "stem": "Which of the following metabolic conditions would most likely cause an increase in NADH levels in the mitochondria affecting ETC?",
+      "options": {
+        "A": "Enhanced oxygen availability",
+        "B": "Decrease in glucose metabolism",
+        "C": "Increase in ATP demand",
+        "D": "Increased fatty acid oxidation"
+      },
+      "key": "D",
+      "rationale": "Beta-oxidation supplies NADH and FAD-linked electrons to the respiratory chain. Increased reducing-equivalent production can raise mitochondrial NADH if oxidation does not increase proportionally.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-021",
+      "number": 21,
+      "page": 4,
+      "stem": "Which of the following amino acids contains an imino group rather than an amino group?",
+      "options": {
+        "A": "Methionine",
+        "B": "Phenylalanine",
+        "C": "Proline",
+        "D": "Tryptophan"
+      },
+      "key": "C",
+      "rationale": "Proline contains a cyclic secondary amino group and is traditionally called an imino acid in older terminology. Its restricted backbone geometry influences protein folding.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-022",
+      "number": 22,
+      "page": 4,
+      "stem": "Which functional group is paired with an amine in an amino acid structure?",
+      "options": {
+        "A": "Benzene",
+        "B": "Carboxyl",
+        "C": "Peptide",
+        "D": "Hydroxyl"
+      },
+      "key": "B",
+      "rationale": "An alpha-amino acid contains an amino group and a carboxyl group attached to the alpha carbon, together with a side chain and hydrogen. A peptide bond joins amino acids in proteins.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-023",
+      "number": 23,
+      "page": 4,
+      "stem": "Which statement is not true about amino acids?",
+      "options": {
+        "A": "Amino acids have carboxyl group, amino group and a side chain.",
+        "B": "All amino acids have a corresponding genetic code.",
+        "C": "Protein synthesis is directed by mRNA.",
+        "D": "Twenty amino acids are found in proteins."
+      },
+      "key": null,
+      "rationale": "Not every naturally occurring amino acid has a dedicated codon: ornithine and citrulline are examples. The conventional set contains 20 common amino acids, but selenocysteine and pyrrolysine require qualification of the source's absolute wording in D.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-024",
+      "number": 24,
+      "page": 4,
+      "stem": "A test dose of this amino acid provides a diagnostic test for folic acid deficiency",
+      "options": {
+        "A": "Histidine",
+        "B": "Glycine",
+        "C": "Serine",
+        "D": "Glutamate"
+      },
+      "key": "A",
+      "rationale": "Histidine breakdown generates formiminoglutamate, whose formimino group is transferred to tetrahydrofolate. Folate deficiency therefore increases urinary FIGLU after a histidine load; this is a historical diagnostic test.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-025",
+      "number": 25,
+      "page": 4,
+      "stem": "What is the underlying defect of Menke’s disease?",
+      "options": {
+        "A": "An autosomal dominant disorder causing brittle bones",
+        "B": "Connective tissue disorder due to impaired copper absorption.",
+        "C": "Genetic mutation involving the gene COLT1A1",
+        "D": "Mutation in lysyl hydroxylation of collagen."
+      },
+      "key": "B",
+      "rationale": "Menkes disease is an X-linked ATP7A copper-transport disorder causing impaired intestinal copper delivery and deficiency of copper-dependent enzymes. Reduced lysyl oxidase activity contributes to abnormal connective tissue.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-026",
+      "number": 26,
+      "page": 4,
+      "stem": "Which amino acid is dominant in collagen structure?",
+      "options": {
+        "A": "Glycine",
+        "B": "Lysine",
+        "C": "Proline",
+        "D": "Valine"
+      },
+      "key": "A",
+      "rationale": "Glycine occurs at every third position in the collagen triple helix. Its small side chain permits tight packing of the three polypeptide chains.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-027",
+      "number": 27,
+      "page": 5,
+      "stem": "Which compound synthesized from arginine promotes smooth muscle relaxation and vasodilation?",
+      "options": {
+        "A": "Dopamine",
+        "B": "Histamine",
+        "C": "Nitric oxide",
+        "D": "Ornithine"
+      },
+      "key": "C",
+      "rationale": "Nitric oxide synthase converts arginine to nitric oxide and citrulline. Nitric oxide activates soluble guanylyl cyclase, increasing cGMP and relaxing vascular smooth muscle.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-028",
+      "number": 28,
+      "page": 5,
+      "stem": "Which is the amino acid precursor of the catecholamines and thyroid hormones?",
+      "options": {
+        "A": "Phenylalanine",
+        "B": "Serine",
+        "C": "Tryptophan",
+        "D": "Tyrosine"
+      },
+      "key": "D",
+      "rationale": "Tyrosine is the immediate amino-acid precursor for catecholamines and provides the residues iodinated to form thyroid hormones. Phenylalanine can first be converted to tyrosine but is not the most direct answer.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-029",
+      "number": 29,
+      "page": 5,
+      "stem": "Which amino acid derivative should be avoided in patients with phenylketonuria?",
+      "options": {
+        "A": "Aspartame",
+        "B": "Carnosine",
+        "C": "Glutathione",
+        "D": "Histamine"
+      },
+      "key": "A",
+      "rationale": "Aspartame contains phenylalanine and must be accounted for or avoided in phenylketonuria dietary management. Impaired phenylalanine metabolism can produce neurotoxic accumulation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-030",
+      "number": 30,
+      "page": 5,
+      "stem": "Which enzyme is deficient in Maple Syrup Urine Disease?",
+      "options": {
+        "A": "α-ketoglutarate dehydrogenase",
+        "B": "Branched chain α-ketoacid dehydrogenase",
+        "C": "Fumaryl acetoacetate hydroxylase",
+        "D": "Tyrosine aminotransferase"
+      },
+      "key": "B",
+      "rationale": "Maple syrup urine disease results from deficient branched-chain alpha-ketoacid dehydrogenase activity. Leucine, isoleucine, valine, and their ketoacids accumulate.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-031",
+      "number": 31,
+      "page": 5,
+      "stem": "Which of the following statements pertains to the secondary level of protein structure?",
+      "options": {
+        "A": "Alpha-helical or beta-pleated sheet spatial arrangement of polypeptide chains.",
+        "B": "Amino acid sequence joined by peptide bonds in the polypeptide chain",
+        "C": "Assembly of different subunits into one multi-unit molecule.",
+        "D": "Three-dimensional folding of a polypeptide chain into globular units"
+      },
+      "key": "A",
+      "rationale": "Secondary structure refers to local backbone arrangements such as alpha helices and beta sheets, stabilized mainly by backbone hydrogen bonds. Sequence is primary structure; whole-chain folding is tertiary and subunit assembly is quaternary.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-032",
+      "number": 32,
+      "page": 5,
+      "stem": "Which is a purely ketogenic amino acid?",
+      "options": {
+        "A": "Cysteine",
+        "B": "Histidine",
+        "C": "Leucine",
+        "D": "Proline"
+      },
+      "key": "C",
+      "rationale": "Leucine and lysine are exclusively ketogenic amino acids. Their carbon skeletons do not yield a net production of glucose.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-033",
+      "number": 33,
+      "page": 5,
+      "stem": "Which of the following is the only known positive allosteric activator of CPS I?",
+      "options": {
+        "A": "Arginine",
+        "B": "ATP",
+        "C": "CO2",
+        "D": "NAG"
+      },
+      "key": "D",
+      "rationale": "N-acetylglutamate is the required allosteric activator of mitochondrial carbamoyl-phosphate synthetase I in the urea cycle. Arginine stimulates N-acetylglutamate synthesis rather than directly replacing its activating role.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-034",
+      "number": 34,
+      "page": 6,
+      "stem": "In the presence of hyperammonemia, production of which of the following amino acids is always increased?",
+      "options": {
+        "A": "Glycine",
+        "B": "Arginine",
+        "C": "Proline",
+        "D": "Glutamine"
+      },
+      "key": "D",
+      "rationale": "Glutamine synthetase incorporates ammonia into glutamate to form glutamine. Increased ammonia can drive this detoxification route, particularly in astrocytes; excessive cerebral glutamine contributes to osmotic stress.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-035",
+      "number": 35,
+      "page": 6,
+      "stem": "Which is the first step in the catabolism of all amino acids?",
+      "options": {
+        "A": "Conversion of carbon skeletons into energy.",
+        "B": "Deamination of glutamine into glutamate.",
+        "C": "Oxidative deamination of glutamate.",
+        "D": "Transfer of the NH3+ to alpha-ketoglutarate"
+      },
+      "key": null,
+      "rationale": "Most amino acids first transfer their amino group to alpha-ketoglutarate through transamination, forming glutamate. The word 'all' is incorrect because several amino acids use other initial pathways.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-036",
+      "number": 36,
+      "page": 6,
+      "stem": "Which of the following is NOT an essential amino acid?",
+      "options": {
+        "A": "Alanine",
+        "B": "Serine",
+        "C": "Tryptophan",
+        "D": "Tyrosine"
+      },
+      "key": null,
+      "rationale": "Alanine and serine are nonessential, and tyrosine is normally synthesized from phenylalanine, making it conditionally essential in some settings. Tryptophan is essential. The original item therefore has multiple correct 'NOT essential' answers.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-037",
+      "number": 37,
+      "page": 6,
+      "stem": "Which carbohydrate derivative is responsible for cataract formation in patients with uncontrolled diabetes mellitus?",
+      "options": {
+        "A": "Glucuronic acid",
+        "B": "Mannitol",
+        "C": "N-acetylglucosamine",
+        "D": "Sorbitol"
+      },
+      "key": "D",
+      "rationale": "Aldose reductase converts excess glucose to sorbitol. In tissues with limited sorbitol metabolism, accumulation causes osmotic injury and contributes to diabetic lens damage.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-038",
+      "number": 38,
+      "page": 6,
+      "stem": "What is the rate-limiting enzyme in glycolysis?",
+      "options": {
+        "A": "Glucose 6 PO4 dehydrogenase",
+        "B": "Hexokinase",
+        "C": "Phosphofructokinase 1",
+        "D": "Pyruvate kinase"
+      },
+      "key": "C",
+      "rationale": "Phosphofructokinase-1 catalyzes the major committed regulatory step of glycolysis: fructose-6-phosphate to fructose-1,6-bisphosphate. It responds to energy status and fructose-2,6-bisphosphate.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-039",
+      "number": 39,
+      "page": 6,
+      "stem": "Which enzyme when deficient results to hemolytic anemia upon ingestion of oxidizing agents?",
+      "options": {
+        "A": "Gluconolactone hydrolase",
+        "B": "Glucose 6-phosphatase",
+        "C": "Glucose 6-phosphate dehydrogenase",
+        "D": "6-phosphogluconate dehydrogenase"
+      },
+      "key": "C",
+      "rationale": "Glucose-6-phosphate dehydrogenase supplies NADPH needed to maintain reduced glutathione in erythrocytes. Deficiency increases vulnerability to oxidant-induced hemolysis.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-040",
+      "number": 40,
+      "page": 6,
+      "stem": "Which is the parent compound of the carbohydrates?",
+      "options": {
+        "A": "Fructose",
+        "B": "Glucose",
+        "C": "Glyceraldehyde",
+        "D": "Ribose"
+      },
+      "key": "C",
+      "rationale": "Glyceraldehyde is the simplest aldose and the stereochemical reference for the D/L designation of sugars. Calling it the parent of all carbohydrates is imprecise because dihydroxyacetone is the simplest ketose.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-041",
+      "number": 41,
+      "page": 6,
+      "stem": "Lactate is primarily and physiologically produced by ______________",
+      "options": {
+        "A": "Adipose Tissue",
+        "B": "Brain",
+        "C": "Erythrocytes",
+        "D": "Skeletal Muscle"
+      },
+      "key": "C",
+      "rationale": "Mature erythrocytes lack mitochondria and continuously convert glucose to lactate to regenerate NAD+ for glycolysis. Other tissues, including exercising skeletal muscle, also produce lactate.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-042",
+      "number": 42,
+      "page": 7,
+      "stem": "Which deficient enzyme in muscles unable them to contribute to free glucose during gluconeogenesis?",
+      "options": {
+        "A": "Fructose 1, 6-bisphosphatase",
+        "B": "Glucose 6-phosphatase",
+        "C": "PEP carboxykinase",
+        "D": "Pyruvate carboxylase"
+      },
+      "key": "B",
+      "rationale": "Skeletal muscle lacks glucose-6-phosphatase and cannot release substantial free glucose from glucose-6-phosphate into blood. Liver and kidney use this enzyme to complete gluconeogenesis and glycogen-derived glucose export.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-043",
+      "number": 43,
+      "page": 7,
+      "stem": "Why does cellulose have low glycemic load?",
+      "options": {
+        "A": "It has a complex structure.",
+        "B": "It is made up of multiple disaccharide units.",
+        "C": "It is easily absorbed in the intestine",
+        "D": "It is not readily digested by the human body."
+      },
+      "key": "D",
+      "rationale": "Humans lack cellulase to hydrolyze cellulose's beta-1,4 linkages, so cellulose does not directly supply readily absorbed glucose. Structural complexity alone does not determine glycemic impact.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-044",
+      "number": 44,
+      "page": 7,
+      "stem": "A low level of insulin will inhibit upregulation of this glucose transporter",
+      "options": {
+        "A": "Glut 2",
+        "B": "Glut 3",
+        "C": "Glut 4",
+        "D": "Glut 5"
+      },
+      "key": "C",
+      "rationale": "Insulin promotes GLUT4 translocation to the surface of skeletal muscle and adipose cells. Low insulin reduces this insulin-stimulated transport response; GLUT2 and GLUT3 are not regulated by this trafficking mechanism.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-045",
+      "number": 45,
+      "page": 7,
+      "stem": "Which of the following food takes more time and enzymatic reactions before it could be completely digested?",
+      "options": {
+        "A": "Cake slice",
+        "B": "Fruit juice",
+        "C": "Non-fat milk",
+        "D": "Wheat bread"
+      },
+      "key": null,
+      "rationale": "Digestion time depends on portion size, processing, fiber, fat, and mixed-meal composition. Whole-grain bread may digest more slowly than juice, but cake can also empty slowly because of fat; the original food labels do not establish one defensible answer.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-046",
+      "number": 46,
+      "page": 7,
+      "stem": "Which of the following organs are Glut 2 transporters not found?",
+      "options": {
+        "A": "Intestines",
+        "B": "Liver",
+        "C": "Muscles",
+        "D": "Pancreas"
+      },
+      "key": "C",
+      "rationale": "Skeletal muscle predominantly uses GLUT4 for insulin-responsive glucose uptake and GLUT1 for basal transport. GLUT2 is classically associated with liver, intestinal basolateral membranes, kidney, and glucose-sensing tissues, with species differences in pancreatic expression.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-047",
+      "number": 47,
+      "page": 7,
+      "stem": "Which structure best describes fructose?",
+      "options": {
+        "A": "5-carbon aldose",
+        "B": "5-carbon ketose",
+        "C": "6-carbon aldose",
+        "D": "6-carbon ketose"
+      },
+      "key": "D",
+      "rationale": "Fructose is a six-carbon ketose, or ketohexose. Glucose is an aldohexose, and ribose is an aldopentose.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-048",
+      "number": 48,
+      "page": 7,
+      "stem": "The absence of which enzyme unables humans to synthesize ascorbic acid from glucose?",
+      "options": {
+        "A": "L-gulonolactone oxidase",
+        "B": "Phosphoglucomutase",
+        "C": "UDP glucose dehydrogenase",
+        "D": "Xylulose reductase"
+      },
+      "key": "A",
+      "rationale": "Humans lack functional L-gulonolactone oxidase, the final enzyme in the ascorbate synthesis pathway. Vitamin C must therefore be obtained from the diet.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-049",
+      "number": 49,
+      "page": 8,
+      "stem": "Which clinical condition is expected with deficiencies in gluconeogenic enzymes?",
+      "options": {
+        "A": "Hemolytic anemia",
+        "B": "Hyperglycemia",
+        "C": "Hypoglycemia",
+        "D": "Osmotic diarrhea"
+      },
+      "key": "C",
+      "rationale": "Impaired gluconeogenesis limits maintenance of blood glucose during fasting and may cause hypoglycemia, sometimes with lactic acidosis. The exact phenotype depends on the affected enzyme.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-050",
+      "number": 50,
+      "page": 8,
+      "stem": "Which is the site of ketone body synthesis?",
+      "options": {
+        "A": "Liver Cytoplasm",
+        "B": "Liver Mitochondria",
+        "C": "Neural cell membrane",
+        "D": "Renal endoplasmic reticulum"
+      },
+      "key": "B",
+      "rationale": "Ketone bodies are synthesized mainly in hepatic mitochondria from acetyl-CoA. The liver exports them for use by extrahepatic tissues.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-051",
+      "number": 51,
+      "page": 8,
+      "stem": "What enzyme is deficient in patients with Tay-Sach’s disease?",
+      "options": {
+        "A": "Hexosaminidase",
+        "B": "Hexoacetylase",
+        "C": "Methylaminidase",
+        "D": "Tyrosinidase"
+      },
+      "key": "A",
+      "rationale": "Tay-Sachs disease results from deficient beta-hexosaminidase A, causing GM2 ganglioside accumulation. The generic option 'hexosaminidase' should be understood specifically as the A isoenzyme.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-052",
+      "number": 52,
+      "page": 8,
+      "stem": "Which of the following substrates is released from adipocytes during lipolysis?",
+      "options": {
+        "A": "Fructose",
+        "B": "Glycogen",
+        "C": "Glycerol",
+        "D": "Lipids"
+      },
+      "key": "C",
+      "rationale": "Adipocyte triglyceride hydrolysis releases glycerol and nonesterified fatty acids. Glycerol travels to the liver and can enter gluconeogenesis or triglyceride synthesis.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-053",
+      "number": 53,
+      "page": 8,
+      "stem": "Impairment in beta-oxidation of fatty acids will manifest as:",
+      "options": {
+        "A": "Hepatomegaly",
+        "B": "Hypoglycemia",
+        "C": "Red blood cell hemolysis",
+        "D": "Obesity"
+      },
+      "key": null,
+      "rationale": "Fatty-acid oxidation defects can cause fasting hypoketotic hypoglycemia because fat cannot adequately support energy production or ketogenesis. Hepatomegaly can also occur, so the original options overlap and the item needs a more specific metabolic focus.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-054",
+      "number": 54,
+      "page": 8,
+      "stem": "Inhibition of the binding of this eicosanoid to its receptor has been used as a treatment for bronchial asthma:",
+      "options": {
+        "A": "Isoprostane",
+        "B": "Leukotriene",
+        "C": "Lipoxin",
+        "D": "PGE2"
+      },
+      "key": "B",
+      "rationale": "Leukotriene receptor antagonists block cysteinyl-leukotriene signaling and are used in selected asthma regimens. These mediators promote bronchoconstriction, mucus production, and vascular permeability.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-055",
+      "number": 55,
+      "page": 8,
+      "stem": "Which enzyme is inhibited by Aspirin® given to patients with cardiovascular diseases?",
+      "options": {
+        "A": "Cyclooxygenase",
+        "B": "Lipoxygenase",
+        "C": "Prostacyclin synthase",
+        "D": "Thromboxane synthase"
+      },
+      "key": "A",
+      "rationale": "Aspirin irreversibly acetylates cyclooxygenase. In platelets, suppression of thromboxane A2 production reduces aggregation for the platelet's remaining lifespan.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-056",
+      "number": 56,
+      "page": 8,
+      "stem": "Which enzyme when deficient unables the liver to utilize/metabolize the ketone bodies?",
+      "options": {
+        "A": "Beta-hydroxybutyrate dehydrogenase",
+        "B": "Beta-thiolase",
+        "C": "HMG CoA lyase",
+        "D": "Succinyl CoA acetoacetate CoA transferase"
+      },
+      "key": "D",
+      "rationale": "The liver lacks succinyl-CoA:acetoacetate CoA transferase, also called SCOT or thiophorase. It therefore produces ketone bodies but cannot use them as a major fuel through ketolysis.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-057",
+      "number": 57,
+      "page": 9,
+      "stem": "Which of the following conditions increases the rate of ketogenesis?",
+      "options": {
+        "A": "Genetic def. of beta-oxidation enzymes.",
+        "B": "High carbohydrate and low fat diet.",
+        "C": "Insulin administration for DM.",
+        "D": "Prolonged fasting and starvation"
+      },
+      "key": "D",
+      "rationale": "Prolonged fasting lowers the insulin-to-glucagon ratio, increases adipose lipolysis, and supplies hepatic fatty-acid oxidation with substrate for ketogenesis. Insulin and carbohydrate feeding suppress this pathway.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-058",
+      "number": 58,
+      "page": 9,
+      "stem": "Which enzyme is the target of pharmacological intervention in the treatment of patients with hypercholesterolemia?",
+      "options": {
+        "A": "Acetoacetyl CoA thiolase",
+        "B": "HMG CoA reductase",
+        "C": "HMG CoA synthase",
+        "D": "Mevalonate kinase"
+      },
+      "key": "B",
+      "rationale": "Statins inhibit HMG-CoA reductase, the rate-limiting enzyme of cholesterol synthesis. The resulting hepatic response increases LDL-receptor-mediated clearance of circulating LDL.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-059",
+      "number": 59,
+      "page": 9,
+      "stem": "Which pathway is the major source of NADPH for fatty acid synthesis?",
+      "options": {
+        "A": "Gluconeogenesis",
+        "B": "Glycolysis",
+        "C": "Krebs cycle",
+        "D": "Pentose phosphate pathway"
+      },
+      "key": "D",
+      "rationale": "The oxidative pentose-phosphate pathway produces NADPH used for reductive biosynthesis and antioxidant defense. Cytosolic malic enzyme can also contribute NADPH for fatty-acid synthesis.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-060",
+      "number": 60,
+      "page": 9,
+      "stem": "Which contributes to the first two carbons for the initiation of fatty acid synthesis?",
+      "options": {
+        "A": "Acetyl CoA",
+        "B": "Malonyl CoA",
+        "C": "Propionyl CoA",
+        "D": "Succinyl CoA"
+      },
+      "key": "A",
+      "rationale": "Fatty-acid synthase uses an acetyl-CoA-derived primer to begin chain assembly. Subsequent two-carbon additions are supplied by malonyl-CoA after decarboxylation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-061",
+      "number": 61,
+      "page": 9,
+      "stem": "Which enzyme is inhibited by Allopurinol to decrease synthesis of uric acid?",
+      "options": {
+        "A": "5’-nucleotidase",
+        "B": "Guanase",
+        "C": "Purine nucleoside phosphorylase",
+        "D": "Xanthine oxidase"
+      },
+      "key": "D",
+      "rationale": "Allopurinol and its active metabolite inhibit xanthine oxidase, reducing conversion of hypoxanthine and xanthine to uric acid. This lowers urate production rather than directly increasing its renal excretion.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-062",
+      "number": 62,
+      "page": 9,
+      "stem": "Which enzymes is deficient in Lesch-Nyhan Syndrome?",
+      "options": {
+        "A": "Adenine phosphoribosyl transferase",
+        "B": "Hypoxanthine-guanine phosphoribosyltransferase",
+        "C": "Nucleoside diphosphate kinase",
+        "D": "Xanthine oxidase"
+      },
+      "key": "B",
+      "rationale": "Lesch-Nyhan syndrome results from severe HGPRT deficiency, impairing purine salvage. Increased urate production accompanies neurologic dysfunction and characteristic self-injurious behavior.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-063",
+      "number": 63,
+      "page": 9,
+      "stem": "Patient presented with pain, swelling and erythema on his 1st digit of the left foot. He was also noted to have elevated serum uric acid level. This is most likely due to an overactivity of which enzyme?",
+      "options": {
+        "A": "PRPP synthase",
+        "B": "Adenosine deaminase",
+        "C": "Xanthine oxidase",
+        "D": "HGPRT"
+      },
+      "key": null,
+      "rationale": "PRPP synthetase overactivity is a recognized inherited mechanism of purine overproduction and hyperuricemia. The clinical picture of gout alone does not establish this rare defect; most hyperuricemia is not caused by PRPP synthetase overactivity.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-064",
+      "number": 64,
+      "page": 10,
+      "stem": "Type II orotic aciduria is due to a deficiency of which enzyme?",
+      "options": {
+        "A": "Aspartate Treanscarbamoylase",
+        "B": "Carbamoyl phosphate synthetase I",
+        "C": "Orotate phosphoribosyltransferase",
+        "D": "Orotidylate decarboxylase"
+      },
+      "key": "D",
+      "rationale": "The historical type II orotic-aciduria classification denotes isolated orotidine-monophosphate decarboxylase deficiency. This activity and orotate phosphoribosyltransferase are carried by the bifunctional UMP-synthase protein.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-065",
+      "number": 65,
+      "page": 10,
+      "stem": "Which substrate is catalyzed by xanthine oxidase to produce xanthine?",
+      "options": {
+        "A": "Hypoxanthine",
+        "B": "Inosine",
+        "C": "Methylxanthine",
+        "D": "Uric acid"
+      },
+      "key": "A",
+      "rationale": "Xanthine oxidoreductase converts hypoxanthine to xanthine and then xanthine to uric acid. Uric acid is the downstream product, not the substrate for xanthine generation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-066",
+      "number": 66,
+      "page": 10,
+      "stem": "Which of the following bases should you look for to confirm that the genetic material is a DNA and not an RNA?",
+      "options": {
+        "A": "Adenine",
+        "B": "Cytosine",
+        "C": "Thymine",
+        "D": "Uracil"
+      },
+      "key": "C",
+      "rationale": "Thymine is the canonical base used in DNA where RNA typically uses uracil. Rare modified bases and unusual genomes do not change this standard introductory distinction.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-067",
+      "number": 67,
+      "page": 10,
+      "stem": "Which of the following is/are correct base pairing/s in DNA?",
+      "options": {
+        "A": "Adenine (A) with Thymine (T)",
+        "B": "Adenine (A) with Uracil (U)",
+        "C": "Cytosine (C) with Guanine (G)",
+        "D": "A and C are correct"
+      },
+      "key": "D",
+      "rationale": "Canonical double-stranded DNA pairs adenine with thymine and cytosine with guanine. Adenine-uracil pairing is characteristic of RNA-containing duplexes.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-068",
+      "number": 68,
+      "page": 10,
+      "stem": "Which chemical bond maintains base pairing in nucleic acids?",
+      "options": {
+        "A": "Amide",
+        "B": "Glycosidic",
+        "C": "Hydrogen",
+        "D": "Phosphodiester"
+      },
+      "key": "C",
+      "rationale": "Hydrogen bonds contribute specificity to complementary base pairing. Phosphodiester bonds form the covalent sugar-phosphate backbone; base stacking also contributes strongly to duplex stability.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-069",
+      "number": 69,
+      "page": 10,
+      "stem": "A 1-year-old female patient is lethargic, weak, and anemic. Her height and weight are both low for her age. Her urine contains an elevated level of orotic acid. The administration of which of the following compounds is most likely to alleviate her symptoms?",
+      "options": {
+        "A": "Adenine.",
+        "B": "Guanine.",
+        "C": "Thymidine.",
+        "D": "Uridine"
+      },
+      "key": "D",
+      "rationale": "Uridine bypasses the UMP-synthase defect in hereditary orotic aciduria and replenishes pyrimidine nucleotides. Orotic acid elevation with hyperammonemia instead suggests a urea-cycle defect such as OTC deficiency.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-070",
+      "number": 70,
+      "page": 10,
+      "stem": "Which of the following symptoms is not observed during acute toxicity of Vitamin A?",
+      "options": {
+        "A": "Blurred vision",
+        "B": "Nausea",
+        "C": "Polyneuritis",
+        "D": "Vertigo"
+      },
+      "key": "C",
+      "rationale": "Acute vitamin A toxicity can cause nausea, dizziness, headache, blurred vision, and raised intracranial pressure. Polyneuritis is not a characteristic acute manifestation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-071",
+      "number": 71,
+      "page": 11,
+      "stem": "Which of the following in not a water-soluble vitamin?",
+      "options": {
+        "A": "Ascorbic acid",
+        "B": "Cobalamin",
+        "C": "Phytonadione",
+        "D": "Thiamine"
+      },
+      "key": "C",
+      "rationale": "Phytonadione is vitamin K1, a fat-soluble vitamin. Vitamins C, B12, and B1 are water-soluble.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-072",
+      "number": 72,
+      "page": 11,
+      "stem": "Which of the following conditions alter the Basal Metabolic Rate (BMR)? I. Viral Fever II. Pregnancy III. Polycythemia IV. Cancer",
+      "options": {
+        "A": "I, II, III",
+        "B": "I, II, IV",
+        "C": "II, III, IV",
+        "D": "I, II, III, IV"
+      },
+      "key": null,
+      "rationale": "Fever, pregnancy, malignancy, and proliferative states such as polycythemia vera can alter resting metabolic demand. The source's broad 'polycythemia' wording needs qualification because a raised hematocrit alone does not guarantee increased basal metabolic rate.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-073",
+      "number": 73,
+      "page": 11,
+      "stem": "Which mineral is involved in hemostasis?",
+      "options": {
+        "A": "Ca+2",
+        "B": "Mg+2",
+        "C": "Mn+2",
+        "D": "Na+"
+      },
+      "key": "A",
+      "rationale": "Calcium is required for several coagulation-complex reactions on phospholipid surfaces. Chelating calcium with citrate prevents clotting in collected blood.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-074",
+      "number": 74,
+      "page": 11,
+      "stem": "Which mineral in excess of requirement causes mottling of the teeth?",
+      "options": {
+        "A": "Calcium",
+        "B": "Fluoride",
+        "C": "Iodine",
+        "D": "Phosphorous"
+      },
+      "key": "B",
+      "rationale": "Excess fluoride exposure during tooth development can cause dental fluorosis with mottled enamel. This differs from caries caused by demineralization.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-075",
+      "number": 75,
+      "page": 11,
+      "stem": "Which vitamin becomes deficient among individuals on long term adherence to strict vegetarian diet?",
+      "options": {
+        "A": "Ascorbic acid",
+        "B": "Cobalamin",
+        "C": "Tocopherol",
+        "D": "1,25-D vit"
+      },
+      "key": "B",
+      "rationale": "A strict vegan diet without fortified foods or supplementation can cause vitamin B12 deficiency. Natural reliable dietary sources are predominantly animal-derived, although deficiency may take years because of body stores.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-076",
+      "number": 76,
+      "page": 11,
+      "stem": "Which vitamin in its active form is an important coenzyme for transamination reactions?",
+      "options": {
+        "A": "Cobalamin",
+        "B": "Niacin",
+        "C": "Pyridoxine",
+        "D": "Thiamine"
+      },
+      "key": "C",
+      "rationale": "Pyridoxal phosphate, the active form of vitamin B6, is a coenzyme for aminotransferases. It also participates in several other amino-acid reactions.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-077",
+      "number": 77,
+      "page": 11,
+      "stem": "Choose the CORRECT deficient vit : clinical manifestation pair:",
+      "options": {
+        "A": "Vit C : pellagra",
+        "B": "Vit A : nyctalopia",
+        "C": "Niacin : rachitic rosary",
+        "D": "Vit D : scurvy"
+      },
+      "key": "B",
+      "rationale": "Vitamin A deficiency impairs dark adaptation and causes nyctalopia. Niacin deficiency causes pellagra, vitamin D deficiency causes rickets, and vitamin C deficiency causes scurvy.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-078",
+      "number": 78,
+      "page": 12,
+      "stem": "Which vitamin is important in collagen synthesis?",
+      "options": {
+        "A": "Ascorbic acid",
+        "B": "Biotin",
+        "C": "Pantothenic acid",
+        "D": "Retinol"
+      },
+      "key": "A",
+      "rationale": "Ascorbate supports proline and lysine hydroxylation during collagen maturation. Deficiency weakens connective tissue and causes the bleeding and wound-healing abnormalities of scurvy.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-079",
+      "number": 79,
+      "page": 12,
+      "stem": "Which vitamin becomes deficient among chronic alcoholics who develop lactic acidosis when placed on high carbohydrate diet?",
+      "options": {
+        "A": "Biotin",
+        "B": "Niacin",
+        "C": "Pantothenic acid",
+        "D": "Thiamine"
+      },
+      "key": "D",
+      "rationale": "Thiamine is required for pyruvate-dehydrogenase and other oxidative reactions. Carbohydrate loading in severe deficiency can divert pyruvate toward lactate and worsen metabolic and neurologic complications.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-080",
+      "number": 80,
+      "page": 12,
+      "stem": "A diet high in tryptophan helps in the synthesis of which vitamin?",
+      "options": {
+        "A": "Niacin",
+        "B": "Thiamine",
+        "C": "Pyridoxine",
+        "D": "Tetrahydrofolate"
+      },
+      "key": "A",
+      "rationale": "Tryptophan can be converted to niacin-derived nucleotides. The pathway depends on other nutrients, including vitamin B6, and does not eliminate all dietary niacin requirements.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-081",
+      "number": 81,
+      "page": 12,
+      "stem": "Which of the following is the preferred method for assessment of nutritional status?",
+      "options": {
+        "A": "Abdominal circumference",
+        "B": "Body mass index",
+        "C": "Height",
+        "D": "Weight"
+      },
+      "key": "B",
+      "rationale": "Among these simple measures, body mass index combines weight and height for adult nutritional screening. It is not a comprehensive nutritional assessment and does not directly measure muscle mass, edema, or micronutrient status.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-082",
+      "number": 82,
+      "page": 12,
+      "stem": "Which of the following conditions does not reflect a positive nitrogen balance?",
+      "options": {
+        "A": "Convalescence",
+        "B": "Growing children",
+        "C": "Kwashiorkor",
+        "D": "Pregnancy"
+      },
+      "key": "C",
+      "rationale": "Kwashiorkor represents severe malnutrition rather than net protein accretion. Growth, pregnancy, and recovery can produce positive nitrogen balance when nutrient intake is adequate.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-083",
+      "number": 83,
+      "page": 12,
+      "stem": "Which provides the greatest fraction of the total energy requirement of an individual?",
+      "options": {
+        "A": "Basal metabolic rate",
+        "B": "Environmental temperature",
+        "C": "Physical activity",
+        "D": "Thermic effect of food"
+      },
+      "key": "A",
+      "rationale": "Basal or resting metabolism usually accounts for the largest fraction of total energy expenditure in a typical sedentary adult. Physical activity can become the largest component in unusually active individuals.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-084",
+      "number": 84,
+      "page": 12,
+      "stem": "Which of the following drugs can be given to a 52-year-old male who underwent kidney transplant to avoid transplant rejection?",
+      "options": {
+        "A": "Aldesleukin",
+        "B": "Cyclosporine",
+        "C": "Filgrastim",
+        "D": "Natalizumab"
+      },
+      "key": "B",
+      "rationale": "Cyclosporine inhibits calcineurin through cyclophilin, reducing T-cell activation and IL-2 transcription. It is used in transplant immunosuppression; aldesleukin stimulates IL-2 signaling.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-085",
+      "number": 85,
+      "page": 12,
+      "stem": "What do you call the observable trait during gene expression?",
+      "options": {
+        "A": "Genotype",
+        "B": "Dominance",
+        "C": "Phenotype",
+        "D": "Stereotype"
+      },
+      "key": "C",
+      "rationale": "Phenotype is the observable expression of genetic and environmental influences. Genotype is the underlying genetic constitution.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-086",
+      "number": 86,
+      "page": 13,
+      "stem": "Which of the following statements does not correctly describe the N-terminus part of protein structure?",
+      "options": {
+        "A": "Contains the intracellular postal codes",
+        "B": "Directly responsible for protein transport to its respective organ/organelle",
+        "C": "Leaves the ribosomes during protein synthesis",
+        "D": "Independent on the action of enzymes for its removal at the destination"
+      },
+      "key": null,
+      "rationale": "Cleavable N-terminal signal peptides require enzymatic processing, commonly by signal peptidase. Not every N terminus is a targeting sequence, and some targeting signals are retained or located elsewhere.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-087",
+      "number": 87,
+      "page": 13,
+      "stem": "Which type of mutation arises from an altered codon that codes for a different but functionally similar amino acid?",
+      "options": {
+        "A": "Missense",
+        "B": "Neutral",
+        "C": "Nonsense",
+        "D": "Silent"
+      },
+      "key": null,
+      "rationale": "A conservative amino-acid substitution may be called neutral if function is preserved. It is also a missense mutation, so the two listed categories overlap unless the stem asks for the most specific functional classification.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-088",
+      "number": 88,
+      "page": 13,
+      "stem": "Which type of RNA carries the genetic information from nucleus to the cytosolic ribosome during protein synthesis?",
+      "options": {
+        "A": "Complementary RNA",
+        "B": "Messenger RNA",
+        "C": "Ribosomal RNA",
+        "D": "Transfer RNA"
+      },
+      "key": "B",
+      "rationale": "Messenger RNA carries coding information used by ribosomes to synthesize protein. Transfer RNA supplies amino acids, and ribosomal RNA forms structural and catalytic components of the ribosome.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-089",
+      "number": 89,
+      "page": 13,
+      "stem": "Which type of DNA damage results from prolonged exposure to the UV light of the sun?",
+      "options": {
+        "A": "Chain break formation",
+        "B": "Deamination of cytosine to uracil",
+        "C": "Depurination",
+        "D": "Thymine-thymine dimer synthesis"
+      },
+      "key": "D",
+      "rationale": "Ultraviolet radiation can form covalent pyrimidine dimers, including thymine-thymine dimers. These lesions distort DNA and are normally addressed by nucleotide-excision repair.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-090",
+      "number": 90,
+      "page": 13,
+      "stem": "Which of the following enzymes relieves the torsional strain during replication fork formation?",
+      "options": {
+        "A": "Helicase",
+        "B": "Ligase",
+        "C": "Polymerase",
+        "D": "Topoisomerase"
+      },
+      "key": "D",
+      "rationale": "Topoisomerases transiently cut and reseal DNA to relieve torsional strain. Helicase separates strands, ligase seals nicks, and polymerase synthesizes new DNA.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-091",
+      "number": 91,
+      "page": 13,
+      "stem": "Which is the site of initiation of replication in eukaryotes?",
+      "options": {
+        "A": "oriC",
+        "B": "Replication bubble",
+        "C": "Replication fork",
+        "D": "TATA box"
+      },
+      "key": null,
+      "rationale": "Eukaryotic replication begins at multiple replication origins. A replication bubble forms around an activated origin, but is not itself the initiation sequence; oriC is the bacterial origin and the TATA box is a transcriptional element. No option precisely names the requested site.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-092",
+      "number": 92,
+      "page": 13,
+      "stem": "The origin of DNA replication usually starts at a site rich in which nitrogenous base pair?",
+      "options": {
+        "A": "Adenine-Cytosine",
+        "B": "Adenine-Thymine",
+        "C": "Adenine-Uracil",
+        "D": "Guanine-Cytosine"
+      },
+      "key": "B",
+      "rationale": "AT-rich DNA is generally easier to separate than GC-rich DNA, favoring origin unwinding in many familiar systems. Eukaryotic origin selection also depends on chromatin and protein licensing, not solely an AT-rich sequence.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-093",
+      "number": 93,
+      "page": 14,
+      "stem": "Which syndrome causes a non-itchy type of jaundice and an increase in conjugated serum bilirubin?",
+      "options": {
+        "A": "Crigler-Najar",
+        "B": "Gilbert’s",
+        "C": "Rotor",
+        "D": "Rotor-Johnson"
+      },
+      "key": "C",
+      "rationale": "Rotor syndrome causes benign predominantly conjugated hyperbilirubinemia without the dark liver of Dubin-Johnson syndrome. Gilbert and Crigler-Najjar syndromes cause unconjugated hyperbilirubinemia; 'Rotor-Johnson' is not a standard diagnosis.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-094",
+      "number": 94,
+      "page": 14,
+      "stem": "Which of the following vitamins acts as a cofactor for the synthesis of carboxyglutamate residues of the clotting factors?",
+      "options": {
+        "A": "Ascorbic Acid",
+        "B": "Phytomenadione",
+        "C": "Retinol",
+        "D": "Tocopherol"
+      },
+      "key": "B",
+      "rationale": "Vitamin K is a cofactor for gamma-carboxylation of glutamate residues in selected coagulation proteins. This modification permits calcium-dependent interactions necessary for normal coagulation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-095",
+      "number": 95,
+      "page": 14,
+      "stem": "Which of the following correctly describes the Bohr effect?",
+      "options": {
+        "A": "It is the adaption of RBCs to biochemical changes in the environment to maximize oxygen-hemoglobin binding.",
+        "B": "Oxygen’s affinity to hemoglobin is declines to an increase in partial pressure of carbon dioxide.",
+        "C": "The methylation or conformational changes in hemoglobin adapt to oxygen concentration.",
+        "D": "The affinity of hemoglobin to oxygen increases secondary to partial pressure of carbon dioxide and blood pH"
+      },
+      "key": "B",
+      "rationale": "The Bohr effect describes reduced hemoglobin oxygen affinity as carbon dioxide rises or pH falls. This favors oxygen unloading in metabolically active tissues.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-096",
+      "number": 96,
+      "page": 14,
+      "stem": "What is the mechanism behind transplantation rejection months after transplantation?",
+      "options": {
+        "A": "CD4 and T cells respond to recipient APC",
+        "B": "CD8 and T cells activate against donor MHC",
+        "C": "Pre-existing recipient antibodies react to donor cells",
+        "D": "Type IV hypersensitivity reaction"
+      },
+      "key": null,
+      "rationale": "Rejection months after transplantation may be cellular, antibody-mediated, chronic active, or mixed. Indirect antigen presentation and T-cell mechanisms are possible, but timing alone does not distinguish A, B, or D; preexisting antibodies classically cause hyperacute rejection.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-097",
+      "number": 97,
+      "page": 14,
+      "stem": "What test is used to assess ACTH and GH levels if Insulin Stress Test is contraindicated?",
+      "options": {
+        "A": "Dexamethasone Test",
+        "B": "Glucagon Text",
+        "C": "Insulin Tolerance Test",
+        "D": "Oral Glucose Tolerance Test"
+      },
+      "key": "B",
+      "rationale": "A glucagon stimulation test can assess growth-hormone reserve and, in appropriate protocols, the hypothalamic-pituitary-adrenal axis when insulin-induced hypoglycemia is unsuitable. Interpretation requires assay- and protocol-specific thresholds.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-098",
+      "number": 98,
+      "page": 14,
+      "stem": "Which clotting factor will be deficient in a patient diagnosed with Hemophilia A presented with easy bruisability, easy fatigability, and pallor?",
+      "options": {
+        "A": "Factor II",
+        "B": "Factor V",
+        "C": "Factor VIII",
+        "D": "Factor IX"
+      },
+      "key": "C",
+      "rationale": "Hemophilia A is factor VIII deficiency. Hemophilia B is factor IX deficiency; both typically prolong aPTT with a normal platelet count and PT.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-099",
+      "number": 99,
+      "page": 14,
+      "stem": "A patient came to your clinic with his laboratory work up reflecting an increased prothrombin time and partial thrombin time and normal platelet count and bleeding time. What is the most likely bleeding disorder of the patient?",
+      "options": {
+        "A": "Bernard-Soulier Syndrome",
+        "B": "Hemophilia disease",
+        "C": "Vitamin K deficiency",
+        "D": "vWF deficiency"
+      },
+      "key": "C",
+      "rationale": "Vitamin K deficiency reduces functional factors II, VII, IX, and X and can prolong both PT and aPTT. Platelet number and primary platelet function are usually preserved; early deficiency often prolongs PT first.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "BCH-2027-100",
+      "number": 100,
+      "page": 15,
+      "stem": "Which of the following conditions is associated with a defect in the respiratory burst and can lead to increased susceptibility to infections?",
+      "options": {
+        "A": "Bronchial Asthma",
+        "B": "Chronic obstructive pulmonary disease",
+        "C": "Chronic granulomatous disease",
+        "D": "Leukocyte Adhesion Deficiency"
+      },
+      "key": "C",
+      "rationale": "Chronic granulomatous disease involves defective phagocyte NADPH oxidase and an impaired respiratory burst. Leukocyte adhesion deficiency instead impairs leukocyte recruitment rather than oxidant generation.",
+      "review_only": false,
+      "references": []
+    }
+  ]
+}

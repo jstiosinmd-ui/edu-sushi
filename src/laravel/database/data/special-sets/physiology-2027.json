@@ -1,0 +1,1630 @@
+{
+  "slug": "physiology-2027",
+  "title": "Physiology 2027",
+  "subject_code": "PHY",
+  "version": 1,
+  "source_file": "PHYSIOLOGY QUESTIONS - 2027 (1).pdf",
+  "source_sha256": "88ff3286c345e13125d081e68e567deaf25d42969a60111157040ec786baa4c2",
+  "note": "Rationales and proposed answers authored for study. No complete official answer key was supplied. Items with ambiguous, incomplete, or outdated premises are review-only and excluded from scores. Original question numbering and choices are retained; PDF extraction errors and table formatting are repaired. Targeted external source checks are linked where available; this is not a full textbook-page verification of every item.",
+  "items": [
+    {
+      "id": "PHY-2027-001",
+      "number": 1,
+      "page": 1,
+      "stem": "In comparison with the slow response action potential, the fast response action potential has:",
+      "options": {
+        "A": "a less steep slope of phase 0",
+        "B": "a more negative RMP",
+        "C": "no early repolarization phase",
+        "D": "a lower amplitude of upstroke"
+      },
+      "key": "B",
+      "rationale": "Fast-response atrial, ventricular, and Purkinje cells have a more negative resting membrane potential and a rapid sodium-mediated upstroke. Slow-response nodal cells have a less negative diastolic potential and a calcium-mediated phase 0.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-002",
+      "number": 2,
+      "page": 1,
+      "stem": "The heart rate is estimated to be around_____bpm:",
+      "options": {
+        "A": "50",
+        "B": "65",
+        "C": "95",
+        "D": "110"
+      },
+      "key": "B",
+      "rationale": "At standard ECG speed, approximately 4.5 to 5 large squares between R waves gives 300 divided by that interval, or about 60 to 67 beats/min. The closest option is 65 beats/min; the source ECG is retained with the question.",
+      "review_only": false,
+      "references": [],
+      "image": "physiology-2027-002.png"
+    },
+    {
+      "id": "PHY-2027-003",
+      "number": 3,
+      "page": 1,
+      "stem": "What is the end-diastolic volume if the heart rate = 70 bpm, stroke volume = 80 mL, cardiac output = 5.6 L/min and end systolic volume is 50mL?",
+      "options": {
+        "A": "30",
+        "B": "100",
+        "C": "130",
+        "D": "150"
+      },
+      "key": "C",
+      "rationale": "Stroke volume equals end-diastolic volume minus end-systolic volume. Thus EDV = 80 + 50 = 130 mL; 70 beats/min multiplied by 80 mL also confirms the stated 5.6 L/min cardiac output.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-004",
+      "number": 4,
+      "page": 1,
+      "stem": "Which best describes the frank starling mechanism?",
+      "options": {
+        "A": "An increase in end-diastolic volume will increase cardiac output",
+        "B": "An increase in heart rate will increase the cardiac output",
+        "C": "An increase in venous return will increase the right atrial pressure",
+        "D": "An increase in venous return will increase heart rate"
+      },
+      "key": "A",
+      "rationale": "Within the physiologic range, increased ventricular filling stretches myocardial fibers and increases stroke volume at unchanged contractility. This Frank-Starling response is distinct from a heart-rate-mediated increase in cardiac output.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-005",
+      "number": 5,
+      "page": 1,
+      "stem": "During the cardiac cycle the opening of the aortic valve takes place at the:",
+      "options": {
+        "A": "Beginning of systole",
+        "B": "End of isovolumetric contraction",
+        "C": "End of diastole",
+        "D": "End of diastasis"
+      },
+      "key": "B",
+      "rationale": "The aortic valve opens when left-ventricular pressure exceeds aortic pressure, ending isovolumetric contraction. It remains closed during the preceding pressure rise.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-006",
+      "number": 6,
+      "page": 2,
+      "stem": "A patient participating in a clinical trial takes a new drug that increases cardiac contractility. The patient’s left ventricular ejection fraction increases from 55% to 65% after taking the medication. Via which of the following mechanisms does this new drug most likely work?",
+      "options": {
+        "A": "Antagonization of beta 1 receptors",
+        "B": "Activation of Na/K ATPase pump",
+        "C": "Increase intracellular calcium levels",
+        "D": "Stimulation of M2 receptor"
+      },
+      "key": "C",
+      "rationale": "Increased calcium availability to the contractile apparatus increases cardiac force and can raise ejection fraction. Beta-1 blockade and M2 stimulation generally oppose cardiac stimulation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-007",
+      "number": 7,
+      "page": 2,
+      "stem": "Which will likely to have a turbulent blood flow?",
+      "options": {
+        "A": "Slowing of blood velocity",
+        "B": "Severe dehydration",
+        "C": "Severe anemia",
+        "D": "Vasodilatation"
+      },
+      "key": "C",
+      "rationale": "Anemia reduces blood viscosity and can increase flow velocity, raising the Reynolds number and favoring turbulence. Slow flow and increased viscosity tend to favor laminar flow.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-008",
+      "number": 8,
+      "page": 2,
+      "stem": "In a patient with massive blood loss, the resulting hypotension is probably due to:",
+      "options": {
+        "A": "increased heart rate following an increase in sympathetic activity",
+        "B": "increased arterial tone following massive volume loss",
+        "C": "decreased stroke volume following a decrease in venous return",
+        "D": "decreased venous return following an increase in venous compliance"
+      },
+      "key": "C",
+      "rationale": "Hemorrhage reduces circulating volume, venous return, ventricular preload, and stroke volume. Reflex tachycardia and vasoconstriction compensate but may not restore cardiac output after major blood loss.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-009",
+      "number": 9,
+      "page": 2,
+      "stem": "Which starling force is likely affected in the appearance of peripheral edema among nephrotic syndrome patients?",
+      "options": {
+        "A": "Capillary hydrostatic pressure",
+        "B": "Plasma oncotic pressure",
+        "C": "Interstitial hydrostatic pressure",
+        "D": "Interstitial oncotic pressure"
+      },
+      "key": "B",
+      "rationale": "Urinary protein loss and hypoalbuminemia reduce plasma oncotic pressure, favoring edema. Renal sodium retention also contributes to nephrotic edema, so reduced oncotic pressure is not the sole mechanism.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-010",
+      "number": 10,
+      "page": 2,
+      "stem": "Increased BP and decreased heart rate is seen in:",
+      "options": {
+        "A": "Hemorrhage",
+        "B": "High altitude",
+        "C": "Raised intracranial pressure",
+        "D": "Anemia"
+      },
+      "key": "C",
+      "rationale": "Raised intracranial pressure can produce the Cushing response: systemic hypertension, reflex bradycardia, and abnormal respiration. This pattern is distinct from the usual tachycardic response to hemorrhage.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-011",
+      "number": 11,
+      "page": 2,
+      "stem": "The blood pressure of an 83-year-old male who was not on any medication indicated a very low aortic compliance. What was the most likely blood pressure recorded?",
+      "options": {
+        "A": "100/80 mmHg",
+        "B": "130/90 mmHg",
+        "C": "150/110 mmHg",
+        "D": "160/90 mmHg"
+      },
+      "key": "D",
+      "rationale": "Reduced aortic compliance increases systolic pressure and widens pulse pressure. Of the choices, 160/90 mmHg has the widest pulse pressure, 70 mmHg.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-012",
+      "number": 12,
+      "page": 2,
+      "stem": "Clamping of the carotid arteries above the carotid sinus result in:",
+      "options": {
+        "A": "Increase in blood pressure and increase in heart rate",
+        "B": "Increase in blood pressure and decrease in heart rate",
+        "C": "Decrease in blood pressure and increase in heart rate",
+        "D": "Decrease in blood pressure and decrease in heart rate"
+      },
+      "key": "D",
+      "rationale": "Clamping distal to the carotid sinus raises pressure at the sinus, increasing baroreceptor firing and reflexly reducing sympathetic output and heart rate. Clamping proximal to the sinus would produce the opposite response; the location is essential.",
+      "review_only": false,
+      "references": [
+        {
+          "title": "Carotid sinus baroreceptor anatomy and response",
+          "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK554378/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "PHY-2027-013",
+      "number": 13,
+      "page": 3,
+      "stem": "Which lung capacity is the equilibrium point between the elastic recoil of the lungs and the outward recoil of the thoracic wall?",
+      "options": {
+        "A": "vital capacity",
+        "B": "inspiratory capacity",
+        "C": "functional residual capacity",
+        "D": "total lung capacity"
+      },
+      "key": "C",
+      "rationale": "Functional residual capacity is the resting lung volume after a normal passive expiration. At that point, inward lung recoil balances outward chest-wall recoil.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-014",
+      "number": 14,
+      "page": 3,
+      "stem": "Tidal volume is calculated by:",
+      "options": {
+        "A": "Inspiratory capacity minus the inspiratory reserve volume",
+        "B": "Total lung capacity minus the reserve volume",
+        "C": "Functional residual capacity minus residual volume",
+        "D": "Vital capacity minus expiratory reserve volumes"
+      },
+      "key": "A",
+      "rationale": "Inspiratory capacity equals tidal volume plus inspiratory reserve volume. Subtracting inspiratory reserve volume therefore gives tidal volume.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-015",
+      "number": 15,
+      "page": 3,
+      "stem": "A person with a tidal volume of 0.5 L is breathing at a rate of 15 breaths/min. The PCO2 of his arterial blood is 40 mm Hg, and the PCO2 of his expired air is 36 mm Hg. What is his minute ventilation?",
+      "options": {
+        "A": "5.5 L",
+        "B": "6.0 L",
+        "C": "7.5 L",
+        "D": "8.0 L"
+      },
+      "key": "C",
+      "rationale": "Minute ventilation equals tidal volume multiplied by respiratory rate: 0.5 L times 15/min = 7.5 L/min. The carbon-dioxide values would be relevant to dead-space calculations, not this calculation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-016",
+      "number": 16,
+      "page": 3,
+      "stem": "Which lungs mechanics is true if surfactant is absent from the alveoli?",
+      "options": {
+        "A": "Airway resistance decreases",
+        "B": "Compliance decreases",
+        "C": "Recoil pressure decreases",
+        "D": "Oxygen diffusing capacity increases"
+      },
+      "key": "B",
+      "rationale": "Surfactant reduces alveolar surface tension and increases lung compliance. Its absence makes inflation harder, increases recoil, and promotes alveolar collapse.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-017",
+      "number": 17,
+      "page": 3,
+      "stem": "What is characteristic of restrictive lung disease?",
+      "options": {
+        "A": "FEV1/FVC ratio is much lower than 0.8",
+        "B": "FVC is decreased much more than FEV1",
+        "C": "FEV1 is decreased much more than FVC",
+        "D": "FEV1/FVC is 0"
+      },
+      "key": "B",
+      "rationale": "Restriction reduces lung volumes, including FVC, with FEV1 falling proportionately or less, so FEV1/FVC is preserved or increased. Option B is the closest available description, but 'much more' is stronger than necessary and low total lung capacity confirms restriction.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-018",
+      "number": 18,
+      "page": 3,
+      "stem": "What is expected of the breathing pattern if vagus nerve is stimulated?",
+      "options": {
+        "A": "Cessation of inspiration",
+        "B": "Prolonged breath holding",
+        "C": "Deep breathing",
+        "D": "Not really affected"
+      },
+      "key": "A",
+      "rationale": "Pulmonary stretch-receptor afferents travel in the vagus and can terminate inspiration through the Hering-Breuer inflation reflex. The stem should specify this afferent pathway because nonspecific vagal stimulation has additional effects.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-019",
+      "number": 19,
+      "page": 3,
+      "stem": "Increase in ventilation is expected when:",
+      "options": {
+        "A": "Blood pH increases",
+        "B": "paO2 level increases",
+        "C": "paCO2 level increases",
+        "D": "H+ ion decreases"
+      },
+      "key": "C",
+      "rationale": "A rise in arterial carbon dioxide stimulates ventilation, mainly through central chemoreceptor responses to changes in cerebrospinal-fluid pH. Marked hypoxemia and increased arterial hydrogen-ion concentration also stimulate peripheral chemoreceptors.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-020",
+      "number": 20,
+      "page": 3,
+      "stem": "What happened to the following pressure during inspiration?",
+      "options": {
+        "A": "Both intra-pleural and intra-alveolar pressure becomes negative",
+        "B": "Both intra-pleural and intra-alveolar pressure becomes positive",
+        "C": "Intra-alveolar pressure at zero while intra-pleural pressure becomes positive",
+        "D": "Intra-pleural pressure at zero while intra-alveolar pressure becomes negative"
+      },
+      "key": "A",
+      "rationale": "During spontaneous inspiratory airflow, pleural pressure becomes more negative and alveolar pressure falls slightly below atmospheric pressure. At end-inspiration, alveolar pressure returns to atmospheric pressure even though pleural pressure remains negative.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-021",
+      "number": 21,
+      "page": 4,
+      "stem": "Oxygen dissociation curve shifts to right in all except",
+      "options": {
+        "A": "Diabetic ketoacidosis",
+        "B": "Blood transfusion",
+        "C": "High altitude",
+        "D": "Anemia"
+      },
+      "key": null,
+      "rationale": "Stored erythrocytes can have reduced 2,3-BPG and initially shift oxygen affinity leftward. Acidosis and increased 2,3-BPG in anemia or altitude adaptation favor rightward shifts; 'blood transfusion' needs the stored-blood qualification.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-022",
+      "number": 22,
+      "page": 4,
+      "stem": "A 65-year-old patient was brought to the ER due to congestive heart failure. Her breathing was rapid and shallow. The most likely receptors involved here are the",
+      "options": {
+        "A": "J receptors",
+        "B": "Irritant receptors",
+        "C": "Stretch receptors",
+        "D": "Chemoreceptors"
+      },
+      "key": "A",
+      "rationale": "Pulmonary congestion stimulates juxtacapillary vagal C-fiber receptors, commonly called J receptors. Their activation can produce rapid shallow breathing and dyspnea.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-023",
+      "number": 23,
+      "page": 4,
+      "stem": "Small airways have laminar airflow because:",
+      "options": {
+        "A": "Reynold’s number >2000",
+        "B": "Very small diameter",
+        "C": "Extremely low velocity",
+        "D": "Low cross-sectional area"
+      },
+      "key": null,
+      "rationale": "The enormous total cross-sectional area of distal small airways greatly lowers airflow velocity, favoring laminar flow. Small individual diameter also lowers Reynolds number, so B is a contributing factor even though C is the best physiologic explanation.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-024",
+      "number": 24,
+      "page": 4,
+      "stem": "If V/Q = 0 in a single alveolus, the:",
+      "options": {
+        "A": "alveolus is ventilated and blood flow is normal",
+        "B": "alveolus is ventilated but there is no blood flow",
+        "C": "alveolus is not ventilated but there is blood flow",
+        "D": "alveolus is not ventilated with no blood flow"
+      },
+      "key": "C",
+      "rationale": "A ventilation/perfusion ratio of zero means blood flow persists without alveolar ventilation, creating a shunt-like unit. Ventilation without perfusion instead gives an infinitely high ratio.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-025",
+      "number": 25,
+      "page": 4,
+      "stem": "Which of the following movement has housekeeping role in GIT?",
+      "options": {
+        "A": "Migrating Myoelectric Complex",
+        "B": "Segmentation",
+        "C": "Mixing movement",
+        "D": "Peristalsis"
+      },
+      "key": "A",
+      "rationale": "The migrating motor complex sweeps residual contents and bacteria through the stomach and small intestine between meals. Feeding interrupts this interdigestive housekeeping pattern.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-026",
+      "number": 26,
+      "page": 4,
+      "stem": "Which primarily stimulate pancreatic protease secretion?",
+      "options": {
+        "A": "Secretin",
+        "B": "Cholecystokinin",
+        "C": "Gastrin",
+        "D": "Somatostatin"
+      },
+      "key": "B",
+      "rationale": "Cholecystokinin stimulates pancreatic acinar enzyme secretion, including proteases released as zymogens. Secretin predominantly stimulates bicarbonate-rich ductal fluid.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-027",
+      "number": 27,
+      "page": 4,
+      "stem": "A group of investigators discovered special cells in the enteric nervous system that generate slow wave potentials in the intestinal tract. These cells are most appropriately described as which of the following?",
+      "options": {
+        "A": "Parietal cells",
+        "B": "Interstitial cells of Cajal",
+        "C": "Enterochromaffin cells",
+        "D": "Neuroglia"
+      },
+      "key": "B",
+      "rationale": "Interstitial cells of Cajal generate and propagate gastrointestinal slow waves. These pacemaker oscillations help organize smooth-muscle contractile activity.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-028",
+      "number": 28,
+      "page": 4,
+      "stem": "A researcher is performing a histological examination of the gastrointestinal tract. Several cell types are identified and studied. The researchers isolate a group of cells called S cells, which are found in the duodenum. These cells produce a hormone that exerts the following effects?",
+      "options": {
+        "A": "Stimulates gallbladder contraction",
+        "B": "Stimulates pancreatic HCO3- secretion",
+        "C": "Inhibits pancreatic secretions",
+        "D": "Increase insulin secretion from the pancreas"
+      },
+      "key": "B",
+      "rationale": "Duodenal S cells release secretin in response to acid. Secretin stimulates pancreatic bicarbonate secretion to neutralize acidic chyme.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-029",
+      "number": 29,
+      "page": 5,
+      "stem": "A group of investigators discover that both bile salts and bilirubin can be recycled via enterohepatic circulation. Which of the following is the primary site of bile salt reabsorption in the gastrointestinal tract?",
+      "options": {
+        "A": "Ascending colon",
+        "B": "Descending colon",
+        "C": "Distal ileum",
+        "D": "Jejunum"
+      },
+      "key": "C",
+      "rationale": "Most actively reclaimed bile salts are absorbed in the terminal ileum and returned to the liver through portal blood. Ileal disease or resection can therefore cause bile-salt loss.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-030",
+      "number": 30,
+      "page": 5,
+      "stem": "Which of the following secretion has the minimal sodium level?",
+      "options": {
+        "A": "Saliva at low flow rate",
+        "B": "Bile",
+        "C": "Duodenal secretion",
+        "D": "Stomach"
+      },
+      "key": "A",
+      "rationale": "At low flow rates, salivary ducts have more time to reabsorb sodium while remaining relatively water-impermeable. Final saliva is therefore particularly low in sodium and hypotonic.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-031",
+      "number": 31,
+      "page": 5,
+      "stem": "Which gastrointestinal motor activity is most affected by vagotomy?",
+      "options": {
+        "A": "Secondary esophageal peristalsis",
+        "B": "Distension-induced intestinal segmentation",
+        "C": "Oral stomach accommodation",
+        "D": "Caudad stomach peristalsis"
+      },
+      "key": "C",
+      "rationale": "Proximal-stomach receptive relaxation and accommodation depend strongly on vagovagal reflexes. Vagotomy impairs the stomach's ability to accept a meal without a large pressure increase.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-032",
+      "number": 32,
+      "page": 5,
+      "stem": "The mechanism involved in the absorption of glucose from the small intestine is:",
+      "options": {
+        "A": "Passive diffusion",
+        "B": "Facilitated diffusion",
+        "C": "Secondary active cotransport with sodium",
+        "D": "Actively by insulin dependent uptake"
+      },
+      "key": "C",
+      "rationale": "Apical SGLT1 uses the sodium gradient to cotransport glucose into enterocytes. Basolateral glucose exit occurs by facilitated diffusion, so membrane location matters.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-033",
+      "number": 33,
+      "page": 5,
+      "stem": "Which is correct about potassium handling in the GIT?",
+      "options": {
+        "A": "Passively absorbed in the small intestine and actively secreted in the proximal colon",
+        "B": "Passively absorbed in the small intestine and actively absorbed in the proximal colon",
+        "C": "Actively absorbed throughout small and large intestine",
+        "D": "Actively secreted in the small intestine and actively absorbed in the proximal colon"
+      },
+      "key": "A",
+      "rationale": "Most intestinal potassium absorption is passive in the small intestine, while the colon can actively secrete potassium. Colonic transport is adaptive and can include potassium conservation under depletion.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-034",
+      "number": 34,
+      "page": 5,
+      "stem": "Which will inhibit gastric emptying?",
+      "options": {
+        "A": "Carbohydrate-rich food",
+        "B": "Distilled water",
+        "C": "Creamy ice cream",
+        "D": "Piece of wheat bread"
+      },
+      "key": "C",
+      "rationale": "A fatty meal, represented by creamy ice cream, stimulates duodenal feedback that slows gastric emptying. Meal volume, energy density, and osmolarity also influence emptying.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-035",
+      "number": 35,
+      "page": 5,
+      "stem": "Compared to hepatic bile, gallbladder bile has higher:",
+      "options": {
+        "A": "Water content",
+        "B": "Bicarbonate level",
+        "C": "pH level",
+        "D": "bile acid concentration"
+      },
+      "key": "D",
+      "rationale": "The gallbladder absorbs water and electrolytes, concentrating bile salts and other organic components. Gallbladder bile is consequently more concentrated than newly secreted hepatic bile.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-036",
+      "number": 36,
+      "page": 6,
+      "stem": "Which does not stimulate gastric acid production?",
+      "options": {
+        "A": "Acetylcholine",
+        "B": "Histamine",
+        "C": "Prostaglandin",
+        "D": "Gastrin"
+      },
+      "key": "C",
+      "rationale": "Prostaglandins, especially PGE2, inhibit gastric acid secretion and support mucosal protection. Acetylcholine, histamine, and gastrin stimulate parietal-cell acid secretion.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-037",
+      "number": 37,
+      "page": 6,
+      "stem": "Short loop feedback in endocrine hormone regulation is demonstrated by the effect of:",
+      "options": {
+        "A": "growth hormone on IGF-1 production.",
+        "B": "LH on hypothalamic GnRH release.",
+        "C": "milk letdown on prolactin secretion.",
+        "D": "serum T4 on pituitary thyrotropes."
+      },
+      "key": "B",
+      "rationale": "Short-loop feedback refers to a pituitary hormone influencing hypothalamic releasing-hormone output. LH acting back on GnRH is the listed example; thyroid hormone acting on the pituitary is long-loop feedback.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-038",
+      "number": 38,
+      "page": 6,
+      "stem": "This factor inhibits the secretion of GH from the anterior pituitary:",
+      "options": {
+        "A": "Ghrelin",
+        "B": "Hypoglycemia",
+        "C": "IGF-1",
+        "D": "Exercise"
+      },
+      "key": "C",
+      "rationale": "IGF-1 feeds back to suppress growth-hormone secretion at pituitary and hypothalamic levels. Ghrelin, hypoglycemia, and exercise generally stimulate GH release.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-039",
+      "number": 39,
+      "page": 6,
+      "stem": "A patient was noted to have low levels of thyroxine-binding globulin. Which would be a direct effect of this deficiency?",
+      "options": {
+        "A": "Decreased renal clearance of T3 & T4",
+        "B": "Impaired thyroid hormone synthesis",
+        "C": "Reduced affinity of T3 to its receptor",
+        "D": "Shortened half-lives of thyroid hormones"
+      },
+      "key": "D",
+      "rationale": "Reduced thyroid-binding globulin reduces the circulating bound hormone reservoir and can shorten hormone half-life. Total hormone concentration falls, while free hormone and TSH can remain normal after equilibration.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-040",
+      "number": 40,
+      "page": 6,
+      "stem": "A patient has a tumor in the thyroid gland that is causing it to overproduce T4. What is the most likely effect on TRH and TSH levels?",
+      "options": {
+        "A": "Decreased TRH, Decreased TSH",
+        "B": "Decreased TRH, Increased TSH",
+        "C": "Increased TRH, Decreased TSH",
+        "D": "Increased TRH, Increased TSH"
+      },
+      "key": "A",
+      "rationale": "Autonomous thyroid-hormone excess suppresses hypothalamic TRH and pituitary TSH through negative feedback. This differs from a TSH-secreting pituitary tumor.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-041",
+      "number": 41,
+      "page": 6,
+      "stem": "Which of the following conditions will have decrease cortisol but normal aldosterone level?",
+      "options": {
+        "A": "Primary adrenocortical insufficiency",
+        "B": "Panhypopituitarism",
+        "C": "Pheochromocytoma",
+        "D": "Conn’s disease"
+      },
+      "key": "B",
+      "rationale": "Pituitary failure reduces ACTH and cortisol, while aldosterone is often preserved because angiotensin II and potassium are its major regulators. Primary adrenal failure can reduce both cortisol and aldosterone.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-042",
+      "number": 42,
+      "page": 6,
+      "stem": "Which would most directly decrease the production of aldosterone?",
+      "options": {
+        "A": "Going on a low-salt diet",
+        "B": "Ingesting extra dietary vitamin D",
+        "C": "Increasing dietary cholesterol",
+        "D": "Injecting a drug that blocks angiotensin II"
+      },
+      "key": "D",
+      "rationale": "Angiotensin II directly stimulates zona-glomerulosa aldosterone secretion. Blocking its action reduces this stimulus; sodium restriction generally increases renin-angiotensin activity.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-043",
+      "number": 43,
+      "page": 6,
+      "stem": "Giving a healthy person high doses of cortisol for 2 months causes:",
+      "options": {
+        "A": "central deposition of fat.",
+        "B": "skeletal muscle anabolism.",
+        "C": "increased adrenal size.",
+        "D": "fasting hypoglycemia."
+      },
+      "key": "A",
+      "rationale": "Sustained glucocorticoid excess can cause central fat accumulation, muscle protein catabolism, and hyperglycemia. Exogenous cortisol suppresses ACTH and tends to cause adrenal cortical atrophy rather than enlargement.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-044",
+      "number": 44,
+      "page": 7,
+      "stem": "In a patient with severe hypoglycemia (38 mg/dL), which marker can be measured to differentiate between insulin overdose and a tumor that produces excess insulin?",
+      "options": {
+        "A": "Amylin",
+        "B": "C peptide",
+        "C": "Insulin",
+        "D": "Proinsulin"
+      },
+      "key": "B",
+      "rationale": "Endogenous insulin secretion releases C-peptide with insulin, whereas injected insulin lacks C-peptide. High insulin with suppressed C-peptide supports exogenous insulin exposure, with assay and medication context considered.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-045",
+      "number": 45,
+      "page": 7,
+      "stem": "Which statement best differentiates GLUT 2 from GLUT 4?",
+      "options": {
+        "A": "GLUT 2 transports mainly fructose",
+        "B": "GLUT 4 has the highest affinity for glucose",
+        "C": "GLUT 2 is a Class I facilitative glucose transporter",
+        "D": "GLUT 4 is insulin-sensitive"
+      },
+      "key": "D",
+      "rationale": "GLUT4 undergoes insulin-stimulated membrane translocation in skeletal muscle and adipose tissue. GLUT2 is not regulated by this mechanism; both transporters belong to class I GLUT proteins.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-046",
+      "number": 46,
+      "page": 7,
+      "stem": "Which metabolic state would result in the lowest insulin-to-glucagon ratio?",
+      "options": {
+        "A": "Following an overnight fast",
+        "B": "Immediately after a high-carbohydrate meal",
+        "C": "After a three-day fast",
+        "D": "After a high-protein, low-carbohydrate meal"
+      },
+      "key": "C",
+      "rationale": "A three-day fast produces low insulin and relatively high glucagon, favoring gluconeogenesis, lipolysis, and ketogenesis. A carbohydrate-rich meal produces the opposite hormonal pattern.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-047",
+      "number": 47,
+      "page": 7,
+      "stem": "Which is expected in a patient with hypoparathyroidism? (Order: serum calcium / serum phosphate / urinary phosphate.)",
+      "options": {
+        "A": "High / High / Low",
+        "B": "High / Low / High",
+        "C": "Low / High / Low",
+        "D": "Low / Low / High"
+      },
+      "key": "C",
+      "rationale": "Low PTH reduces renal calcium conservation and phosphate excretion, producing low serum calcium and high serum phosphate. The expected urinary phosphate effect is reduced fractional excretion, although absolute urinary amounts depend on intake and filtered load.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-048",
+      "number": 48,
+      "page": 7,
+      "stem": "Hyperphosphatemia directly increases the level of which hormone?",
+      "options": {
+        "A": "Calcitonin",
+        "B": "FGF-23",
+        "C": "PTH",
+        "D": "Vitamin D"
+      },
+      "key": null,
+      "rationale": "Phosphate loading can increase FGF23 and also stimulate PTH through direct and indirect mechanisms. Without specifying osteocytes, the time course, or a particular pathway, the word 'directly' does not provide a unique choice between B and C.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "Human responses to phosphate loads",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4243350/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "PHY-2027-049",
+      "number": 49,
+      "page": 7,
+      "stem": "Damage to the glomerular filtration barrier leads to:",
+      "options": {
+        "A": "higher glomerular capillary oncotic pressure.",
+        "B": "lower tubular Na+ concentration.",
+        "C": "proteins appearing in the tubular fluid.",
+        "D": "reduced tubular fluid osmolality."
+      },
+      "key": "C",
+      "rationale": "Damage to the size- and charge-selective glomerular barrier permits excessive protein filtration into tubular fluid. Clinically this can appear as proteinuria.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-050",
+      "number": 50,
+      "page": 7,
+      "stem": "Which of the following increases both GFR and RBF?",
+      "options": {
+        "A": "Afferent arteriolar constriction",
+        "B": "Afferent arteriolar dilation",
+        "C": "Efferent arteriolar constriction",
+        "D": "Efferent arteriolar dilation"
+      },
+      "key": "B",
+      "rationale": "Afferent arteriolar dilation lowers resistance before the glomerulus, increasing renal blood flow and glomerular capillary pressure. This generally increases GFR when other determinants are unchanged.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-051",
+      "number": 51,
+      "page": 8,
+      "stem": "Which substance will increase the GFR?",
+      "options": {
+        "A": "Adenosine",
+        "B": "High-dose of angiotensin II",
+        "C": "Vasopressin",
+        "D": "Prostaglandin"
+      },
+      "key": "D",
+      "rationale": "Renal vasodilator prostaglandins help maintain afferent blood flow and filtration, especially during reduced effective circulating volume. High angiotensin-II levels and adenosine can instead reduce filtration in the relevant settings.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-052",
+      "number": 52,
+      "page": 8,
+      "stem": "Giving a drug that inhibits this transporter will prevent the generation of a hyperosmotic medullary interstitium.",
+      "options": {
+        "A": "Na+/Cl- symporter",
+        "B": "Na+-glucose co-transporter 2",
+        "C": "Na+/H+ antiporter",
+        "D": "Na+/K+/2Cl- symporter"
+      },
+      "key": "D",
+      "rationale": "NKCC2 in the thick ascending limb reabsorbs sodium, potassium, and chloride without water and supports the medullary osmotic gradient. Loop diuretics inhibit this transporter.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-053",
+      "number": 53,
+      "page": 8,
+      "stem": "Given the following: GFR 100 mL/min Plasma concentration, substance Y 3 mg/mL Tubular reabsorption rate, substance Y 270 mg/min Tubular secretion rate, substance Y 0 mg/min Urinary excretion rate, substance Y 30 mg/min Which BEST describes the renal handling of substance Y?",
+      "options": {
+        "A": "It is filtered & completely reabsorbed.",
+        "B": "It is filtered & partially reabsorbed.",
+        "C": "It is filtered & secreted.",
+        "D": "It is filtered."
+      },
+      "key": "B",
+      "rationale": "The filtered load is 100 mL/min times 3 mg/mL = 300 mg/min. Reabsorption removes 270 mg/min, leaving 30 mg/min excreted with no secretion, so the substance is partially reabsorbed.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-054",
+      "number": 54,
+      "page": 8,
+      "stem": "What are the expected changes in a person stranded in a desert with little to no water source?",
+      "options": {
+        "A": "Decreased plasma osmolality; increased plasma volume.",
+        "B": "Decreased plasma osmolality; decreased plasma volume.",
+        "C": "Increased plasma osmolality; increased plasma volume.",
+        "D": "Increased plasma osmolality; decreased plasma volume."
+      },
+      "key": "D",
+      "rationale": "Water deprivation tends to increase plasma osmolality and decrease circulating volume. ADH secretion and thirst respond to conserve and replace water.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-055",
+      "number": 55,
+      "page": 8,
+      "stem": "Which is the most important determinant of plasma osmolality?",
+      "options": {
+        "A": "Glucose",
+        "B": "K+",
+        "C": "Na+",
+        "D": "Water"
+      },
+      "key": "C",
+      "rationale": "Sodium salts are the major extracellular osmoles and dominate routine calculated plasma osmolality. Water balance determines their concentration; severe hyperglycemia or other osmoles can also substantially alter measured osmolality.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-056",
+      "number": 56,
+      "page": 8,
+      "stem": "Reabsorption of K+ is greatest at the",
+      "options": {
+        "A": "Proximal tubule",
+        "B": "Loop of Henle",
+        "C": "Distal tubule",
+        "D": "Collecting duct"
+      },
+      "key": "A",
+      "rationale": "The proximal tubule reabsorbs the largest fraction of filtered potassium, followed by the thick ascending limb. Distal nephron segments provide regulated secretion or conservation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-057",
+      "number": 57,
+      "page": 9,
+      "stem": "Which will inhibit the renal phosphate transport in the tubules?",
+      "options": {
+        "A": "Aldosterone",
+        "B": "Parathyroid hormone",
+        "C": "Calcium",
+        "D": "ADH"
+      },
+      "key": "B",
+      "rationale": "PTH reduces proximal tubular sodium-phosphate cotransport, increasing urinary phosphate loss. FGF23 also promotes phosphaturia but is not among the options.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-058",
+      "number": 58,
+      "page": 9,
+      "stem": "The principal site of acidification of urine is:",
+      "options": {
+        "A": "Distal convoluted tubule",
+        "B": "Proximal convoluted tubule",
+        "C": "Loop of Henle",
+        "D": "Collecting duct"
+      },
+      "key": "D",
+      "rationale": "Collecting-duct alpha-intercalated cells generate the final steep hydrogen-ion gradient and minimum urinary pH. The proximal tubule reclaims most filtered bicarbonate but does not achieve the same final urine acidification.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-059",
+      "number": 59,
+      "page": 9,
+      "stem": "Activation of beta-intercalated cells of the late distal convoluted tubule and collecting duct will:",
+      "options": {
+        "A": "Form new HCO3 from glutamine",
+        "B": "Reabsorb filtered HCO3 with secreted H+",
+        "C": "Secrete H+ in exchange for Na+",
+        "D": "Secrete HCO3 in exchange for Cl-"
+      },
+      "key": "D",
+      "rationale": "Beta-intercalated cells secrete bicarbonate into the lumen through the chloride/bicarbonate exchanger pendrin. They help correct alkalosis and differ from acid-secreting alpha-intercalated cells.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-060",
+      "number": 60,
+      "page": 9,
+      "stem": "A patient has the following laboratory values: arterial pH= 7.02, arterial PCO2= 35mmHg, plasma HCO3= 11mEq/L, plasma Na= 145mEq/L, plasma Cl=96 mEq/L. What is the most likely cause of his acid-base imbalance?",
+      "options": {
+        "A": "diabetic ketoacidosis",
+        "B": "massive blood loss",
+        "C": "profuse vomiting",
+        "D": "watery diarrhea"
+      },
+      "key": null,
+      "rationale": "The anion gap is 145 minus 96 minus 11 = 38 mEq/L, indicating high-gap metabolic acidosis. DKA is possible, but hemorrhagic lactic acidosis is also possible; PCO2 35 exceeds expected compensation of about 24.5 +/- 2 mmHg, and the reported pH is inconsistent with the other values. The item needs corrected data and clinical context.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-061",
+      "number": 61,
+      "page": 9,
+      "stem": "In neuronal cells, repolarization is most closely associated with:",
+      "options": {
+        "A": "Na efflux",
+        "B": "Na influx",
+        "C": "K efflux",
+        "D": "K influx"
+      },
+      "key": "C",
+      "rationale": "Opening voltage-gated potassium channels allows potassium efflux and drives neuronal repolarization. Sodium-channel inactivation also contributes to ending the depolarizing phase.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-062",
+      "number": 62,
+      "page": 9,
+      "stem": "What is/are effect on the membrane when the extracellular concentration of K+ is decreased?",
+      "options": {
+        "A": "Decreased magnitude of action potential",
+        "B": "Increased negativity of the membrane",
+        "C": "Increased magnitude of action potential",
+        "D": "Decreased negativity of membrane"
+      },
+      "key": "B",
+      "rationale": "Lower extracellular potassium makes the potassium equilibrium potential more negative and generally hyperpolarizes the resting membrane. The effect on excitability depends on cell type and severity.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-063",
+      "number": 63,
+      "page": 9,
+      "stem": "A 50-year-old woman undergoes a neurological exam that indicates loss of pain and temperature sensitivity, vibratory sense, and proprioception in both legs. These symptoms could be explained by:",
+      "options": {
+        "A": "Tumor on the medial lemniscal pathway in the sacral spinal cord",
+        "B": "Peripheral neuropathy",
+        "C": "Large tumor in the sacral dorsal horn",
+        "D": "Large tumor affecting the posterior paracentral gyri"
+      },
+      "key": null,
+      "rationale": "Peripheral neuropathy can affect all listed sensory modalities, while bilateral lesions of the posterior paracentral lobules can also impair leg sensation. The stem lacks examination findings that distinguish peripheral from cortical localization.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-064",
+      "number": 64,
+      "page": 10,
+      "stem": "Person wakes up with pain, paresthesia, tingling of the arms. He had slept with arm below the head. Which fibers are involved?",
+      "options": {
+        "A": "Type A fibers",
+        "B": "Type B",
+        "C": "Type C (pain)",
+        "D": "Type C (postganglionic)"
+      },
+      "key": "A",
+      "rationale": "Compression preferentially disrupts large myelinated fibers and commonly causes transient paresthesia. A-fiber involvement is the best listed explanation for the classic limb-'falling-asleep' scenario.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-065",
+      "number": 65,
+      "page": 10,
+      "stem": "A medical student is seen lying down with his eyes close but awake when suddenly someone called him cause him to open his eyes and stand up. Which EEG wave is likely appreciated on the student?",
+      "options": {
+        "A": "Alpha wave turning to beta wave",
+        "B": "Beta wave turning to alpha wave",
+        "C": "Delta wave turning to beta wave",
+        "D": "Delta wave turning to alpha wave"
+      },
+      "key": "A",
+      "rationale": "Relaxed wakefulness with closed eyes produces posterior alpha activity. Eye opening and alert mental activity suppress alpha and favor lower-amplitude, faster beta activity.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-066",
+      "number": 66,
+      "page": 10,
+      "stem": "Which pathway is likely affected in patient with hypokinetic disorder of basal ganglia pathology?",
+      "options": {
+        "A": "Overstimulation of D1 receptor",
+        "B": "Overstimulation of direct loop",
+        "C": "Inhibition of subthalamic nucleus of Ley",
+        "D": "Inhibition of D2 receptor"
+      },
+      "key": "D",
+      "rationale": "Blocking striatal D2 receptors removes dopamine's inhibition of the indirect pathway, increasing suppression of movement. This can produce drug-induced parkinsonism.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-067",
+      "number": 67,
+      "page": 10,
+      "stem": "Which situation is likely to be observe in a patient with damaged striatum?",
+      "options": {
+        "A": "A stewardess unable to remember his last plane ride",
+        "B": "A driver who does not know his home address",
+        "C": "A pianist who does not remember how to play a piano",
+        "D": "A doctor unable to recognize terms like “anatomy”"
+      },
+      "key": "C",
+      "rationale": "The striatum participates in procedural learning, habits, and skilled motor routines such as playing an instrument. Remembering an address or a prior event relies on different memory systems.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-068",
+      "number": 68,
+      "page": 10,
+      "stem": "Which neurotransmitter is likely diminish in patient with Alzheimer’s disease?",
+      "options": {
+        "A": "Dopamine",
+        "B": "Acetylcholine",
+        "C": "Norepinephrine",
+        "D": "Serotonin"
+      },
+      "key": "B",
+      "rationale": "Alzheimer disease is associated with loss of basal forebrain cholinergic neurons and reduced cortical acetylcholine signaling. This provides the rationale for symptomatic acetylcholinesterase-inhibitor therapy.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-069",
+      "number": 69,
+      "page": 10,
+      "stem": "Which of these will occur if beta-2 receptors are activated?",
+      "options": {
+        "A": "Cardiac contractility",
+        "B": "Erection",
+        "C": "Bronchial smooth muscle relaxation",
+        "D": "Vascular constriction"
+      },
+      "key": "C",
+      "rationale": "Beta-2 receptor activation relaxes bronchial smooth muscle through cAMP-dependent signaling. It also relaxes selected vascular and uterine smooth muscle beds.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-070",
+      "number": 70,
+      "page": 10,
+      "stem": "Which drug can be used to dilate a patient's pupils to aid in an eye examination?",
+      "options": {
+        "A": "Acetylcholinesterase inhibitor",
+        "B": "Alpha-adrenergic antagonist",
+        "C": "Beta-adrenergic blocker",
+        "D": "Muscarinic antagonist"
+      },
+      "key": "D",
+      "rationale": "Muscarinic antagonists block the iris sphincter, producing mydriasis and often cycloplegia. Alpha-1 agonists can also dilate pupils but are not offered here.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-071",
+      "number": 71,
+      "page": 11,
+      "stem": "Which physiologic effect is stimulated by estrogen?",
+      "options": {
+        "A": "Formation of tortuous sacculated uterine glands",
+        "B": "Increase in basal body temperature",
+        "C": "Production of viscous acidic cervical mucus",
+        "D": "Proliferation of vaginal epithelium"
+      },
+      "key": "D",
+      "rationale": "Estrogen promotes proliferation of vaginal and endometrial epithelium. Progesterone causes secretory endometrial glands, thicker cervical mucus, and an increase in basal body temperature.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-072",
+      "number": 72,
+      "page": 11,
+      "stem": "Which sequence of hormonal events correctly precedes ovulation?",
+      "options": {
+        "A": "Increase in progesterone → LH surge",
+        "B": "LH surge → increase in estrogen",
+        "C": "Increase in estrogen → LH surge",
+        "D": "Increase in estrogen → FSH surge"
+      },
+      "key": "C",
+      "rationale": "Sustained high estradiol late in the follicular phase produces positive feedback and the LH surge that triggers ovulation. Progesterone rises substantially after ovulation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-073",
+      "number": 73,
+      "page": 11,
+      "stem": "Which hormonal profile is expected in a 20-year-old female who is currently on Day 23 of her 30-day menstrual cycle? (Order: FSH / LH / estrogen / progesterone.)",
+      "options": {
+        "A": "High / Low / High / Low",
+        "B": "High / High / Low / Low",
+        "C": "Low / Low / High / High",
+        "D": "High / High / High / Low"
+      },
+      "key": "C",
+      "rationale": "Day 23 of a typical 30-day ovulatory cycle lies in the luteal phase, when corpus-luteum progesterone and estrogen suppress FSH and LH. The pattern is low FSH/LH with relatively high estrogen/progesterone.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-074",
+      "number": 74,
+      "page": 11,
+      "stem": "Which event will help promote uterine contractions during active labor?",
+      "options": {
+        "A": "Giving anesthesia to help the patient calm down.",
+        "B": "Inserting a progesterone agonist vaginal suppository.",
+        "C": "Rupturing the amniotic sac when the cervix is dilated.",
+        "D": "All of the above"
+      },
+      "key": "C",
+      "rationale": "Amniotomy can augment labor through increased local prostaglandin activity and improved pressure of the presenting part on the cervix. Whether to perform it clinically depends on obstetric indications and risks, not this mechanism alone.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-075",
+      "number": 75,
+      "page": 11,
+      "stem": "Which statement best explains why lactation is normally suppressed during pregnancy?",
+      "options": {
+        "A": "Prolactin is consistently low throughout pregnancy.",
+        "B": "Estrogen and progesterone block the action of prolactin.",
+        "C": "The fetal adrenal gland does not produce sufficient estriol.",
+        "D": "Maternal anterior pituitary hormones are suppressed."
+      },
+      "key": "B",
+      "rationale": "High estrogen and progesterone during pregnancy limit copious milk secretion despite elevated prolactin. Their fall after placental delivery permits secretory activation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-076",
+      "number": 76,
+      "page": 11,
+      "stem": "In a patient with prostatic enlargement, blocking which mechanism will help prevent prostate enlargement without reducing spermatogenesis?",
+      "options": {
+        "A": "Conversion of testosterone to dihydrotestosterone",
+        "B": "Synthesis of testosterone",
+        "C": "Binding of testosterone to sex hormone binding globulin",
+        "D": "Conversion of testosterone to estrogen"
+      },
+      "key": "A",
+      "rationale": "Inhibiting 5-alpha reductase reduces conversion of testosterone to DHT and can reduce prostatic growth. It does not directly abolish intratesticular testosterone production, although sexual and fertility-related adverse effects can occur.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-077",
+      "number": 77,
+      "page": 11,
+      "stem": "Which statement is TRUE?",
+      "options": {
+        "A": "FSH primarily induces testosterone secretion in the Leydig cells.",
+        "B": "Inhibin B inhibits the pulsatile secretion of GnRH.",
+        "C": "LH primarily increases the amount of androgen binding protein in the Sertoli cells.",
+        "D": "Testosterone inhibits the pulsatile secretion of GnRH."
+      },
+      "key": "D",
+      "rationale": "Testosterone provides negative feedback on hypothalamic GnRH and pituitary gonadotropin signaling. LH stimulates Leydig-cell testosterone production, while FSH acts on Sertoli cells and inhibin B predominantly suppresses FSH.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-078",
+      "number": 78,
+      "page": 12,
+      "stem": "Which of the following will have a high LH but low testosterone?",
+      "options": {
+        "A": "A normal 3-year old boy",
+        "B": "21-yr old male taking anabolic steroids",
+        "C": "Castrated 15-year old male",
+        "D": "21-yr old male with partial deficiency of 21-beta hydroxylase"
+      },
+      "key": "C",
+      "rationale": "Loss of testicular function reduces testosterone feedback, raising LH in hypergonadotropic hypogonadism. Exogenous anabolic steroids usually suppress LH.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-079",
+      "number": 79,
+      "page": 12,
+      "stem": "Which variation of FSH and LH is correct?",
+      "options": {
+        "A": "At childhood, both are high, FSH > LH",
+        "B": "At adulthood, both are high, FSH > LH",
+        "C": "At senescence, both are high, FSH > LH",
+        "D": "At senescence, both are low, LH > FSH"
+      },
+      "key": null,
+      "rationale": "With gonadal senescence, reduced sex-steroid and inhibin feedback can increase gonadotropins, often with FSH rising more than LH. This is particularly clear after menopause; male aging is more variable than the stem implies.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-080",
+      "number": 80,
+      "page": 12,
+      "stem": "What is the proper sequence of skeletal muscle contraction? I. Accumulation of calcium within the sarcoplasm II. Depolarization of the sarcolemma III. Opening of dihydropyridine receptor IV. Build-up of end-plate potential in the muscle end-plate",
+      "options": {
+        "A": "III  →  I - →  IV  →  II",
+        "B": "II  →  IV  →  III  →  I",
+        "C": "IV  →  II  →  III  →  I",
+        "D": "I  →  II  →  IV  →  III"
+      },
+      "key": "C",
+      "rationale": "An end-plate potential triggers sarcolemmal depolarization, which activates the dihydropyridine voltage sensor and sarcoplasmic-reticulum calcium release. In skeletal muscle, mechanical coupling to the ryanodine receptor matters more than calcium entry through the dihydropyridine channel.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-081",
+      "number": 81,
+      "page": 12,
+      "stem": "What is the major source of the ATP after running 21 kilometers?",
+      "options": {
+        "A": "Amino acid metabolism",
+        "B": "Phosphocreatine",
+        "C": "Anaerobic glycolysis",
+        "D": "Beta-oxidation"
+      },
+      "key": null,
+      "rationale": "Prolonged running uses both aerobic carbohydrate oxidation and fatty-acid oxidation, with their proportions depending on pace, training, and nutrition. Beta-oxidation is the best listed sustained fuel pathway, but distance alone cannot establish it as the major source and aerobic carbohydrate oxidation is omitted.",
+      "review_only": true,
+      "references": [
+        {
+          "title": "ISSN: fuel use at endurance-racing intensities",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11212571/",
+          "accessed": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "id": "PHY-2027-082",
+      "number": 82,
+      "page": 12,
+      "stem": "During isometric contraction:",
+      "options": {
+        "A": "Intracellular free calcium is lower than resting conditions",
+        "B": "Calcium remain bounded to troponin to maintain active tension",
+        "C": "Total tension in the muscle is generated from actin-myosin crossbridges",
+        "D": "ATPase activity of the sarcoplasmic reticulum is inhibited"
+      },
+      "key": "B",
+      "rationale": "Active isometric tension requires calcium binding to troponin and ongoing crossbridge cycling without net change in muscle length. Total tension may also include passive elastic tension, so it is not entirely crossbridge-derived.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-083",
+      "number": 83,
+      "page": 12,
+      "stem": "Which is a characteristic of a type I muscle fiber?",
+      "options": {
+        "A": "Uses anaerobic metabolism",
+        "B": "Fatigue resistant",
+        "C": "Small capillary density",
+        "D": "Strong contraction force"
+      },
+      "key": "B",
+      "rationale": "Type I fibers are slow oxidative, richly supplied with capillaries and mitochondria, and resistant to fatigue. They generate less rapid force than fast glycolytic fibers.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-084",
+      "number": 84,
+      "page": 12,
+      "stem": "Which is the regulator of cross-bridging in muscle contraction?",
+      "options": {
+        "A": "Troponin I",
+        "B": "Tropomyosin",
+        "C": "Actin",
+        "D": "Myosin"
+      },
+      "key": null,
+      "rationale": "Tropomyosin physically covers or exposes myosin-binding sites on actin as the troponin complex changes conformation. Troponin I also regulates this system, so the broad phrase 'regulator of cross-bridging' is not sufficiently specific for an exclusive answer.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-085",
+      "number": 85,
+      "page": 12,
+      "stem": "Which will initiate smooth muscle contraction?",
+      "options": {
+        "A": "Distention of the muscle",
+        "B": "Presence of excitatory ligand",
+        "C": "Depolarization of the membrane",
+        "D": "All of the above"
+      },
+      "key": "D",
+      "rationale": "Depending on smooth-muscle type, stretch, excitatory receptor signaling, or membrane depolarization can increase intracellular calcium and initiate contraction. Not every smooth muscle responds identically to all three stimuli.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-086",
+      "number": 86,
+      "page": 13,
+      "stem": "Which is responsible for calcium binding in the smooth muscle contraction?",
+      "options": {
+        "A": "Calsequestrin",
+        "B": "Calbindin",
+        "C": "Calmodulin",
+        "D": "Calferrin"
+      },
+      "key": "C",
+      "rationale": "Calcium binds calmodulin in smooth muscle, activating myosin light-chain kinase. Phosphorylation of myosin permits crossbridge cycling; smooth muscle does not use skeletal-muscle troponin regulation.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-087",
+      "number": 87,
+      "page": 13,
+      "stem": "The rate at which calcium is sequestered by sarcoplasmic reticulum during the muscle twitch is directly related to:",
+      "options": {
+        "A": "Rate of ATP hydrolysis by myosin",
+        "B": "Rate of tension development",
+        "C": "Height of action potential",
+        "D": "Rate of muscle relaxation"
+      },
+      "key": "D",
+      "rationale": "SERCA-mediated calcium reuptake lowers cytosolic calcium and promotes relaxation. Faster sequestration generally shortens the relaxation phase of a twitch.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-088",
+      "number": 88,
+      "page": 13,
+      "stem": "A group of investigators are studying the process of clot retraction and fibrinolysis. They discovered that the process of fibrinolysis starts approximately two days after the injury and involves the action of tissue plasminogen activator (tPA). Which of the following best describes the function of tPA?",
+      "options": {
+        "A": "Inhibition of factor Va and VIIIa",
+        "B": "Conversion of plasminogen to plasmin",
+        "C": "Stabilization of fibrin network",
+        "D": "Breakdown and deactivation of fibrin and fibrinogen"
+      },
+      "key": "B",
+      "rationale": "Tissue plasminogen activator converts plasminogen to plasmin, especially on fibrin surfaces. Plasmin then degrades fibrin; fibrinolysis is regulated from clot formation and does not universally begin only two days later.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-089",
+      "number": 89,
+      "page": 13,
+      "stem": "A 25-year-old woman requires a blood transfusion before elective surgery. Her blood type is found to be O negative. This patient can receive blood from which of the following type(s) of blood donors?",
+      "options": {
+        "A": "Type A and B positive",
+        "B": "Type O positive",
+        "C": "Type AB positive",
+        "D": "Type O negative"
+      },
+      "key": "D",
+      "rationale": "For routine red-cell transfusion, an O Rh-negative recipient should receive compatible O Rh-negative red cells. Plasma compatibility follows different rules, and emergency exceptions require blood-bank assessment.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-090",
+      "number": 90,
+      "page": 13,
+      "stem": "The first step in leukocyte adhesion cascade is:",
+      "options": {
+        "A": "Adhesion",
+        "B": "Rolling",
+        "C": "Margination",
+        "D": "Diapedesis"
+      },
+      "key": null,
+      "rationale": "In the overall sequence of leukocyte recruitment, margination precedes selectin-mediated rolling, firm adhesion, and diapedesis. In the narrower molecular 'adhesion cascade,' rolling is often called the first step, making the source terminology ambiguous.",
+      "review_only": true,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-091",
+      "number": 91,
+      "page": 13,
+      "stem": "In which of the following conditions is erythropoietin (EPO) administration helpful?",
+      "options": {
+        "A": "permanent adult resident of Baguio City",
+        "B": "patient with chronic obstructive lung disease",
+        "C": "chronic kidney disease patient on dialysis",
+        "D": "athlete given testosterone injections"
+      },
+      "key": "C",
+      "rationale": "Chronic kidney disease can reduce endogenous erythropoietin production, causing anemia that may respond to an erythropoiesis-stimulating agent after appropriate assessment. Administration is not routine treatment for physiologic altitude adaptation or athletic performance.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-092",
+      "number": 92,
+      "page": 13,
+      "stem": "What happens to the iron after lysis of red cells?",
+      "options": {
+        "A": "released and stored as ferritin",
+        "B": "remains attached to hemoglobin",
+        "C": "excreted in the body through the kidneys",
+        "D": "metabolized to bilirubin"
+      },
+      "key": "A",
+      "rationale": "Macrophages recover iron from heme and either store it as ferritin or export it for transferrin-mediated reuse. The porphyrin portion, rather than the iron, becomes bilirubin.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-093",
+      "number": 93,
+      "page": 14,
+      "stem": "Which platelet receptor binds fibrinogen to form platelet plugs?",
+      "options": {
+        "A": "Gp Ib/Ia",
+        "B": "Gp VI",
+        "C": "Gp IIb/IIIa",
+        "D": "PAR-1"
+      },
+      "key": "C",
+      "rationale": "Activated platelet integrin alpha-IIb beta-3, also called GPIIb/IIIa, binds fibrinogen to bridge adjacent platelets. GPIb primarily mediates von-Willebrand-factor-dependent adhesion.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-094",
+      "number": 94,
+      "page": 14,
+      "stem": "Which cytokine can be given to a patient to inhibit the inflammatory response?",
+      "options": {
+        "A": "IL-1",
+        "B": "IL-6",
+        "C": "IL-10",
+        "D": "TNF-alpha"
+      },
+      "key": "C",
+      "rationale": "IL-10 suppresses several macrophage and antigen-presenting-cell inflammatory functions. This identifies its physiologic role, not a routine recommendation to administer IL-10 clinically.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-095",
+      "number": 95,
+      "page": 14,
+      "stem": "Which is seen exclusively in cell-mediated immunity than humoral immunity?",
+      "options": {
+        "A": "Involvement of B-lymphocyte",
+        "B": "Respond to exogenous antigens",
+        "C": "Neutralization of antigens by immunoglobins",
+        "D": "Apoptosis of infected cell thru granzymes"
+      },
+      "key": "D",
+      "rationale": "Cytotoxic lymphocytes can trigger target-cell apoptosis through perforin and granzymes. Antibody-mediated neutralization is a humoral mechanism, while B lymphocytes are central to antibody production.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-096",
+      "number": 96,
+      "page": 14,
+      "stem": "When compared to rods of the retina, the cones are:",
+      "options": {
+        "A": "Highly concentrated all throughout the retina",
+        "B": "More sensitive to low-intensity light",
+        "C": "Primarily involve in scoptopic vision",
+        "D": "Adapts first in before rods in the dark"
+      },
+      "key": "D",
+      "rationale": "Cones adapt more rapidly during the early phase of dark adaptation, whereas rods achieve much greater sensitivity later. Cones mediate photopic color vision and are concentrated in the fovea.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-097",
+      "number": 97,
+      "page": 14,
+      "stem": "What would be the immediate effect on the photoreceptor when exposed to light, if a chemical that blocks the activity of cGMP phosphodiesterase in the retina is given to a laboratory rat?",
+      "options": {
+        "A": "Increased conversion of 11-cis-retinal to all-trans-retinol.",
+        "B": "Immediate closure of all Na+ channels.",
+        "C": "Rapid hyperpolarization of the cell membrane.",
+        "D": "Sustained depolarization and continued glutamate release."
+      },
+      "key": "D",
+      "rationale": "Blocking cGMP phosphodiesterase prevents the normal light-induced fall in cGMP, maintaining cation-channel opening and relative depolarization. Glutamate release therefore continues instead of falling normally.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-098",
+      "number": 98,
+      "page": 14,
+      "stem": "A patient has a visual field defect affecting the left half of the visual field of both eyes. Where is the lesion located?",
+      "options": {
+        "A": "Left optic nerve",
+        "B": "Optic chiasm",
+        "C": "Left optic tract",
+        "D": "Right optic tract"
+      },
+      "key": "D",
+      "rationale": "A right retrochiasmal lesion can cause left homonymous hemianopia. The right optic tract is the listed site carrying information from the left visual hemifield of both eyes.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-099",
+      "number": 99,
+      "page": 14,
+      "stem": "A patient consults due to hearing loss in the left ear. Weber test results show localization to the left ear. Rinne test shows BC>AC on the left ear and AC>BC on the right. Which pathology could explain these findings?",
+      "options": {
+        "A": "Chronic exposure to loud sound in the left ear",
+        "B": "Cochlear nerve damage to the left ear",
+        "C": "Damaged auditory cortex on the right.",
+        "D": "Damaged eardrum on the left ear"
+      },
+      "key": "D",
+      "rationale": "Weber lateralization to the affected ear with bone conduction exceeding air conduction indicates conductive hearing loss. Tympanic-membrane damage fits this pattern; cochlear or nerve damage usually gives a sensorineural pattern.",
+      "review_only": false,
+      "references": []
+    },
+    {
+      "id": "PHY-2027-100",
+      "number": 100,
+      "page": 14,
+      "stem": "Which statement best describes what happens when the inner hair cells in the organ of Corti are bent by vibrations?",
+      "options": {
+        "A": "Chloride channels will open.",
+        "B": "Potassium channels will open.",
+        "C": "Sodium channels will open",
+        "D": "Neurotransmitter vesicles will open."
+      },
+      "key": "B",
+      "rationale": "Stereocilia deflection toward the tallest row opens mechanically gated cation channels. Potassium enters from potassium-rich endolymph, depolarizing the hair cell and subsequently triggering calcium-dependent transmitter release.",
+      "review_only": false,
+      "references": []
+    }
+  ]
+}
